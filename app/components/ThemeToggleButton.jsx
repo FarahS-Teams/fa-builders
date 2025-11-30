@@ -1,0 +1,38 @@
+"use client";
+
+import { useContext } from "react";
+import { FiSun, FiMoon } from "react-icons/fi";
+import themeContext from "../context/themeContext";
+const ThemeToggleButton = () => {
+  const context = useContext(themeContext);
+
+  if (!context) {
+    throw new Error(
+      "ThemeToggleButton must be used within a ThemeContextProvider",
+    );
+  }
+
+  const { theme, toggleTheme } = context;
+
+  return (
+    <button
+      onClick={toggleTheme}
+      className=" relative w-14 h-8 flex items-center bg-gray-300  rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
+    >
+      {/* Circle slider */}
+      <span
+        className={`
+          w-6 h-6 flex items-center justify-center rounded-full bg-white shadow-md transform transition-transform duration-300 ${theme === "dark" ? "translate-x-6" : "translate-x-0"}
+        `}
+      >
+        {theme === "dark" ? (
+          <FiMoon className="text-gray-700 text-lg" />
+        ) : (
+          <FiSun className="text-orange-500 text-lg" />
+        )}
+      </span>
+    </button>
+  );
+};
+
+export default ThemeToggleButton;
