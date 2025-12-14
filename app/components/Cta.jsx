@@ -4,9 +4,9 @@ import React from "react";
 const Cta = ({ text, path, className = "", variant = "primary" }) => {
   const variantClasses = {
     primary:
-      "bg-[#ff9326] text-white hover:bg-[#e9821f] rounded-md transition-all duration-500 ease-out transform hover:-translate-y-2 ",
+      "px-4 py-2 font-semibold bg-linear-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105",
     secondary:
-      "border border-[#ff9326] text-[#ff9326] rounded-md drop-shadow-lg drop-shadow-orange-500/50 transition-all duration-500 ease-out hover:bg-[#ff9326] hover:text-white",
+      "px-8 py-4  font-semibold border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-lg transition-all duration-300",
   };
 
   return (

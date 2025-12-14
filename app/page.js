@@ -1,9 +1,10 @@
-import Image from "next/image";
+import HomePage from "./components/home/HomePage";
 
+// app/page.js
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="pt-32 min-h-screen">
+      <HomePage />
     </div>
   );
 }

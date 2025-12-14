@@ -15,18 +15,10 @@ const ThemeToggleButton = () => {
   const { theme, toggleTheme } = context;
 
   return (
-    <button
-      onClick={toggleTheme}
-      className=" relative w-14 h-8 flex items-center bg-gray-300  rounded-full p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
-    >
-      {/* Circle slider */}
-      <span
-        className={`
-          w-6 h-6 flex items-center justify-center rounded-full bg-white shadow-md transform transition-transform duration-300 ${theme === "dark" ? "translate-x-6" : "translate-x-0"}
-        `}
-      >
+    <button onClick={toggleTheme} className="cursor-pointer">
+      <span>
         {theme === "dark" ? (
-          <FiMoon className="text-gray-700 text-lg" />
+          <FiMoon className="text-gray-200 text-lg" />
         ) : (
           <FiSun className="text-orange-500 text-lg" />
         )}

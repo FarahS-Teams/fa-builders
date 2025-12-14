@@ -1,4 +1,6 @@
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import ThemeContextProvider from "./context/ThemeContextProvider";
 import Header from "./components/Header";
 import { Inter, Montserrat } from "next/font/google";
@@ -27,6 +29,7 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
           <Header />
           {children}
+          <Footer />
         </ThemeContextProvider>
       </body>
     </html>

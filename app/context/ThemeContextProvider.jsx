@@ -12,15 +12,15 @@ const ThemeContextProvider = ({ children }) => {
   const themeStyles = {
     dark: {
       background: "bg-[#0a122a]",
-      card: "bg-[#1E293B]/80 border-[#334155] hover:bg-[#273449] hover:shadow-[0_0_15px_rgba(99,102,241,0.15)] hover:border-[#475569] backdrop-blur-sm",
-      headings: "text-[#ffffff]",
-      text: "text-[#CBD5E1]",
+      card: "bg-[#1E293B]/80 border-1 border-orange-500 shadow-[0_0_10px_rgba(255,107,53,0.25)] hover:shadow-[inset_0_0_15px_rgba(255,107,53,0.1)] backdrop-blur-sm",
+      headings: "text-[#f3f3f3]",
+      text: "text-[#f3f3f3]",
     },
     light: {
-      background: "bg-[#ffffff]",
-      card: "bg-[#FFFFFF] border-gray-200 backdrop-blur-sm hover:bg-gray-50 hover:shadow-[0_0_12px_rgba(0,0,0,0.08)] hover:border-gray-300 ",
+      background: "bg-[#f4f4f4]",
+      card: "bg-[#FFFFFF] backdrop-blur-sm border-1 border-orange-500 hadow-[0_0_25px_rgba(255,107,53,0.25)] hover:shadow-[inset_0_0_15px_rgba(255,107,53,0.1)]",
       headings: "text-[#0a122a]",
-      text: "text-[#4B5563]",
+      text: "text-[#313131]",
     },
   };
 
@@ -29,7 +29,7 @@ const ThemeContextProvider = ({ children }) => {
   return (
     <themeContext.Provider value={{ theme, toggleTheme, currentTheme }}>
       <div
-        className={`min-h-screen ${currentTheme.background} ${currentTheme.text} transition-colors duration-300 flex justify-center items-center`}
+        className={`min-h-screen ${currentTheme.background} ${currentTheme.text} transition-colors duration-300`}
       >
         {children}
       </div>
