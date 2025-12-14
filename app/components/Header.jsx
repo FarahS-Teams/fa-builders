@@ -16,6 +16,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/aboutPage/AboutPage" },
+    { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
@@ -79,7 +80,7 @@ const Header = () => {
             >
               {elem.name}
 
-              {/* Hover underline animation */}
+              {/* Hover Underline Animation */}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ff9326] group-hover:w-full transition-all duration-300 ease-out"></span>
             </Link>
           ))}
