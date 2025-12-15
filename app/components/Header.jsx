@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/aboutPage/AboutPage" },
+    // { name: "About", path: "/aboutPage/AboutPage" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
     { name: "Services", path: "/services" },
