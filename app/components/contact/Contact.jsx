@@ -7,8 +7,12 @@ const Contact = () => {
   return (
     <div>
       <ContactHeroSection />
-      <ContactForm />
-      <LeftSide />
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+          <LeftSide />
+          <ContactForm />
+        </div>
+      </div>
     </div>
   );
 };
