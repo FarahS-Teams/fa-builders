@@ -9,7 +9,7 @@ import PerksSection from "../../components/home/PerksSection";
 
 export default function AboutPage() {
   return (
-    <div className="w-full pt-16 mt-12">
+    <>
       <AboutHero />
       <AboutStory />
       <OurValues />
@@ -18,6 +18,6 @@ export default function AboutPage() {
       <OurProcess />
       <PerksSection />
       <CTASection />
-    </div>
+    </>
   );
 }

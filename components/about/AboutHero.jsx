@@ -15,8 +15,7 @@ const AboutHero = () => {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} relative w-full 
-            h-[60vh] sm:h-[70vh] md:h-[80vh] overflow-hidden`}
+      className={`${currentTheme.background} ${currentTheme.text} relative h-[60vh] sm:h-[70vh] md:h-[80vh]`}
     >
       {/* Background Image */}
       <Image
@@ -51,6 +50,9 @@ const AboutHero = () => {
           <Cta text={"View Our Projects"} path={"/projects"} />
         </div>
       </div>
+      {/* London Minimal Double Border Line */}
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#ff9326] to-transparent"></div>
+      <div className="absolute top-[4px] left-0 w-full h-[1px] bg-gradient-to-r from-[#ffffff20] to-transparent"></div>
     </section>
   );
 };

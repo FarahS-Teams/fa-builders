@@ -22,10 +22,6 @@ const AboutStory = () => {
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#ff9326]/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#ff7b00]/10 rounded-full blur-3xl"></div>
 
-      {/* London Minimal Double Border Line */}
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#ff9326] to-transparent"></div>
-      <div className="absolute top-[4px] left-0 w-full h-[1px] bg-gradient-to-r from-[#ffffff20] to-transparent"></div>
-
       {/* Wrapper */}
       <div
         className="
