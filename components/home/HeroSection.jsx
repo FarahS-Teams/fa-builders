@@ -5,7 +5,7 @@ import Cta from "../Cta";
 import { useContext } from "react";
 import themeContext from "@/app/context/themeContext";
 import Image from "next/image";
-import hero from "../../../public/hero.jpg";
+import hero from "../../public/hero.jpg";
 
 import { FaToolbox, FaAward } from "react-icons/fa";
 import Badge from "../Badge";

@@ -11,9 +11,9 @@ import {
 } from "react-icons/fa";
 import { GrTechnology } from "react-icons/gr";
 import { useContext } from "react";
-import themeContext from "../context/themeContext";
-import logo_dark from "../../public/logo_dark.png";
-import logo_light from "../../public/logo_light.png";
+import themeContext from "../app/context/themeContext";
+import logo_dark from "../public/logo_dark.png";
+import logo_light from "../public/logo_light.png";
 import Image from "next/image";
 
 const Footer = () => {

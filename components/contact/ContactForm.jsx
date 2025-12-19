@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext, useState } from "react";
-import themeContext from "../../context/themeContext";
+import themeContext from "../../app/context/themeContext";
 
 const ContactForm = () => {
   const [result, setResult] = useState("");

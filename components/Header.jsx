@@ -7,9 +7,9 @@ import Link from "next/link";
 import Cta from "./Cta";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useContext } from "react";
-import themeContext from "../context/themeContext";
-import logo_dark from "../../public/logo_dark.png";
-import logo_light from "../../public/logo_light.png";
+import themeContext from "../app/context/themeContext";
+import logo_dark from "../public/logo_dark.png";
+import logo_light from "../public/logo_light.png";
 import { usePathname } from "next/navigation";
 
 const Header = () => {

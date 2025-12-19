@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import contactHeroSection from "../../../public/contactHeroSection.jpg";
+import contactHeroSection from "../../public/contactHeroSection.jpg";
 
 const ContactHeroSection = () => {
   return (

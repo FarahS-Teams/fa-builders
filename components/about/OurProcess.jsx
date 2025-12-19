@@ -23,7 +23,7 @@ const OurProcess = () => {
           <h2 className="text-3xl md:text-4xl font-bold">
             Checkout How We Work
           </h2>
-          <div className="w-24 h-[2px] bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
+          <div className="w-24 h-0.5 bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
 
           <p className="mt-4 max-w-xl">We know your time is valuable</p>
         </div>

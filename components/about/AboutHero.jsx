@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Cta from "../Cta";
 import { useContext } from "react";
-import themeContext from "../../context/themeContext";
+import themeContext from "../../app/context/themeContext";
 
 const AboutHero = () => {
   const context = useContext(themeContext);

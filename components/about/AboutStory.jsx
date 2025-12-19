@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useContext } from "react";
-import themeContext from "../../context/themeContext";
+import themeContext from "../../app/context/themeContext";
 import Cta from "../Cta";
 
 const AboutStory = () => {
