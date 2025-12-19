@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
-import themeContext from "../context/themeContext";
+import themeContext from "../app/context/themeContext";
 const ThemeToggleButton = () => {
   const context = useContext(themeContext);
 

@@ -40,7 +40,7 @@ export default function Stats() {
           {/* Small head text */}
           <p className="text-[#ff9326] mb-2">Stats</p>
           <h2 className="text-3xl md:text-4xl font-bold">Our Excellence</h2>
-          <div className="w-24 h-[2px] bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
+          <div className="w-24 h-0.5 bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
         </div>
 
         <div className="flex text-center flex-col md:flex-row items-stretch justify-between gap-8 px-6">
@@ -50,7 +50,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex-1 min-w-[220px] p-8 bg-[#1a1a1a] border-t-4 border-[#ff9326] rounded-xl shadow-lg bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
+            className="flex-1 min-w-[220px] p-8  border-t-4 border-[#ff9326]  bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
           >
             <h2 className="text-4xl font-extrabold text-[#ff9326]">
               <StatCounter from={0} to={150} duration={2} />+
@@ -64,7 +64,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-1 min-w-[220px] p-8 bg-[#1a1a1a] border-t-4 border-[#ff9326] rounded-xl shadow-lg bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
+            className="flex-1 min-w-[220px] p-8 border-t-4 border-[#ff9326]  bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
           >
             <h2 className="text-4xl font-extrabold text-[#ff9326]">
               <StatCounter from={0} to={10} duration={2} />+
@@ -78,7 +78,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex-1 min-w-[220px] p-8 bg-[#1a1a1a] border-t-4 border-[#ff9326] rounded-xl shadow-lg bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
+            className="flex-1 min-w-[220px] p-8 border-t-4 border-[#ff9326]  bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
           >
             <h2 className="text-4xl font-extrabold text-[#ff9326]">
               <StatCounter from={0} to={100} duration={2} />%
@@ -92,7 +92,7 @@ export default function Stats() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex-1 min-w-[220px] p-8 bg-[#1a1a1a] border-t-4 border-[#ff9326] rounded-xl shadow-lg bg-white/10 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
+            className="flex-1 min-w-[220px] p-8 bg-white/10 border-t-4 border-[#ff9326] rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transitio"
           >
             <h2 className="text-4xl font-extrabold text-[#ff9326]">
               <StatCounter from={0} to={20} duration={2} />+

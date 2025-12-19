@@ -1,6 +1,6 @@
 "use client";
 import { useContext } from "react";
-import themeContext from "../../context/themeContext";
+import themeContext from "../../app/context/themeContext";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const LeftSide = () => {
