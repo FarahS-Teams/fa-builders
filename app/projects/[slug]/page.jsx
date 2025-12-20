@@ -1,19 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projects } from "@/app/data/projects";
-import ProjectGallery from "@/app/components/projects/ProjectGallery";
-import ProjectCTA from "@/app/components/projects/ProjectCTA";
+import projects from "@/app/data/projects";
+import ProjectGallery from "@/components/projects/ProjectGallery";
+import ProjectCTA from "@/components/projects/ProjectCTA";
 
-/* SEO + Static Generation */
+/* Static params */
 export async function generateStaticParams() {
   return projects.map((project) => ({
     slug: project.slug,
   }));
 }
 
+/* SEO */
 export async function generateMetadata({ params }) {
-  const project = projects.find((p) => p.slug === params.slug);
+  const { slug } = await params;
 
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return {};
 
   return {
@@ -22,22 +25,21 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function ProjectPage({ params }) {
-  console.log(params); // should log { slug: "something" }
-  const project = projects.find((p) => p.slug === params.slug);
+/* PAGE */
+export default async function ProjectPage({ params }) {
+  const { slug } = await params; // ✅ REQUIRED
 
+  const project = projects.find((p) => p.slug === slug);
   if (!project) return notFound();
 
-  const currentIndex = projects.findIndex((p) => p.slug === params.slug);
-
+  const currentIndex = projects.findIndex((p) => p.slug === slug);
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
-
   const nextProject =
     currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
     <main className="w-full overflow-hidden">
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section className="relative h-[60vh] md:h-[70vh]">
         <Image
           src={project.heroImage}
@@ -46,14 +48,9 @@ export default function ProjectPage({ params }) {
           priority
           className="object-cover"
         />
-
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/60" />
-
-        {/* Diagonal Orange Overlay */}
         <div className="absolute bottom-0 left-0 w-full h-28 bg-[#ff9326]/90 clip-path-diagonal" />
 
-        {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col justify-end px-6 lg:px-16 pb-16 text-white">
           <div className="flex gap-3 flex-wrap mb-4">
             <span className="bg-[#ff9326] px-4 py-1 rounded-full text-sm font-semibold">
@@ -65,83 +62,59 @@ export default function ProjectPage({ params }) {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold">{project.title}</h1>
-
           <p className="mt-2 text-gray-200">
             {project.location} • {project.year}
           </p>
         </div>
       </section>
 
-      {/* ================= CONTENT ================= */}
+      {/* CONTENT */}
       <section className="px-6 lg:px-16 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {/* LEFT CONTENT */}
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
-          <p className="text-gray-300 leading-relaxed mb-10">
-            {project.description}
-          </p>
-
-          {/* Gallery */}
+          <p className="text-gray-300 mb-10">{project.description}</p>
           <ProjectGallery images={project.gallery} />
         </div>
 
-        {/* RIGHT SIDEBAR */}
-        <aside className="bg-white/10 border border-white/20 p-6 rounded-xl backdrop-blur-md h-fit">
+        <aside className="bg-white/10 border border-white/20 p-6 rounded-xl h-fit">
           <h3 className="text-xl font-semibold mb-4">Project Details</h3>
-
           <ul className="space-y-3 text-sm">
             <li>
-              <strong className="text-white">Category:</strong>{" "}
-              <span className="text-gray-300">{project.category}</span>
+              <strong>Category:</strong> {project.category}
             </li>
             <li>
-              <strong className="text-white">Service:</strong>{" "}
-              <span className="text-gray-300">{project.service}</span>
+              <strong>Service:</strong> {project.service}
             </li>
             <li>
-              <strong className="text-white">Location:</strong>{" "}
-              <span className="text-gray-300">{project.location}</span>
+              <strong>Location:</strong> {project.location}
             </li>
             <li>
-              <strong className="text-white">Year:</strong>{" "}
-              <span className="text-gray-300">{project.year}</span>
+              <strong>Year:</strong> {project.year}
             </li>
           </ul>
         </aside>
       </section>
 
-      {/* ============= Next & Prev Project ============= */}
+      {/* PREV / NEXT */}
       <section className="px-6 lg:px-16 py-12 border-t border-white/10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* PREVIOUS */}
+        <div className="flex justify-between">
           {prevProject ? (
             <Link
               href={`/projects/${prevProject.slug}`}
-              className="group w-full md:w-auto text-left"
+              className="text-[#ff9326]"
             >
-              <span className="text-sm text-gray-400">Previous Project</span>
-              <div className="mt-1 flex items-center gap-3">
-                <span className="text-[#ff9326] group-hover:underline">
-                  ← {prevProject.title}
-                </span>
-              </div>
+              ← {prevProject.title}
             </Link>
           ) : (
             <div />
           )}
 
-          {/* NEXT */}
           {nextProject ? (
             <Link
               href={`/projects/${nextProject.slug}`}
-              className="group w-full md:w-auto text-right"
+              className="text-[#ff9326]"
             >
-              <span className="text-sm text-gray-400">Next Project</span>
-              <div className="mt-1 flex items-center justify-end gap-3">
-                <span className="text-[#ff9326] group-hover:underline">
-                  {nextProject.title} →
-                </span>
-              </div>
+              {nextProject.title} →
             </Link>
           ) : (
             <div />
@@ -149,7 +122,6 @@ export default function ProjectPage({ params }) {
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
       <ProjectCTA />
     </main>
   );

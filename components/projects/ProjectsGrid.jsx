@@ -1,6 +1,6 @@
 "use client";
 import { useContext, useState } from "react";
-import { projects } from "@/app/data/projects";
+import projects from "@/app/data/projects";
 import themeContext from "@/app/context/themeContext";
 import ProjectCard from "./ProjectsCard";
 import ProjectFilters from "./ProjectFilters";
