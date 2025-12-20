@@ -21,9 +21,9 @@ const HeroSection = () => {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} w-full overflow-hidden`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16">
           {/* Left Side text */}
           <div className="lg:w-1/2">

@@ -41,9 +41,9 @@ const Header = () => {
 
   return (
     <header
-      className={`${currentTheme.background} ${currentTheme.text} w-full py-2 px-6 md:px-12 fixed top-0 left-0 right-0 border-b border-gray-200/50 dark:border-slate-700/40 z-50 shadow-sm`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container py-2 px-6 md:px-12 fixed top-0 left-0 right-0 border-b border-gray-200/50 dark:border-slate-700/40 z-50 shadow-sm`}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="content flex items-center justify-between">
         {/* Logo  */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-3">

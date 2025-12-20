@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+
+@layer components {
+  .custom-container {
+    @apply flex w-full justify-center bg-black;
+  }
+  .content {
+    @apply mx-4 w-full max-w-[1560px];
+  }
+}

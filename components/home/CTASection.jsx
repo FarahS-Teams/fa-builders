@@ -23,9 +23,9 @@ const CTASection = () => {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} w-full`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="content px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         {/* Main CTA Card */}
         <div
           className={`${currentTheme.card} rounded-2xl p-8 md:p-12 text-center relative overflow-hidden`}
