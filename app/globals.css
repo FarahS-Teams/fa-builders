@@ -1,15 +1,13 @@
 @import "tailwindcss/preflight";
 @import "tailwindcss/theme";
-@tailwind utilities;
 
 @theme {
-  /* These now generate real bg-background, text-foreground, etc. */
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
 }
 
 :root {
-  --primary: #0a1221;
+  --primary: #ffffff;
   --secondary: #ff9326;
 }
 .dark {
