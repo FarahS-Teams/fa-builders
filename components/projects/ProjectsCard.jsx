@@ -1,0 +1,79 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+
+const ProjectCard = ({ project }) => {
+  return (
+    <div className="group relative overflow-hidden rounded-2xl border border-[#ff9326]/40 bg-white/10 backdrop-blur-md shadow-lg transition-all hover:shadow-2xl">
+      {/* IMAGE WRAPPER */}
+      <div className="relative w-full h-56 sm:h-64 overflow-hidden rounded-t-2xl">
+        {/* IMAGE */}
+        <Image
+          src={project.heroImage}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+
+        {/* DIAGONAL LONDON OVERLAY */}
+        <div
+          className="
+            absolute inset-0
+            bg-gradient-to-tr from-black/70 via-black/40 to-transparent
+            opacity-0 group-hover:opacity-100
+            transition duration-500
+          "
+        />
+
+        {/* DIAGONAL ORANGE STRIPE */}
+        <div
+          className="
+            absolute -bottom-20 -left-20 w-[150%] h-24
+            bg-[#ff9326]/90
+            rotate-[-12deg]
+            opacity-0 group-hover:opacity-100
+            transition duration-500
+          "
+        />
+
+        {/* CATEGORY BADGE */}
+        <div className="absolute top-4 left-4 z-10">
+          <span className="px-3 py-1 text-xs font-semibold tracking-wide uppercase rounded-full bg-[#ff9326] text-white shadow-md">
+            {project.category}
+          </span>
+        </div>
+
+        {/* CENTER HOVER TEXT */}
+        <div className="absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition duration-300">
+          <span className="text-white text-sm tracking-widest uppercase">
+            {project.title}
+          </span>
+        </div>
+      </div>
+
+      {/* CONTENT */}
+      <div className="p-5 text-center flex flex-col gap-2 relative z-10">
+        <h3 className="text-lg font-semibold">{project.title}</h3>
+        <span className="px-3 py-1 text-xs rounded-full">
+          {project.service}
+        </span>
+        <p className="text-sm">{project.location}</p>
+
+        {/* VIEW MORE BUTTON */}
+        <Link
+          href={`/projects/${project.slug}`}
+          className="
+            mt-4 inline-block px-6 py-2 text-sm font-semibold
+            border border-[#ff9326] text-[#ff9326]
+            rounded-full transition-all duration-300
+            hover:bg-[#ff9326] hover:text-white hover:shadow-lg
+          "
+        >
+          View Project
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;
