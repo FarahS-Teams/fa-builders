@@ -18,13 +18,11 @@ const OurValues = () => {
     >
       {/* Section Header */}
       <div className="flex flex-col md:w-1/2 text-center md:text-left mb-12 mx-auto md:mx-0">
-        <p className="text-[#ff9326] mb-2 tracking-wider text-sm sm:text-base">
+        <p className="text-secondary mb-2 tracking-wider text-sm sm:text-base">
           Values
         </p>
-
         <h2 className="text-3xl sm:text-4xl font-bold">Our Values</h2>
-
-        <div className="w-24 h-[2px] bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
+        <div className="w-24 h-0.5 bg-secondary mt-3 mx-auto md:mx-0 rounded-full"></div>
       </div>
 
       {/* Cards Wrapper */}

@@ -1,2 +1,16 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import "tailwindcss/preflight";
+@import "tailwindcss/theme";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+}
+
+:root {
+  --primary: #ffffff;
+  --secondary: #ff9326;
+}
+.dark {
+  --primary: #0a1221;
+  --secondary: #ff9326;
+}
