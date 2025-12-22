@@ -1,5 +1,5 @@
 "use client";
-
+import service from "@/app/data/service";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa6";
 import ThemeToggleButton from "./ThemeToggleButton";
@@ -70,20 +70,67 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 px-8 py-3">
-          {navItems.map((elem, index) => (
-            <Link
-              key={index}
-              href={elem.path}
-              className={`${isActivePath(elem.path) ? "text-[#ff9326] border-b-2 border-[#ff9326]" : "relative group hover:text-[#ff9326] transition-all duration-300"}`}
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {elem.name}
 
-              {/* Hover Underline Animation */}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ff9326] group-hover:w-full transition-all duration-300 ease-out"></span>
-            </Link>
-          ))}
+        <nav className="hidden lg:flex items-center gap-8 px-8 py-3">
+          {navItems.map((elem, index) => {
+            // SERVICES DROPDOWN
+            if (elem.name === "Services") {
+              return (
+                <div key={index} className="relative group">
+                  {/* Services link */}
+                  <Link
+                    href="/services"
+                    className={`${
+                      isActivePath("/services")
+                        ? "text-[#ff9326] border-b-2 border-[#ff9326]"
+                        : "hover:text-[#ff9326]"
+                    } transition-all duration-300`}
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    Services
+                  </Link>
+
+                  {/* Dropdown */}
+                  <div className="absolute left-0 top-full mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div
+                      className={`${currentTheme.card} rounded-xl shadow-lg border border-[#ff9326]/30 p-4`}
+                    >
+                      <ul className="flex flex-col gap-3">
+                        {service.map((item) => (
+                          <li key={item.slug}>
+                            <Link
+                              href={`/services/${item.slug}`}
+                              className="block text-sm hover:text-[#ff9326] transition"
+                              style={{ fontFamily: "var(--font-inter)" }}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            // NORMAL LINKS
+            return (
+              <Link
+                key={index}
+                href={elem.path}
+                className={`${
+                  isActivePath(elem.path)
+                    ? "text-[#ff9326] border-b-2 border-[#ff9326]"
+                    : "relative group hover:text-[#ff9326]"
+                } transition-all duration-300`}
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {elem.name}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ff9326] group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right Section - Theme Toggle and CTA */}
