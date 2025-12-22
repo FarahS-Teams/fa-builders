@@ -54,7 +54,7 @@ const Header = () => {
               height={10}
             />
             {/* line*/}
-            <div className="h-8 w-0.5 bg-orange-500/40 hidden sm:block"></div>
+            <div className="h-8 w-0.5 bg-[#ff9326]/40 hidden sm:block"></div>
           </div>
 
           {/* Tagline */}
@@ -75,7 +75,7 @@ const Header = () => {
             <Link
               key={index}
               href={elem.path}
-              className={`${isActivePath(elem.path) ? "text-orange-500 border-b-2 border-orange-500" : "relative group hover:text-[#ff9326] transition-all duration-300"}`}
+              className={`${isActivePath(elem.path) ? "text-[#ff9326] border-b-2 border-[#ff9326]" : "relative group hover:text-[#ff9326] transition-all duration-300"}`}
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {elem.name}
@@ -148,7 +148,7 @@ const Header = () => {
                 ))}
 
                 {/* Mobile CTA */}
-                <div className="pt-4 mt-4 border-t border-gray-200/50 dark:border-slate-600/50">
+                <div className="pt-4 mt-4 border-t border-gray-200/50">
                   <Cta text={"Get Consultation"} path={"/contact"} />
                 </div>
               </div>

@@ -91,11 +91,8 @@ const TestimonialsSection = () => {
         {/* main hading*/}
         <div className="text-center mb-16">
           <Badge text={"Client Stories"} />
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6"
-            style={{ fontFamily: "var(--font-montserrat)" }}
-          >
-            What Our <span className="text-orange-500">Clients</span> Say
+          <h2 className={`${currentTheme.headings}`}>
+            What Our <span className="text-[#ff9326]">Clients</span> Say
           </h2>
         </div>
 
@@ -142,25 +139,17 @@ const TestimonialsSection = () => {
                   className={`${currentTheme.card} p-6 md:p-8 rounded-xl mt-1 h-full`}
                 >
                   {/* Quote Icon */}
-                  <div className="text-orange-500 text-2xl mb-4">
+                  <div className="text-[#ff9326] text-2xl mb-4">
                     <FaQuoteLeft />
                   </div>
 
                   {/* Review Text */}
-                  <p
-                    className="mb-6 leading-relaxed italic"
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
-                    "{elem.review}"
-                  </p>
+                  <p className="mb-6 leading-relaxed italic">"{elem.review}"</p>
 
                   {/* Client Info */}
-                  <div
-                    className="border-t border-gray-700 pt-4"
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
+                  <div className="border-t border-gray-700 pt-4">
                     <h4 className="font-bold text-lg">{elem.client}</h4>
-                    <p className="text-orange-500 text-sm">{elem.project}</p>
+                    <p className="text-[#ff9326] text-sm">{elem.project}</p>
                   </div>
                 </div>
               </SwiperSlide>

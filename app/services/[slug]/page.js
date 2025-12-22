@@ -141,7 +141,7 @@ const ServiceDetailPage = () => {
 
           <div className="relative w-full aspect-video max-w-4xl mx-auto">
             <Image
-              src={contactHeroSection}
+              src={IndService.image}
               alt={IndService.title}
               fill
               className="object-cover rounded-xl"

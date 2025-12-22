@@ -31,21 +31,15 @@ const HeroSection = () => {
             <Badge text={"TRUSTED CONTRACTORS"} />
 
             {/* Main Heading */}
-            <h1
-              className="text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
-              style={{ fontFamily: "var(--font-montserrat)" }}
-            >
-              Building Your <span className="text-orange-500">Dreams</span> With{" "}
+            <h2 className={`${currentTheme.headings}`}>
+              Building Your <span className="text-[#ff9326]">Dreams</span> With{" "}
               Precision & Excellence.
-            </h1>
+            </h2>
 
             {/* description */}
-            <p
-              className="text-lg md:text-lg mb-8 leading-relaxed max-w-2xl"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
+            <p className="text-lg md:text-lg mb-8 leading-relaxed max-w-2xl">
               We transform your vision into reality with{" "}
-              <span className="font-semibold text-orange-500">
+              <span className="font-semibold text-[#ff9326]">
                 unmatched quality
               </span>{" "}
               and professional craftsmanship. From concept to completion, we
@@ -90,7 +84,7 @@ const HeroSection = () => {
               className={`absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-orange-500/20 max-w-xs`}
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-orange-500 rounded-lg">
+                <div className="p-2 bg-[#ff9326] rounded-lg">
                   <FaToolbox className="text-white text-xl" />
                 </div>
                 <div>
@@ -105,7 +99,7 @@ const HeroSection = () => {
               className={`absolute -top-8 -right-2 md:-right-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-orange-500/20 max-w-xs`}
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-orange-500 rounded-lg">
+                <div className="p-2 bg-[#ff9326] rounded-lg">
                   <FaAward className="text-white text-xl" />
                 </div>
                 <div>

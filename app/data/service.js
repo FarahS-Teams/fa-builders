@@ -40,6 +40,7 @@ import {
 
 const service = [
   {
+    image: "/about-story.jpg",
     icon: <FaHome className="text-3xl" />,
     slug: "New-Build-Construction",
     title: "New Build Construction",
@@ -50,19 +51,20 @@ const service = [
     specialties: [
       {
         text: "Custom architectural design and planning",
-        icon: <FaRulerCombined className="text-orange-500" />,
+        icon: <FaRulerCombined className="text-[#ff9326]" />,
       },
       {
         text: "Full project management from ground-breaking to completion",
-        icon: <FaClipboardCheck className="text-orange-500" />,
+        icon: <FaClipboardCheck className="text-[#ff9326]" />,
       },
       {
         text: "Sustainable building materials and energy-efficient solutions",
-        icon: <FaLeaf className="text-orange-500" />,
+        icon: <FaLeaf className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/about-story.jpg",
     icon: <FaPaintRoller className="text-3xl" />,
     slug: "Complete-Renovation",
     title: "Complete Renovation",
@@ -73,19 +75,20 @@ const service = [
     specialties: [
       {
         text: "Structural assessment and reinforcement",
-        icon: <FaSearch className="text-orange-500" />,
+        icon: <FaSearch className="text-[#ff9326]" />,
       },
       {
         text: "Interior layout reconfiguration",
-        icon: <FaArrowsAltH className="text-orange-500" />,
+        icon: <FaArrowsAltH className="text-[#ff9326]" />,
       },
       {
         text: "Period property restoration with modern amenities",
-        icon: <FaHistory className="text-orange-500" />,
+        icon: <FaHistory className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/loft.jpg",
     icon: <FaArrowUp className="text-3xl" />,
     slug: "Loft-Conversion",
     title: "Loft Conversion",
@@ -96,19 +99,20 @@ const service = [
     specialties: [
       {
         text: "Dormer and mansard loft conversions",
-        icon: <FaDoorOpen className="text-orange-500" />,
+        icon: <FaDoorOpen className="text-[#ff9326]" />,
       },
       {
         text: "Structural floor strengthening",
-        icon: <FaHammer className="text-orange-500" />,
+        icon: <FaHammer className="text-[#ff9326]" />,
       },
       {
         text: "Natural light optimization with roof windows",
-        icon: <FaSolarPanel className="text-orange-500" />,
+        icon: <FaSolarPanel className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/propert.jpg",
     icon: <FaExpandAlt className="text-3xl" />,
     slug: "Property-Extension",
     title: "Property Extension",
@@ -119,19 +123,20 @@ const service = [
     specialties: [
       {
         text: "Seamless architectural integration with existing structures",
-        icon: <FaCouch className="text-orange-500" />,
+        icon: <FaCouch className="text-[#ff9326]" />,
       },
       {
         text: "Open-plan living space creation",
-        icon: <FaArrowsAltH className="text-orange-500" />,
+        icon: <FaArrowsAltH className="text-[#ff9326]" />,
       },
       {
         text: "Bi-fold door installations for indoor-outdoor flow",
-        icon: <FaDoorClosed className="text-orange-500" />,
+        icon: <FaDoorClosed className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/basement.jpg",
     icon: <FaBoxOpen className="text-3xl" />,
     slug: "Basement-Construction",
     title: "Basement Construction",
@@ -142,19 +147,20 @@ const service = [
     specialties: [
       {
         text: "Waterproof tanking systems and drainage solutions",
-        icon: <FaShieldAlt className="text-orange-500" />,
+        icon: <FaShieldAlt className="text-[#ff9326]" />,
       },
       {
         text: "Structural underpinning and excavation",
-        icon: <FaTruckMoving className="text-orange-500" />,
+        icon: <FaTruckMoving className="text-[#ff9326]" />,
       },
       {
         text: "Below-ground ventilation and moisture control",
-        icon: <FaWind className="text-orange-500" />,
+        icon: <FaWind className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/bathroom.jpg",
     icon: <FaBath className="text-3xl" />,
     slug: "Bathroom-Installation",
     title: "Bathroom Installation",
@@ -165,19 +171,20 @@ const service = [
     specialties: [
       {
         text: "Wet room installations and waterproofing",
-        icon: <FaTint className="text-orange-500" />,
+        icon: <FaTint className="text-[#ff9326]" />,
       },
       {
         text: "Underfloor heating systems",
-        icon: <FaThermometerHalf className="text-orange-500" />,
+        icon: <FaThermometerHalf className="text-[#ff9326]" />,
       },
       {
         text: "Custom vanity and storage solutions",
-        icon: <FaToolbox className="text-orange-500" />,
+        icon: <FaToolbox className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/kitchen.jpg",
     icon: <FaUtensils className="text-3xl" />,
     slug: "Kitchen-Design",
     title: "Kitchen Design",
@@ -188,19 +195,20 @@ const service = [
     specialties: [
       {
         text: "Custom cabinetry and storage solutions",
-        icon: <FaToolbox className="text-orange-500" />,
+        icon: <FaToolbox className="text-[#ff9326]" />,
       },
       {
         text: "Professional appliance installation and plumbing",
-        icon: <FaTools className="text-orange-500" />,
+        icon: <FaTools className="text-[#ff9326]" />,
       },
       {
         text: "Stone worktops and quality finishes",
-        icon: <FaRulerCombined className="text-orange-500" />,
+        icon: <FaRulerCombined className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/gas.jpg",
     icon: <FaFire className="text-3xl" />,
     slug: "Gas-Safe-Registered-Services",
     title: "Gas Safe Registered Services",
@@ -211,19 +219,20 @@ const service = [
     specialties: [
       {
         text: "Boiler installation and servicing",
-        icon: <FaOilCan className="text-orange-500" />,
+        icon: <FaOilCan className="text-[#ff9326]" />,
       },
       {
         text: "Gas appliance safety certification",
-        icon: <FaGasPump className="text-orange-500" />,
+        icon: <FaGasPump className="text-[#ff9326]" />,
       },
       {
         text: "Emergency gas repair services",
-        icon: <FaExclamationTriangle className="text-orange-500" />,
+        icon: <FaExclamationTriangle className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/wires.jpg",
     icon: <FaBolt className="text-3xl" />,
     slug: "NICEIC-Electrical-Services",
     title: "NICEIC Electrical Services",
@@ -234,19 +243,20 @@ const service = [
     specialties: [
       {
         text: "Full property rewiring and consumer unit upgrades",
-        icon: <FaPlug className="text-orange-500" />,
+        icon: <FaPlug className="text-[#ff9326]" />,
       },
       {
         text: "Periodic inspection and testing with certification",
-        icon: <FaCertificate className="text-orange-500" />,
+        icon: <FaCertificate className="text-[#ff9326]" />,
       },
       {
         text: "Smart home and lighting system installations",
-        icon: <FaLightbulb className="text-orange-500" />,
+        icon: <FaLightbulb className="text-[#ff9326]" />,
       },
     ],
   },
   {
+    image: "/heating.jpg",
     icon: <FaThermometerHalf className="text-3xl" />,
     slug: "Underfloor-Heating-Systems",
     title: "Underfloor Heating Systems",
@@ -257,15 +267,15 @@ const service = [
     specialties: [
       {
         text: "Wet and electric system installations",
-        icon: <FaCogs className="text-orange-500" />,
+        icon: <FaCogs className="text-[#ff9326]" />,
       },
       {
         text: "Thermostat zoning and smart controls",
-        icon: <FaMobileAlt className="text-orange-500" />,
+        icon: <FaMobileAlt className="text-[#ff9326]" />,
       },
       {
         text: "Retrofit solutions for existing properties",
-        icon: <FaRetrofit className="text-orange-500" />,
+        icon: <FaRetrofit className="text-[#ff9326]" />,
       },
     ],
   },

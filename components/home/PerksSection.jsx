@@ -38,11 +38,8 @@ const PerksSection = () => {
 
       {/* main heading */}
 
-      <h2
-        className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10"
-        style={{ fontFamily: "var(--font-montserrat)" }}
-      >
-        Why <span className="text-orange-500">Choose</span> Us{" "}
+      <h2 className={`${currentTheme.headings}`}>
+        Why <span className="text-[#ff9326]">Choose</span> Us{" "}
       </h2>
 
       {/* cards section */}
@@ -53,7 +50,7 @@ const PerksSection = () => {
             className={`p-4 md:p-6 rounded-xl flex flex-col items-center text-center gap-4 ${currentTheme.card} transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2`}
           >
             {/* Icon */}
-            <div className="text-3xl md:text-4xl text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            <div className="text-3xl md:text-4xl text-[#ff9326] group-hover:scale-110 transition-transform duration-300">
               {elem.icon}
             </div>
 
