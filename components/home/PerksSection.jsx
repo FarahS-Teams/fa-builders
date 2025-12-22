@@ -50,20 +50,20 @@ const PerksSection = () => {
         {perks.map((elem, index) => (
           <div
             key={index}
-            className={`p-5 rounded-xl flex flex-col justify-center items-center gap-5 ${currentTheme.card}  transition-all duration-300 group hover:-translate-y-2`}
+            className={`p-4 md:p-6 rounded-xl flex flex-col items-center text-center gap-4 ${currentTheme.card} transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2`}
           >
-            <div className="text-orange-500 group-hover:scale-110 transition-transform duration-300">
+            {/* Icon */}
+            <div className="text-3xl md:text-4xl text-orange-500 group-hover:scale-110 transition-transform duration-300">
               {elem.icon}
             </div>
-            <h4
-              className="font-bold text-4xl"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
+
+            {/* Title */}
+            <h4 className="text-xl md:text-2xl lg:text-3xl font-bold">
               {elem.title}
             </h4>
-            <p className="text-md" style={{ fontFamily: "var(--font-inter)" }}>
-              {elem.desc}
-            </p>
+
+            {/* Description */}
+            <p className="text-sm md:text-base">{elem.desc}</p>
           </div>
         ))}
       </div>
