@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
 
 /* PAGE */
 export default async function ProjectPage({ params }) {
-  const { slug } = await params; // ✅ REQUIRED
+  const { slug } = await params; // REQUIRED
 
   const project = projects.find((p) => p.slug === slug);
   if (!project) return notFound();

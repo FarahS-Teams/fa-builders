@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import Cta from "../Cta";
 
 const ProjectCard = ({ project }) => {
   return (
@@ -39,7 +40,7 @@ const ProjectCard = ({ project }) => {
         {/* CATEGORY BADGE */}
         <div className="absolute top-4 left-4 z-10">
           <span className="px-3 py-1 text-xs font-semibold tracking-wide uppercase rounded-full bg-[#ff9326] text-white shadow-md">
-            {project.category}
+            {project.service}
           </span>
         </div>
 
@@ -60,17 +61,13 @@ const ProjectCard = ({ project }) => {
         <p className="text-sm">{project.location}</p>
 
         {/* VIEW MORE BUTTON */}
-        <Link
-          href={`/projects/${project.slug}`}
-          className="
-            mt-4 inline-block px-6 py-2 text-sm font-semibold
-            border border-[#ff9326] text-[#ff9326]
-            rounded-full transition-all duration-300
-            hover:bg-[#ff9326] hover:text-white hover:shadow-lg
-          "
-        >
-          View Project
-        </Link>
+        <div className="mt-6">
+          <Cta
+            text="View Project Details"
+            path={`/projects/${project.slug}`}
+            variant="secondary"
+          />
+        </div>
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { useContext } from "react";
 import themeContext from "@/app/context/themeContext";
+import Badge from "../Badge";
 
 export default function Leadership() {
   const context = useContext(themeContext);
@@ -19,11 +20,9 @@ export default function Leadership() {
     <section className={`${currentTheme.background} ${currentTheme.text}`}>
       <div className="w-full flex flex-col justify-evenly gap-6 px-6 md:px-12 mb-20 mt-10">
         {/* Section Title */}
-        <div className="mb-4 px-2 md:px-0 flex flex-col md:w-1/2 text-center md:text-left">
-          <p className="text-[#ff9326] mb-2">Leadership</p>
+        <div className="mb-4 px-2 md:px-0 flex flex-col justify-center items-center  text-center md:text-left">
+          <Badge text="Our Leadership" />
           <h2 className="text-3xl md:text-4xl font-bold">Meet Our Director</h2>
-          <div className="w-24 h-[2px] bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
-
           <p className="mt-4 max-w-xl">
             FA Builders Ltd. is led by experienced professionals committed to
             delivering quality, integrity, and reliable construction services

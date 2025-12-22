@@ -4,6 +4,7 @@ import projects from "@/app/data/projects";
 import themeContext from "@/app/context/themeContext";
 import ProjectCard from "./ProjectsCard";
 import ProjectFilters from "./ProjectFilters";
+import Badge from "../Badge";
 
 export default function ProjectsGrid() {
   const context = useContext(themeContext);
@@ -32,10 +33,9 @@ export default function ProjectsGrid() {
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
-        <div className="mb-12 text-center md:text-left md:w-1/2">
-          <p className="text-[#ff9326] mb-2">Portfolio</p>
+        <div className="mb-12 flex flex-col items-center justify-center">
+          <Badge text="Our Portfolio" />
           <h2 className="text-3xl md:text-4xl font-bold">Our Projects</h2>
-          <div className="w-24 h-[2px] bg-[#ff9326] mt-3 rounded-full mx-auto md:mx-0"></div>
         </div>
 
         {/* FILTERS */}

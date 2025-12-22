@@ -3,14 +3,13 @@ import Image from "next/image";
 import { useContext } from "react";
 import themeContext from "../../app/context/themeContext";
 import Cta from "../Cta";
+import Badge from "../Badge";
 
 const AboutStory = () => {
   const context = useContext(themeContext);
-
   if (!context) {
-    throw new Error("Hero Section must be used within a ThemeContextProvider");
+    throw new Error("About Section must be used within a ThemeContextProvider");
   }
-
   const { currentTheme } = context;
 
   return (
@@ -22,6 +21,9 @@ const AboutStory = () => {
       <div className="absolute top-0 left-0 w-64 h-64 bg-[#ff9326]/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#ff7b00]/10 rounded-full blur-3xl"></div>
 
+      <div className="flex items-center justify-center">
+        <Badge text="Our Story" />
+      </div>
       {/* Wrapper */}
       <div
         className="
@@ -30,19 +32,15 @@ const AboutStory = () => {
                 items-center md:items-start
                 justify-between
                 gap-10 md:gap-14 lg:gap-16
-                mt-10
             "
       >
         {/* Text Section */}
         <div className="flex flex-col md:w-1/2 text-center md:text-left z-10">
-          <p className="text-[#ff9326] mb-2 tracking-wider text-sm sm:text-base">
+          {/* <p className="text-[#ff9326] mb-2 tracking-wider text-sm sm:text-base">
             History
-          </p>
+          </p> */}
 
           <h2 className="text-3xl sm:text-4xl font-bold">FA Builders Story</h2>
-
-          <div className="w-24 h-[2px] bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
-
           <p className="py-4 mt-4 text-base sm:text-lg drop-shadow-md leading-relaxed">
             Founded in 2025, FA Builders Ltd. has grown from a small
             construction firm into one of London’s most trusted building
