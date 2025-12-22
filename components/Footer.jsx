@@ -21,12 +21,15 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "New Build", href: "/services/residential" },
-        { name: "Complete Renovation", href: "/services/commercial" },
-        { name: "Loft Conversion", href: "/services/renovation" },
-        { name: "Extension", href: "/services/design" },
-        { name: "Gas Safe Registered", href: "/services/management" },
-        { name: "NICEIC", href: "/services/management" },
+        { name: "New Build", href: "/services/New-Build-Construction" },
+        { name: "Complete Renovation", href: "/services/Complete-Renovation" },
+        { name: "Loft Conversion", href: "/services/Loft-Conversion" },
+        { name: "Extension", href: "/services/Property-Extension" },
+        {
+          name: "Gas Safe Registered",
+          href: "/services/Gas-Safe-Registered-Services",
+        },
+        { name: "NICEIC", href: "/services/NICEIC-Electrical-Services" },
       ],
     },
     {
@@ -34,7 +37,7 @@ const Footer = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Projects", href: "/projects" },
-        { name: "Testimonials", href: "/testimonials" },
+        { name: "Testimonials", href: "/#testimonials" },
       ],
     },
     {
@@ -75,7 +78,7 @@ const Footer = () => {
     },
     {
       icon: FaFacebookF,
-      href: "https://www.instagram.com/fabuildersltd?igsh=azg2OGc1MmlvdGZ6&utm_source=qr",
+      href: "https://www.facebook.com/share/1FeXdKT8s5/?mibextid=wwXIfr",
     },
   ];
 
@@ -92,7 +95,7 @@ const Footer = () => {
       className={`${currentTheme.background} ${currentTheme.text} w-full overflow-hidden border-t-4 border-[#ff9326]`}
     >
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16 pb-2 lg:pb-4">
         {/*Logo and Links */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Company Info*/}
@@ -171,7 +174,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section - Social Links and Copyright */}
-        <div className="pt-8 border-t border-gray-700">
+        <div className="pt-4 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Social Links */}
             <div className="flex items-center gap-4">
