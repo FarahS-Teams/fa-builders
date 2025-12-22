@@ -15,3 +15,11 @@
   --primary: #0a1221;
   --secondary: #ff9326;
 }
+
+h2 {
+  font-family: Montserrat;
+}
+
+* {
+  font-family: inter;
+}

@@ -34,21 +34,17 @@ const CTASection = () => {
           <Badge text={"Limited Slots Avaiable"} />
 
           {/* Main Heading */}
-          <h2
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6"
-            style={{ fontFamily: "var(--font-montserrat)" }}
-          >
-            Ready to Build Your <span className="text-orange-500">Dream</span>{" "}
+          <h2 className={`${currentTheme.headings}`}>
+            Ready to Build Your <span className="text-[#ff9326">Dream</span>{" "}
             Space?
           </h2>
 
           {/* Subheading */}
           <p
             className={`${currentTheme.text} text-lg md:text-xl max-w-2xl mx-auto mb-8`}
-            style={{ fontFamily: "var(--font-inter)" }}
           >
             Get a{" "}
-            <span className="font-bold text-orange-500">free consultation</span>{" "}
+            <span className="font-bold text-[#ff9326]">free consultation</span>{" "}
             and detailed quote. No obligation, just expert advice from London's
             top construction team.
           </p>
@@ -57,13 +53,8 @@ const CTASection = () => {
           <div className="flex flex-wrap justify-center gap-6 mb-10">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-2">
-                <span className="text-orange-500">{benefit.icon}</span>
-                <span
-                  className="font-medium"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {benefit.text}
-                </span>
+                <span className="text-[#ff9326]">{benefit.icon}</span>
+                <span className="font-medium">{benefit.text}</span>
               </div>
             ))}
           </div>
@@ -83,7 +74,7 @@ const CTASection = () => {
           </div>
 
           {/* Guarantee */}
-          <div className="text-sm" style={{ fontFamily: "var(--font-inter)" }}>
+          <div className="text-sm">
             ⭐ 100% Satisfaction Guarantee | ⏱️ Response within 24 hours
           </div>
         </div>
