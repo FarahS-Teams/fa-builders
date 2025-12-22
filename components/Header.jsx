@@ -45,7 +45,7 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo  */}
-        <div className="flex items-center gap-3">
+        <Link className="flex items-center gap-3" href={"/"}>
           <div className="flex items-center gap-3">
             <Image
               src={theme === "dark" ? logo_dark : logo_light}
@@ -67,7 +67,7 @@ const Header = () => {
             </p>
             <p className="text-sm font-bold">EXCELLENCE.</p>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 px-8 py-3">
