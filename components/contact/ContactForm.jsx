@@ -77,7 +77,7 @@ const ContactForm = () => {
                 id="first-name"
                 autoComplete="given-name"
                 required
-                className={`mt-1 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
               />
             </div>
             <div>
@@ -88,7 +88,7 @@ const ContactForm = () => {
                 id="last-name"
                 autoComplete="family-name"
                 required
-                className={`mt-1 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
               />
             </div>
           </div>
@@ -100,7 +100,7 @@ const ContactForm = () => {
               id="email"
               required
               autoComplete="email"
-              className={`mt-1 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
             />
           </div>
           <div>
@@ -111,14 +111,14 @@ const ContactForm = () => {
               id="phone"
               autoComplete="tel"
               required
-              className={`mt-1 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
             />
           </div>
           <div>
             <Label htmlFor="service">Services</Label>
             <Select name="service" id="service" required>
               <SelectTrigger
-                className={`w-full mt-1 px-4 py-3 rounded-lg ${currentTheme.card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary`}
+                className={`w-full mt-3 px-4 py-3 rounded-lg ${currentTheme.card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary`}
               >
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
@@ -150,7 +150,7 @@ const ContactForm = () => {
               id="message"
               rows="5"
               required
-              className={`mt-1 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
             ></textarea>
           </div>
           <div className="text-center">
