@@ -6,7 +6,26 @@ import themeContext from "@/app/context/themeContext";
 import Badge from "../Badge";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Globe, Rocket, Briefcase, Smartphone } from "lucide-react";
+
+const StatCounter = ({ from, to, duration }) => {
+  const [count, setCount] = useState(from);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return; // Only start when in view
+
+    const start = performance.now();
+    const animate = (time) => {
+      const progress = Math.min((time - start) / (duration * 1000), 1);
+      setCount(Math.floor(progress * (to - from) + from));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+  }, [from, to, duration, isInView]);
+
+  return <span ref={ref}>{count}</span>;
+};
 
 const statsData = [
   {
@@ -35,77 +54,6 @@ const statsData = [
   },
 ];
 
-const StatCounter = ({ from, to, duration }) => {
-  const [count, setCount] = useState(from);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!isInView) return; // Only start when in view
-
-    const start = performance.now();
-    const animate = (time) => {
-      const progress = Math.min((time - start) / (duration * 1000), 1);
-      setCount(Math.floor(progress * (to - from) + from));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-    requestAnimationFrame(animate);
-  }, [from, to, duration, isInView]);
-
-  return <span ref={ref}>{count}</span>;
-};
-
-const ProgressCircle = ({ value, suffix }) => {
-  const radius = 62;
-  const circumference = 2 * Math.PI * radius;
-
-  return (
-    <div className="relative w-24 h-24 flex items-center justify-center">
-      <svg
-        className="absolute rotate-[-90deg] mx-auto block"
-        width="140"
-        height="140"
-      >
-        {/* Background circle */}
-        <circle
-          cx="70"
-          cy="70"
-          r={radius}
-          stroke="#ff9326"
-          strokeOpacity="0.2"
-          strokeWidth="4"
-          fill="transparent"
-        />
-
-        {/* Animated progress circle */}
-        <motion.circle
-          cx="70"
-          cy="70"
-          r={radius}
-          stroke="#ff9326"
-          strokeWidth="4"
-          fill="transparent"
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          initial={{ strokeDashoffset: circumference }}
-          whileInView={{ strokeDashoffset: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        />
-      </svg>
-
-      {/* Number inside */}
-      <h2
-        className="text-3xl font-extrabold text-[#ff9326] z-10"
-        style={{ fontFamily: "var(--font-Montserrat)" }}
-      >
-        <StatCounter from={0} to={value} duration={2} />
-        {suffix}
-      </h2>
-    </div>
-  );
-};
-
 export default function Stats() {
   const context = useContext(themeContext);
   if (!context) {
@@ -115,58 +63,39 @@ export default function Stats() {
   const { currentTheme } = context;
 
   return (
-    <section
-      className={`${currentTheme.background} ${currentTheme.text}  w-full relative overflow-hidden
-                 px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
-    >
-      {/* Section Title */}
-      <div className="flex flex-col items-center text-center mb-4">
-        <Badge text={"Our Stats"} className="mb-12" />
-        <h2
-          className={`${currentTheme.headings}`}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Our <span className="text-[#ff9326]">Excellence </span>
-        </h2>
-      </div>
+    <section className={`${currentTheme.background} ${currentTheme.text}`}>
+      <div className="w-full flex flex-col gap-12 px-6 mb-20 mt-10">
+        {/* Section Title */}
+        <div className="flex flex-col items-center text-center">
+          <Badge text="Our Stats" />
+          <h2 className="text-3xl md:text-4xl font-bold">Our Excellence</h2>
+        </div>
 
-      {/* Stats Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
-        {statsData.map(({ value, suffix, label, delay }) => (
-          <motion.div
-            key={label}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1, delay }}
-            className={`${currentTheme.card} relative
-  px-2 py-2
-  sm:px-6 sm:py-9
-  md:px-8 md:py-10
-  flex flex-col
-  items-center
-  justify-between
-  gap-4 sm:gap-5 md:gap-6
-  rounded-xl
-  h-full
-  w-full
-  hover:-translate-y-3
-  transition-all duration-300 ease-in`}
-          >
-            {/* Animated Circle */}
-            <div className="flex items-center justify-center w-full">
-              <ProgressCircle value={value} suffix={suffix} />
-            </div>
-
-            {/* Label */}
-            <p
-              className="text-md sm:text-base text-center"
-              style={{ fontFamily: "var(--font-inter)" }}
+        {/* Stats Cards */}
+        <div className="flex flex-col md:flex-row gap-8 px-6">
+          {statsData.map(({ value, suffix, label, delay }) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 1, delay }}
+              className="flex-1 min-w-[220px] max-w-[300px]
+             p-8 bg-white/10
+             border-t-4 border-r-2 border-b-2 border-l-2 border-[#ff9326]
+             rounded-xl shadow-lg
+             backdrop-blur-md
+             hover:scale-105 transition
+             basis-full sm:basis-1/2 md:basis-1/2"
             >
-              {label}
-            </p>
-          </motion.div>
-        ))}
+              <h2 className="text-4xl font-extrabold text-[#ff9326]">
+                <StatCounter from={0} to={value} duration={2} />
+                {suffix}
+              </h2>
+              <p className="mt-2 font-medium">{label}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

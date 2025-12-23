@@ -42,8 +42,8 @@ const Hero = ({
         <div className="text-center max-w-3xl">
           {/* Heading */}
           <h1
-            className={`${currentTheme.headings} text-[#ffffff]`}
-            style={{ fontFamily: "var(--font-Montserrat)" }}
+            className="sm:mt-10 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 
+                         font-bold text-white leading-tight tracking-tight"
           >
             {title.replace(highlight, "")}
             <span className="text-[#ff9326]"> {highlight}</span>
@@ -54,8 +54,7 @@ const Hero = ({
             <p
               className="mt-3 sm:mt-4 md:mt-5
                          text-sm sm:text-base md:text-lg lg:text-xl
-                         text-gray-200 leading-relaxed mb-6"
-              style={{ fontFamily: "var(--font-inter)" }}
+                         text-gray-200 leading-relaxed"
             >
               {description}
             </p>

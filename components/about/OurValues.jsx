@@ -43,10 +43,10 @@ const cardVariants = {
 const OurValues = () => {
   const context = useContext(themeContext);
   if (!context) {
-    throw new Error("Section must be used within ThemeProvider");
+    throw new Error("Hero Section must be used within ThemeProvider");
   }
 
-  const { theme, currentTheme } = context;
+  const { currentTheme } = context;
 
   return (
     <section
@@ -55,14 +55,9 @@ const OurValues = () => {
                  px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
     >
       {/* Section Header */}
-      <div className="flex flex-col items-center text-center mb-4">
-        <Badge text={"Our Values"} />
-        <h2
-          className={`${currentTheme.headings}`}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Our <span className="text-[#ff9326]">Values </span>
-        </h2>
+      <div className="flex flex-col items-center text-center mb-12">
+        <Badge text="Our Values" />
+        <h2 className="text-3xl sm:text-4xl font-bold">Our Values</h2>
       </div>
 
       {/* Cards */}
@@ -75,20 +70,16 @@ const OurValues = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className={`${currentTheme.card} px-8 py-4 flex-1 flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+            className="flex-1 bg-white/10
+                         border border-[#ff9326]/40
+                         p-6 sm:p-8 rounded-xl shadow-lg
+                         backdrop-blur-md
+                         hover:scale-105 hover:border-[#ff9326]
+                         transition"
           >
             <Icon size={50} className="text-[#ff9326] mb-4" />
-            <h2
-              className="text-3xl font-semibold text-center"
-              style={{ fontFamily: "var(--font-montserrat)" }}
-            >
-              {title}
-            </h2>
-            {/* Content */}
-            <p
-              className="text-md sm:text-base text-center"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
+            <h3 className="text-2xl font-semibold mb-3">{title}</h3>
+            <p className="text-base sm:text-lg leading-relaxed">
               {description}
             </p>
           </motion.div>

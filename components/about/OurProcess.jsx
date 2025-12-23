@@ -24,14 +24,14 @@ const processSteps = [
   },
   {
     step: "03",
-    title: "Construction & Build",
+    title: "Construction",
     description:
       "Skilled builders execute the project with precision and high-quality workmanship.",
     icon: Building2,
   },
   {
     step: "04",
-    title: "Completion & Handover",
+    title: "Final Handover",
     description:
       "We inspect every detail and deliver a result that’s completed to perfection.",
     icon: BadgeCheck,
@@ -58,91 +58,60 @@ const OurProcess = () => {
   const { currentTheme } = context;
 
   return (
-    <section
-      className={`${currentTheme.background} ${currentTheme.text}
-    w-full relative overflow-hidden px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
-    >
-      {/* Section Title */}
-      <div className="flex flex-col items-center text-center mb-4">
-        <Badge text={"Our Process"} className="mb-12" />
-        <h2
-          className={`${currentTheme.headings}`}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Checkout Our <span className="text-[#ff9326]">Process</span>
-        </h2>
-        <p
-          className="text-lg leading-relaxed mb-6 text-center"
-          style={{ fontFamily: "var(--font-inter)" }}
-        >
-          We know your time is valuable, We care
-        </p>
-      </div>
+    <section className={`${currentTheme.background} ${currentTheme.text}`}>
+      <div className="w-full flex flex-col gap-12 px-6 md:px-10 mb-20 mt-10">
+        {/* Section Title */}
+        <div className="flex flex-col items-center text-center">
+          <Badge text="Our Process" />
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Checkout How We Work
+          </h2>
+          <p className="mt-4 max-w-xl">We know your time is valuable</p>
+        </div>
 
-      {/* Process Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
-        {processSteps.map(({ step, title, description, icon: Icon }, index) => (
-          <motion.div
-            key={step}
-            custom={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className={`${currentTheme.card}
-  relative
-  px-5 py-8
-  sm:px-6 sm:py-9
-  md:px-8 md:py-10
-  flex flex-col
-  items-center
-  justify-between
-  gap-4 sm:gap-5 md:gap-6
-  rounded-xl
-  h-full
-  w-full
-  hover:-translate-y-3
-  transition-all duration-300 ease-in`}
-          >
-            {/* Step Number */}
-            <div
-              className="absolute -top-4 sm:-top-5
-                     left-1/2 -translate-x-1/2
-                     w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14
-                     flex items-center justify-center
-                     bg-[#ff9326] text-white rounded-full
-                     text-sm sm:text-lg md:text-xl
-                     font-bold shadow-lg"
-            >
-              {step}
-            </div>
-
-            {/* Icon + Title */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
-              <Icon size={28} className="text-[#ff9326] sm:hidden" />
-              <Icon size={40} className="text-[#ff9326] hidden sm:block" />
-              <h2
-                className="text-3xl font-semibold text-center"
-                style={{ fontFamily: "var(--font-montserrat)" }}
+        {/* Process Cards */}
+        <div className="flex flex-col md:flex-row gap-8">
+          {processSteps.map(
+            ({ step, title, description, icon: Icon }, index) => (
+              <motion.div
+                key={step}
+                custom={index}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className="relative flex-1 bg-white/10
+                           border border-[#ff9326]/40
+                           p-8 pt-12 rounded-xl
+                           shadow-lg backdrop-blur-md
+                           hover:scale-105 hover:border-[#ff9326]
+                           transition"
               >
-                {title}
-              </h2>
-            </div>
+                {/* Step Number */}
+                <div
+                  className="absolute -top-5 left-1/2 -translate-x-1/2
+                             w-14 h-14 flex items-center justify-center
+                             bg-[#ff9326] text-white rounded-full
+                             text-xl font-bold shadow-lg"
+                >
+                  {step}
+                </div>
 
-            {/* Content */}
-            <p
-              className="text-md sm:text-base text-center"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {description}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+                {/* Icon */}
+                <Icon size={50} className="text-[#ff9326] mb-4" />
 
-      {/* CTA */}
-      <div className="flex items-center justify-center mt-10">
-        <Cta text="Build with us" path="/contact" variant="secondary" />
+                {/* Content */}
+                <h3 className="text-2xl font-semibold mb-3">{title}</h3>
+                <p>{description}</p>
+              </motion.div>
+            ),
+          )}
+        </div>
+
+        {/* CTA */}
+        <div className="flex justify-center mt-4">
+          <Cta text="Build with us" path="/contact" variant="secondary" />
+        </div>
       </div>
     </section>
   );

@@ -17,10 +17,13 @@ const AboutStory = () => {
       className={`${currentTheme.background} ${currentTheme.text} 
             relative w-full px-4 sm:px-6 lg:px-12 py-16 md:py-20 overflow-hidden`}
     >
-      <div className="flex items-center justify-center">
-        <Badge text={"Our Story"} className="mb-4" />
-      </div>
+      {/* Background Shapes */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-[#ff9326]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-[#ff7b00]/10 rounded-full blur-3xl"></div>
 
+      <div className="flex items-center justify-center">
+        <Badge text="Our Story" />
+      </div>
       {/* Wrapper */}
       <div
         className="
@@ -33,61 +36,53 @@ const AboutStory = () => {
       >
         {/* Text Section */}
         <div className="flex flex-col md:w-1/2 text-center md:text-left z-10">
-          <h2
-            className={currentTheme.headings}
-            style={{ fontFamily: "var(--font-Montserrat)" }}
-          >
-            FA Builders <span className="text-[#ff9326]">Story </span>
-          </h2>
-          <p
-            className="text-lg leading-relaxed mb-6"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
+          {/* <p className="text-[#ff9326] mb-2 tracking-wider text-sm sm:text-base">
+            History
+          </p> */}
+
+          <h2 className="text-3xl sm:text-4xl font-bold">FA Builders Story</h2>
+          <p className="py-4 mt-4 text-base sm:text-lg drop-shadow-md leading-relaxed">
             Founded in 2025, FA Builders Ltd. has grown from a small
             construction firm into one of London’s most trusted building
             companies. We specialize in creating modern, sustainable, and
             high-quality spaces.
           </p>
 
-          <p
-            className="text-lg leading-relaxed mb-6"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
+          <p className="text-base sm:text-lg drop-shadow-md mb-4 leading-relaxed">
             Every project reflects our commitment to craftsmanship, safety, and
             client satisfaction—building trust and shaping communities across
             London.
           </p>
+
+          <div className="relative group mt-4 mx-auto md:mx-0">
+            <Cta text={"View Our Projects"} path={"/projects"} />
+          </div>
         </div>
 
         {/* Image Section */}
-        <div className="relative">
-          <div className="absolute -inset-4 bg-linear-to-r from-orange-500/20 to-amber-500/20 rounded-3xl blur-xl opacity-50"></div>
-          <div
-            className={`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-orange-500/20 shadow-2xl`}
-          >
-            <Image
-              src="/about-story.jpg"
-              alt="FA Builders Construction Project"
-              width={600}
-              height={600}
-              className="w-full h-auto object-cover"
-            />
-          </div>
+        <div className="md:w-1/2 flex justify-center md:justify-end z-10">
+          <Image
+            src="/about-story.jpg"
+            alt="Construction Background"
+            width={600}
+            height={450}
+            priority
+            className="
+                            object-cover rounded-md
+                            w-full max-w-[440px] sm:max-w-[500px] md:max-w-[580px] lg:max-w-[600px]
+                            shadow-lg shadow-black/40
+                            border border-white/10
+                        "
+          />
         </div>
-      </div>
-      {/* CTA Button */}
-      <div className="flex items-center justify-center mt-10">
-        <Cta
-          text={"View Our Projects"}
-          path={"/projects"}
-          variant="secondary"
-        />
       </div>
     </section>
   );
 };
 
 export default AboutStory;
+
+// "use client";
 // import Image from "next/image";
 // import { FaBars } from "react-icons/fa6";
 // import ThemeToggleButton from "../ThemeToggleButton";
