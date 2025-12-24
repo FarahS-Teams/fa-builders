@@ -77,6 +77,77 @@ const ProgressCircle = ({ value, suffix }) => {
   );
 };
 
+const StatCounter = ({ from, to, duration }) => {
+  const [count, setCount] = useState(from);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!isInView) return; // Only start when in view
+
+    const start = performance.now();
+    const animate = (time) => {
+      const progress = Math.min((time - start) / (duration * 1000), 1);
+      setCount(Math.floor(progress * (to - from) + from));
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+    requestAnimationFrame(animate);
+  }, [from, to, duration, isInView]);
+
+  return <span ref={ref}>{count}</span>;
+};
+
+const ProgressCircle = ({ value, suffix }) => {
+  const radius = 62;
+  const circumference = 2 * Math.PI * radius;
+
+  return (
+    <div className="relative w-24 h-24 flex items-center justify-center">
+      <svg
+        className="absolute rotate-[-90deg] mx-auto block"
+        width="140"
+        height="140"
+      >
+        {/* Background circle */}
+        <circle
+          cx="70"
+          cy="70"
+          r={radius}
+          stroke="#ff9326"
+          strokeOpacity="0.2"
+          strokeWidth="4"
+          fill="transparent"
+        />
+
+        {/* Animated progress circle */}
+        <motion.circle
+          cx="70"
+          cy="70"
+          r={radius}
+          stroke="#ff9326"
+          strokeWidth="4"
+          fill="transparent"
+          strokeLinecap="round"
+          strokeDasharray={circumference}
+          initial={{ strokeDashoffset: circumference }}
+          whileInView={{ strokeDashoffset: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2, ease: "easeInOut" }}
+        />
+      </svg>
+
+      {/* Number inside */}
+      <h2
+        className="text-3xl font-extrabold text-[#ff9326] z-10"
+        style={{ fontFamily: "var(--font-Montserrat)" }}
+      >
+        <StatCounter from={0} to={value} duration={2} />
+        {suffix}
+      </h2>
+    </div>
+  );
+};
+
 export default function Stats() {
   const context = useContext(themeContext);
   if (!context)

@@ -44,7 +44,7 @@ const OurValues = () => {
   const context = useContext(themeContext);
   if (!context) throw new Error("Section must be used within ThemeProvider");
 
-  const { currentTheme } = context;
+  const { theme, currentTheme } = context;
 
   return (
     <section
