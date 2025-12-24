@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useState } from "react";
+import { useContext, useState, useMemo } from "react";
 import projects from "@/app/data/projects";
 import themeContext from "@/app/context/themeContext";
 import ProjectCard from "./ProjectsCard";
@@ -11,50 +11,229 @@ export default function ProjectsGrid() {
   if (!context) throw new Error("Theme provider missing");
   const { currentTheme } = context;
 
-  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const [categoryFilter, setCategoryFilter] = useState("All");
+  const [serviceFilter, setServiceFilter] = useState("All");
+
+  const filteredProjects = useMemo(() => {
+    let data = [...projects];
+
+    if (categoryFilter !== "All") {
+      data = data.filter((p) => p.category === categoryFilter);
+    }
+
+    if (serviceFilter !== "All") {
+      data = data.filter((p) => p.service === serviceFilter);
+    }
+
+    return data;
+  }, [categoryFilter, serviceFilter]);
 
   const handleFilter = (category, service) => {
-    let data = projects;
+    setCategoryFilter(category);
+    setServiceFilter(service);
+  };
 
-    if (category !== "All") {
-      data = data.filter((p) => p.category === category);
-    }
-
-    if (service !== "All") {
-      data = data.filter((p) => p.service === service);
-    }
-
-    setFilteredProjects(data);
+  // Reset to "All" filters
+  const resetFilters = () => {
+    setCategoryFilter("All");
+    setServiceFilter("All");
   };
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} py-20`}
+      className={`${currentTheme.background} ${currentTheme.text} py-12 sm:py-16 lg:py-20`}
+      id="portfolio"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
-        <div className="mb-12 flex flex-col items-center justify-center">
-          <Badge text="Our Portfolio" />
-          <h2 className="text-3xl md:text-4xl font-bold">Our Projects</h2>
+        <div className="mb-10 sm:mb-12 lg:mb-16 text-center">
+          <div className="mb-4">
+            <Badge text="Our Portfolio" />
+          </div>
+
+          <h2
+            className={currentTheme.headings}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Our <span className="text-[#ff9326]">Projects</span>
+          </h2>
+
+          <p
+            className={`text-lg leading-relaxed mb-6 text-center ${currentTheme.text} max-w-2xl mx-auto`}
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            Explore our completed construction projects showcasing quality
+            workmanship and attention to detail
+          </p>
         </div>
 
-        {/* FILTERS */}
-        <ProjectFilters onFilter={handleFilter} />
+        {/* PROJECTS COUNTER & INFO */}
+        <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div>
+            <p
+              className="text-sm sm:text-base font-medium"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              Showing{" "}
+              <span className="text-[#ff9326] font-bold">
+                {filteredProjects.length}
+              </span>
+              {filteredProjects.length === 1 ? " project" : " projects"}
+              {(categoryFilter !== "All" || serviceFilter !== "All") && (
+                <span className="ml-2">
+                  in {categoryFilter !== "All" ? categoryFilter : ""}
+                  {categoryFilter !== "All" && serviceFilter !== "All"
+                    ? " • "
+                    : ""}
+                  {serviceFilter !== "All" ? serviceFilter : ""}
+                </span>
+              )}
+            </p>
+          </div>
 
-        {/* MASONRY GRID */}
-        <div
-          className="
-        columns-1 sm:columns-2 lg:columns-3 gap-6
-        [column-fill:_balance]
-      "
-        >
-          {filteredProjects.map((project) => (
-            <div key={project.slug} className="mb-6 break-inside-avoid">
-              <ProjectCard project={project} />
+          {/* RESET BUTTON - Show only when filters are active */}
+          {(categoryFilter !== "All" || serviceFilter !== "All") && (
+            <button
+              onClick={resetFilters}
+              className="text-sm text-[#ff9326] hover:underline"
+              style={{ fontFamily: "var(--font-inter)" }}
+              aria-label="Reset all filters"
+            >
+              Reset Filters
+            </button>
+          )}
+        </div>
+
+        {/* FILTERS - Pass current filter state */}
+        <div className="mb-8 sm:mb-10 lg:mb-12">
+          <ProjectFilters
+            onFilter={handleFilter}
+            activeCategory={categoryFilter}
+            activeService={serviceFilter}
+          />
+        </div>
+
+        {/* PROJECTS GRID */}
+        <div className="relative min-h-[300px]">
+          {filteredProjects.length > 0 ? (
+            <div
+              className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+              role="list"
+              aria-label="Construction projects portfolio"
+            >
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.slug}
+                  className="break-inside-avoid"
+                  role="listitem"
+                >
+                  <ProjectCard project={project} />
+                </div>
+              ))}
             </div>
-          ))}
+          ) : (
+            // EMPTY STATE - Use resetFilters instead of handleFilter
+            <div className="text-center py-10 sm:py-14 lg:py-16 bg-white/5 rounded-2xl border border-dashed border-[#ff9326]/30">
+              <div className="text-5xl sm:text-6xl mb-4 opacity-50">🏗️</div>
+              <h3
+                className={`text-xl sm:text-2xl font-semibold mb-3 ${currentTheme.headings}`}
+                style={{ fontFamily: "var(--font-montserrat)" }}
+              >
+                No projects found
+              </h3>
+              <p
+                className="text-base sm:text-lg opacity-70 mb-6 max-w-md mx-auto"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                We don't have any projects matching your current filters.
+              </p>
+              <button
+                onClick={resetFilters}
+                className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base font-semibold \
+   bg-linear-to-r from-[#ff9326] to-amber-500 \
+   hover:from-[#ff9326] hover:to-amber-600 \
+   text-white rounded-lg shadow-lg hover:shadow-xl \
+   transition-all duration-300 transform hover:scale-105"
+                aria-label="Reset filters to view all projects"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                View All Projects
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
   );
 }
+
+// "use client";
+// import { useContext, useState } from "react";
+// import projects from "@/app/data/projects";
+// import themeContext from "@/app/context/themeContext";
+// import ProjectCard from "./ProjectsCard";
+// import ProjectFilters from "./ProjectFilters";
+// import Badge from "../Badge";
+
+// export default function ProjectsGrid() {
+//   const context = useContext(themeContext);
+//   if (!context) throw new Error("Theme provider missing");
+//   const { currentTheme } = context;
+
+//   const [filteredProjects, setFilteredProjects] = useState(projects);
+
+//   const handleFilter = (category, service) => {
+//     let data = projects;
+
+//     if (category !== "All") {
+//       data = data.filter((p) => p.category === category);
+//     }
+
+//     if (service !== "All") {
+//       data = data.filter((p) => p.service === service);
+//     }
+
+//     setFilteredProjects(data);
+//   };
+
+//   return (
+//     <section
+//       className={`${currentTheme.background} ${currentTheme.text} py-20`}
+//     >
+//       <div className="max-w-7xl mx-auto px-6">
+//         {/* HEADER */}
+//         <div className="mb-12 flex flex-col items-center justify-center">
+//           <Badge text={"Our Portfolio"} />
+//           {/* main hiading */}
+//           <h2 className={`${currentTheme.headings}`}>
+//             Our{" "}<span className="text-[#ff9326]">Projects</span>
+//           </h2>
+//         </div>
+
+//         {/* FILTERS */}
+//         <ProjectFilters onFilter={handleFilter} />
+
+//         {/* MASONRY GRID */}
+//         <div
+//           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
+//         >
+//           {filteredProjects.map((project) => (
+//             <div key={project.slug} className="mb-6 break-inside-avoid">
+//               <ProjectCard project={project} />
+//             </div>
+//           ))}
+//           {/* {filteredProjects.length === 0 && (
+//             <div className="text-center py-12">
+//               <div className="text-4xl mb-4">🏗️</div>
+//               <h3 className="text-xl font-semibold mb-2">No projects found</h3>
+//               <p className="text-gray-600 mb-4">
+//                 We don't have any projects in the category yet.
+//               </p>
+//             </div>
+//           )} */}
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }

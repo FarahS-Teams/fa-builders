@@ -1,75 +1,127 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { useContext, useState } from "react";
+import { motion } from "framer-motion";
 import Cta from "../Cta";
+import themeContext from "@/app/context/themeContext";
 
-const ProjectCard = ({ project }) => {
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const ProjectCard = ({ project, index }) => {
+  const context = useContext(themeContext);
+  if (!context) throw new Error("Theme provider missing");
+  const { currentTheme } = context;
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-[#ff9326]/40 bg-white/10 backdrop-blur-md shadow-lg transition-all hover:shadow-2xl">
-      {/* IMAGE WRAPPER */}
-      <div className="relative w-full h-56 sm:h-64 overflow-hidden rounded-t-2xl">
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1 }}
+      className="h-full"
+    >
+      <div
+        className={`
+          ${currentTheme.background} ${currentTheme.text}
+          ${currentTheme.card}
+          group relative overflow-hidden
+          rounded-2xl border border-[#ff9326]/40
+          backdrop-blur-md shadow-lg
+          transition-all hover:shadow-2xl
+          flex flex-col h-full
+        `}
+      >
         {/* IMAGE */}
-        <Image
-          src={project.heroImage}
-          alt={project.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+        <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl">
+          {/* Skeleton */}
+          {!imageLoaded && (
+            <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
+          )}
 
-        {/* DIAGONAL LONDON OVERLAY */}
-        <div
-          className="
-            absolute inset-0
-            bg-gradient-to-tr from-black/70 via-black/40 to-transparent
-            opacity-0 group-hover:opacity-100
-            transition duration-500
-          "
-        />
-
-        {/* DIAGONAL ORANGE STRIPE */}
-        <div
-          className="
-            absolute -bottom-20 -left-20 w-[150%] h-24
-            bg-[#ff9326]/90
-            rotate-[-12deg]
-            opacity-0 group-hover:opacity-100
-            transition duration-500
-          "
-        />
-
-        {/* CATEGORY BADGE */}
-        <div className="absolute top-4 left-4 z-10">
-          <span className="px-3 py-1 text-xs font-semibold tracking-wide uppercase rounded-full bg-[#ff9326] text-white shadow-md">
-            {project.service}
-          </span>
-        </div>
-
-        {/* CENTER HOVER TEXT */}
-        <div className="absolute inset-0 flex items-center justify-center z-10 opacity-0 group-hover:opacity-100 transition duration-300">
-          <span className="text-white text-sm tracking-widest uppercase">
-            {project.title}
-          </span>
-        </div>
-      </div>
-
-      {/* CONTENT */}
-      <div className="p-5 text-center flex flex-col gap-2 relative z-10">
-        <h3 className="text-lg font-semibold">{project.title}</h3>
-        <span className="px-3 py-1 text-xs rounded-full">
-          {project.service}
-        </span>
-        <p className="text-sm">{project.location}</p>
-
-        {/* VIEW MORE BUTTON */}
-        <div className="mt-6">
-          <Cta
-            text="View Project Details"
-            path={`/projects/${project.slug}`}
-            variant="secondary"
+          <Image
+            src={project.heroImage}
+            alt={project.title}
+            fill
+            onLoad={() => setImageLoaded(true)}
+            className={`object-cover transition-transform duration-700 group-hover:scale-110 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
           />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+
+          {/* Orange stripe */}
+          <div className="absolute -bottom-20 -left-20 w-[150%] h-24 bg-[#ff9326]/90 rotate-[-12deg] opacity-0 group-hover:opacity-100 transition duration-500" />
+
+          {/* Badge */}
+          <div className="absolute top-3 left-3 z-10">
+            <span
+              className="
+      inline-flex items-center gap-1.5
+      px-3 py-1
+      text-[11px] font-semibold uppercase tracking-wide
+      text-[#ff9326]
+      bg-white/90
+      rounded-full
+      border border-[#ff9326]/30
+      shadow-sm
+      backdrop-blur-sm
+    "
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              {project.service}
+            </span>
+          </div>
+        </div>
+
+        {/* CONTENT */}
+        <div className="p-4 sm:p-5 flex flex-col gap-2 flex-grow text-center">
+          {/* Title – fixed height */}
+          <h3
+            className="text-base sm:text-lg font-bold line-clamp-2 min-h-[3rem]"
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            {project.title}
+          </h3>
+
+          {/* Category */}
+          <span
+            className="text-[10px] sm:text-xs uppercase opacity-90"
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            {project.category}
+          </span>
+
+          {/* Location – fixed height */}
+          <p
+            className="text-xs sm:text-sm opacity-80 min-h-[1.25rem] text-center"
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            {project.location}
+          </p>
+
+          {/* CTA always at bottom */}
+          <div className="mt-auto pt-4">
+            <Cta
+              text="View Project Details"
+              path={`/projects/${project.slug}`}
+              variant="secondary"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

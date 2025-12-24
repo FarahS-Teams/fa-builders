@@ -1,66 +1,76 @@
 "use client";
-import React from "react";
-import Badge from "../Badge";
-import { FaHardHat, FaRulerCombined, FaUsers, FaStar } from "react-icons/fa";
-import { useContext } from "react";
-import themeContext from "@/app/context/themeContext";
-const PerksSection = () => {
-  const perks = [
-    {
-      icon: <FaHardHat className="text-3xl" />,
-      title: "Expert Team",
-      desc: "Skilled professionals",
-    },
-    {
-      icon: <FaRulerCombined className="text-3xl" />,
-      title: "Precision",
-      desc: "Attention to detail",
-    },
-    {
-      icon: <FaStar className="text-3xl" />,
-      title: "Quality",
-      desc: "Highest standards",
-    },
-  ];
 
+import { useContext } from "react";
+import { FaHardHat, FaRulerCombined, FaStar } from "react-icons/fa";
+import themeContext from "@/app/context/themeContext";
+import Badge from "../Badge";
+
+const perksData = [
+  {
+    icon: FaHardHat,
+    title: "Expert Team",
+    desc: "Skilled professionals delivering reliable construction solutions.",
+  },
+  {
+    icon: FaRulerCombined,
+    title: "Precision",
+    desc: "Careful planning and attention to every construction detail.",
+  },
+  {
+    icon: FaStar,
+    title: "Quality",
+    desc: "High standards in materials, workmanship, and finishes.",
+  },
+];
+
+const PerksSection = () => {
   const context = useContext(themeContext);
 
   if (!context) {
-    throw new Error("HeroSection must be used within a ThemeContextProvider");
+    throw new Error("PerksSection must be used within ThemeContextProvider");
   }
 
-  const { theme, currentTheme } = context;
+  const { currentTheme } = context;
+
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} flex flex-col items-center max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9`}
+      className={`${currentTheme.background} ${currentTheme.text}
+      w-full px-4 sm:px-6 lg:px-12 py-16`}
     >
-      <Badge text={"Why Choose Us"} />
+      {/* Section Header */}
+      <div className="flex flex-col items-center text-center mb-10">
+        <Badge text="Why Choose Us" />
+        <h2 className={`${currentTheme.headings}`}>
+          Why <span className="text-[#ff9326]">Choose</span> Us
+        </h2>
+      </div>
 
-      {/* main heading */}
-
-      <h2 className={`${currentTheme.headings}`}>
-        Why <span className="text-[#ff9326]">Choose</span> Us{" "}
-      </h2>
-
-      {/* cards section */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
-        {perks.map((elem, index) => (
+      {/* Cards */}
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 place-items-center">
+        {perksData.map(({ icon: Icon, title, desc }, index) => (
           <div
             key={index}
-            className={`p-4 md:p-6 rounded-xl flex flex-col items-center text-center gap-4 ${currentTheme.card} transition-all duration-300 hover:-translate-y-1 md:hover:-translate-y-2`}
+            className={`
+              ${currentTheme.card}
+              w-full max-w-xs
+              h-full min-h-[240px]
+              p-6
+              flex flex-col items-center justify-center
+              text-center
+              gap-4
+              rounded-xl
+              transition-all duration-300
+              hover:-translate-y-2
+            `}
           >
             {/* Icon */}
-            <div className="text-3xl md:text-4xl text-[#ff9326] group-hover:scale-110 transition-transform duration-300">
-              {elem.icon}
-            </div>
+            <Icon className="text-4xl text-[#ff9326]" aria-hidden="true" />
 
             {/* Title */}
-            <h4 className="text-xl md:text-2xl lg:text-3xl font-bold">
-              {elem.title}
-            </h4>
+            <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
 
             {/* Description */}
-            <p className="text-sm md:text-base">{elem.desc}</p>
+            <p className="text-sm md:text-base leading-relaxed">{desc}</p>
           </div>
         ))}
       </div>
