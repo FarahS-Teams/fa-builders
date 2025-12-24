@@ -4,6 +4,9 @@ import { notFound } from "next/navigation";
 import projects from "@/app/data/projects";
 import ProjectGallery from "@/components/projects/ProjectGallery";
 import ProjectCTA from "@/components/projects/ProjectCTA";
+import themeContext from "@/app/context/themeContext";
+import ProjectDetails from "@/components/projects/ProjectDetailsCard";
+import CTASection from "@/components/home/CTASection";
 
 /* Static params */
 export async function generateStaticParams() {
@@ -48,17 +51,24 @@ export default async function ProjectPage({ params }) {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute bottom-0 left-0 w-full h-28 bg-[#ff9326]/90 clip-path-diagonal" />
+        <div className="absolute inset-0 bg-black/50" />
+        {/* <div className="absolute bottom-0 left-0 w-full h-10 bg-[#ff9326]/90 clip-path-diagonal" /> */}
 
         <div className="absolute inset-0 flex flex-col justify-end px-6 lg:px-16 pb-16 text-white">
           <div className="flex gap-3 flex-wrap mb-4">
-            <span className="bg-[#ff9326] px-4 py-1 rounded-full text-sm font-semibold">
+            <span
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#ff9326] bg-white/90 rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
               {project.category}
             </span>
-            <span className="border border-white/40 px-4 py-1 rounded-full text-sm">
+            <span
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#ff9326]  rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
               {project.service}
             </span>
+            {/* Badge */}
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold">{project.title}</h1>
@@ -70,28 +80,15 @@ export default async function ProjectPage({ params }) {
 
       {/* CONTENT */}
       <section className="px-6 lg:px-16 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 text-center md:text-left">
           <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
-          <p className="text-gray-300 mb-10">{project.description}</p>
+          <p className="mb-10">{project.description}</p>
           <ProjectGallery images={project.gallery} />
         </div>
 
-        <aside className="bg-white/10 border border-white/20 p-6 rounded-xl h-fit">
-          <h3 className="text-xl font-semibold mb-4">Project Details</h3>
-          <ul className="space-y-3 text-sm">
-            <li>
-              <strong>Category:</strong> {project.category}
-            </li>
-            <li>
-              <strong>Service:</strong> {project.service}
-            </li>
-            <li>
-              <strong>Location:</strong> {project.location}
-            </li>
-            <li>
-              <strong>Year:</strong> {project.year}
-            </li>
-          </ul>
+        {/* Projrct Details Card */}
+        <aside>
+          <ProjectDetails project={project} />
         </aside>
       </section>
 
@@ -122,7 +119,7 @@ export default async function ProjectPage({ params }) {
         </div>
       </section>
 
-      <ProjectCTA />
+      <CTASection />
     </main>
   );
 }

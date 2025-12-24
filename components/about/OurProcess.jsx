@@ -39,7 +39,7 @@ const processSteps = [
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
     opacity: 1,
     y: 0,
@@ -60,27 +60,27 @@ const OurProcess = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-    w-full relative overflow-hidden px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+      w-full px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
     >
-      {/* Section Title */}
-      <div className="flex flex-col items-center text-center mb-4">
-        <Badge text={"Our Process"} className="mb-12" />
+      {/* Header */}
+      <div className="flex flex-col items-center text-center mb-12">
+        <Badge text="Our Process" />
         <h2
-          className={`${currentTheme.headings}`}
+          className={currentTheme.headings}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Checkout Our <span className="text-[#ff9326]">Process</span>
         </h2>
         <p
-          className="text-lg leading-relaxed mb-6 text-center"
+          className="text-base sm:text-lg max-w-xl mt-2"
           style={{ fontFamily: "var(--font-inter)" }}
         >
-          We know your time is valuable, We care
+          We know your time is valuable — and we respect it at every step.
         </p>
       </div>
 
-      {/* Process Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-stretch">
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
         {processSteps.map(({ step, title, description, icon: Icon }, index) => (
           <motion.div
             key={step}
@@ -90,48 +90,39 @@ const OurProcess = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             className={`${currentTheme.card}
-  relative
-  px-5 py-8
-  sm:px-6 sm:py-9
-  md:px-8 md:py-10
-  flex flex-col
-  items-center
-  justify-between
-  gap-4 sm:gap-5 md:gap-6
-  rounded-xl
-  h-full
-  w-full
-  hover:-translate-y-3
-  transition-all duration-300 ease-in`}
+              relative
+              max-w-sm mx-auto w-full
+              px-6 py-8
+              flex flex-col items-center
+              gap-5
+              rounded-xl
+              hover:-translate-y-3 hover:shadow-xl
+              transition-all duration-300 ease-out`}
           >
-            {/* Step Number */}
+            {/* Step Badge */}
             <div
-              className="absolute -top-4 sm:-top-5
-                     left-1/2 -translate-x-1/2
-                     w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14
-                     flex items-center justify-center
-                     bg-[#ff9326] text-white rounded-full
-                     text-sm sm:text-lg md:text-xl
-                     font-bold shadow-lg"
+              className="absolute -top-5 left-1/2 -translate-x-1/2
+              w-12 h-12 flex items-center justify-center
+              rounded-full bg-[#ff9326] text-white
+              font-bold shadow-lg ring-4 ring-black/10"
             >
               {step}
             </div>
 
-            {/* Icon + Title */}
-            <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 text-center sm:text-left">
-              <Icon size={28} className="text-[#ff9326] sm:hidden" />
-              <Icon size={40} className="text-[#ff9326] hidden sm:block" />
-              <h2
-                className="text-3xl font-semibold text-center"
-                style={{ fontFamily: "var(--font-montserrat)" }}
-              >
-                {title}
-              </h2>
-            </div>
+            {/* Icon */}
+            <Icon size={36} className="text-[#ff9326] mt-4" />
 
-            {/* Content */}
+            {/* Title */}
+            <h3
+              className="text-xl font-semibold text-center"
+              style={{ fontFamily: "var(--font-montserrat)" }}
+            >
+              {title}
+            </h3>
+
+            {/* Description */}
             <p
-              className="text-md sm:text-base text-center"
+              className="text-sm sm:text-base text-center opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {description}
@@ -141,7 +132,7 @@ const OurProcess = () => {
       </div>
 
       {/* CTA */}
-      <div className="flex items-center justify-center mt-10">
+      <div className="flex justify-center mt-12">
         <Cta text="Build with us" path="/contact" variant="secondary" />
       </div>
     </section>

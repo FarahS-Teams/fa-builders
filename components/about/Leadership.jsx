@@ -10,25 +10,27 @@ import Badge from "../Badge";
 export default function Leadership() {
   const context = useContext(themeContext);
   if (!context) {
-    throw new Error("Hero Section must be used within a ThemeContextProvider");
+    throw new Error(
+      "Leadership Section must be used within a ThemeContextProvider",
+    );
   }
   const { currentTheme } = context;
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text}  w-full relative overflow-hidden px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+      className={`${currentTheme.background} ${currentTheme.text} w-full relative overflow-hidden px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
     >
       {/* Section Title */}
-      <div className="mb-4 px-2 md:px-0 flex flex-col justify-center items-center text-center md:text-left">
-        <Badge text={"Our Leadership"} />
+      <div className="mb-8 text-center">
+        <Badge text="Our Leadership" />
         <h2
-          className={currentTheme.headings}
+          className={`${currentTheme.headings} text-3xl md:text-4xl font-bold mt-2`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Meet Our <span className="text-[#ff9326]">Director</span>
         </h2>
         <p
-          className="text-lg leading-relaxed mb-6 text-center"
+          className="text-lg md:text-xl mt-3 max-w-2xl mx-auto leading-relaxed"
           style={{ fontFamily: "var(--font-inter)" }}
         >
           FA Builders Ltd. is led by experienced professionals committed to
@@ -38,9 +40,9 @@ export default function Leadership() {
       </div>
 
       {/* Director Layout */}
-      <div className="w-full flex flex-col md:flex-row items-center justify-evenly gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-8 items-center">
         {/* Director Image */}
-        <div className="w-full md:w-[40%] max-w-[450px] mx-auto md:mx-0 relative rounded-2xl overflow-hidden">
+        <div className="w-full relative rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
           <Image
             src="/about-story.jpg"
             alt="Director"
@@ -52,31 +54,23 @@ export default function Leadership() {
         </div>
 
         {/* Director Info */}
-        <div className="w-full md:w-[60%] flex flex-col gap-4 text-center md:text-left">
-          <h3 className="text-2xl font-bold">Awais Ibrar</h3>
-
-          <p
-            className="text-lg leading-relaxed text-[#ff9326]"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
+        <div className="flex flex-col gap-4 text-center md:text-left">
+          <h3 className="text-2xl md:text-3xl font-bold">Awais Ibrar</h3>
+          <p className="text-lg md:text-xl text-[#ff9326]">
             Managing Director, FA Builders Ltd.
           </p>
-
-          {/* Quote */}
-          <p
-            className="italic leading-relaxed max-w-xl mx-auto md:mx-0"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
+          <p className="italic text-md md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
             “At FA Builders, we don’t just construct buildings — we build trust,
             deliver quality, and make sure every project stands the test of
             time.”
           </p>
 
           {/* Social Icons */}
-          <div className="flex justify-center md:justify-start gap-6 mt-3">
+          <div className="flex justify-center md:justify-start gap-6 mt-4">
             <a
               href="https://www.facebook.com/share/1FeXdKT8s5/?mibextid=wwXIfr"
               target="_blank"
+              aria-label="Facebook"
               className="text-white p-3 rounded-full bg-[#ff9326] hover:bg-[#e6831f] transition shadow-lg"
             >
               <FaFacebook size={24} />
@@ -84,6 +78,7 @@ export default function Leadership() {
             <a
               href="https://www.tiktok.com/@fabuildersltd?_r=1&_t=ZN-91vF6beGwBa"
               target="_blank"
+              aria-label="TikTok"
               className="text-white p-3 rounded-full bg-[#ff9326] hover:bg-[#e6831f] transition shadow-lg"
             >
               <FaTiktok size={24} />
@@ -91,6 +86,7 @@ export default function Leadership() {
             <a
               href="https://www.instagram.com/fabuildersltd?igsh=azg2OGc1MmlvdGZ6&utm_source=qr"
               target="_blank"
+              aria-label="Instagram"
               className="text-white p-3 rounded-full bg-[#ff9326] hover:bg-[#e6831f] transition shadow-lg"
             >
               <FaInstagram size={24} />

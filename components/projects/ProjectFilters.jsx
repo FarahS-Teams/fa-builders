@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import CategorySelect from "./CategorySelect";
 
 const categories = ["All", "Residential", "Commercial"];
@@ -11,13 +11,34 @@ const services = [
   "Renovation",
 ];
 
-export default function ProjectFilters({ onFilter }) {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [activeService, setActiveService] = useState("All");
+export default function ProjectFilters({
+  onFilter,
+  activeCategory: externalCategory,
+  activeService: externalService,
+}) {
+  // Use external props if provided, otherwise use internal state
+  const [internalCategory, setInternalCategory] = useState("All");
+  const [internalService, setInternalService] = useState("All");
+
+  // Determine which state to use
+  const activeCategory =
+    externalCategory !== undefined ? externalCategory : internalCategory;
+  const activeService =
+    externalService !== undefined ? externalService : internalService;
+
+  // Update internal state when external props change
+  useEffect(() => {
+    if (externalCategory !== undefined) {
+      setInternalCategory(externalCategory);
+    }
+    if (externalService !== undefined) {
+      setInternalService(externalService);
+    }
+  }, [externalCategory, externalService]);
 
   const applyFilter = (cat, serv) => {
-    setActiveCategory(cat);
-    setActiveService(serv);
+    setInternalCategory(cat);
+    setInternalService(serv);
     onFilter(cat, serv);
   };
 
@@ -44,6 +65,7 @@ export default function ProjectFilters({ onFilter }) {
                     ? "bg-[#ff9326] text-white border-[#ff9326]"
                     : "border-gray-300 hover:border-[#ff9326] hover:text-[#ff9326]"
                 }`}
+              style={{ fontFamily: "var(--font-inter)" }}
             >
               {serv}
             </button>
