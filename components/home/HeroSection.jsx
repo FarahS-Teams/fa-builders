@@ -23,23 +23,21 @@ const HeroSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content px-4 sm:px-6 lg:px-8  md:py-8 lg:py-9">
+      <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-16">
           {/* Left Side text */}
-          <div className="lg:w-1/2 flex flex-col items-center md:items-start">
+          <div className="lg:w-1/2">
             {/* Badge */}
             <Badge text={"TRUSTED CONTRACTORS"} />
 
             {/* Main Heading */}
-            <h2
-              className={`${currentTheme.headings} text-center md:text-start`}
-            >
+            <h2 className={`${currentTheme.headings}`}>
               Building Your <span className="text-[#ff9326]">Dreams</span> With{" "}
               Precision & Excellence.
             </h2>
 
             {/* description */}
-            <p className="text-lg md:text-lg mb-8 leading-relaxed max-w-2xl text-center md:text-start">
+            <p className="text-lg md:text-lg mb-8 leading-relaxed max-w-2xl">
               We transform your vision into reality with{" "}
               <span className="font-semibold text-[#ff9326]">
                 unmatched quality

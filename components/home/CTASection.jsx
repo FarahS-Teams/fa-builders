@@ -25,57 +25,61 @@ const CTASection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        {/* Main CTA Card */}
-        <div
-          className={`${currentTheme.card} rounded-2xl p-8 md:p-12 text-center relative overflow-hidden`}
-        >
-          {/* Badge */}
-          <Badge text={"Limited Slots Avaiable"} />
-
-          {/* Main Heading */}
-          <h2 className={`${currentTheme.headings}`}>
-            Ready to Build Your <span className="text-[#ff9326">Dream</span>{" "}
-            Space?
-          </h2>
-
-          {/* Subheading */}
-          <p
-            className={`${currentTheme.text} text-lg md:text-xl max-w-2xl mx-auto mb-8`}
+      <div className="content">
+        <div className="py-16 md:py-24">
+          {/* Main CTA Card */}
+          <div
+            className={`${currentTheme.card} rounded-2xl p-8 md:p-12 text-center relative overflow-hidden`}
           >
-            Get a{" "}
-            <span className="font-bold text-[#ff9326]">free consultation</span>{" "}
-            and detailed quote. No obligation, just expert advice from London's
-            top construction team.
-          </p>
+            {/* Badge */}
+            <Badge text={"Limited Slots Avaiable"} />
 
-          {/* Benefits */}
-          <div className="flex flex-wrap justify-center gap-6 mb-10">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <span className="text-[#ff9326]">{benefit.icon}</span>
-                <span className="font-medium">{benefit.text}</span>
-              </div>
-            ))}
-          </div>
+            {/* Main Heading */}
+            <h2 className={`${currentTheme.headings}`}>
+              Ready to Build Your <span className="text-[#ff9326">Dream</span>{" "}
+              Space?
+            </h2>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Cta
-              text="Get Free Consultation Now"
-              path="/contact"
-              variant="primary"
-            />
-            <Cta
-              text="Call: 07476555002"
-              path="tel:07476555002"
-              variant="secondary"
-            />
-          </div>
+            {/* Subheading */}
+            <p
+              className={`${currentTheme.text} text-lg md:text-xl max-w-2xl mx-auto mb-8`}
+            >
+              Get a{" "}
+              <span className="font-bold text-[#ff9326]">
+                free consultation
+              </span>{" "}
+              and detailed quote. No obligation, just expert advice from
+              London's top construction team.
+            </p>
 
-          {/* Guarantee */}
-          <div className="text-sm">
-            ⭐ 100% Satisfaction Guarantee | ⏱️ Response within 24 hours
+            {/* Benefits */}
+            <div className="flex flex-wrap justify-center gap-6 mb-10">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <span className="text-[#ff9326]">{benefit.icon}</span>
+                  <span className="font-medium">{benefit.text}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Cta
+                text="Get Free Consultation Now"
+                path="/contact"
+                variant="primary"
+              />
+              <Cta
+                text="Call: 07476555002"
+                path="tel:07476555002"
+                variant="secondary"
+              />
+            </div>
+
+            {/* Guarantee */}
+            <div className="text-sm">
+              ⭐ 100% Satisfaction Guarantee | ⏱️ Response within 24 hours
+            </div>
           </div>
         </div>
       </div>

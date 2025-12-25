@@ -36,7 +36,7 @@ const PerksSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-0 py-12 md:py-8 lg:py-9">
         <Badge text={"Why Choose Us"} />
 
         {/* main heading */}
