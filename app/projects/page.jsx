@@ -3,7 +3,7 @@ import Projects from "@/components/projects/Projects";
 
 const ProjectsPage = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <Projects />
     </div>
   );

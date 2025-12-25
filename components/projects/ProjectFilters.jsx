@@ -1,5 +1,5 @@
 "use client";
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import CategorySelect from "./CategorySelect";
 
 const categories = ["All", "Residential", "Commercial"];
@@ -43,7 +43,7 @@ export default function ProjectFilters({
   };
 
   return (
-    <div className="flex flex-col gap-6 mb-12">
+    <div className={`flex flex-col gap-6 mb-12`}>
       {/* TOP BAR */}
       <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
         {/* CATEGORY SELECT */}

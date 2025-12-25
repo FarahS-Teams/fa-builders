@@ -3,7 +3,7 @@ import Contact from "../../components/contact/Contact";
 
 const ContactPage = () => {
   return (
-    <div className="pt-19 min-h-screen">
+    <div className="min-h-screen">
       <Contact />
     </div>
   );

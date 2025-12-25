@@ -17,7 +17,6 @@ const About = () => {
         image="/about-story.jpg"
         ctaText="View Our Projects"
         ctaPath="/projects"
-        height="h-[60vh] sm:h-[70vh] md:h-[80vh]"
       />
       <AboutStory />
       <OurValues />

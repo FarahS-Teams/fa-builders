@@ -12,7 +12,6 @@ const Projects = () => {
         ctaText="Check Out Our Services"
         ctaPath="/services"
         overlay="bg-black/30"
-        height="h-[60vh] sm:h-[70vh] md:h-[80vh]"
       />
 
       <ProjectsGrid />

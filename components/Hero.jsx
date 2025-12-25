@@ -13,7 +13,7 @@ const Hero = ({
   ctaText,
   ctaPath,
   overlay = "bg-black/50",
-  height = "h-[50vh] md:h-[60vh]",
+  height = "h-[60vh] sm:h-[70vh] md:h-[80vh]",
 }) => {
   const context = useContext(themeContext);
   if (!context) throw new Error("Use inside ThemeProvider");
@@ -42,7 +42,7 @@ const Hero = ({
         <div className="text-center max-w-3xl">
           {/* Heading */}
           <h1
-            className={`${currentTheme.headings} text-[#ffffff]`}
+            className={`${currentTheme.headings} text-[#ffffff] mt-3 sm:mt-4 md:mt-5`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             {title.replace(highlight, "")}
@@ -52,9 +52,9 @@ const Hero = ({
           {/* Optional Paragraph */}
           {description && (
             <p
-              className="mt-3 sm:mt-4 md:mt-5
+              className="hidden sm:flex mt-3 sm:mt-4 md:mt-5
                          text-sm sm:text-base md:text-lg lg:text-xl
-                         text-gray-200 leading-relaxed mb-6"
+                         text-gray-200 leading-relaxed mb-2"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {description}
