@@ -6,12 +6,7 @@ import Hero from "../Hero";
 const Services = () => {
   return (
     <div>
-      <Hero
-        title="Our"
-        highlight="Services"
-        image="/about-story.jpg"
-        height="h-[50vh] sm:h-[60vh] md:h-[70vh]"
-      />
+      <Hero title="Our" highlight="Services" image="/about-story.jpg" />
       <ServicesCardsSection />
       <CTASection />
     </div>
