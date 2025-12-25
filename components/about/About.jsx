@@ -1,0 +1,33 @@
+import Hero from "../Hero";
+import AboutStory from "./AboutStory";
+import OurValues from "./OurValues";
+import Stats from "./Stats";
+import Leadership from "./Leadership";
+import OurProcess from "./OurProcess";
+import CTASection from "../home/CTASection";
+import PerksSection from "../home/PerksSection";
+
+const About = () => {
+  return (
+    <div>
+      <Hero
+        title="About FA Builders"
+        highlight="FA Builders"
+        description="Building London’s skyline with precision, innovation, and unwavering commitment since 2015."
+        image="/about-story.jpg"
+        ctaText="View Our Projects"
+        ctaPath="/projects"
+        height="h-[60vh] sm:h-[70vh] md:h-[80vh]"
+      />
+      <AboutStory />
+      <OurValues />
+      <Stats />
+      <Leadership />
+      <OurProcess />
+      <PerksSection />
+      <CTASection />
+    </div>
+  );
+};
+
+export default About;

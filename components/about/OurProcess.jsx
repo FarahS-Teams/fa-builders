@@ -1,108 +1,139 @@
 "use client";
 
 import { ClipboardCheck, Hammer, Building2, BadgeCheck } from "lucide-react";
-import Cta from "../Cta";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 import themeContext from "@/app/context/themeContext";
+import Cta from "../Cta";
+import Badge from "../Badge";
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Consultation",
+    description:
+      "We begin by understanding your project needs, goals, and site requirements.",
+    icon: ClipboardCheck,
+  },
+  {
+    step: "02",
+    title: "Planning & Design",
+    description:
+      "Our team prepares clear plans, budgets, and timelines tailored to your project.",
+    icon: Hammer,
+  },
+  {
+    step: "03",
+    title: "Construction & Build",
+    description:
+      "Skilled builders execute the project with precision and high-quality workmanship.",
+    icon: Building2,
+  },
+  {
+    step: "04",
+    title: "Completion & Handover",
+    description:
+      "We inspect every detail and deliver a result that’s completed to perfection.",
+    icon: BadgeCheck,
+  },
+];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const OurProcess = () => {
   const context = useContext(themeContext);
-
-  if (!context) {
-    throw new Error("Hero Section must be used within a ThemeContextProvider");
-  }
+  if (!context) throw new Error("Use inside ThemeProvider");
 
   const { currentTheme } = context;
 
   return (
-    <section className={`${currentTheme.background} ${currentTheme.text}`}>
-      <div className="w-full flex flex-col justify-evenly gap-12 px-6 md:px-10 mb-20 mt-10 ">
-        {/* Section Title */}
-        <div className="mb-4 flex flex-col md:w-1/2 text-center md:text-left">
-          <p className="text-[#ff9326] mb-2">Process</p>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            Checkout How We Work
-          </h2>
-          <div className="w-24 h-0.5 bg-[#ff9326] mt-3 mx-auto md:mx-0 rounded-full"></div>
+    <section
+      className={`${currentTheme.background} ${currentTheme.text}
+      w-full px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+    >
+      {/* Header */}
+      <div className="flex flex-col items-center text-center mb-12">
+        <Badge text="Our Process" />
+        <h2
+          className={currentTheme.headings}
+          style={{ fontFamily: "var(--font-Montserrat)" }}
+        >
+          Checkout Our <span className="text-[#ff9326]">Process</span>
+        </h2>
+        <p
+          className="text-base sm:text-lg max-w-xl mt-2"
+          style={{ fontFamily: "var(--font-inter)" }}
+        >
+          We know your time is valuable — and we respect it at every step.
+        </p>
+      </div>
 
-          <p className="mt-4 max-w-xl">We know your time is valuable</p>
-        </div>
-
-        {/* Process Cards */}
-        <div className="flex flex-col md:flex-row items-stretch justify-between gap-8">
-          {/* Step 1 */}
-          <div className="relative flex-1 bg-white/10 border border-white/20 p-8 pt-12 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transition">
+      {/* Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        {processSteps.map(({ step, title, description, icon: Icon }, index) => (
+          <motion.div
+            key={step}
+            custom={index}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className={`${currentTheme.card}
+              relative
+              max-w-sm mx-auto w-full
+              px-6 py-8
+              flex flex-col items-center
+              gap-5
+              rounded-xl
+              hover:-translate-y-3 hover:shadow-xl
+              transition-all duration-300 ease-out`}
+          >
+            {/* Step Badge */}
             <div
-              className="absolute -top-5 left-1/2 -translate-x-1/2 w-14 h-14 flex items-center justify-center
-                         bg-[#ff9326] text-white rounded-full text-xl font-bold shadow-lg"
+              className="absolute -top-5 left-1/2 -translate-x-1/2
+              w-12 h-12 flex items-center justify-center
+              rounded-full bg-[#ff9326] text-white
+              font-bold shadow-lg ring-4 ring-black/10"
             >
-              01
+              {step}
             </div>
 
-            <ClipboardCheck size={50} className="text-[#ff9326] mb-4" />
-            <h3 className="text-2xl font-semibold mb-3">Consultation</h3>
-            <p>
-              We begin by understanding your project needs, goals, and site
-              requirements.
-            </p>
-          </div>
+            {/* Icon */}
+            <Icon size={36} className="text-[#ff9326] mt-4" />
 
-          {/* Step 2 */}
-          <div className="relative flex-1 bg-white/10 border border-white/20 p-8 pt-12 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transition">
-            <div
-              className="absolute -top-5 left-1/2 -translate-x-1/2 w-14 h-14 flex items-center justify-center
-                         bg-[#ff9326] text-white rounded-full text-xl font-bold shadow-lg"
+            {/* Title */}
+            <h3
+              className="text-xl font-semibold text-center"
+              style={{ fontFamily: "var(--font-montserrat)" }}
             >
-              02
-            </div>
+              {title}
+            </h3>
 
-            <Hammer size={50} className="text-[#ff9326] mb-4" />
-            <h3 className="text-2xl font-semibold mb-3">Planning & Design</h3>
-            <p>
-              Our team prepares clear plans, budgets, and timelines tailored to
-              your project.
-            </p>
-          </div>
-
-          {/* Step 3 */}
-          <div className="relative flex-1 bg-white/10 border border-white/20 p-8 pt-12 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transition">
-            <div
-              className="absolute -top-5 left-1/2 -translate-x-1/2 w-14 h-14 flex items-center justify-center
-                         bg-[#ff9326] text-white rounded-full text-xl font-bold shadow-lg"
+            {/* Description */}
+            <p
+              className="text-sm sm:text-base text-center opacity-90"
+              style={{ fontFamily: "var(--font-inter)" }}
             >
-              03
-            </div>
-
-            <Building2 size={50} className="text-[#ff9326] mb-4" />
-            <h3 className="text-2xl font-semibold mb-3">Construction</h3>
-            <p>
-              Skilled builders execute the project with precision and
-              high-quality workmanship.
+              {description}
             </p>
-          </div>
+          </motion.div>
+        ))}
+      </div>
 
-          {/* Step 4 */}
-          <div className="relative flex-1 bg-white/10 border border-white/20 p-8 pt-12 rounded-xl shadow-lg backdrop-blur-md hover:scale-105 transition">
-            <div
-              className="absolute -top-5 left-1/2 -translate-x-1/2 w-14 h-14 flex items-center justify-center
-                         bg-[#ff9326] text-white rounded-full text-xl font-bold shadow-lg"
-            >
-              04
-            </div>
-
-            <BadgeCheck size={50} className="text-[#ff9326] mb-4" />
-            <h3 className="text-2xl font-semibold mb-3">Final Handover</h3>
-            <p>
-              We inspect every detail and deliver a result that’s completed to
-              perfection.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="flex items-center justify-center mt-4">
-          <Cta text={"Build with us"} path={"/contact"} variant="secondary" />
-        </div>
+      {/* CTA */}
+      <div className="flex justify-center mt-12">
+        <Cta text="Build with us" path="/contact" variant="secondary" />
       </div>
     </section>
   );

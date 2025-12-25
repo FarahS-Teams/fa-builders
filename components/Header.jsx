@@ -1,5 +1,5 @@
 "use client";
-
+import service from "@/app/data/service";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa6";
 import ThemeToggleButton from "./ThemeToggleButton";
@@ -45,7 +45,7 @@ const Header = () => {
     >
       <div className="content flex items-center justify-between">
         {/* Logo  */}
-        <div className="flex items-center gap-3">
+        <Link className="flex items-center gap-3" href={"/"}>
           <div className="flex items-center gap-3">
             <Image
               src={theme === "dark" ? logo_dark : logo_light}
@@ -54,7 +54,7 @@ const Header = () => {
               height={10}
             />
             {/* line*/}
-            <div className="h-8 w-0.5 bg-orange-500/40 hidden sm:block"></div>
+            <div className="h-8 w-0.5 bg-[#ff9326]/40 hidden sm:block"></div>
           </div>
 
           {/* Tagline */}
@@ -67,23 +67,70 @@ const Header = () => {
             </p>
             <p className="text-sm font-bold">EXCELLENCE.</p>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8 px-8 py-3">
-          {navItems.map((elem, index) => (
-            <Link
-              key={index}
-              href={elem.path}
-              className={`${isActivePath(elem.path) ? "text-orange-500 border-b-2 border-orange-500" : "relative group hover:text-[#ff9326] transition-all duration-300"}`}
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {elem.name}
 
-              {/* Hover Underline Animation */}
-              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ff9326] group-hover:w-full transition-all duration-300 ease-out"></span>
-            </Link>
-          ))}
+        <nav className="hidden lg:flex items-center gap-8 px-8 py-3">
+          {navItems.map((elem, index) => {
+            // SERVICES DROPDOWN
+            if (elem.name === "Services") {
+              return (
+                <div key={index} className="relative group">
+                  {/* Services link */}
+                  <Link
+                    href="/services"
+                    className={`${
+                      isActivePath("/services")
+                        ? "text-[#ff9326] border-b-2 border-[#ff9326]"
+                        : "hover:text-[#ff9326]"
+                    } transition-all duration-300`}
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    Services
+                  </Link>
+
+                  {/* Dropdown */}
+                  <div className="absolute left-0 top-full mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div
+                      className={`${currentTheme.card} rounded-xl shadow-lg border border-[#ff9326]/30 p-4`}
+                    >
+                      <ul className="flex flex-col gap-3">
+                        {service.map((item) => (
+                          <li key={item.slug}>
+                            <Link
+                              href={`/services/${item.slug}`}
+                              className="block text-sm hover:text-[#ff9326] transition"
+                              style={{ fontFamily: "var(--font-inter)" }}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
+
+            // NORMAL LINKS
+            return (
+              <Link
+                key={index}
+                href={elem.path}
+                className={`${
+                  isActivePath(elem.path)
+                    ? "text-[#ff9326] border-b-2 border-[#ff9326]"
+                    : "relative group hover:text-[#ff9326]"
+                } transition-all duration-300`}
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {elem.name}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ff9326] group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Right Section - Theme Toggle and CTA */}
@@ -148,7 +195,7 @@ const Header = () => {
                 ))}
 
                 {/* Mobile CTA */}
-                <div className="pt-4 mt-4 border-t border-gray-200/50 dark:border-slate-600/50">
+                <div className="pt-4 mt-4 border-t border-gray-200/50">
                   <Cta text={"Get Consultation"} path={"/contact"} />
                 </div>
               </div>

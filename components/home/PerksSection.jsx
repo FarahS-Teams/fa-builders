@@ -1,35 +1,37 @@
 "use client";
-import React from "react";
-import Badge from "../Badge";
-import { FaHardHat, FaRulerCombined, FaUsers, FaStar } from "react-icons/fa";
-import { useContext } from "react";
-import themeContext from "@/app/context/themeContext";
-const PerksSection = () => {
-  const perks = [
-    {
-      icon: <FaHardHat className="text-3xl" />,
-      title: "Expert Team",
-      desc: "Skilled professionals",
-    },
-    {
-      icon: <FaRulerCombined className="text-3xl" />,
-      title: "Precision",
-      desc: "Attention to detail",
-    },
-    {
-      icon: <FaStar className="text-3xl" />,
-      title: "Quality",
-      desc: "Highest standards",
-    },
-  ];
 
+import { useContext } from "react";
+import { FaHardHat, FaRulerCombined, FaStar } from "react-icons/fa";
+import themeContext from "@/app/context/themeContext";
+import Badge from "../Badge";
+
+const perksData = [
+  {
+    icon: FaHardHat,
+    title: "Expert Team",
+    desc: "Skilled professionals delivering reliable construction solutions.",
+  },
+  {
+    icon: FaRulerCombined,
+    title: "Precision",
+    desc: "Careful planning and attention to every construction detail.",
+  },
+  {
+    icon: FaStar,
+    title: "Quality",
+    desc: "High standards in materials, workmanship, and finishes.",
+  },
+];
+
+const PerksSection = () => {
   const context = useContext(themeContext);
 
   if (!context) {
-    throw new Error("HeroSection must be used within a ThemeContextProvider");
+    throw new Error("PerksSection must be used within ThemeContextProvider");
   }
 
-  const { theme, currentTheme } = context;
+  const { currentTheme } = context;
+
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
@@ -48,28 +50,31 @@ const PerksSection = () => {
 
         {/* cards section */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
-          {perks.map((elem, index) => (
-            <div
-              key={index}
-              className={`p-5 rounded-xl flex flex-col justify-center items-center gap-5 ${currentTheme.card}  transition-all duration-300 group hover:-translate-y-2`}
-            >
-              <div className="text-orange-500 group-hover:scale-110 transition-transform duration-300">
-                {elem.icon}
+          {perksData.map((elem, index) => {
+            const Icon = elem.icon;
+            return (
+              <div
+                key={index}
+                className={`p-5 rounded-xl flex flex-col justify-center items-center gap-5 ${currentTheme.card}  transition-all duration-300 group hover:-translate-y-2`}
+              >
+                <div className="text-orange-500 group-hover:scale-110 transition-transform duration-300">
+                  <Icon />
+                </div>
+                <h4
+                  className="font-bold text-4xl"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {elem.title}
+                </h4>
+                <p
+                  className="text-md"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {elem.desc}
+                </p>
               </div>
-              <h4
-                className="font-bold text-4xl"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                {elem.title}
-              </h4>
-              <p
-                className="text-md"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                {elem.desc}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

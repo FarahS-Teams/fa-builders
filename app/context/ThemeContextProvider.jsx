@@ -12,14 +12,16 @@ const ThemeContextProvider = ({ children }) => {
   const themeStyles = {
     dark: {
       background: "bg-[#0a122a]",
-      card: "bg-[#1E293B]/80 border-1 border-orange-500 shadow-[0_0_10px_rgba(255,107,53,0.25)] hover:shadow-[inset_0_0_15px_rgba(255,107,53,0.1)] backdrop-blur-sm",
-      headings: "text-[#f3f3f3]",
+      card: "bg-[#1E293B]/80 border-1 border-[#ff9326] shadow-[0_0_10px_rgba(255,107,53,0.25)] hover:shadow-[inset_0_0_15px_rgba(255,107,53,0.1)] backdrop-blur-sm",
+      headings:
+        "text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-[#f3f3f3]",
       text: "text-[#f3f3f3]",
     },
     light: {
       background: "bg-[#f4f4f4]",
-      card: "bg-[#FFFFFF] backdrop-blur-sm border-1 border-orange-500 hadow-[0_0_25px_rgba(255,107,53,0.25)] hover:shadow-[inset_0_0_15px_rgba(255,107,53,0.1)]",
-      headings: "text-[#0a122a]",
+      card: "bg-[#FFFFFF] backdrop-blur-sm border-1 border-[#ff9326] hadow-[0_0_25px_rgba(255,107,53,0.25)] hover:shadow-[inset_0_0_15px_rgba(255,107,53,0.1)]",
+      headings:
+        "text-4xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight text-[#0a122a]",
       text: "text-[#313131]",
     },
   };

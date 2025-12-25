@@ -21,12 +21,15 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "New Build", href: "/services/residential" },
-        { name: "Complete Renovation", href: "/services/commercial" },
-        { name: "Loft Conversion", href: "/services/renovation" },
-        { name: "Extension", href: "/services/design" },
-        { name: "Gas Safe Registered", href: "/services/management" },
-        { name: "NICEIC", href: "/services/management" },
+        { name: "New Build", href: "/services/New-Build-Construction" },
+        { name: "Complete Renovation", href: "/services/Complete-Renovation" },
+        { name: "Loft Conversion", href: "/services/Loft-Conversion" },
+        { name: "Extension", href: "/services/Property-Extension" },
+        {
+          name: "Gas Safe Registered",
+          href: "/services/Gas-Safe-Registered-Services",
+        },
+        { name: "NICEIC", href: "/services/NICEIC-Electrical-Services" },
       ],
     },
     {
@@ -34,14 +37,14 @@ const Footer = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Projects", href: "/projects" },
-        { name: "Testimonials", href: "/testimonials" },
+        { name: "Testimonials", href: "/#testimonials" },
       ],
     },
     {
       title: "Support",
       links: [
         { name: "Contact Us", href: "/contact" },
-        { name: "Get Consultation", href: "/quote" },
+        { name: "FAQs", href: "/faqs" },
       ],
     },
   ];
@@ -75,7 +78,7 @@ const Footer = () => {
     },
     {
       icon: FaFacebookF,
-      href: "https://www.instagram.com/fabuildersltd?igsh=azg2OGc1MmlvdGZ6&utm_source=qr",
+      href: "https://www.facebook.com/share/1FeXdKT8s5/?mibextid=wwXIfr",
     },
   ];
 
@@ -115,7 +118,7 @@ const Footer = () => {
                 >
                   FA Builders
                 </h3>
-                <p className="text-orange-500 text-sm font-semibold tracking-wider uppercase">
+                <p className="text-[#ff9326] text-sm font-semibold tracking-wider uppercase">
                   THE STANDARD OF EXCELLENCE
                 </p>
               </div>
@@ -133,9 +136,9 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={item.href}
-                  className="flex items-start gap-3 hover:text-orange-400 transition-colors duration-300 group"
+                  className="flex items-start gap-3 hover:text-[#ff9326] transition-colors duration-300 group"
                 >
-                  <item.icon className="text-orange-500 mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                  <item.icon className="text-[#ff9326] mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-sm flex-1">{item.text}</span>
                 </Link>
               ))}
@@ -149,16 +152,16 @@ const Footer = () => {
                 <div key={index} className="w-full">
                   <h4 className="text-lg font-bold font-montserrat mb-4 relative pb-2">
                     {section.title}
-                    <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-orange-500"></span>
+                    <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#ff9326]"></span>
                   </h4>
                   <ul className="space-y-2">
                     {section.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
                         <Link
                           href={link.href}
-                          className="text-sm -space-x-4 hover:space-x-0 hover:text-orange-400 transition-all duration-500 flex items-center gap-2 group py-1"
+                          className="text-sm -space-x-4 hover:space-x-0 hover:text-[#ff9326] transition-all duration-500 flex items-center gap-2 group py-1"
                         >
-                          <span className="w-1.5 h-1.5 bg-orange-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-[#ff9326] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 shrink-0"></span>
                           <span className="truncate">{link.name}</span>
                         </Link>
                       </li>
@@ -171,7 +174,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section - Social Links and Copyright */}
-        <div className="pt-8 border-t border-gray-700">
+        <div className="pt-4 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Social Links */}
             <div className="flex items-center gap-4">
@@ -193,10 +196,10 @@ const Footer = () => {
 
             {/* our agency name */}
             <div className="flex justify-center items-center gap-2">
-              <span className="text-lg text-orange-500">
+              <span className="text-lg text-[#ff9326]">
                 <GrTechnology />
               </span>
-              <span className="text-sm hover:text-orange-500 transition-colors duration-300 ease-in-out cursor-pointer">
+              <span className="text-sm hover:text-[#ff9326] transition-colors duration-300 ease-in-out cursor-pointer">
                 Developed by Nexora Studio
               </span>
             </div>

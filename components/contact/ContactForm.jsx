@@ -2,6 +2,17 @@
 
 import { useContext, useState } from "react";
 import themeContext from "../../app/context/themeContext";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import service from "../../app/data/service";
 
 const ContactForm = () => {
   const [result, setResult] = useState("");
@@ -57,57 +68,100 @@ const ContactForm = () => {
         </p>
 
         <form onSubmit={onSubmit} className="space-y-6">
-          {" "}
-          {/* Yeh zaroori tha! */}
-          <div>
-            <label htmlFor="name" className="sr-only">
-              Name
-            </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="Name"
-              className={`w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
-            />
+          <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+            <div>
+              <Label htmlFor="first-name">First Name</Label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                autoComplete="given-name"
+                required
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+              />
+            </div>
+            <div>
+              <Label htmlFor="last-name">Last Name</Label>
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                autoComplete="family-name"
+                required
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+              />
+            </div>
           </div>
           <div>
-            <label htmlFor="email" className="sr-only">
-              Email
-            </label>
+            <Label htmlFor="email">Email</Label>
             <input
               type="email"
               name="email"
               id="email"
               required
-              placeholder="Email"
-              className={`w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+              autoComplete="email"
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
             />
           </div>
           <div>
-            <label htmlFor="message" className="sr-only">
-              Message
-            </label>
+            <Label htmlFor="phone">Phone Number</Label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              autoComplete="tel"
+              required
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+            />
+          </div>
+          <div>
+            <Label htmlFor="service">Services</Label>
+            <Select name="service" id="service" required>
+              <SelectTrigger
+                className={`w-full mt-3 px-4 py-3 rounded-lg ${currentTheme.card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary`}
+              >
+                <SelectValue placeholder="Select a service" />
+              </SelectTrigger>
+              <SelectContent
+                className={`${currentTheme.card} ${currentTheme.text} `}
+                position="popper"
+              >
+                <SelectGroup>
+                  <SelectLabel className={`${currentTheme.text}`}>
+                    Services
+                  </SelectLabel>
+                  {service.map((item) => (
+                    <SelectItem
+                      key={item.slug}
+                      value={item.slug}
+                      className={`${currentTheme.text} hover:bg-gray-700 cursor-pointer`}
+                    >
+                      {item.title}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+          <div>
+            <Label htmlFor="message">Message</Label>
             <textarea
               name="message"
               id="message"
-              rows="4"
+              rows="5"
               required
-              placeholder="Message"
-              className={`w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
             ></textarea>
           </div>
           <div className="text-center">
             <button
               type="submit"
               disabled={loading}
-              className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 disabled:opacity-70 disabled:cursor-not-allowed transition"
+              className="bg-orange-500 text-white cursor-pointer px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 disabled:opacity-70 disabled:cursor-not-allowed transition"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
-          {/* Success/Error Message */}
           {result && (
             <p
               className={`text-center font-medium mt-4 ${
