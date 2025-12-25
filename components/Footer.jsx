@@ -92,7 +92,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`${currentTheme.background} ${currentTheme.text} custom-container border-t-4 border-orange-500`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container border-t-4 border-secondary`}
     >
       {/* Main Footer Content */}
       <div className="content px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
