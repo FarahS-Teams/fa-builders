@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
         <div className="text-center mb-16">
           <Badge text={"Client Stories"} />
           <h2 className={`${currentTheme.headings}`}>
-            What Our <span className="text-[#ff9326]">Clients</span> Say
+            What Our <span className="text-secondary">Clients</span> Say
           </h2>
         </div>
 
@@ -139,7 +139,7 @@ const TestimonialsSection = () => {
                   className={`${currentTheme.card} p-6 md:p-8 rounded-xl mt-1 h-full`}
                 >
                   {/* Quote Icon */}
-                  <div className="text-[#ff9326] text-2xl mb-4">
+                  <div className="text-secondary text-2xl mb-4">
                     <FaQuoteLeft />
                   </div>
 
@@ -149,7 +149,7 @@ const TestimonialsSection = () => {
                   {/* Client Info */}
                   <div className="border-t border-gray-700 pt-4">
                     <h4 className="font-bold text-lg">{elem.client}</h4>
-                    <p className="text-[#ff9326] text-sm">{elem.project}</p>
+                    <p className="text-secondary text-sm">{elem.project}</p>
                   </div>
                 </div>
               </SwiperSlide>

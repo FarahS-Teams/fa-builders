@@ -36,7 +36,7 @@ const CTASection = () => {
 
             {/* Main Heading */}
             <h2 className={`${currentTheme.headings}`}>
-              Ready to Build Your <span className="text-[#ff9326">Dream</span>{" "}
+              Ready to Build Your <span className="text-secondary">Dream</span>{" "}
               Space?
             </h2>
 
@@ -45,7 +45,7 @@ const CTASection = () => {
               className={`${currentTheme.text} text-lg md:text-xl max-w-2xl mx-auto mb-8`}
             >
               Get a{" "}
-              <span className="font-bold text-[#ff9326]">
+              <span className="font-bold text-secondary">
                 free consultation
               </span>{" "}
               and detailed quote. No obligation, just expert advice from
@@ -56,7 +56,7 @@ const CTASection = () => {
             <div className="flex flex-wrap justify-center gap-6 mb-10">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center gap-2">
-                  <span className="text-[#ff9326]">{benefit.icon}</span>
+                  <span className="text-secondary">{benefit.icon}</span>
                   <span className="font-medium">{benefit.text}</span>
                 </div>
               ))}
