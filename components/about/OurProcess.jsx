@@ -60,7 +60,7 @@ const OurProcess = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      custom-container px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+      custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
     >
       <div className="content">
         {/* Header */}

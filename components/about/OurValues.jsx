@@ -44,20 +44,20 @@ const OurValues = () => {
   const context = useContext(themeContext);
   if (!context) throw new Error("Section must be used within ThemeProvider");
 
-  const { theme, currentTheme } = context;
+  const { currentTheme } = context;
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text}
-     custom-container w-full relative overflow-hidden
-      px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+      className={`${currentTheme.background} ${currentTheme.text} 
+      custom-container w-full relative overflow-hidden
+      px-4 sm:px-6 lg:px-8 py-12 md:py-16 `}
     >
       <div className="content">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center mb-4 md:mb-8">
           <Badge text="Our Values" />
           <h2
-            className={currentTheme.headings}
+            className={`${currentTheme.headings}`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Values</span>
@@ -65,7 +65,7 @@ const OurValues = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row gap-8 md:gap-10">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-10">
           {valuesData.map(({ title, description, icon: Icon }, index) => (
             <motion.div
               key={title}
@@ -75,24 +75,25 @@ const OurValues = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               className={`
-              ${currentTheme.card}
-              flex-1 max-w-md mx-auto md:mx-0
-              px-8 py-10 rounded-xl
-              flex flex-col items-center gap-5
-              text-center md:text-center
-              hover:-translate-y-3 hover:shadow-xl
-              transition-all duration-300 ease-out
-            `}
+                ${currentTheme.card}
+                flex-1 max-w-md mx-auto md:mx-0
+                px-6 sm:px-8 py-8 sm:py-10
+                rounded-xl
+                flex flex-col items-center gap-4 sm:gap-5
+                text-center
+                hover:-translate-y-3 hover:shadow-xl
+                transition-all duration-300 ease-out
+              `}
             >
               {/* Icon */}
-              <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center">
-                <Icon size={36} className="text-secondary" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ff9326]/10 flex items-center justify-center">
+                <Icon size={28} sm={36} className="text-[#ff9326]" />
               </div>
 
               {/* Title */}
               <h3
-                className="text-xl sm:text-2xl font-semibold"
-                style={{ fontFamily: "var(--font-montserrat)" }}
+                className="text-lg sm:text-xl md:text-2xl font-semibold"
+                style={{ fontFamily: "var(--font-Montserrat)" }}
               >
                 {title}
               </h3>

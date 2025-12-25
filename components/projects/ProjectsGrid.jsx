@@ -41,7 +41,7 @@ export default function ProjectsGrid() {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container py-12 sm:py-16 lg:py-20`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
       id="portfolio"
     >
       <div className="content">
@@ -166,74 +166,3 @@ export default function ProjectsGrid() {
     </section>
   );
 }
-
-// "use client";
-// import { useContext, useState } from "react";
-// import projects from "@/app/data/projects";
-// import themeContext from "@/app/context/themeContext";
-// import ProjectCard from "./ProjectsCard";
-// import ProjectFilters from "./ProjectFilters";
-// import Badge from "../Badge";
-
-// export default function ProjectsGrid() {
-//   const context = useContext(themeContext);
-//   if (!context) throw new Error("Theme provider missing");
-//   const { currentTheme } = context;
-
-//   const [filteredProjects, setFilteredProjects] = useState(projects);
-
-//   const handleFilter = (category, service) => {
-//     let data = projects;
-
-//     if (category !== "All") {
-//       data = data.filter((p) => p.category === category);
-//     }
-
-//     if (service !== "All") {
-//       data = data.filter((p) => p.service === service);
-//     }
-
-//     setFilteredProjects(data);
-//   };
-
-//   return (
-//     <section
-//       className={`${currentTheme.background} ${currentTheme.text} py-20`}
-//     >
-//       <div className="max-w-7xl mx-auto px-6">
-//         {/* HEADER */}
-//         <div className="mb-12 flex flex-col items-center justify-center">
-//           <Badge text={"Our Portfolio"} />
-//           {/* main hiading */}
-//           <h2 className={`${currentTheme.headings}`}>
-//             Our{" "}<span className="text-secondary">Projects</span>
-//           </h2>
-//         </div>
-
-//         {/* FILTERS */}
-//         <ProjectFilters onFilter={handleFilter} />
-
-//         {/* MASONRY GRID */}
-//         <div
-//           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
-//         >
-//           {filteredProjects.map((project) => (
-//             <div key={project.slug} className="mb-6 break-inside-avoid">
-//               <ProjectCard project={project} />
-//             </div>
-//           ))}
-//           {/* {filteredProjects.length === 0 && (
-//             <div className="text-center py-12">
-//               <div className="text-4xl mb-4">🏗️</div>
-//               <h3 className="text-xl font-semibold mb-2">No projects found</h3>
-//               <p className="text-gray-600 mb-4">
-//                 We don't have any projects in the category yet.
-//               </p>
-//             </div>
-//           )} */}
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
