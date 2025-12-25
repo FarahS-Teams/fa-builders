@@ -16,57 +16,50 @@ const AboutStory = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      custom-container
-      relative w-full overflow-hidden
-      px-4 sm:px-6 lg:px-12
-      py-16 md:py-20`}
+      custom-container relative w-full overflow-hidden
+      px-4 sm:px-6 lg:px-8
+      py-12 md:py-16 lg:py-8 mt-8`}
     >
       <div className="content">
         {/* Badge */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center">
           <Badge text="Our Story" />
         </div>
 
         {/* Content Wrapper */}
-        <div
-          className="
-        
-        flex flex-col md:flex-row
-        items-center md:items-start
-        gap-10 md:gap-12 lg:gap-16
-      "
-        >
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 lg:gap-16">
           {/* Text Section */}
           <div className="flex flex-col md:w-1/2 text-center md:text-left">
             <h2
-              className={`${currentTheme.headings} mb-4`}
+              className={`${currentTheme.headings}`}
               style={{ fontFamily: "var(--font-Montserrat)" }}
             >
               FA Builders <span className="text-secondary">Story</span>
             </h2>
 
             <p
-              className="text-base sm:text-lg leading-relaxed mb-5 opacity-90"
+              className="text-base sm:text-lg leading-relaxed mb-4 md:mb-5 opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              Founded in 2025, FA Builders Ltd. has grown from a small
-              construction firm into one of London’s most trusted building
-              companies. We specialize in creating modern, sustainable, and
-              high-quality spaces.
+              Since 2025, FA Builders Ltd. has established itself as a trusted
+              construction company in London, completing over 100 projects with
+              a strong focus on client satisfaction.
             </p>
 
             <p
               className="text-base sm:text-lg leading-relaxed opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              Every project reflects our commitment to craftsmanship, safety,
-              and client satisfaction—building trust and shaping communities
-              across London.
+              We specialize in high-quality, modern, and sustainable building
+              solutions, from home renovations and extensions to commercial
+              projects. Every project showcases our expert craftsmanship,
+              safety, and commitment to timely delivery, helping us build
+              lasting relationships and stronger communities across London.
             </p>
           </div>
 
           {/* Image Section */}
-          <div className="relative md:w-1/2 flex justify-center">
+          <div className="relative md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Glow */}
             <div className="absolute -inset-6 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50" />
 
@@ -95,9 +88,9 @@ const AboutStory = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex justify-center mt-12">
+        {/* <div className="flex justify-center mt-0 lg:mt-8">
           <Cta text="View Our Projects" path="/projects" variant="secondary" />
-        </div>
+        </div> */}
       </div>
     </section>
   );
