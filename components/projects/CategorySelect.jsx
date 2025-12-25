@@ -34,7 +34,7 @@ export default function CategorySelect({ options, value, onChange }) {
         onClick={() => setOpen(!open)}
         className={`w-full px-4 py-2 flex items-center justify-between 
                    rounded-lg border text-sm font-medium
-                   hover:border-[#ff9326] focus:outline-none`}
+                   hover:border-secondary focus:outline-none`}
         style={{ fontFamily: "var(--font-inter)" }}
       >
         {value}
@@ -44,7 +44,7 @@ export default function CategorySelect({ options, value, onChange }) {
       {/* Dropdown */}
       {open && (
         <div
-          className={`${currentTheme.card} absolute z-50 mt-2 w-full rounded-lg shadow-lg border-[#fftt66] overflow-hidden`}
+          className={`${currentTheme.card} absolute z-50 mt-2 w-full rounded-lg shadow-lg border-secondary overflow-hidden`}
         >
           {options.map((opt) => (
             <button
@@ -54,12 +54,12 @@ export default function CategorySelect({ options, value, onChange }) {
                 setOpen(false);
               }}
               className={`w-full flex items-center justify-between px-4 py-2 text-sm
-                hover:bg-[#ff9326]/10 transition
-                ${value === opt ? "bg-[#ff9326]/20 text-[#ff9326] font-medium hover:text-[#ff9326]" : "hover:text-[#ff9326]"}`}
+                hover:bg-secondary/10 transition
+                ${value === opt ? "bg-secondary/20 text-secondary font-medium hover:text-secondary" : "hover:text-secondary"}`}
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {opt}
-              {value === opt && <Check size={16} className="text-[#ff9326]" />}
+              {value === opt && <Check size={16} className="text-secondary" />}
             </button>
           ))}
         </div>

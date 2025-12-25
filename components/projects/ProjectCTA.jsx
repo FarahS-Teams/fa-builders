@@ -16,7 +16,7 @@ export default function ProjectCTA() {
         relative overflow-hidden
         ${currentTheme.text}
         py-20 px-6 text-center
-        bg-gradient-to-r from-[#ff9326] via-[#ff8a1e] to-[#ff7b00]
+        bg-linear-to-r from-secondary/20 via-secondary/10 to-secondary/5
       `}
     >
       {/* Subtle background glow */}
@@ -42,7 +42,7 @@ export default function ProjectCTA() {
             text="Contact Us Now"
             path="/contact"
             className="
-              bg-white text-[#ff9326]
+              bg-white text-secondary 
               hover:bg-white/90
               shadow-lg
               border border-white/30

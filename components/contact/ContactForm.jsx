@@ -77,7 +77,7 @@ const ContactForm = () => {
                 id="first-name"
                 autoComplete="given-name"
                 required
-                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
               />
             </div>
             <div>
@@ -88,7 +88,7 @@ const ContactForm = () => {
                 id="last-name"
                 autoComplete="family-name"
                 required
-                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
               />
             </div>
           </div>
@@ -150,14 +150,14 @@ const ContactForm = () => {
               id="message"
               rows="5"
               required
-              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-orange-500`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
             ></textarea>
           </div>
           <div className="text-center">
             <button
               type="submit"
               disabled={loading}
-              className="bg-orange-500 text-white cursor-pointer px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 disabled:opacity-70 disabled:cursor-not-allowed transition"
+              className="bg-secondary text-white cursor-pointer px-8 py-3 rounded-lg font-semibold hover:bg-secondary/70 disabled:opacity-70 disabled:cursor-not-allowed transition"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

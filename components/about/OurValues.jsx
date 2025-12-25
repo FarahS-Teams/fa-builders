@@ -60,7 +60,7 @@ const OurValues = () => {
             className={currentTheme.headings}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Our <span className="text-[#ff9326]">Values</span>
+            Our <span className="text-secondary">Values</span>
           </h2>
         </div>
 
@@ -86,7 +86,7 @@ const OurValues = () => {
             >
               {/* Icon */}
               <div className="w-16 h-16 rounded-full bg-[#ff9326]/10 flex items-center justify-center">
-                <Icon size={36} className="text-[#ff9326]" />
+                <Icon size={36} className="text-secondary" />
               </div>
 
               {/* Title */}

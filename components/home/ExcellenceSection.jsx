@@ -48,7 +48,7 @@ const ExcellenceSection = () => {
           className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10"
           style={{ fontFamily: "var(--font-montserrat)" }}
         >
-          By The <span className="text-orange-500">Numbers</span>
+          By The <span className="text-secondary">Numbers</span>
         </h2>
 
         {/* cards */}
@@ -59,7 +59,7 @@ const ExcellenceSection = () => {
                 key={index}
                 className={`${currentTheme.card} px-10 py-8 flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
               >
-                <div className="text-5xl text-orange-500">{item.icon}</div>
+                <div className="text-5xl text-secondary">{item.icon}</div>
                 <h2
                   className="text-3xl font-semibold text-center"
                   style={{ fontFamily: "var(--font-montserrat)" }}

@@ -42,7 +42,7 @@ const AboutStory = () => {
               className={`${currentTheme.headings} mb-4`}
               style={{ fontFamily: "var(--font-Montserrat)" }}
             >
-              FA Builders <span className="text-[#ff9326]">Story</span>
+              FA Builders <span className="text-secondary">Story</span>
             </h2>
 
             <p
@@ -68,7 +68,7 @@ const AboutStory = () => {
           {/* Image Section */}
           <div className="relative md:w-1/2 flex justify-center">
             {/* Glow */}
-            <div className="absolute -inset-6 bg-linear-to-r from-orange-500/20 to-amber-500/20 rounded-3xl blur-2xl opacity-50" />
+            <div className="absolute -inset-6 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50" />
 
             {/* Image Card */}
             <div
@@ -77,7 +77,7 @@ const AboutStory = () => {
               aspect-square
               rounded-2xl overflow-hidden
               ${currentTheme.card}
-              border border-orange-500/20
+              border border-secondary/20
               shadow-xl
               transition-transform duration-300
               hover:scale-[1.02]`}

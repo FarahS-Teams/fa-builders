@@ -32,14 +32,14 @@ const HeroSection = () => {
 
             {/* Main Heading */}
             <h2 className={`${currentTheme.headings}`}>
-              Building Your <span className="text-[#ff9326]">Dreams</span> With{" "}
+              Building Your <span className="text-secondary">Dreams</span> With{" "}
               Precision & Excellence.
             </h2>
 
             {/* description */}
             <p className="text-lg md:text-lg mb-8 leading-relaxed max-w-2xl">
               We transform your vision into reality with{" "}
-              <span className="font-semibold text-[#ff9326]">
+              <span className="font-semibold text-secondary">
                 unmatched quality
               </span>{" "}
               and professional craftsmanship. From concept to completion, we
@@ -65,9 +65,9 @@ const HeroSection = () => {
           <div className="lg:w-1/2 relative h-full">
             {/* Main Image */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-linear-to-r from-orange-500/20 to-amber-500/20 rounded-3xl blur-xl opacity-50"></div>
+              <div className="absolute -inset-4 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-xl opacity-50"></div>
               <div
-                className={`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-orange-500/20 shadow-2xl`}
+                className={`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-secondary shadow-2xl`}
               >
                 <Image
                   src={hero}
@@ -81,10 +81,10 @@ const HeroSection = () => {
 
             {/* Card 1 */}
             <div
-              className={`absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-orange-500/20 max-w-xs`}
+              className={`absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary max-w-xs`}
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-[#ff9326] rounded-lg">
+                <div className="p-2 bg-secondary rounded-lg">
                   <FaToolbox className="text-white text-xl" />
                 </div>
                 <div>
@@ -96,10 +96,10 @@ const HeroSection = () => {
 
             {/*Card 2 */}
             <div
-              className={`absolute -top-8 -right-2 md:-right-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-orange-500/20 max-w-xs`}
+              className={`absolute -top-8 -right-2 md:-right-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-[#ff9326] rounded-lg">
+                <div className="p-2 bg-secondary rounded-lg">
                   <FaAward className="text-white text-xl" />
                 </div>
                 <div>

@@ -55,7 +55,7 @@ export default function ProjectsGrid() {
             className={currentTheme.headings}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Our <span className="text-[#ff9326]">Projects</span>
+            Our <span className="text-secondary">Projects</span>
           </h2>
 
           <p
@@ -75,7 +75,7 @@ export default function ProjectsGrid() {
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Showing{" "}
-              <span className="text-[#ff9326] font-bold">
+              <span className="text-secondary font-bold">
                 {filteredProjects.length}
               </span>
               {filteredProjects.length === 1 ? " project" : " projects"}
@@ -95,7 +95,7 @@ export default function ProjectsGrid() {
           {(categoryFilter !== "All" || serviceFilter !== "All") && (
             <button
               onClick={resetFilters}
-              className="text-sm text-[#ff9326] hover:underline"
+              className="text-sm text-secondary hover:underline"
               style={{ fontFamily: "var(--font-inter)" }}
               aria-label="Reset all filters"
             >
@@ -133,7 +133,7 @@ export default function ProjectsGrid() {
             </div>
           ) : (
             // EMPTY STATE - Use resetFilters instead of handleFilter
-            <div className="text-center py-10 sm:py-14 lg:py-16 bg-white/5 rounded-2xl border border-dashed border-[#ff9326]/30">
+            <div className="text-center py-10 sm:py-14 lg:py-16 bg-white/5 rounded-2xl border border-dashed border-secondary/30">
               <div className="text-5xl sm:text-6xl mb-4 opacity-50">🏗️</div>
               <h3
                 className={`text-xl sm:text-2xl font-semibold mb-3 ${currentTheme.headings}`}
@@ -150,8 +150,8 @@ export default function ProjectsGrid() {
               <button
                 onClick={resetFilters}
                 className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base font-semibold \
-   bg-linear-to-r from-[#ff9326] to-amber-500 \
-   hover:from-[#ff9326] hover:to-amber-600 \
+   bg-linear-to-r from-secondary to-amber-500 \
+   hover:from-secondary hover:to-amber-600 \
    text-white rounded-lg shadow-lg hover:shadow-xl \
    transition-all duration-300 transform hover:scale-105"
                 aria-label="Reset filters to view all projects"
@@ -206,7 +206,7 @@ export default function ProjectsGrid() {
 //           <Badge text={"Our Portfolio"} />
 //           {/* main hiading */}
 //           <h2 className={`${currentTheme.headings}`}>
-//             Our{" "}<span className="text-[#ff9326]">Projects</span>
+//             Our{" "}<span className="text-secondary">Projects</span>
 //           </h2>
 //         </div>
 

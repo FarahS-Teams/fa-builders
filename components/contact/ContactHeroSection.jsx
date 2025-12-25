@@ -26,7 +26,7 @@ const ContactHeroSection = () => {
         {/* Text Content */}
         <div className="relative z-10 h-full flex items-center justify-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center px-4">
-            Contact <span className="text-orange-500">Me</span>
+            Contact <span className="text-secondary">Me</span>
           </h1>
         </div>
       </div>
