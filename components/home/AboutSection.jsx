@@ -48,7 +48,7 @@ const AboutSection = () => {
           <Badge text={"About us"} />
 
           <h2 className={`${currentTheme.headings}`}>
-            Building <span className="text-[#ff9326]">Excellence</span> Since
+            Building <span className="text-secondary">Excellence</span> Since
             2008
           </h2>
 

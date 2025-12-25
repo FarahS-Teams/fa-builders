@@ -44,7 +44,7 @@ const ProgressCircle = ({ value, suffix }) => {
           cx="70"
           cy="70"
           r={radius}
-          stroke="#ff9326"
+          stroke="secondary"
           strokeOpacity="0.15"
           strokeWidth="4"
           fill="transparent"
@@ -54,7 +54,7 @@ const ProgressCircle = ({ value, suffix }) => {
           cx="70"
           cy="70"
           r={radius}
-          stroke="#ff9326"
+          stroke="secondary"
           strokeWidth="4"
           fill="transparent"
           strokeLinecap="round"

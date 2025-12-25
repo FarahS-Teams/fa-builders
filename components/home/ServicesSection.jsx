@@ -64,7 +64,7 @@ const ServicesSection = () => {
 
         {/* Main Heading */}
         <h2 className={`${currentTheme.headings}`}>
-          Comprehensive <span className="text-[#ff9326]">Construction</span>{" "}
+          Comprehensive <span className="text-secondary">Construction</span>{" "}
           Services
         </h2>
 
@@ -76,11 +76,11 @@ const ServicesSection = () => {
               className={`group relative ${currentTheme.card} p-6 rounded-xl flex flex-col items-start justify-center gap-6 border border-secondary transition-all duration-500 hover:-translate-y-2`}
             >
               {/* Icon */}
-              <div className="text-[#ff9326]">{service.icon}</div>
+              <div className="text-secondary">{service.icon}</div>
 
               {/* Content */}
               <div className="relative">
-                <h3 className="text-xl font-bold mb-3 group-hover:text-[#ff9326] transition-colors duration-300">
+                <h3 className="text-xl font-bold mb-3 group-hover:text-secondary transition-colors duration-300">
                   {service.title}
                 </h3>
 
@@ -90,7 +90,7 @@ const ServicesSection = () => {
                 <ul className="mb-6 space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm">
-                      <FaTachometerAlt className="text-[#ff9326] text-xs" />
+                      <FaTachometerAlt className="text-secondary text-xs" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -106,7 +106,7 @@ const ServicesSection = () => {
               </div>
 
               {/* Bottom Border Effect */}
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#ff9326] opacity-30"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary opacity-30"></div>
             </div>
           ))}
         </div>

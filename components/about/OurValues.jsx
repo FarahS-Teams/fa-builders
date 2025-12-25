@@ -85,7 +85,7 @@ const OurValues = () => {
             `}
             >
               {/* Icon */}
-              <div className="w-16 h-16 rounded-full bg-[#ff9326]/10 flex items-center justify-center">
+              <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center">
                 <Icon size={36} className="text-secondary" />
               </div>
 

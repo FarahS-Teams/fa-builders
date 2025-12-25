@@ -9,11 +9,11 @@
 
 :root {
   --primary: #ffffff;
-  --secondary: #ff9326;
+  --secondary: #f7922c;
 }
 .dark {
-  --primary: #0a1221;
-  --secondary: #ff9326;
+  --primary: #0e152b;
+  --secondary: #f7922c;
 }
 
 h2 {
