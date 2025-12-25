@@ -85,7 +85,7 @@ const Footer = () => {
   const context = useContext(themeContext);
 
   if (!context) {
-    throw new Error("Header must be used within a ThemeContextProvider");
+    throw new Error("Footer must be used within a ThemeContextProvider");
   }
 
   const { theme, currentTheme } = context;

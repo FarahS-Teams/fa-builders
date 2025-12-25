@@ -63,7 +63,7 @@ const ServicesSection = () => {
         <Badge text={"Our Expertise"} />
 
         {/* Main Heading */}
-        <h2 className={`${currentTheme.headings}`}>
+        <h2 className={`${currentTheme.headings} text-center`}>
           Comprehensive <span className="text-secondary">Construction</span>{" "}
           Services
         </h2>

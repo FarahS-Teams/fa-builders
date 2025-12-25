@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaLinkedin, FaFacebook, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaTiktok } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { useContext } from "react";
 import themeContext from "@/app/context/themeContext";
