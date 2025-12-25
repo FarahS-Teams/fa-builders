@@ -60,36 +60,38 @@ const OurProcess = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      w-full px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+      custom-container px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
     >
-      {/* Header */}
-      <div className="flex flex-col items-center text-center mb-12">
-        <Badge text="Our Process" />
-        <h2
-          className={currentTheme.headings}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Checkout Our <span className="text-[#ff9326]">Process</span>
-        </h2>
-        <p
-          className="text-base sm:text-lg max-w-xl mt-2"
-          style={{ fontFamily: "var(--font-inter)" }}
-        >
-          We know your time is valuable — and we respect it at every step.
-        </p>
-      </div>
+      <div className="content">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center mb-12">
+          <Badge text="Our Process" />
+          <h2
+            className={currentTheme.headings}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Checkout Our <span className="text-[#ff9326]">Process</span>
+          </h2>
+          <p
+            className="text-base sm:text-lg max-w-xl mt-2"
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            We know your time is valuable — and we respect it at every step.
+          </p>
+        </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-        {processSteps.map(({ step, title, description, icon: Icon }, index) => (
-          <motion.div
-            key={step}
-            custom={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className={`${currentTheme.card}
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {processSteps.map(
+            ({ step, title, description, icon: Icon }, index) => (
+              <motion.div
+                key={step}
+                custom={index}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className={`${currentTheme.card}
               relative
               max-w-sm mx-auto w-full
               px-6 py-8
@@ -98,42 +100,44 @@ const OurProcess = () => {
               rounded-xl
               hover:-translate-y-3 hover:shadow-xl
               transition-all duration-300 ease-out`}
-          >
-            {/* Step Badge */}
-            <div
-              className="absolute -top-5 left-1/2 -translate-x-1/2
+              >
+                {/* Step Badge */}
+                <div
+                  className="absolute -top-5 left-1/2 -translate-x-1/2
               w-12 h-12 flex items-center justify-center
               rounded-full bg-[#ff9326] text-white
               font-bold shadow-lg ring-4 ring-black/10"
-            >
-              {step}
-            </div>
+                >
+                  {step}
+                </div>
 
-            {/* Icon */}
-            <Icon size={36} className="text-[#ff9326] mt-4" />
+                {/* Icon */}
+                <Icon size={36} className="text-[#ff9326] mt-4" />
 
-            {/* Title */}
-            <h3
-              className="text-xl font-semibold text-center"
-              style={{ fontFamily: "var(--font-montserrat)" }}
-            >
-              {title}
-            </h3>
+                {/* Title */}
+                <h3
+                  className="text-xl font-semibold text-center"
+                  style={{ fontFamily: "var(--font-montserrat)" }}
+                >
+                  {title}
+                </h3>
 
-            {/* Description */}
-            <p
-              className="text-sm sm:text-base text-center opacity-90"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {description}
-            </p>
-          </motion.div>
-        ))}
-      </div>
+                {/* Description */}
+                <p
+                  className="text-sm sm:text-base text-center opacity-90"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {description}
+                </p>
+              </motion.div>
+            ),
+          )}
+        </div>
 
-      {/* CTA */}
-      <div className="flex justify-center mt-12">
-        <Cta text="Build with us" path="/contact" variant="secondary" />
+        {/* CTA */}
+        <div className="flex justify-center mt-12">
+          <Cta text="Build with us" path="/contact" variant="secondary" />
+        </div>
       </div>
     </section>
   );

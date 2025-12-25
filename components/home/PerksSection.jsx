@@ -34,45 +34,48 @@ const PerksSection = () => {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text}
-      w-full px-4 sm:px-6 lg:px-12 py-16`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      {/* Section Header */}
-      <div className="flex flex-col items-center text-center mb-10">
-        <Badge text="Why Choose Us" />
-        <h2 className={`${currentTheme.headings}`}>
-          Why <span className="text-[#ff9326]">Choose</span> Us
+      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-0 py-12 md:py-8 lg:py-9">
+        <Badge text={"Why Choose Us"} />
+
+        {/* main heading */}
+
+        <h2
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10"
+          style={{ fontFamily: "var(--font-montserrat)" }}
+        >
+          Why <span className="text-orange-500">Choose</span> Us{" "}
         </h2>
-      </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 place-items-center">
-        {perksData.map(({ icon: Icon, title, desc }, index) => (
-          <div
-            key={index}
-            className={`
-              ${currentTheme.card}
-              w-full max-w-xs
-              h-full min-h-[240px]
-              p-6
-              flex flex-col items-center justify-center
-              text-center
-              gap-4
-              rounded-xl
-              transition-all duration-300
-              hover:-translate-y-2
-            `}
-          >
-            {/* Icon */}
-            <Icon className="text-4xl text-[#ff9326]" aria-hidden="true" />
-
-            {/* Title */}
-            <h3 className="text-lg md:text-xl font-semibold">{title}</h3>
-
-            {/* Description */}
-            <p className="text-sm md:text-base leading-relaxed">{desc}</p>
-          </div>
-        ))}
+        {/* cards section */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
+          {perksData.map((elem, index) => {
+            const Icon = elem.icon;
+            return (
+              <div
+                key={index}
+                className={`p-5 rounded-xl flex flex-col justify-center items-center gap-5 ${currentTheme.card}  transition-all duration-300 group hover:-translate-y-2`}
+              >
+                <div className="text-orange-500 group-hover:scale-110 transition-transform duration-300">
+                  <Icon />
+                </div>
+                <h4
+                  className="font-bold text-4xl"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {elem.title}
+                </h4>
+                <p
+                  className="text-md"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {elem.desc}
+                </p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -85,10 +85,9 @@ const TestimonialsSection = () => {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} max-w-full overflow-hidden`}
-      id="testimonials"
+      className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
         {/* main hading*/}
         <div className="text-center mb-16">
           <Badge text={"Client Stories"} />

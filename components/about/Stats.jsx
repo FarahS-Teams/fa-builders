@@ -87,46 +87,48 @@ export default function Stats() {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      w-full px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
+      custom-container py-16 md:py-20`}
     >
-      {/* Header */}
-      <div className="flex flex-col items-center text-center mb-12">
-        <Badge text="Our Stats" />
-        <h2
-          className={currentTheme.headings}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Our <span className="text-[#ff9326]">Excellence</span>
-        </h2>
-      </div>
+      <div className="content ">
+        {/* Header */}
+        <div className="flex flex-col items-center text-center mb-12">
+          <Badge text="Our Stats" />
+          <h2
+            className={currentTheme.headings}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Our <span className="text-[#ff9326]">Excellence</span>
+          </h2>
+        </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-        {statsData.map(({ value, suffix, label, delay }) => (
-          <motion.div
-            key={label}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay }}
-            className={`${currentTheme.card}
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          {statsData.map(({ value, suffix, label, delay }) => (
+            <motion.div
+              key={label}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay }}
+              className={`${currentTheme.card}
               max-w-sm mx-auto w-full
               flex flex-col items-center
               gap-6 py-8 px-6
               rounded-xl
               hover:-translate-y-3 hover:shadow-xl
               transition-all duration-300 ease-out`}
-          >
-            <ProgressCircle value={value} suffix={suffix} />
-
-            <p
-              className="text-sm sm:text-base text-center opacity-90"
-              style={{ fontFamily: "var(--font-inter)" }}
             >
-              {label}
-            </p>
-          </motion.div>
-        ))}
+              <ProgressCircle value={value} suffix={suffix} />
+
+              <p
+                className="text-sm sm:text-base text-center opacity-90"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

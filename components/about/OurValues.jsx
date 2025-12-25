@@ -49,31 +49,32 @@ const OurValues = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      w-full relative overflow-hidden
+     custom-container w-full relative overflow-hidden
       px-4 sm:px-6 lg:px-12 py-16 md:py-20`}
     >
-      {/* Section Header */}
-      <div className="flex flex-col items-center text-center mb-12">
-        <Badge text="Our Values" />
-        <h2
-          className={currentTheme.headings}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Our <span className="text-[#ff9326]">Values</span>
-        </h2>
-      </div>
+      <div className="content">
+        {/* Section Header */}
+        <div className="flex flex-col items-center text-center mb-12">
+          <Badge text="Our Values" />
+          <h2
+            className={currentTheme.headings}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Our <span className="text-[#ff9326]">Values</span>
+          </h2>
+        </div>
 
-      {/* Cards */}
-      <div className="flex flex-col md:flex-row gap-8 md:gap-10">
-        {valuesData.map(({ title, description, icon: Icon }, index) => (
-          <motion.div
-            key={title}
-            custom={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            className={`
+        {/* Cards */}
+        <div className="flex flex-col md:flex-row gap-8 md:gap-10">
+          {valuesData.map(({ title, description, icon: Icon }, index) => (
+            <motion.div
+              key={title}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className={`
               ${currentTheme.card}
               flex-1 max-w-md mx-auto md:mx-0
               px-8 py-10 rounded-xl
@@ -82,29 +83,30 @@ const OurValues = () => {
               hover:-translate-y-3 hover:shadow-xl
               transition-all duration-300 ease-out
             `}
-          >
-            {/* Icon */}
-            <div className="w-16 h-16 rounded-full bg-[#ff9326]/10 flex items-center justify-center">
-              <Icon size={36} className="text-[#ff9326]" />
-            </div>
-
-            {/* Title */}
-            <h3
-              className="text-xl sm:text-2xl font-semibold"
-              style={{ fontFamily: "var(--font-montserrat)" }}
             >
-              {title}
-            </h3>
+              {/* Icon */}
+              <div className="w-16 h-16 rounded-full bg-[#ff9326]/10 flex items-center justify-center">
+                <Icon size={36} className="text-[#ff9326]" />
+              </div>
 
-            {/* Description */}
-            <p
-              className="text-sm sm:text-base leading-relaxed opacity-90"
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {description}
-            </p>
-          </motion.div>
-        ))}
+              {/* Title */}
+              <h3
+                className="text-xl sm:text-2xl font-semibold"
+                style={{ fontFamily: "var(--font-montserrat)" }}
+              >
+                {title}
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-sm sm:text-base leading-relaxed opacity-90"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
