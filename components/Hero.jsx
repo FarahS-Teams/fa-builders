@@ -46,7 +46,7 @@ const Hero = ({
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             {title.replace(highlight, "")}
-            <span className="text-[#ff9326]"> {highlight}</span>
+            <span className="text-secondary"> {highlight}</span>
           </h1>
 
           {/* Optional Paragraph */}
@@ -75,7 +75,7 @@ const Hero = ({
       </div>
 
       {/* Decorative Lines */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-[#ff9326] to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary to-transparent" />
       <div className="absolute top-[4px] left-0 w-full h-[1px] bg-gradient-to-r from-[#ffffff20] to-transparent" />
     </section>
   );

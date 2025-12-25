@@ -35,7 +35,7 @@ const ProjectCard = ({ project, index }) => {
           ${currentTheme.background} ${currentTheme.text}
           ${currentTheme.card}
           group relative overflow-hidden
-          rounded-2xl border border-[#ff9326]/40
+          rounded-2xl border border-secondary/20
           backdrop-blur-md shadow-lg
           transition-all hover:shadow-2xl
           flex flex-col h-full
@@ -62,7 +62,7 @@ const ProjectCard = ({ project, index }) => {
           <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
           {/* Orange stripe */}
-          <div className="absolute -bottom-20 -left-20 w-[150%] h-24 bg-[#ff9326]/90 rotate-[-12deg] opacity-0 group-hover:opacity-100 transition duration-500" />
+          <div className="absolute -bottom-20 -left-20 w-[150%] h-24 bg-secondary rotate-[-12deg] opacity-0 group-hover:opacity-100 transition duration-500" />
 
           {/* Badge */}
           <div className="absolute top-3 left-3 z-10">
@@ -71,10 +71,10 @@ const ProjectCard = ({ project, index }) => {
       inline-flex items-center gap-1.5
       px-3 py-1
       text-[11px] font-semibold uppercase tracking-wide
-      text-[#ff9326]
+      text-secondary
       bg-white/90
       rounded-full
-      border border-[#ff9326]/30
+      border border-secondary/30
       shadow-sm
       backdrop-blur-sm
     "

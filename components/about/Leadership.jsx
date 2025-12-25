@@ -28,7 +28,7 @@ export default function Leadership() {
             className={`${currentTheme.headings} text-3xl md:text-4xl font-bold mt-2`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Meet Our <span className="text-[#ff9326]">Director</span>
+            Meet Our <span className="text-secondary">Director</span>
           </h2>
           <p
             className="text-lg md:text-xl mt-3 max-w-2xl mx-auto leading-relaxed"
@@ -57,7 +57,7 @@ export default function Leadership() {
           {/* Director Info */}
           <div className="flex flex-col gap-4 text-center md:text-left">
             <h3 className="text-2xl md:text-3xl font-bold">Awais Ibrar</h3>
-            <p className="text-lg md:text-xl text-[#ff9326]">
+            <p className="text-lg md:text-xl text-secondary">
               Managing Director, FA Builders Ltd.
             </p>
             <p className="italic text-md md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
@@ -72,7 +72,7 @@ export default function Leadership() {
                 href="https://www.facebook.com/share/1FeXdKT8s5/?mibextid=wwXIfr"
                 target="_blank"
                 aria-label="Facebook"
-                className="text-white p-3 rounded-full bg-[#ff9326] hover:bg-[#e6831f] transition shadow-lg"
+                className="text-white p-3 rounded-full bg-secondary hover:bg-secondary/70 transition shadow-lg"
               >
                 <FaFacebook size={24} />
               </a>
@@ -80,7 +80,7 @@ export default function Leadership() {
                 href="https://www.tiktok.com/@fabuildersltd?_r=1&_t=ZN-91vF6beGwBa"
                 target="_blank"
                 aria-label="TikTok"
-                className="text-white p-3 rounded-full bg-[#ff9326] hover:bg-[#e6831f] transition shadow-lg"
+                className="text-white p-3 rounded-full bg-secondary hover:bg-secondary/70 transition shadow-lg"
               >
                 <FaTiktok size={24} />
               </a>
@@ -88,7 +88,7 @@ export default function Leadership() {
                 href="https://www.instagram.com/fabuildersltd?igsh=azg2OGc1MmlvdGZ6&utm_source=qr"
                 target="_blank"
                 aria-label="Instagram"
-                className="text-white p-3 rounded-full bg-[#ff9326] hover:bg-[#e6831f] transition shadow-lg"
+                className="text-white p-3 rounded-full bg-secondary hover:bg-secondary/70 transition shadow-lg"
               >
                 <FaInstagram size={24} />
               </a>

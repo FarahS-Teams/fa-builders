@@ -95,9 +95,9 @@ const AboutSection = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`p-5 rounded-xl flex flex-col justify-center items-center ${currentTheme.card} border border-orange-500/10 hover:border-orange-500/30 transition-all duration-300 group `}
+                className={`p-5 rounded-xl flex flex-col justify-center items-center ${currentTheme.card} border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group `}
               >
-                <div className="text-[#ff9326] mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-secondary mb-3 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 <h4 className="font-bold text-xl mb-1">{feature.title}</h4>

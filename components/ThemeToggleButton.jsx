@@ -20,7 +20,7 @@ const ThemeToggleButton = () => {
         {theme === "dark" ? (
           <FiMoon className="text-gray-200 text-lg" />
         ) : (
-          <FiSun className="text-orange-500 text-lg" />
+          <FiSun className="text-secondary text-lg" />
         )}
       </span>
     </button>

@@ -73,7 +73,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative ${currentTheme.card} p-6 rounded-xl flex flex-col items-start justify-center gap-6 border border-orange-500 transition-all duration-500 hover:-translate-y-2`}
+              className={`group relative ${currentTheme.card} p-6 rounded-xl flex flex-col items-start justify-center gap-6 border border-secondary transition-all duration-500 hover:-translate-y-2`}
             >
               {/* Icon */}
               <div className="text-[#ff9326]">{service.icon}</div>

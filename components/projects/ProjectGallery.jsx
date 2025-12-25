@@ -62,13 +62,13 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#d6c3b0] text-[#ff9326] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-[#ff9326] hover:text-white transition"
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-secondary w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-secondary/70 hover:text-white transition"
       >
         &#10094;
       </button>
       <button
         onClick={nextSlide}
-        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#d6c3b0] text-[#ff9326] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-[#ff9326] hover:text-white transition"
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-secondary w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-secondary/70 hover:text-white transition"
       >
         &#10095;
       </button>
@@ -81,8 +81,8 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full cursor-pointer transition ${
               currentIndex === index
-                ? "bg-[#ff9326] scale-125"
-                : "bg-[#ff9326]/70"
+                ? "bg-secondary scale-125"
+                : "bg-secondary/70"
             }`}
           ></span>
         ))}
@@ -130,8 +130,8 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
                 onClick={() => setLightboxIndex(index)}
                 className={`w-2 h-2 rounded-full cursor-pointer transition  ${
                   lightboxIndex === index
-                    ? "bg-[#ff9326] scale-125"
-                    : "bg-[#ff9326]/70"
+                    ? "bg-secondary scale-125"
+                    : "bg-secondary/70"
                 }`}
               ></span>
             ))}

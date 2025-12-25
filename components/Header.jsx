@@ -54,13 +54,13 @@ const Header = () => {
               height={10}
             />
             {/* line*/}
-            <div className="h-8 w-0.5 bg-[#ff9326]/40 hidden sm:block"></div>
+            <div className="h-8 w-0.5 bg-secondary/40 hidden sm:block"></div>
           </div>
 
           {/* Tagline */}
           <div className="hidden sm:block">
             <p
-              className="text-xs text-[#ff9326] tracking-widest uppercase"
+              className="text-xs text-secondary tracking-widest uppercase"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               The Standard of
@@ -82,8 +82,8 @@ const Header = () => {
                     href="/services"
                     className={`${
                       isActivePath("/services")
-                        ? "text-[#ff9326] border-b-2 border-[#ff9326]"
-                        : "hover:text-[#ff9326]"
+                        ? "text-secondary border-b-2 border-secondary"
+                        : "hover:text-secondary"
                     } transition-all duration-300`}
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
@@ -93,14 +93,14 @@ const Header = () => {
                   {/* Dropdown */}
                   <div className="absolute left-0 top-full mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div
-                      className={`${currentTheme.card} rounded-xl shadow-lg border border-[#ff9326]/30 p-4`}
+                      className={`${currentTheme.card} rounded-xl shadow-lg border border-secondary/30 p-4`}
                     >
                       <ul className="flex flex-col gap-3">
                         {service.map((item) => (
                           <li key={item.slug}>
                             <Link
                               href={`/services/${item.slug}`}
-                              className="block text-sm hover:text-[#ff9326] transition"
+                              className="block text-sm hover:text-secondary transition"
                               style={{ fontFamily: "var(--font-inter)" }}
                             >
                               {item.title}
@@ -121,13 +121,13 @@ const Header = () => {
                 href={elem.path}
                 className={`${
                   isActivePath(elem.path)
-                    ? "text-[#ff9326] border-b-2 border-[#ff9326]"
-                    : "relative group hover:text-[#ff9326]"
+                    ? "text-secondary border-b-2 border-secondary"
+                    : "relative group hover:text-secondary"
                 } transition-all duration-300`}
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {elem.name}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#ff9326] group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
               </Link>
             );
           })}
@@ -170,7 +170,7 @@ const Header = () => {
                 />
                 <div>
                   <p
-                    className="text-xs text-[#ff9326] tracking-widest"
+                    className="text-xs text-secondary tracking-widest"
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     The Standard of

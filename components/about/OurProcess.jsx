@@ -70,7 +70,7 @@ const OurProcess = () => {
             className={currentTheme.headings}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Checkout Our <span className="text-[#ff9326]">Process</span>
+            Checkout Our <span className="text-secondary">Process</span>
           </h2>
           <p
             className="text-base sm:text-lg max-w-xl mt-2"
@@ -105,14 +105,14 @@ const OurProcess = () => {
                 <div
                   className="absolute -top-5 left-1/2 -translate-x-1/2
               w-12 h-12 flex items-center justify-center
-              rounded-full bg-[#ff9326] text-white
+              rounded-full bg-secondary text-white
               font-bold shadow-lg ring-4 ring-black/10"
                 >
                   {step}
                 </div>
 
                 {/* Icon */}
-                <Icon size={36} className="text-[#ff9326] mt-4" />
+                <Icon size={36} className="text-secondary mt-4" />
 
                 {/* Title */}
                 <h3

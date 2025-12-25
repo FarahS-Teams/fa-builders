@@ -118,7 +118,7 @@ const Footer = () => {
                 >
                   FA Builders
                 </h3>
-                <p className="text-[#ff9326] text-sm font-semibold tracking-wider uppercase">
+                <p className="text-secondary text-sm font-semibold tracking-wider uppercase">
                   THE STANDARD OF EXCELLENCE
                 </p>
               </div>
@@ -136,9 +136,9 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={item.href}
-                  className="flex items-start gap-3 hover:text-[#ff9326] transition-colors duration-300 group"
+                  className="flex items-start gap-3 hover:text-secondary transition-colors duration-300 group"
                 >
-                  <item.icon className="text-[#ff9326] mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                  <item.icon className="text-secondary mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
                   <span className="text-sm flex-1">{item.text}</span>
                 </Link>
               ))}
@@ -152,16 +152,16 @@ const Footer = () => {
                 <div key={index} className="w-full">
                   <h4 className="text-lg font-bold font-montserrat mb-4 relative pb-2">
                     {section.title}
-                    <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-[#ff9326]"></span>
+                    <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-secondary"></span>
                   </h4>
                   <ul className="space-y-2">
                     {section.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
                         <Link
                           href={link.href}
-                          className="text-sm -space-x-4 hover:space-x-0 hover:text-[#ff9326] transition-all duration-500 flex items-center gap-2 group py-1"
+                          className="text-sm -space-x-4 hover:space-x-0 hover:text-secondary transition-all duration-500 flex items-center gap-2 group py-1"
                         >
-                          <span className="w-1.5 h-1.5 bg-[#ff9326] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 shrink-0"></span>
+                          <span className="w-1.5 h-1.5 bg-secondary rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 shrink-0"></span>
                           <span className="truncate">{link.name}</span>
                         </Link>
                       </li>
@@ -196,10 +196,10 @@ const Footer = () => {
 
             {/* our agency name */}
             <div className="flex justify-center items-center gap-2">
-              <span className="text-lg text-[#ff9326]">
+              <span className="text-lg text-secondary">
                 <GrTechnology />
               </span>
-              <span className="text-sm hover:text-[#ff9326] transition-colors duration-300 ease-in-out cursor-pointer">
+              <span className="text-sm hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer">
                 Developed by Nexora Studio
               </span>
             </div>

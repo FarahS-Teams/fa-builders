@@ -62,8 +62,8 @@ export default function ProjectFilters({
               className={`px-4 py-1.5 text-sm rounded-full transition border
                 ${
                   activeService === serv
-                    ? "bg-[#ff9326] text-white border-[#ff9326]"
-                    : "border-gray-300 hover:border-[#ff9326] hover:text-[#ff9326]"
+                    ? "bg-secondary text-white border-secondary"
+                    : "border-gray-300 hover:border-secondary hover:text-secondary"
                 }`}
               style={{ fontFamily: "var(--font-inter)" }}
             >
