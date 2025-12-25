@@ -79,10 +79,10 @@ export default async function ProjectPage({ params }) {
       </section>
 
       {/* CONTENT */}
-      <section className="px-6 lg:px-16 py-16 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <section className="px-6 sm:px-8 lg:px-12 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2 text-center md:text-left">
           <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
-          <p className="mb-10">{project.description}</p>
+          <p className="mb-4">{project.description}</p>
           <ProjectGallery images={project.gallery} />
         </div>
 
@@ -93,7 +93,7 @@ export default async function ProjectPage({ params }) {
       </section>
 
       {/* PREV / NEXT */}
-      <section className="px-6 lg:px-16 py-12 border-t border-white/10">
+      <section className="px-6 sm:px-8 lg:px-12 pt-8 border-t border-white/10">
         <div className="flex justify-between">
           {prevProject ? (
             <Link

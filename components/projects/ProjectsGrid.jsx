@@ -41,7 +41,7 @@ export default function ProjectsGrid() {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container py-12 sm:py-16 lg:py-20`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
       id="portfolio"
     >
       <div className="content">

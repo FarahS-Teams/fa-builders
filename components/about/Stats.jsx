@@ -38,7 +38,7 @@ const ProgressCircle = ({ value, suffix }) => {
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <div className="relative w-32 h-32 flex items-center justify-center">
+    <div className="relative w-28 sm:w-32 h-28 sm:h-32 flex items-center justify-center">
       <svg className="absolute -rotate-90" width="140" height="140">
         <circle
           cx="70"
@@ -49,7 +49,6 @@ const ProgressCircle = ({ value, suffix }) => {
           strokeWidth="4"
           fill="transparent"
         />
-
         <motion.circle
           cx="70"
           cy="70"
@@ -67,7 +66,7 @@ const ProgressCircle = ({ value, suffix }) => {
       </svg>
 
       <h3
-        className="text-3xl font-extrabold text-secondary z-10"
+        className="text-2xl sm:text-3xl font-extrabold text-[#ff9326] z-10"
         style={{ fontFamily: "var(--font-Montserrat)" }}
       >
         <StatCounter from={0} to={value} duration={2} />
@@ -86,15 +85,15 @@ export default function Stats() {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text}
-      custom-container py-16 md:py-20`}
+      className={`${currentTheme.background} ${currentTheme.text} 
+      custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
     >
-      <div className="content ">
+      <div className="content">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center mb-8 md:mb-12">
           <Badge text="Our Stats" />
           <h2
-            className={currentTheme.headings}
+            className={`${currentTheme.headings} mt-4`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Excellence</span>
@@ -102,7 +101,7 @@ export default function Stats() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
           {statsData.map(({ value, suffix, label, delay }) => (
             <motion.div
               key={label}
@@ -110,13 +109,14 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay }}
-              className={`${currentTheme.card}
-              max-w-sm mx-auto w-full
-              flex flex-col items-center
-              gap-6 py-8 px-6
-              rounded-xl
-              hover:-translate-y-3 hover:shadow-xl
-              transition-all duration-300 ease-out`}
+              className={`${currentTheme.card} 
+                max-w-sm mx-auto w-full
+                flex flex-col items-center
+                gap-4 sm:gap-6
+                py-6 sm:py-8 px-4 sm:px-6
+                rounded-xl
+                hover:-translate-y-3 hover:shadow-xl
+                transition-all duration-300 ease-out`}
             >
               <ProgressCircle value={value} suffix={suffix} />
 

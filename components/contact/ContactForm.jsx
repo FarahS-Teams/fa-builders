@@ -54,13 +54,14 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`${currentTheme.background} ${currentTheme.text} py-12 px-4 sm:px-6 lg:px-8`}
+      className={`${currentTheme.background} ${currentTheme.text} py-12 md:py-16 px-4 sm:px-6 lg:px-8`}
     >
       <div className="max-w-lg mx-auto">
         <h2
-          className={`text-3xl font-bold text-center mb-2 ${currentTheme.headings}`}
+          className={`text-center mb-2 ${currentTheme.headings}`}
+          style={{ fontFamily: "var(--font-Montserrat)" }}
         >
-          Get in Touch
+          Get in <span className="text-secondary">Touch</span>
         </h2>
         <p className="text-center mb-8">
           Have a project in mind? Fill out the form below and we'll get back to
