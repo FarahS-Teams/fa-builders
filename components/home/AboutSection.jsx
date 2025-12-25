@@ -67,7 +67,7 @@ const AboutSection = () => {
           <div>
             <div className="mb-8">
               <p
-                className="text-lg leading-relaxed mb-6"
+                className="text-lg leading-relaxed mb-6 text-center lg:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 Founded with a commitment to exceptional craftsmanship and
@@ -77,7 +77,7 @@ const AboutSection = () => {
               </p>
 
               <p
-                className="text-lg leading-relaxed"
+                className="text-lg leading-relaxed text-center lg:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 Every project we undertake reflects our core values: quality
@@ -87,7 +87,12 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <Cta text="Our Full Story" path="/about" variant="secondary" />
+            <Cta
+              text="Our Full Story"
+              path="/about"
+              variant="secondary"
+              className="w-full"
+            />
           </div>
 
           {/* Right Features */}

@@ -53,11 +53,11 @@ const Header = () => {
               height={10}
             />
             {/* line*/}
-            <div className="h-8 w-0.5 bg-secondary/40 hidden sm:block"></div>
+            <div className="h-8 w-0.5 bg-secondary/40"></div>
           </div>
 
           {/* Tagline */}
-          <div className="hidden sm:block">
+          <div>
             <p
               className="text-xs text-secondary tracking-widest uppercase"
               style={{ fontFamily: "var(--font-inter)" }}
@@ -133,7 +133,7 @@ const Header = () => {
         </nav>
 
         {/* Right Section - Theme Toggle and CTA */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4">
           <ThemeToggleButton />
 
           {/* Cta*/}
@@ -147,7 +147,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className="md:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-4">
           <ThemeToggleButton />
 
           <Sheet>

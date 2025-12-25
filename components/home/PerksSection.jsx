@@ -57,17 +57,17 @@ const PerksSection = () => {
                 key={index}
                 className={`p-5 rounded-xl flex flex-col justify-center items-center gap-5 ${currentTheme.card}  transition-all duration-300 group hover:-translate-y-2`}
               >
-                <div className="text-secondary group-hover:scale-110 transition-transform duration-300">
+                <div className="text-secondary text-4xl group-hover:scale-110 transition-transform duration-300">
                   <Icon />
                 </div>
                 <h4
-                  className="font-bold text-4xl"
+                  className="font-bold text-2xl md:text-4xl text-center"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {elem.title}
                 </h4>
                 <p
-                  className="text-md"
+                  className="text-md text-center"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {elem.desc}
