@@ -88,9 +88,9 @@ const TestimonialsSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
       id="testimonials"
     >
-      <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content px-4 sm:px-6 lg:px-8">
         {/* main hading*/}
-        <div className="text-center mb-16">
+        <div className="text-center">
           <Badge text={"Client Stories"} />
           <h2 className={`${currentTheme.headings}`}>
             What Our <span className="text-secondary">Clients</span> Say
@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Swiper Slider */}
-        <div className="relative">
+        <div className="relative px-4 sm:px-6 lg:px-8">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}

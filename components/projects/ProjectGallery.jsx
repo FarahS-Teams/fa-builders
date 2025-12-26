@@ -36,7 +36,7 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
   const nextLightbox = () => setLightboxIndex((lightboxIndex + 1) % length);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto overflow-hidden py-10">
+    <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
       {/* Carousel */}
       <div
         className="flex transition-transform duration-500"
@@ -53,7 +53,7 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
               alt={`Slide ${index + 1}`}
               width={800}
               height={500}
-              className="object-cover w-full h-64 md:h-80 transition-transform duration-300 hover:scale-105"
+              className="object-cover w-full h-64 md:h-80 rounded-md transition-transform duration-300 hover:scale-105 "
             />
           </div>
         ))}

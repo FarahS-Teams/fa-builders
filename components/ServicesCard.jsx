@@ -49,9 +49,6 @@ const ServicesCard = ({ icon, slug, title, description, features }) => {
           className="w-full"
         />
       </div>
-
-      {/* Bottom Border Effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary opacity-30"></div>
     </div>
   );
 };

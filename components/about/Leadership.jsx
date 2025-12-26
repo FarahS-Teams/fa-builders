@@ -18,14 +18,14 @@ export default function Leadership() {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container relative overflow-hidden px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container relative overflow-hidden px-4 sm:px-6 lg:px-8`}
     >
       <div className="content">
         {/* Section Title */}
-        <div className="mb-8 text-center">
+        <div className="flex flex-col items-center text-center mb-12">
           <Badge text="Our Leadership" />
           <h2
-            className={`${currentTheme.headings} text-3xl md:text-4xl font-bold mt-2`}
+            className={`${currentTheme.headings}`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Meet Our <span className="text-secondary">Director</span>

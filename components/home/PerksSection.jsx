@@ -36,13 +36,11 @@ const PerksSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-0 py-12 md:py-8 lg:py-9">
+      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-8">
         <Badge text={"Why Choose Us"} />
-
         {/* main heading */}
-
         <h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-10"
+          className={`${currentTheme.headings} text-center`}
           style={{ fontFamily: "var(--font-montserrat)" }}
         >
           Why <span className="text-secondary">Choose</span> Us{" "}

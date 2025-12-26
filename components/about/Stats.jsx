@@ -66,7 +66,7 @@ const ProgressCircle = ({ value, suffix }) => {
       </svg>
 
       <h3
-        className="text-2xl sm:text-3xl font-extrabold text-[#ff9326] z-10"
+        className="text-2xl sm:text-3xl font-extrabold text-[#f7922c] z-10"
         style={{ fontFamily: "var(--font-Montserrat)" }}
       >
         <StatCounter from={0} to={value} duration={2} />
@@ -86,14 +86,14 @@ export default function Stats() {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text} 
-      custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
+      custom-container px-4 sm:px-6 lg:px-8`}
     >
       <div className="content">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-8 md:mb-12">
+        <div className="flex flex-col items-center text-center">
           <Badge text="Our Stats" />
           <h2
-            className={`${currentTheme.headings} mt-4`}
+            className={`${currentTheme.headings}`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Excellence</span>

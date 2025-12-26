@@ -5,7 +5,7 @@ import Hero from "../Hero";
 
 const Services = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-16 lg:gap-24">
       <Hero title="Our" highlight="Services" image="/about-story.jpg" />
       <ServicesCardsSection />
       <CTASection />

@@ -54,11 +54,11 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`${currentTheme.background} ${currentTheme.text} py-12 md:py-16 px-4 sm:px-6 lg:px-8`}
+      className={`${currentTheme.background} ${currentTheme.text} px-6 sm:px-10 lg:px-14`}
     >
       <div className="max-w-lg mx-auto">
         <h2
-          className={`text-center mb-2 ${currentTheme.headings}`}
+          className={`text-center ${currentTheme.headings}`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Get in <span className="text-secondary">Touch</span>

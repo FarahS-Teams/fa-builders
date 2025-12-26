@@ -25,17 +25,20 @@ const CTASection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content">
+      <div className="content flex flex-col items-center justify-stretch px-4 sm:px-6 lg:px-8">
         <div className="py-16 md:py-24">
           {/* Main CTA Card */}
           <div
-            className={`${currentTheme.card} rounded-2xl p-8 md:p-12 text-center relative overflow-hidden`}
+            className={`${currentTheme.card} rounded-2xl p-17 md:p-16 text-center relative overflow-hidden`}
           >
             {/* Badge */}
             <Badge text={"Limited Slots Avaiable"} />
 
             {/* Main Heading */}
-            <h2 className={`${currentTheme.headings}`}>
+            <h2
+              className={`${currentTheme.headings}`}
+              style={{ fontFamily: "var(--font-montserrat)" }}
+            >
               Ready to Build Your <span className="text-secondary">Dream</span>{" "}
               Space?
             </h2>

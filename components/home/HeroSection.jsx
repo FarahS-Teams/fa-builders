@@ -47,7 +47,7 @@ const HeroSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col lg:flex-row gap-4 mb-12">
+            <div className="flex flex-col lg:flex-row gap-4">
               <Cta
                 text="Get Free Consultation"
                 path="/contact"

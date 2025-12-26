@@ -30,3 +30,11 @@ h2 {
 .content {
   @apply mx-4 w-full max-w-[1560px];
 }
+
+/* .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */

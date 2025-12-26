@@ -41,25 +41,21 @@ export default function ProjectsGrid() {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container px-4 sm:px-6 lg:px-8`}
       id="portfolio"
     >
       <div className="content">
         {/* HEADER */}
-        <div className="mb-10 sm:mb-12 lg:mb-16 text-center">
-          <div className="mb-4">
-            <Badge text="Our Portfolio" />
-          </div>
-
+        <div className="text-center mb-10">
+          <Badge text="Our Portfolio" />
           <h2
             className={currentTheme.headings}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Projects</span>
           </h2>
-
           <p
-            className={`text-lg leading-relaxed mb-6 text-center ${currentTheme.text} max-w-2xl mx-auto`}
+            className={`text-lg leading-relaxed text-center ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Explore our completed construction projects showcasing quality

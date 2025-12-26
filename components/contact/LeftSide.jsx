@@ -9,12 +9,11 @@ const LeftSide = () => {
   return (
     <div
       className={`${currentTheme.background} ${currentTheme.text}
-      py-6 md:py-16
-      px-4 sm:px-6 lg:px-8`}
+      px-6 sm:px-10 lg:px-14`}
     >
       <div className="max-w-lg mx-auto">
         <h2
-          className={`mb-6 ${currentTheme.headings}`}
+          className={`text-center ${currentTheme.headings}`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Contact <span className="text-secondary">At</span>
