@@ -43,7 +43,7 @@ const AboutSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-12">
           <Badge text={"About us"} />
 
@@ -105,7 +105,9 @@ const AboutSection = () => {
                 <div className="text-secondary mb-3 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h4 className="font-bold text-xl mb-1">{feature.title}</h4>
+                <h4 className="font-bold text-xl mb-1 text-center">
+                  {feature.title}
+                </h4>
                 <p className="text-md opacity-80">{feature.desc}</p>
               </div>
             ))}

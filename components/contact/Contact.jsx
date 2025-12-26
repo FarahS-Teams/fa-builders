@@ -11,7 +11,7 @@ const Contact = () => {
       <Hero
         title="Contact Us"
         highlight="Us"
-        image="/contactHeroSection.jpg"
+        image="/cHeroSection.jpg"
         overlay="bg-black/30"
       />
       <div className="flex items-center justify-center py-12">

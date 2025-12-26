@@ -14,7 +14,7 @@ const LeftSide = () => {
     >
       <div className="max-w-lg mx-auto">
         <h2
-          className={`text-center mb-6 ${currentTheme.headings}`}
+          className={`mb-6 ${currentTheme.headings}`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Contact <span className="text-secondary">At</span>
@@ -23,7 +23,7 @@ const LeftSide = () => {
         <div className="space-y-6">
           {/* Email */}
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
             <div className="flex flex-col gap-1">
@@ -34,7 +34,7 @@ const LeftSide = () => {
 
           {/* Phone */}
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
             <div className="flex flex-col gap-1">
@@ -45,7 +45,7 @@ const LeftSide = () => {
 
           {/* Address */}
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
             <div className="flex flex-col gap-1">
@@ -59,7 +59,7 @@ const LeftSide = () => {
 
           {/* Hours */}
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center">
+            <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
             <div className="flex flex-col gap-1">

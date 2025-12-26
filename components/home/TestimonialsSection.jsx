@@ -86,6 +86,7 @@ const TestimonialsSection = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
+      id="testimonials"
     >
       <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
         {/* main hading*/}

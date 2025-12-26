@@ -75,8 +75,8 @@ const Hero = ({
       </div>
 
       {/* Decorative Lines */}
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-secondary to-transparent" />
-      <div className="absolute top-[4px] left-0 w-full h-[1px] bg-gradient-to-r from-secondary to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-0-to-r from-secondary to-transparent" />
+      <div className="absolute top-1 left-0 w-full h-px bg-linear-0-to-r from-secondary to-transparent" />
     </section>
   );
 };

@@ -99,7 +99,6 @@ import service from "@/app/data/service";
 import Image from "next/image";
 import PerksSection from "@/components/home/PerksSection";
 import CTASection from "@/components/home/CTASection";
-import contactHeroSection from "../../../public/contactHeroSection.jpg";
 import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
 import { useParams } from "next/navigation";
@@ -135,7 +134,7 @@ const ServiceDetailPage = () => {
             {IndService.title}
           </h1>
 
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg max-w-3xl mx-auto mb-8">
             {IndService.detailedDescription}
           </p>
 
