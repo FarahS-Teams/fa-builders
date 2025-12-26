@@ -9,7 +9,7 @@ import PerksSection from "./PerksSection";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-20">
       <HeroSection />
       <AboutSection />
       <ExcellenceSection />

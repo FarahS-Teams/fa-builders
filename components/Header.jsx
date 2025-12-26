@@ -3,6 +3,7 @@ import service from "@/app/data/service";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa6";
 import ThemeToggleButton from "./ThemeToggleButton";
+import { FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import Cta from "./Cta";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -79,7 +80,7 @@ const Header = () => {
                   {/* Services link */}
                   <Link
                     href="/services"
-                    className={`${
+                    className={`flex items-center gap-1 ${
                       isActivePath("/services")
                         ? "text-secondary border-b-2 border-secondary"
                         : "hover:text-secondary"
@@ -87,6 +88,8 @@ const Header = () => {
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     Services
+                    {/* Arrow icon */}
+                    <FaChevronDown className="text-xs transition-transform duration-300 group-hover:rotate-180" />
                   </Link>
 
                   {/* Dropdown */}

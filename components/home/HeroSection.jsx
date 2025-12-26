@@ -23,7 +23,7 @@ const HeroSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-16">
           {/* Left Side text */}
           <div className="lg:w-1/2 text-center lg:text-left">
@@ -81,7 +81,7 @@ const HeroSection = () => {
 
             {/* Card 1 */}
             <div
-              className={`absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary max-w-xs`}
+              className={`${currentTheme.background} absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary max-w-xs`}
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary rounded-lg">

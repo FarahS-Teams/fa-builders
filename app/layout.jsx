@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ThemeContextProvider from "./context/ThemeContextProvider";
 import { Inter, Montserrat } from "next/font/google";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <ThemeContextProvider>
           <Header />
           {children}
+          <ScrollToTop />
           <Footer />
         </ThemeContextProvider>
       </body>
