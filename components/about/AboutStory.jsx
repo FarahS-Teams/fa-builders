@@ -14,11 +14,11 @@ const AboutStory = () => {
   const { currentTheme } = context;
 
   return (
+    // py-12 md:py-16 lg:py-8
     <section
       className={`${currentTheme.background} ${currentTheme.text}
       custom-container relative w-full overflow-hidden
-      px-4 sm:px-6 lg:px-8
-      py-12 md:py-16 lg:py-8 mt-8`}
+      px-4 sm:px-6 lg:px-8`}
     >
       <div className="content">
         {/* Badge */}
@@ -61,7 +61,7 @@ const AboutStory = () => {
           {/* Image Section */}
           <div className="relative md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Glow */}
-            <div className="absolute -inset-6 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50" />
+            {/* <div className="absolute -inset-6 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50" /> */}
 
             {/* Image Card */}
             <div

@@ -38,11 +38,11 @@ const Hero = ({
       <div className={`absolute inset-0 ${overlay}`} />
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:px-10">
+      <div className="absolute inset-0 flex items-center justify-center pt-20  md:12 px-4 sm:px-6 md:px-10">
         <div className="text-center max-w-3xl">
           {/* Heading */}
           <h1
-            className={`${currentTheme.headings} text-[#ffffff] mt-3 sm:mt-4 md:mt-5`}
+            className={`${currentTheme.headings} text-[#ffffff]`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             {title.replace(highlight, "")}
@@ -52,9 +52,9 @@ const Hero = ({
           {/* Optional Paragraph */}
           {description && (
             <p
-              className="hidden sm:flex mt-3 sm:mt-4 md:mt-5
+              className="hidden sm:flex 
                          text-sm sm:text-base md:text-lg lg:text-xl
-                         text-gray-200 leading-relaxed mb-2"
+                         text-gray-200 leading-relaxed "
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {description}
@@ -63,12 +63,8 @@ const Hero = ({
 
           {/* Optional CTA */}
           {ctaText && ctaPath && (
-            <div className="hidden sm:flex mt-5 sm:mt-6 md:mt-8 justify-center">
-              <Cta
-                text={ctaText}
-                path={ctaPath}
-                className="px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base"
-              />
+            <div className="hidden sm:flex justify-center pt-4">
+              <Cta text={ctaText} path={ctaPath} />
             </div>
           )}
         </div>

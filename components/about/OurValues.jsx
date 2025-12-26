@@ -50,11 +50,11 @@ const OurValues = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} 
       custom-container w-full relative overflow-hidden
-      px-4 sm:px-6 lg:px-8 py-12 md:py-16 `}
+      px-4 sm:px-6 lg:px-8`}
     >
       <div className="content">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-4 md:mb-8">
+        <div className="flex flex-col items-center text-center">
           <Badge text="Our Values" />
           <h2
             className={`${currentTheme.headings}`}
@@ -86,8 +86,8 @@ const OurValues = () => {
               `}
             >
               {/* Icon */}
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#ff9326]/10 flex items-center justify-center">
-                <Icon size={28} sm={36} className="text-[#ff9326]" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f7922c]/10 flex items-center justify-center">
+                <Icon size={28} sm={36} className="text-secondary" />
               </div>
 
               {/* Title */}

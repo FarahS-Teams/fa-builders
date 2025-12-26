@@ -3,8 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import projects from "@/app/data/projects";
 import ProjectGallery from "@/components/projects/ProjectGallery";
-import ProjectCTA from "@/components/projects/ProjectCTA";
-import themeContext from "@/app/context/themeContext";
 import ProjectDetails from "@/components/projects/ProjectDetailsCard";
 import CTASection from "@/components/home/CTASection";
 
@@ -43,7 +41,7 @@ export default async function ProjectPage({ params }) {
   return (
     <main className="w-full overflow-hidden">
       {/* HERO */}
-      <section className="relative h-[60vh] md:h-[70vh]">
+      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
         <Image
           src={project.heroImage}
           alt={project.title}
@@ -52,18 +50,18 @@ export default async function ProjectPage({ params }) {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/50" />
-        {/* <div className="absolute bottom-0 left-0 w-full h-10 bg-[#ff9326]/90 clip-path-diagonal" /> */}
+        {/* <div className="absolute bottom-0 left-0 w-full h-10 bg-[#f7922c]/90 clip-path-diagonal" /> */}
 
         <div className="absolute inset-0 flex flex-col justify-end px-6 lg:px-16 pb-16 text-white">
           <div className="flex gap-3 flex-wrap mb-4">
             <span
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#ff9326] bg-white/90 rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#f7922c] bg-white/90 rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {project.category}
             </span>
             <span
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#ff9326]  rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#f7922c]  rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {project.service}
@@ -82,7 +80,7 @@ export default async function ProjectPage({ params }) {
       <section className="px-6 sm:px-8 lg:px-12 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2 text-center md:text-left">
           <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
-          <p className="mb-4">{project.description}</p>
+          <p className="mb-10">{project.description}</p>
           <ProjectGallery images={project.gallery} />
         </div>
 
@@ -98,7 +96,7 @@ export default async function ProjectPage({ params }) {
           {prevProject ? (
             <Link
               href={`/projects/${prevProject.slug}`}
-              className="text-[#ff9326]"
+              className="text-[#f7922c]"
             >
               ← {prevProject.title}
             </Link>
@@ -109,7 +107,7 @@ export default async function ProjectPage({ params }) {
           {nextProject ? (
             <Link
               href={`/projects/${nextProject.slug}`}
-              className="text-[#ff9326]"
+              className="text-[#f7922c]"
             >
               {nextProject.title} →
             </Link>

@@ -62,7 +62,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-28">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-28">
           {/* Left Content */}
           <div>
             <div className="mb-8">

@@ -19,10 +19,12 @@ const ServicesCardsSection = () => {
   const { theme, currentTheme } = context;
   return (
     <section
-      className={`${currentTheme.background}  ${currentTheme.text} custom-container`}
+      className={`${currentTheme.background}  ${currentTheme.text} custom-container overflow-hidden px-4 sm:px-6 lg:px-8`}
     >
-      <div className="content flex flex-col items-center  py-12 md:py-8 lg:py-9">
+      <div className="content flex flex-col items-center">
         <Badge text={"Services"} />
+        {/* For SEO */}
+        {/* <p>“Providing loft conversions across London with full building regulation compliance.”</p> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {service.map((elem) => {
             return (

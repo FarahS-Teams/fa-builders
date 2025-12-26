@@ -60,11 +60,11 @@ const OurProcess = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      custom-container px-4 sm:px-6 lg:px-8 py-12 md:py-16`}
+      custom-container px-4 sm:px-6 lg:px-8`}
     >
       <div className="content">
         {/* Header */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center">
           <Badge text="Our Process" />
           <h2
             className={currentTheme.headings}
@@ -73,7 +73,7 @@ const OurProcess = () => {
             Checkout Our <span className="text-secondary">Process</span>
           </h2>
           <p
-            className="text-base sm:text-lg max-w-xl mt-2"
+            className="text-base sm:text-lg max-w-xl mb-8"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             We know your time is valuable — and we respect it at every step.
@@ -135,7 +135,7 @@ const OurProcess = () => {
         </div>
 
         {/* CTA */}
-        <div className="flex justify-center mt-12">
+        <div className="flex justify-center mt-8">
           <Cta text="Build with us" path="/contact" variant="secondary" />
         </div>
       </div>

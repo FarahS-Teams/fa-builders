@@ -3,7 +3,7 @@ import ProjectsGrid from "./ProjectsGrid";
 import CTASection from "../home/CTASection";
 const Projects = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-16 lg:gap-24">
       <Hero
         title="Our Projects"
         highlight="Projects"

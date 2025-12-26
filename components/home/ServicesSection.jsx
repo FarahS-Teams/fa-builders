@@ -58,7 +58,7 @@ const ServicesSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 md:py-8 lg:py-9">
+      <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Badge */}
         <Badge text={"Our Expertise"} />
 
@@ -99,14 +99,11 @@ const ServicesSection = () => {
                 {/* Learn More Link */}
                 <Cta
                   text="Explore Service"
-                  path={service.path}
+                  path="/services"
                   variant="secondary"
                   className="w-full"
                 />
               </div>
-
-              {/* Bottom Border Effect */}
-              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-secondary opacity-30"></div>
             </div>
           ))}
         </div>

@@ -9,7 +9,7 @@ import PerksSection from "../home/PerksSection";
 
 const About = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-16 lg:gap-24">
       <Hero
         title="About FA Builders"
         highlight="FA Builders"

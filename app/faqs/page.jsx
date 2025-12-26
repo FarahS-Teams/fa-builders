@@ -75,7 +75,7 @@ const FAQsPage = () => {
           </div>
 
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            Frequently Asked <span className="text-orange-500">Questions</span>
+            Frequently Asked <span className="text-secondary">Questions</span>
           </h1>
 
           <p className="text-lg mb-8 max-w-2xl mx-auto">
@@ -85,7 +85,7 @@ const FAQsPage = () => {
       </section>
 
       {/* FAQs Section */}
-      <section className="px-4 py-4 md:py-8">
+      <section className="px-4 py-4 md:py-8 cursor-pointer">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 gap-3 md:gap-4">
             {questions.map((item, index) => (
@@ -96,14 +96,14 @@ const FAQsPage = () => {
                   className="w-full p-6 text-left flex items-center justify-between transition-colors duration-500"
                 >
                   <div className="flex items-center gap-4 flex-1">
-                    <div className="text-orange-500 text-xl">
+                    <div className="text-secondary text-xl">
                       <FaQuestionCircle />
                     </div>
                     <h3 className="text-lg md:text-xl font-bold">{item.q}</h3>
                   </div>
 
                   {/* down arrow Icon */}
-                  <div className="text-orange-500 ml-4">
+                  <div className="text-secondary ml-4">
                     {openIndex === index ? (
                       <FaChevronUp className="transition-transform duration-300" />
                     ) : (
