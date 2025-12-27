@@ -42,6 +42,7 @@ export default async function ProjectPage({ params }) {
     <main className="w-full overflow-hidden">
       {/* HERO */}
       <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
+        {/* Background Image */}
         <Image
           src={project.heroImage}
           alt={project.title}
@@ -49,28 +50,54 @@ export default async function ProjectPage({ params }) {
           priority
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
-        {/* <div className="absolute bottom-0 left-0 w-full h-10 bg-[#f7922c]/90 clip-path-diagonal" /> */}
 
-        <div className="absolute inset-0 flex flex-col justify-end px-6 lg:px-16 pb-16 text-white">
-          <div className="flex gap-3 flex-wrap mb-4">
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Content */}
+        <div
+          className="absolute inset-0 flex flex-col
+               justify-end md:justify-center
+               px-6 sm:px-8 lg:px-16
+               py-4 md:py-0
+               text-white"
+        >
+          {/* Badges */}
+          <div className="flex gap-2 flex-wrap mb-3 sm:mb-4">
             <span
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#f7922c] bg-white/90 rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center gap-1
+               px-2 py-0.5
+               text-[10px] sm:text-[11px]
+               font-semibold uppercase tracking-wide
+               text-secondary bg-white/90
+               rounded-full border border-secondary/30
+               shadow-sm backdrop-blur-sm"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {project.category}
             </span>
+
             <span
-              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#f7922c]  rounded-full border border-[#ff9326]/30 shadow-sm backdrop-blur-sm"
+              className="inline-flex items-center gap-1
+               px-2 py-0.5
+               text-[10px] sm:text-[11px]
+               font-semibold uppercase tracking-wide
+               text-secondary bg-white/80
+               rounded-full border border-secondary/30
+               shadow-sm backdrop-blur-sm"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {project.service}
             </span>
-            {/* Badge */}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold">{project.title}</h1>
-          <p className="mt-2 text-gray-200">
+          {/* Title */}
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight max-w-4xl">
+            {project.title}
+          </h1>
+
+          {/* Meta */}
+          <p className="mt-2 text-gray-200 text-sm sm:text-base">
             {project.location} • {project.year}
           </p>
         </div>
@@ -79,7 +106,9 @@ export default async function ProjectPage({ params }) {
       {/* CONTENT */}
       <section className="px-6 sm:px-8 lg:px-12 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="md:col-span-2 text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-4">Project Overview</h2>
+          <h2 className="text-2xl font-bold mb-4 text-primary">
+            Project Overview
+          </h2>
           <p className="mb-10">{project.description}</p>
           <ProjectGallery images={project.gallery} />
         </div>
@@ -91,12 +120,12 @@ export default async function ProjectPage({ params }) {
       </section>
 
       {/* PREV / NEXT */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-8 border-t border-white/10">
+      <section className="px-6 sm:px-8 lg:px-12 pt-8 border-t border-primary/10">
         <div className="flex justify-between">
           {prevProject ? (
             <Link
               href={`/projects/${prevProject.slug}`}
-              className="text-[#f7922c]"
+              className="text-secondary"
             >
               ← {prevProject.title}
             </Link>
@@ -107,7 +136,7 @@ export default async function ProjectPage({ params }) {
           {nextProject ? (
             <Link
               href={`/projects/${nextProject.slug}`}
-              className="text-[#f7922c]"
+              className="text-secondary"
             >
               {nextProject.title} →
             </Link>

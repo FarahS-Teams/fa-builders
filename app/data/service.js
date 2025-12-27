@@ -35,15 +35,16 @@ import {
   FaSolarPanel,
   FaCogs,
   FaMobileAlt,
-  FaHome as FaRetrofit,
+  FaSnowflake,
+  FaBuilding,
 } from "react-icons/fa";
 
 const service = [
   {
     image: "/about-story.jpg",
     icon: <FaHome className="text-3xl" />,
-    slug: "New-Build-Construction",
-    title: "New Build Construction",
+    slug: "new-build-services",
+    title: "New Build Services",
     shortDescription:
       "Complete construction of new residential and commercial properties from the ground up.",
     detailedDescription:
@@ -66,12 +67,12 @@ const service = [
   {
     image: "/about-story.jpg",
     icon: <FaPaintRoller className="text-3xl" />,
-    slug: "Complete-Renovation",
-    title: "Complete Renovation",
+    slug: "renovation-services",
+    title: "Renovation Services",
     shortDescription:
       "Transform existing spaces with comprehensive renovation and remodeling services.",
     detailedDescription:
-      "Our complete renovation services breathe new life into outdated or worn properties. We handle structural changes, interior redesign, and complete overhauls while maintaining the integrity of your existing building. Our renovation process includes careful planning, quality materials selection, and skilled execution to ensure your space meets modern standards while respecting its original character.",
+      "Our complete renovation services breathe new life into outdated or worn properties. We handle structural changes, interior redesign, and full refurbishments while maintaining the integrity of your existing building.",
     specialties: [
       {
         text: "Structural assessment and reinforcement",
@@ -82,7 +83,7 @@ const service = [
         icon: <FaArrowsAltH className="text-[#ff9326]" />,
       },
       {
-        text: "Period property restoration with modern amenities",
+        text: "Period property restoration with modern finishes",
         icon: <FaHistory className="text-[#ff9326]" />,
       },
     ],
@@ -90,12 +91,12 @@ const service = [
   {
     image: "/loft.jpg",
     icon: <FaArrowUp className="text-3xl" />,
-    slug: "Loft-Conversion",
-    title: "Loft Conversion",
+    slug: "loft-conversions",
+    title: "Loft Conversions",
     shortDescription:
-      "Maximize your home's potential by converting unused loft space into functional living areas.",
+      "Convert unused loft space into functional and stylish living areas.",
     detailedDescription:
-      "Transform your underutilized attic into valuable living space with our expert loft conversion services. We specialize in creating additional bedrooms, home offices, playrooms, or entertainment areas. Our team handles structural considerations, insulation, lighting, and access solutions while ensuring compliance with building regulations and maximizing the potential of your roof space.",
+      "We transform underutilized lofts into bedrooms, offices, or leisure spaces with expert structural work, insulation, and natural light optimization.",
     specialties: [
       {
         text: "Dormer and mansard loft conversions",
@@ -106,31 +107,31 @@ const service = [
         icon: <FaHammer className="text-[#ff9326]" />,
       },
       {
-        text: "Natural light optimization with roof windows",
+        text: "Roof windows and skylight installations",
         icon: <FaSolarPanel className="text-[#ff9326]" />,
       },
     ],
   },
   {
-    image: "/propert.jpg",
+    image: "/property.jpg",
     icon: <FaExpandAlt className="text-3xl" />,
-    slug: "Property-Extension",
-    title: "Property Extension",
+    slug: "extension-services",
+    title: "Extension Services",
     shortDescription:
-      "Expand your living space with custom-designed single or multi-story extensions.",
+      "Expand your living space with bespoke single or multi-story extensions.",
     detailedDescription:
-      "Increase your property's square footage and functionality with carefully planned extensions. Whether you need additional living space, a larger kitchen, or extra bedrooms, we design and build extensions that seamlessly integrate with your existing property. Our services include foundation work, structural connections, and interior finishing to create harmonious additions that enhance both your lifestyle and property value.",
+      "Our extension services seamlessly blend new spaces with existing structures, increasing functionality and property value through thoughtful design and expert construction.",
     specialties: [
       {
-        text: "Seamless architectural integration with existing structures",
+        text: "Architectural integration with existing buildings",
         icon: <FaCouch className="text-[#ff9326]" />,
       },
       {
-        text: "Open-plan living space creation",
+        text: "Open-plan living space solutions",
         icon: <FaArrowsAltH className="text-[#ff9326]" />,
       },
       {
-        text: "Bi-fold door installations for indoor-outdoor flow",
+        text: "Bi-fold and sliding door installations",
         icon: <FaDoorClosed className="text-[#ff9326]" />,
       },
     ],
@@ -138,144 +139,48 @@ const service = [
   {
     image: "/basement.jpg",
     icon: <FaBoxOpen className="text-3xl" />,
-    slug: "Basement-Construction",
-    title: "Basement Construction",
+    slug: "basement-conversions",
+    title: "Basement Conversions",
     shortDescription:
-      "Create additional underground living or storage space with professional basement construction.",
+      "Create high-quality underground living or storage spaces.",
     detailedDescription:
-      "Unlock valuable square footage beneath your property with our specialized basement construction services. We handle complex excavation, waterproofing, and structural work to create secure, dry, and functional underground spaces. Whether for additional living areas, home theaters, wine cellars, or storage, we ensure proper ventilation, lighting, and accessibility in every basement project.",
+      "We deliver safe, dry, and fully functional basement conversions using advanced waterproofing, structural underpinning, and ventilation solutions.",
     specialties: [
       {
-        text: "Waterproof tanking systems and drainage solutions",
+        text: "Waterproofing and tanking systems",
         icon: <FaShieldAlt className="text-[#ff9326]" />,
       },
       {
-        text: "Structural underpinning and excavation",
+        text: "Excavation and structural underpinning",
         icon: <FaTruckMoving className="text-[#ff9326]" />,
       },
       {
-        text: "Below-ground ventilation and moisture control",
+        text: "Ventilation and moisture control",
         icon: <FaWind className="text-[#ff9326]" />,
       },
     ],
   },
   {
-    image: "/bathroom.jpg",
-    icon: <FaBath className="text-3xl" />,
-    slug: "Bathroom-Installation",
-    title: "Bathroom Installation",
+    image: "/ac.jpg",
+    icon: <FaSnowflake className="text-3xl" />,
+    slug: "ac-installation",
+    title: "AC Installation",
     shortDescription:
-      "Design and install beautiful, functional bathrooms tailored to your needs.",
+      "Professional air conditioning installation for residential and commercial properties.",
     detailedDescription:
-      "Create your perfect sanctuary with our comprehensive bathroom services. From complete installations to renovations, we handle plumbing, tiling, electrical work, and finishing. We work with you to design bathrooms that combine luxury, functionality, and efficient use of space, using quality fixtures and materials that ensure durability and aesthetic appeal.",
+      "Our AC installation services ensure optimal indoor comfort through efficient and reliable air conditioning systems. We assess your space, recommend suitable units, and provide expert installation with minimal disruption.",
     specialties: [
       {
-        text: "Wet room installations and waterproofing",
-        icon: <FaTint className="text-[#ff9326]" />,
+        text: "Residential and commercial AC systems",
+        icon: <FaBuilding className="text-[#ff9326]" />,
       },
       {
-        text: "Underfloor heating systems",
-        icon: <FaThermometerHalf className="text-[#ff9326]" />,
+        text: "Energy-efficient cooling solutions",
+        icon: <FaLeaf className="text-[#ff9326]" />,
       },
       {
-        text: "Custom vanity and storage solutions",
-        icon: <FaToolbox className="text-[#ff9326]" />,
-      },
-    ],
-  },
-  {
-    image: "/kitchen.jpg",
-    icon: <FaUtensils className="text-3xl" />,
-    slug: "Kitchen-Design",
-    title: "Kitchen Design",
-    shortDescription:
-      "Create functional, stylish kitchens with custom design and professional installation.",
-    detailedDescription:
-      "We design and build kitchens that are both beautiful and practical, serving as the heart of your home. Our services include layout planning, cabinetry installation, appliance fitting, and finishing work. We focus on creating efficient work triangles, ample storage, and durable surfaces that withstand daily use while maintaining aesthetic appeal.",
-    specialties: [
-      {
-        text: "Custom cabinetry and storage solutions",
-        icon: <FaToolbox className="text-[#ff9326]" />,
-      },
-      {
-        text: "Professional appliance installation and plumbing",
+        text: "Maintenance and after-installation support",
         icon: <FaTools className="text-[#ff9326]" />,
-      },
-      {
-        text: "Stone worktops and quality finishes",
-        icon: <FaRulerCombined className="text-[#ff9326]" />,
-      },
-    ],
-  },
-  {
-    image: "/gas.jpg",
-    icon: <FaFire className="text-3xl" />,
-    slug: "Gas-Safe-Registered-Services",
-    title: "Gas Safe Registered Services",
-    shortDescription:
-      "Certified gas installation, repair, and maintenance by registered Gas Safe engineers.",
-    detailedDescription:
-      "Our Gas Safe registered engineers provide safe, compliant gas work for residential and commercial properties. We handle boiler installations, gas appliance fitting, pipework, safety checks, and repairs. All work is carried out to the highest safety standards with proper certification, ensuring your gas systems are efficient, reliable, and compliant with UK regulations.",
-    specialties: [
-      {
-        text: "Boiler installation and servicing",
-        icon: <FaOilCan className="text-[#ff9326]" />,
-      },
-      {
-        text: "Gas appliance safety certification",
-        icon: <FaGasPump className="text-[#ff9326]" />,
-      },
-      {
-        text: "Emergency gas repair services",
-        icon: <FaExclamationTriangle className="text-[#ff9326]" />,
-      },
-    ],
-  },
-  {
-    image: "/wires.jpg",
-    icon: <FaBolt className="text-3xl" />,
-    slug: "NICEIC-Electrical-Services",
-    title: "NICEIC Electrical Services",
-    shortDescription:
-      "Certified electrical installation, testing, and certification by NICEIC registered contractors.",
-    detailedDescription:
-      "As NICEIC registered contractors, we provide professional electrical services for all types of properties. Our certified electricians handle everything from complete rewires and consumer unit upgrades to lighting installations and electrical testing. We ensure all work complies with current wiring regulations and provide proper certification for insurance and safety purposes.",
-    specialties: [
-      {
-        text: "Full property rewiring and consumer unit upgrades",
-        icon: <FaPlug className="text-[#ff9326]" />,
-      },
-      {
-        text: "Periodic inspection and testing with certification",
-        icon: <FaCertificate className="text-[#ff9326]" />,
-      },
-      {
-        text: "Smart home and lighting system installations",
-        icon: <FaLightbulb className="text-[#ff9326]" />,
-      },
-    ],
-  },
-  {
-    image: "/heating.jpg",
-    icon: <FaThermometerHalf className="text-3xl" />,
-    slug: "Underfloor-Heating-Systems",
-    title: "Underfloor Heating Systems",
-    shortDescription:
-      "Install efficient, space-saving underfloor heating for comfortable, even warmth.",
-    detailedDescription:
-      "Transform your heating system with our professional underfloor heating installation services. We provide both electric and water-based systems that offer efficient, evenly distributed warmth while freeing up wall space. Our installations include proper insulation, control systems, and integration with your existing heating, ensuring optimal performance and energy efficiency.",
-    specialties: [
-      {
-        text: "Wet and electric system installations",
-        icon: <FaCogs className="text-[#ff9326]" />,
-      },
-      {
-        text: "Thermostat zoning and smart controls",
-        icon: <FaMobileAlt className="text-[#ff9326]" />,
-      },
-      {
-        text: "Retrofit solutions for existing properties",
-        icon: <FaRetrofit className="text-[#ff9326]" />,
       },
     ],
   },
