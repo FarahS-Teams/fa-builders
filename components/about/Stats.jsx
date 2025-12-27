@@ -1,86 +1,47 @@
 "use client";
 
-import { useEffect, useState, useContext, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useContext } from "react";
+import { motion } from "framer-motion";
 import themeContext from "@/app/context/themeContext";
 import Badge from "../Badge";
+import ProgressCircle from "./ProgressCircle";
+import { FaBuilding, FaBriefcase, FaSmileBeam, FaUsers } from "react-icons/fa";
 
 const statsData = [
-  { value: 150, suffix: "+", label: "Completed Projects", delay: 0 },
-  { value: 10, suffix: "+", label: "Years Experience", delay: 0.15 },
-  { value: 100, suffix: "%", label: "Client Satisfaction", delay: 0.3 },
-  { value: 20, suffix: "+", label: "Skilled Team Members", delay: 0.45 },
+  {
+    value: 150,
+    suffix: "+",
+    label: "Completed Projects",
+    icon: FaBuilding,
+    delay: 0,
+  },
+  {
+    value: 10,
+    suffix: "+",
+    label: "Years Experience",
+    icon: FaBriefcase,
+    delay: 0.15,
+  },
+  {
+    value: 100,
+    suffix: "%",
+    label: "Client Satisfaction",
+    icon: FaSmileBeam,
+    delay: 0.3,
+  },
+  {
+    value: 20,
+    suffix: "+",
+    label: "Skilled Team Members",
+    icon: FaUsers,
+    delay: 0.45,
+  },
 ];
-
-const StatCounter = ({ from, to, duration }) => {
-  const [count, setCount] = useState(from);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
-  useEffect(() => {
-    if (!isInView) return;
-
-    const start = performance.now();
-    const animate = (time) => {
-      const progress = Math.min((time - start) / (duration * 1000), 1);
-      setCount(Math.floor(progress * (to - from) + from));
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
-  }, [from, to, duration, isInView]);
-
-  return <span ref={ref}>{count}</span>;
-};
-
-const ProgressCircle = ({ value, suffix }) => {
-  const radius = 60;
-  const circumference = 2 * Math.PI * radius;
-
-  return (
-    <div className="relative w-28 sm:w-32 h-28 sm:h-32 flex items-center justify-center">
-      <svg className="absolute -rotate-90" width="140" height="140">
-        <circle
-          cx="70"
-          cy="70"
-          r={radius}
-          stroke="secondary"
-          strokeOpacity="0.15"
-          strokeWidth="4"
-          fill="transparent"
-        />
-        <motion.circle
-          cx="70"
-          cy="70"
-          r={radius}
-          stroke="secondary"
-          strokeWidth="4"
-          fill="transparent"
-          strokeLinecap="round"
-          strokeDasharray={circumference}
-          initial={{ strokeDashoffset: circumference }}
-          whileInView={{ strokeDashoffset: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 2, ease: "easeInOut" }}
-        />
-      </svg>
-
-      <h3
-        className="text-2xl sm:text-3xl font-extrabold text-[#f7922c] z-10"
-        style={{ fontFamily: "var(--font-Montserrat)" }}
-      >
-        <StatCounter from={0} to={value} duration={2} />
-        {suffix}
-      </h3>
-    </div>
-  );
-};
 
 export default function Stats() {
   const context = useContext(themeContext);
   if (!context)
     throw new Error("Stats must be used within ThemeContextProvider");
-
   const { currentTheme } = context;
 
   return (
@@ -102,7 +63,7 @@ export default function Stats() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-          {statsData.map(({ value, suffix, label, delay }) => (
+          {statsData.map(({ value, suffix, label, delay, icon: Icon }) => (
             <motion.div
               key={label}
               initial={{ opacity: 0, y: 30 }}
@@ -113,19 +74,20 @@ export default function Stats() {
                 max-w-sm mx-auto w-full
                 flex flex-col items-center
                 gap-4 sm:gap-6
-                py-6 sm:py-8 px-4 sm:px-6
+                py-2 sm:py-6 px-4 sm:px-6
                 rounded-xl
                 hover:-translate-y-3 hover:shadow-xl
                 transition-all duration-300 ease-out`}
             >
+              <Icon size={36} className="text-secondary" />
               <ProgressCircle value={value} suffix={suffix} />
 
-              <p
-                className="text-sm sm:text-base text-center opacity-90"
-                style={{ fontFamily: "var(--font-inter)" }}
+              <h3
+                className="text-lg sm:text-xl md:text-2xl font-semibold text-center opacity-90"
+                style={{ fontFamily: "var(--font-Montserrat)" }}
               >
                 {label}
-              </p>
+              </h3>
             </motion.div>
           ))}
         </div>

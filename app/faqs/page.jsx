@@ -65,7 +65,7 @@ const FAQsPage = () => {
 
   return (
     <main
-      className={`${currentTheme.background} ${currentTheme.text} min-h-screen py-12 md:py-8 lg:py-9`}
+      className={`${currentTheme.background} ${currentTheme.text} min-h-screen lex flex-col gap-16 lg:gap-24`}
     >
       {/* Hero Section */}
       <section className="px-4 pt-12 md:pt-16 lg:pt-20">

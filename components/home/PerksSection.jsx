@@ -47,25 +47,26 @@ const PerksSection = () => {
         </h2>
 
         {/* cards section */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full max-w-6xl">
           {perksData.map((elem, index) => {
             const Icon = elem.icon;
             return (
               <div
                 key={index}
-                className={`p-5 rounded-xl flex flex-col justify-center items-center gap-5 ${currentTheme.card}  transition-all duration-300 group hover:-translate-y-2`}
+                className={`p-4 sm:p-5 lg:p-6 rounded-xl flex flex-col items-center text-center gap-4 sm:gap-5
+                ${currentTheme.card} transition-all duration-300 group hover:-translate-y-2`}
               >
-                <div className="text-secondary text-4xl group-hover:scale-110 transition-transform duration-300">
+                <div className="text-secondary text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">
                   <Icon />
                 </div>
                 <h4
-                  className="font-bold text-2xl md:text-4xl text-center"
+                  className="font-bold text-lg sm:text-xl md:text-2xl"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {elem.title}
                 </h4>
                 <p
-                  className="text-md text-center"
+                  className="text-sm sm:text-base opacity-80"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {elem.desc}

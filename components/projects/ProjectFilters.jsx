@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useContext } from "react";
 import CategorySelect from "./CategorySelect";
-
+import ServicePills from "./ServicePills";
 const categories = ["All", "Residential", "Commercial"];
 const services = [
   "All",
@@ -56,12 +56,7 @@ export default function ProjectFilters({
         />
 
         {/* SERVICES PILLS */}
-        {/* <ServiceFilter
-          services={services}
-          activeService={activeService}
-          activeCategory={ activeCategory}
-          applyFilter={applyFilter}/> */}
-        <div className="flex flex-wrap gap-3 justify-center">
+        {/* <div className="flex flex-wrap gap-3 justify-center">
           {services.map((serv) => (
             <button
               key={serv}
@@ -77,7 +72,13 @@ export default function ProjectFilters({
               {serv}
             </button>
           ))}
-        </div>
+        </div> */}
+        <ServicePills
+          services={services}
+          activeService={activeService}
+          activeCategory={activeCategory}
+          applyFilter={applyFilter}
+        />
       </div>
     </div>
   );

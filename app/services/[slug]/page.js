@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import service from "@/app/data/service";
+import projects from "@/app/data/projects";
 import Image from "next/image";
 import PerksSection from "@/components/home/PerksSection";
 import CTASection from "@/components/home/CTASection";
@@ -8,6 +9,7 @@ import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
 import { useParams } from "next/navigation";
 import Badge from "@/components/Badge";
+import RelatedProjects from "@/components/services/RelatedProjects";
 
 const ServiceDetailPage = () => {
   const params = useParams();
@@ -18,8 +20,11 @@ const ServiceDetailPage = () => {
     return <h1>Service not found!</h1>;
   }
 
-  const context = useContext(themeContext);
+  const relatedProjects = projects
+    .filter((p) => p.service === IndService.title)
+    .slice(0, 3);
 
+  const context = useContext(themeContext);
   if (!context) {
     throw new Error(
       "ServicesSection must be used within a ThemeContextProvider",
@@ -53,6 +58,13 @@ const ServiceDetailPage = () => {
             />
           </div>
         </div>
+      </section>
+
+      {/* ADD Related Projects Here */}
+      <section
+        className={`${currentTheme.background} ${currentTheme.text} px-4 sm:px-6 lg:px-8`}
+      >
+        <RelatedProjects projects={relatedProjects} />
       </section>
 
       {/* Specialties Section */}
