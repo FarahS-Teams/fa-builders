@@ -39,7 +39,7 @@ export default async function ProjectPage({ params }) {
     currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
-    <main className="w-full overflow-hidden">
+    <main>
       {/* HERO */}
       <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
         {/* Background Image */}
@@ -102,51 +102,56 @@ export default async function ProjectPage({ params }) {
           </p>
         </div>
       </section>
+      <div className="custom-container">
+        <div className="content flex flex-col gap-16 lg:gap-24">
+          {/* CONTENT */}
+          <section className="py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="md:col-span-2 text-center md:text-left">
+              <h2 className="text-2xl font-bold mb-4 text-primary">
+                Project Overview
+              </h2>
+              <p className="mb-10">{project.description}</p>
+              <ProjectGallery images={project.gallery} />
+            </div>
 
-      {/* CONTENT */}
-      <section className="px-6 sm:px-8 lg:px-12 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-        <div className="md:col-span-2 text-center md:text-left">
-          <h2 className="text-2xl font-bold mb-4 text-primary">
-            Project Overview
-          </h2>
-          <p className="mb-10">{project.description}</p>
-          <ProjectGallery images={project.gallery} />
+            {/* Projrct Details Card */}
+            <aside>
+              <ProjectDetails project={project} />
+            </aside>
+          </section>
+
+          {/* PREV / NEXT */}
+          <section className="px-6 sm:px-8 lg:px-12 pt-8 border-t border-primary/10">
+            <div className="flex justify-between">
+              {prevProject ? (
+                <Link
+                  href={`/projects/${prevProject.slug}`}
+                  className="text-secondary"
+                >
+                  ← {prevProject.title}
+                </Link>
+              ) : (
+                <div />
+              )}
+
+              {nextProject ? (
+                <Link
+                  href={`/projects/${nextProject.slug}`}
+                  className="text-secondary"
+                >
+                  {nextProject.title} →
+                </Link>
+              ) : (
+                <div />
+              )}
+            </div>
+          </section>
+
+          <div className="-mx-4">
+            <CTASection />
+          </div>
         </div>
-
-        {/* Projrct Details Card */}
-        <aside>
-          <ProjectDetails project={project} />
-        </aside>
-      </section>
-
-      {/* PREV / NEXT */}
-      <section className="px-6 sm:px-8 lg:px-12 pt-8 border-t border-primary/10">
-        <div className="flex justify-between">
-          {prevProject ? (
-            <Link
-              href={`/projects/${prevProject.slug}`}
-              className="text-secondary"
-            >
-              ← {prevProject.title}
-            </Link>
-          ) : (
-            <div />
-          )}
-
-          {nextProject ? (
-            <Link
-              href={`/projects/${nextProject.slug}`}
-              className="text-secondary"
-            >
-              {nextProject.title} →
-            </Link>
-          ) : (
-            <div />
-          )}
-        </div>
-      </section>
-
-      <CTASection />
+      </div>
     </main>
   );
 }

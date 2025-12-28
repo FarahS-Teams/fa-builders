@@ -18,7 +18,7 @@ export default function Leadership() {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container relative overflow-hidden px-4 sm:px-6 lg:px-8`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container relative`}
     >
       <div className="content">
         {/* Section Title */}

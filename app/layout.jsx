@@ -20,6 +20,9 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "FA Builders",
   description: "The standard of Excellence.",
+  icons: {
+    icon: "/logo_light.png",
+  },
 };
 
 export default function RootLayout({ children }) {

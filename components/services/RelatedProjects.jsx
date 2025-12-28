@@ -24,7 +24,7 @@ const RelatedProjects = ({ projects }) => {
 
   return (
     <section className={`${currentTheme.background} ${currentTheme.text}`}>
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="w-full">
         {/* Heading */}
         <div className="text-center mb-10">
           <Badge text="Related Projects" />

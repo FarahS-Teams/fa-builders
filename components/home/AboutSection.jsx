@@ -43,7 +43,7 @@ const AboutSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content px-4 sm:px-6 lg:px-8 ">
+      <div className="content ">
         <div className="text-center mb-12">
           <Badge text={"About us"} />
 
