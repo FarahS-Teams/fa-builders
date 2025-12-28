@@ -53,9 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div
-      className={`${currentTheme.background} ${currentTheme.text} px-6 sm:px-10 lg:px-14`}
-    >
+    <div className={`${currentTheme.background} ${currentTheme.text}`}>
       <div className="max-w-lg mx-auto">
         <h2
           className={`text-center ${currentTheme.headings}`}

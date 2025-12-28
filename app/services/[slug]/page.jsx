@@ -34,73 +34,77 @@ const ServiceDetailPage = () => {
   const { currentTheme } = context;
 
   return (
-    <main className="min-h-screen flex flex-col gap-16 lg:gap-24">
-      {/* Hero Section */}
-      <section className="pt-28 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <Badge text={IndService.title} />
+    <main className="custom-container">
+      <div className="content flex flex-col gap-16 lg:gap-24">
+        {/* Hero Section */}
+        <section className="pt-28 content">
+          <div className="max-w-6xl mx-auto text-center">
+            <Badge text={IndService.title} />
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-            {IndService.title}
-          </h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              {IndService.title}
+            </h1>
 
-          <p className="text-lg max-w-3xl mx-auto mb-8">
-            {IndService.detailedDescription}
-          </p>
+            <p className="text-lg max-w-3xl mx-auto mb-8">
+              {IndService.detailedDescription}
+            </p>
 
-          <div className="relative w-full aspect-video max-w-4xl mx-auto">
-            <Image
-              src={IndService.image}
-              alt={IndService.title}
-              fill
-              className="object-cover rounded-xl"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-            />
+            <div className="relative w-full aspect-video max-w-4xl mx-auto">
+              <Image
+                src={IndService.image}
+                alt={IndService.title}
+                fill
+                className="object-cover rounded-xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ADD Related Projects Here */}
-      <section
-        className={`${currentTheme.background} ${currentTheme.text} px-4 sm:px-6 lg:px-8`}
-      >
-        <RelatedProjects projects={relatedProjects} />
-      </section>
+        {/* ADD Related Projects Here */}
+        <section className={`${currentTheme.background} ${currentTheme.text}`}>
+          <RelatedProjects projects={relatedProjects} />
+        </section>
 
-      {/* Specialties Section */}
-      <section
-        className={`${currentTheme.background} ${currentTheme.text} px-4 sm:px-6 lg:px-8`}
-      >
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center">
-            <Badge text="Specialties" />
-            <h2
-              className={`${currentTheme.headings}`}
-              style={{ fontFamily: "var(--font-Montserrat)" }}
-            >
-              Our <span className="text-secondary">Expertise</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {IndService.specialties.map((elem, idx) => (
-              <div
-                key={idx}
-                className={`p-6 rounded-xl flex flex-col items-center text-center ${currentTheme.card} hover:transform hover:-translate-y-1 transition-all duration-300`}
+        {/* Specialties Section */}
+        <section
+          className={`${currentTheme.background} ${currentTheme.text} flex justify-center`}
+        >
+          <div className="">
+            <div className="text-center">
+              <Badge text="Specialties" />
+              <h2
+                className={`${currentTheme.headings}`}
+                style={{ fontFamily: "var(--font-Montserrat)" }}
               >
-                <div className="text-3xl text-secondary mb-4">{elem.icon}</div>
-                <p className="text-sm md:text-base">{elem.text}</p>
-              </div>
-            ))}
+                Our <span className="text-secondary">Expertise</span>
+              </h2>
+            </div>
+
+            <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 xl:gap-12">
+              {IndService.specialties.map((elem, idx) => (
+                <div
+                  key={idx}
+                  className={`p-8 sm:p-4 lg:p-3 xl:p-8 rounded-xl flex flex-col items-center text-center ${currentTheme.card} hover:transform hover:-translate-y-1 transition-all duration-300`}
+                >
+                  <div className="text-3xl text-secondary mb-4">
+                    {elem.icon}
+                  </div>
+                  <p className="text-sm md:text-base">{elem.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
+        </section>
+
+        {/* Why Us Section */}
+        <PerksSection />
+
+        {/* CTA Section */}
+        <div className="-mx-4">
+          <CTASection />
         </div>
-      </section>
-
-      {/* Why Us Section */}
-      <PerksSection />
-
-      {/* CTA Section */}
-      <CTASection />
+      </div>
     </main>
   );
 };

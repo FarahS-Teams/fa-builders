@@ -95,7 +95,7 @@ const Footer = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container border-t-4 border-secondary`}
     >
       {/* Main Footer Content */}
-      <div className="content px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="content py-12 lg:py-16">
         {/*Logo and Links */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-12">
           {/* Company Info*/}

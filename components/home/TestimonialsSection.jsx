@@ -88,7 +88,7 @@ const TestimonialsSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
       id="testimonials"
     >
-      <div className="content px-4 sm:px-6 lg:px-8">
+      <div className="content">
         {/* main hading*/}
         <div className="text-center">
           <Badge text={"Client Stories"} />
@@ -98,7 +98,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Swiper Slider */}
-        <div className="relative px-4 sm:px-6 lg:px-8">
+        <div className="relative ">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}

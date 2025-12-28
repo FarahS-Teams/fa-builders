@@ -25,10 +25,10 @@ const CTASection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content py-16 md:py-24 ">
+      <div className="content py-16 md:py-24">
         {/* Main CTA Card */}
         <div
-          className={`${currentTheme.card} bg-purple-500 rounded-2xl py-17 md:py-16 px-5 text-center relative overflow-hidden`}
+          className={`${currentTheme.card} rounded-2xl py-17 md:py-16 px-5 text-center relative overflow-hidden`}
         >
           {/* Badge */}
           <Badge text={"Limited Slots Avaiable"} />

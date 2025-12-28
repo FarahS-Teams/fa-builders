@@ -39,7 +39,7 @@ export default async function ProjectPage({ params }) {
     currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
   return (
-    <main className="">
+    <main>
       {/* HERO */}
       <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
         {/* Background Image */}
@@ -103,9 +103,9 @@ export default async function ProjectPage({ params }) {
         </div>
       </section>
       <div className="custom-container">
-        <div className="content">
+        <div className="content flex flex-col gap-16 lg:gap-24">
           {/* CONTENT */}
-          <section className="px-6 sm:px-8 lg:px-12 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <section className="py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-2 text-center md:text-left">
               <h2 className="text-2xl font-bold mb-4 text-primary">
                 Project Overview
@@ -147,7 +147,9 @@ export default async function ProjectPage({ params }) {
             </div>
           </section>
 
-          <CTASection />
+          <div className="-mx-4">
+            <CTASection />
+          </div>
         </div>
       </div>
     </main>

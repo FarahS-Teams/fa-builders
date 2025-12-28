@@ -19,7 +19,7 @@ const ServicesCardsSection = () => {
   const { theme, currentTheme } = context;
   return (
     <section
-      className={`${currentTheme.background}  ${currentTheme.text} custom-container overflow-hidden px-4 sm:px-6 lg:px-8`}
+      className={`${currentTheme.background}  ${currentTheme.text} custom-container`}
     >
       <div className="content flex flex-col items-center">
         <Badge text={"Services"} />
