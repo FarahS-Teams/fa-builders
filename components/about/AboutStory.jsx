@@ -38,49 +38,55 @@ const AboutStory = () => {
             </h2>
 
             <p
-              className="text-base sm:text-lg leading-relaxed mb-4 md:mb-5 opacity-90"
+              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              Since 2025, FA Builders Ltd. has established itself as a trusted
-              construction company in London, completing over 100 projects with
-              a strong focus on client satisfaction.
+              Founded in 2024, FA Builders Ltd is a trusted London construction
+              company with over 50 successful projects. We specialize in new
+              builds, renovations, loft conversions, extensions, basements, and
+              underfloor heating.
             </p>
 
             <p
-              className="text-base sm:text-lg leading-relaxed opacity-90"
+              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
-              We specialize in high-quality, modern, and sustainable building
-              solutions, from home renovations and extensions to commercial
-              projects. Every project showcases our expert craftsmanship,
-              safety, and commitment to timely delivery, helping us build
-              lasting relationships and stronger communities across London.
+              Our experienced team deliver high-quality, safe, and sustainable
+              solutions. All work is carried out by certified professionals,
+              including Gas Safe registered and NICEIC-approved contractors.
+            </p>
+
+            <p
+              className="text-base sm:text-md leading-relaxed opacity-90"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              With a focus on clear communication, timely delivery, and client
+              satisfaction, FA Builders Ltd has built lasting relationships
+              across London. Every project reflects our commitment to
+              excellence, craftsmanship, and trust.
             </p>
           </div>
 
           {/* Image Section */}
-          <div className="relative md:w-1/2 flex justify-center mt-6 md:mt-0">
-            {/* Glow */}
-            {/* <div className="absolute -inset-6 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-2xl opacity-50" /> */}
-
+          <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Image Card */}
             <div
               className={`relative
-              w-full max-w-md
-              aspect-square
-              rounded-2xl overflow-hidden
-              ${currentTheme.card}
-              border border-secondary/20
-              shadow-xl
-              transition-transform duration-300
-              hover:scale-[1.02]`}
+      w-full max-w-md
+      aspect-square
+      rounded-2xl overflow-hidden
+      ${currentTheme.card}
+      border border-secondary/20
+      shadow-xl
+      transition-transform duration-300
+      hover:scale-[1.02]`}
             >
               <Image
                 src="/about-story.jpg"
-                alt="FA Builders Construction Project"
+                alt="FA Builders construction project in London"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw max-w-lg lg:max-w-xl"
                 priority
               />
             </div>

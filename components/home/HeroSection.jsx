@@ -42,17 +42,19 @@ const HeroSection = () => {
               <span className="font-semibold text-secondary">
                 unmatched quality
               </span>{" "}
-              and professional craftsmanship. From concept to completion, we
-              deliver excellence in every project.
+              and professional craftsmanship. As a trusted London construction
+              company, we manage every stage — from planning and design to final
+              completion — delivering excellence in every project.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col lg:flex-row gap-4">
               <Cta
-                text="Get Free Consultation"
+                text="Request a Free Quote"
                 path="/contact"
                 variant="primary"
               />
+
               <Cta
                 text="View Our Projects"
                 path="/projects"
@@ -104,7 +106,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <h4 className="font-bold">Quality Guarantee</h4>
-                  <p className="text-sm opacity-80">5-year warranty</p>
+                  <p className="text-sm opacity-80">Quality You Can Trust</p>
                 </div>
               </div>
             </div>

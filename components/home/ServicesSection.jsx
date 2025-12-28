@@ -61,11 +61,10 @@ const ServicesSection = () => {
       <div className="content flex flex-col items-center px-4 sm:px-6 lg:px-8">
         {/* Badge */}
         <Badge text={"Our Expertise"} />
-
         {/* Main Heading */}
         <h2 className={`${currentTheme.headings} text-center`}>
-          Comprehensive <span className="text-secondary">Construction</span>{" "}
-          Services
+          Expert <span className="text-secondary">Construction Services</span>{" "}
+          Across London
         </h2>
 
         {/* Services section */}

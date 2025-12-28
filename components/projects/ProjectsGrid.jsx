@@ -48,23 +48,26 @@ export default function ProjectsGrid() {
         {/* HEADER */}
         <div className="text-center mb-10">
           <Badge text="Our Portfolio" />
+
           <h2
             className={currentTheme.headings}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Projects</span>
           </h2>
+
           <p
             className={`text-lg leading-relaxed text-center ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            Explore our completed construction projects showcasing quality
-            workmanship and attention to detail
+            Explore our completed construction projects across London,
+            showcasing high-quality workmanship, modern design, and meticulous
+            attention to detail.
           </p>
         </div>
 
         {/* PROJECTS COUNTER & INFO */}
-        <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div className="mb-6 sm:mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 px-4">
           <div>
             <p
               className="text-sm sm:text-base font-medium"
@@ -113,7 +116,7 @@ export default function ProjectsGrid() {
         <div className="relative min-h-[300px]" id="projectsgrid">
           {filteredProjects.length > 0 ? (
             <div
-              className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+              className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
               role="list"
               aria-label="Construction projects portfolio"
             >
@@ -146,10 +149,10 @@ export default function ProjectsGrid() {
               <button
                 onClick={resetFilters}
                 className="px-3 py-1.5 text-sm sm:px-4 sm:py-2 sm:text-base font-semibold \
-   bg-linear-to-r from-secondary to-amber-500 \
-   hover:from-secondary hover:to-amber-600 \
-   text-white rounded-lg shadow-lg hover:shadow-xl \
-   transition-all duration-300 transform hover:scale-105"
+                bg-linear-to-r from-secondary to-amber-500 \
+                hover:from-secondary hover:to-amber-600 \
+                text-white rounded-lg shadow-lg hover:shadow-xl \
+                transition-all duration-300 transform hover:scale-105"
                 aria-label="Reset filters to view all projects"
                 style={{ fontFamily: "var(--font-inter)" }}
               >

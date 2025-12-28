@@ -10,19 +10,19 @@ const valuesData = [
   {
     title: "Our Mission",
     description:
-      "To deliver high-quality, reliable, and modern construction solutions that enhance communities and exceed expectations.",
+      "To deliver high-quality, reliable, and modern construction solutions across London, exceeding client expectations through expert craftsmanship and professionalism.",
     icon: HardHat,
   },
   {
     title: "Our Vision",
     description:
-      "To become London’s most trusted construction company, known for innovation, sustainability, and craftsmanship.",
+      "To become one of London’s most trusted construction companies, recognised for innovation, sustainability, and exceptional building standards.",
     icon: Building2,
   },
   {
     title: "Our Values",
     description:
-      "Integrity, safety, transparency, and dedication—our core principles guide every project we build.",
+      "Integrity, safety, transparency, and dedication guide every project we undertake, ensuring quality results and long-term client trust.",
     icon: ShieldCheck,
   },
 ];

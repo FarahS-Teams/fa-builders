@@ -10,6 +10,7 @@ import { useContext } from "react";
 import { useParams } from "next/navigation";
 import Badge from "@/components/Badge";
 import RelatedProjects from "@/components/services/RelatedProjects";
+import Hero from "@/components/Hero";
 
 const ServiceDetailPage = () => {
   const params = useParams();
@@ -31,12 +32,21 @@ const ServiceDetailPage = () => {
     );
   }
 
+  // const description = IndService.shortDescriptionlength > 100
+  //             ? project.description.slice(0, 100) + "..."
+  //             : project.description;
   const { currentTheme } = context;
 
   return (
     <main className="min-h-screen flex flex-col gap-16 lg:gap-24">
       {/* Hero Section */}
-      <section className="pt-28 px-4 sm:px-6 lg:px-8">
+      <Hero
+        title={IndService.title}
+        description={IndService.shortDescription}
+        image="/about-story.jpg"
+      />
+
+      <section className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <Badge text={IndService.title} />
 

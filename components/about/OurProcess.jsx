@@ -10,30 +10,30 @@ import Badge from "../Badge";
 const processSteps = [
   {
     step: "01",
-    title: "Consultation",
+    title: "Free Consultation",
     description:
-      "We begin by understanding your project needs, goals, and site requirements.",
+      "We discuss your construction requirements, budget, and site conditions to fully understand your project goals.",
     icon: ClipboardCheck,
   },
   {
     step: "02",
     title: "Planning & Design",
     description:
-      "Our team prepares clear plans, budgets, and timelines tailored to your project.",
+      "Our experts create detailed designs, timelines, and cost plans to ensure a smooth and transparent build process.",
     icon: Hammer,
   },
   {
     step: "03",
     title: "Construction & Build",
     description:
-      "Skilled builders execute the project with precision and high-quality workmanship.",
+      "Our skilled construction team delivers high-quality workmanship using trusted materials and proven techniques.",
     icon: Building2,
   },
   {
     step: "04",
-    title: "Completion & Handover",
+    title: "Final Inspection & Handover",
     description:
-      "We inspect every detail and deliver a result that’s completed to perfection.",
+      "We carry out thorough quality checks and hand over a completed project that meets the highest standards.",
     icon: BadgeCheck,
   },
 ];
@@ -66,12 +66,10 @@ const OurProcess = () => {
         {/* Header */}
         <div className="flex flex-col items-center text-center">
           <Badge text="Our Process" />
-          <h2
-            className={currentTheme.headings}
-            style={{ fontFamily: "var(--font-Montserrat)" }}
-          >
-            Checkout Our <span className="text-secondary">Process</span>
+          <h2 className={currentTheme.headings}>
+            Our <span className="text-secondary">Construction Process</span>
           </h2>
+
           <p
             className="text-base sm:text-lg max-w-xl mb-8"
             style={{ fontFamily: "var(--font-inter)" }}

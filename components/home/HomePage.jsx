@@ -6,6 +6,7 @@ import TestimonialsSection from "./TestimonialsSection";
 import CTASection from "./CTASection";
 import ServicesSection from "./ServicesSection";
 import PerksSection from "./PerksSection";
+import ProjectSection from "./ProjectSection";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <AboutSection />
       <ExcellenceSection />
       <ServicesSection />
+      <ProjectSection />
       <PerksSection />
       <TestimonialsSection />
       <CTASection />

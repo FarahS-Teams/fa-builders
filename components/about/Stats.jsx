@@ -9,7 +9,7 @@ import { FaBuilding, FaBriefcase, FaSmileBeam, FaUsers } from "react-icons/fa";
 
 const statsData = [
   {
-    value: 150,
+    value: 50,
     suffix: "+",
     label: "Completed Projects",
     icon: FaBuilding,
@@ -30,7 +30,7 @@ const statsData = [
     delay: 0.3,
   },
   {
-    value: 20,
+    value: 10,
     suffix: "+",
     label: "Skilled Team Members",
     icon: FaUsers,

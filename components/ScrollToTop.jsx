@@ -26,26 +26,23 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
-
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
+    return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   const context = useContext(themeContext);
-
   if (!context) {
-    throw new Error("button must be used within a ThemeContextProvider");
+    throw new Error("ScrollToTop must be used within a ThemeContextProvider");
   }
 
-  const { theme, currentTheme } = context;
+  const { currentTheme } = context;
+
   return (
     <>
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className={`${currentTheme.text} bg-secondary fixed bottom-8 right-4 z-50 p-3 rounded-full shadow-lg hover:bg-secondary/70 transition-all duration-500"
-          aria-label="Scroll to top`}
+          aria-label="Scroll to top"
+          className={`fixed bottom-8 right-4 z-50 p-3 rounded-full shadow-lg bg-secondary ${currentTheme.text} hover:bg-secondary/90 transition-all duration-300 text-white`}
         >
           <FaArrowUp size={20} />
         </button>

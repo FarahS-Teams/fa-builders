@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import Cta from "../Cta";
 import themeContext from "@/app/context/themeContext";
+import { MapPin, Clock } from "lucide-react";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -67,17 +68,7 @@ const ProjectCard = ({ project, index }) => {
           {/* Badge */}
           <div className="absolute top-3 left-3 z-10">
             <span
-              className="
-      inline-flex items-center gap-1.5
-      px-3 py-1
-      text-[11px] font-semibold uppercase tracking-wide
-      text-secondary
-      bg-white/90
-      rounded-full
-      border border-secondary/30
-      shadow-sm
-      backdrop-blur-sm
-    "
+              className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-secondary bg-white/90 rounded-full border border-secondary/30 shadow-sm backdrop-blur-sm"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {project.service}
@@ -86,7 +77,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* CONTENT */}
-        <div className="p-4 sm:p-5 flex flex-col gap-2 flex-grow text-center">
+        <div className="p-4 sm:p-5 flex flex-col text-center md:text-left lg:text-left gap-2 flex-grow ">
           {/* Title – fixed height */}
           <h3
             className="text-base sm:text-lg font-bold line-clamp-2 min-h-[3rem]"
@@ -95,21 +86,26 @@ const ProjectCard = ({ project, index }) => {
             {project.title}
           </h3>
 
-          {/* Category */}
-          <span
-            className="text-[10px] sm:text-xs uppercase opacity-90"
+          {/* Decription */}
+          <p
+            className="text-xs sm:text-sm opacity-90 min-h-[1.5rem] mb-2"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            {project.category}
-          </span>
+            {project.description.length > 100
+              ? project.description.slice(0, 100) + "..."
+              : project.description}
+          </p>
 
           {/* Location – fixed height */}
-          <p
-            className="text-xs sm:text-sm opacity-80 min-h-[1.25rem] text-center"
-            style={{ fontFamily: "var(--font-inter)" }}
-          >
-            {project.location}
-          </p>
+          <div className="flex items-center gap-2">
+            <MapPin className="w-6 h-6 sm:w-4 sm:h-7 min-h-[1.25rem] text-secondary" />
+            <p
+              className="text-xs sm:text-sm opacity-80 min-h-[1.25rem]"
+              style={{ fontFamily: "var(--font-inter)" }}
+            >
+              {project.location}
+            </p>
+          </div>
 
           {/* CTA always at bottom */}
           <div className="mt-auto pt-4">

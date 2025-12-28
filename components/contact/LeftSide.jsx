@@ -7,16 +7,17 @@ const LeftSide = () => {
   const { currentTheme } = useContext(themeContext);
 
   return (
-    <div
-      className={`${currentTheme.background} ${currentTheme.text}
-      px-6 sm:px-10 lg:px-14`}
+    <section
+      aria-labelledby="contact-fa-builders"
+      className={`${currentTheme.background} ${currentTheme.text} px-6 sm:px-10 lg:px-14 py-12`}
     >
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-2xl mx-auto">
         <h2
-          className={`text-center ${currentTheme.headings}`}
+          id="contact-fa-builders"
+          className={`text-center ${currentTheme.headings} text-3xl sm:text-4xl font-bold mb-8`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
-          Contact <span className="text-secondary">At</span>
+          Contact <span className="text-secondary">FA Builders</span>
         </h2>
 
         <div className="space-y-6">
@@ -27,7 +28,14 @@ const LeftSide = () => {
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-secondary text-sm">Email</span>
-              <p className="text-sm sm:text-base">info@fabuilders.co.uk</p>
+              <p className="text-sm sm:text-base">
+                <a
+                  href="mailto:info@fabuilders.co.uk"
+                  className="hover:underline"
+                >
+                  info@fabuilders.co.uk
+                </a>
+              </p>
             </div>
           </div>
 
@@ -38,7 +46,11 @@ const LeftSide = () => {
             </div>
             <div className="flex flex-col gap-1">
               <span className="text-secondary text-sm">Phone</span>
-              <p className="text-sm sm:text-base">+44 7476 555002</p>
+              <p className="text-sm sm:text-base">
+                <a href="tel:+447476555002" className="hover:underline">
+                  +44 7476 555002
+                </a>
+              </p>
             </div>
           </div>
 
@@ -64,7 +76,7 @@ const LeftSide = () => {
             <div className="flex flex-col gap-1">
               <span className="text-secondary text-sm">Opening Hours</span>
               <p className="text-sm sm:text-base">
-                Monday - Saturday: 9am - 5pm
+                Monday - Saturday: 9:00 AM to 5:00 PM
               </p>
               <p className="text-sm sm:text-base">Sunday: Closed</p>
             </div>
@@ -84,11 +96,12 @@ const LeftSide = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              title="FA Builders Location on Google Maps"
             />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

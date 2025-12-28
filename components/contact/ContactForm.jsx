@@ -26,7 +26,6 @@ const ContactForm = () => {
     setResult("");
 
     const formData = new FormData(event.target);
-
     formData.append("access_key", process.env.NEXT_PUBLIC_WEB3FORMS_KEY);
 
     try {
@@ -34,7 +33,6 @@ const ContactForm = () => {
         method: "POST",
         body: formData,
       });
-
       const data = await response.json();
 
       if (data.success) {
@@ -53,22 +51,28 @@ const ContactForm = () => {
   };
 
   return (
-    <div
-      className={`${currentTheme.background} ${currentTheme.text} px-6 sm:px-10 lg:px-14`}
+    <section
+      aria-labelledby="contact-heading"
+      className={`${currentTheme.background} ${currentTheme.text} px-6 sm:px-10 lg:px-14 py-12`}
     >
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-2xl mx-auto">
         <h2
-          className={`text-center ${currentTheme.headings}`}
+          id="contact-heading"
+          className={`text-center ${currentTheme.headings} text-3xl sm:text-4xl font-bold mb-4`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Get in <span className="text-secondary">Touch</span>
         </h2>
-        <p className="text-center mb-8">
+        <p className="text-center text-base sm:text-lg mb-10 max-w-xl mx-auto">
           Have a project in mind? Fill out the form below and we'll get back to
           you as soon as possible.
         </p>
 
-        <form onSubmit={onSubmit} className="space-y-6">
+        <form
+          onSubmit={onSubmit}
+          className="space-y-6"
+          aria-label="Contact form"
+        >
           <div className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
             <div>
               <Label htmlFor="first-name">First Name</Label>
@@ -76,9 +80,11 @@ const ContactForm = () => {
                 type="text"
                 name="first-name"
                 id="first-name"
+                aria-required="true"
                 autoComplete="given-name"
                 required
-                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+                placeholder="John"
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
               />
             </div>
             <div>
@@ -87,44 +93,53 @@ const ContactForm = () => {
                 type="text"
                 name="last-name"
                 id="last-name"
+                aria-required="true"
                 autoComplete="family-name"
                 required
-                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+                placeholder="Doe"
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
               />
             </div>
           </div>
+
           <div>
             <Label htmlFor="email">Email</Label>
             <input
               type="email"
               name="email"
               id="email"
-              required
+              aria-required="true"
               autoComplete="email"
-              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+              required
+              placeholder="you@example.com"
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
             />
           </div>
+
           <div>
             <Label htmlFor="phone">Phone Number</Label>
             <input
               type="tel"
               name="phone"
               id="phone"
+              aria-required="true"
               autoComplete="tel"
               required
-              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+              placeholder="+44 123 456 7890"
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
             />
           </div>
+
           <div>
             <Label htmlFor="service">Services</Label>
-            <Select name="service" id="service" required>
+            <Select name="service" id="service" required aria-required="true">
               <SelectTrigger
-                className={`w-full mt-3 px-4 py-3 rounded-lg ${currentTheme.card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary`}
+                className={`w-full mt-3 px-4 py-3 rounded-lg ${currentTheme.card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary transition`}
               >
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent
-                className={`${currentTheme.card} ${currentTheme.text} `}
+                className={`${currentTheme.card} ${currentTheme.text}`}
                 position="popper"
               >
                 <SelectGroup>
@@ -135,7 +150,7 @@ const ContactForm = () => {
                     <SelectItem
                       key={item.slug}
                       value={item.slug}
-                      className={`${currentTheme.text} hover:bg-gray-700 cursor-pointer`}
+                      className={`${currentTheme.text} hover:bg-gray-700 cursor-pointer transition`}
                     >
                       {item.title}
                     </SelectItem>
@@ -144,16 +159,20 @@ const ContactForm = () => {
               </SelectContent>
             </Select>
           </div>
+
           <div>
             <Label htmlFor="message">Message</Label>
             <textarea
               name="message"
               id="message"
               rows="5"
+              aria-required="true"
               required
-              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary`}
+              placeholder="Tell us about your project..."
+              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
             ></textarea>
           </div>
+
           <div className="text-center">
             <button
               type="submit"
@@ -163,6 +182,7 @@ const ContactForm = () => {
               {loading ? "Sending..." : "Send Message"}
             </button>
           </div>
+
           {result && (
             <p
               className={`text-center font-medium mt-4 ${
@@ -174,7 +194,7 @@ const ContactForm = () => {
           )}
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

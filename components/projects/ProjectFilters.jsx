@@ -56,23 +56,6 @@ export default function ProjectFilters({
         />
 
         {/* SERVICES PILLS */}
-        {/* <div className="flex flex-wrap gap-3 justify-center">
-          {services.map((serv) => (
-            <button
-              key={serv}
-              onClick={() => applyFilter(activeCategory, serv)}
-              className={`px-4 py-1.5 text-sm rounded-full transition border
-                ${
-                  activeService === serv
-                    ? "bg-secondary text-white border-secondary"
-                    : "border-gray-300 hover:border-secondary hover:text-secondary"
-                }`}
-              style={{ fontFamily: "var(--font-inter)" }}
-            >
-              {serv}
-            </button>
-          ))}
-        </div> */}
         <ServicePills
           services={services}
           activeService={activeService}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useContext } from "react";
 import Badge from "../Badge";
 import themeContext from "@/app/context/themeContext";
+import { Calendar } from "lucide-react";
 import Cta from "../Cta";
 
 const RelatedProjects = ({ projects }) => {
@@ -28,14 +29,23 @@ const RelatedProjects = ({ projects }) => {
         {/* Heading */}
         <div className="text-center mb-10">
           <Badge text="Related Projects" />
+
           <h2
-            className={`${currentTheme.headings}`}
+            className={`${currentTheme.headings} text-2xl sm:text-3xl font-bold`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Projects Related to{" "}
-            <span className="text-secondary">{projects[0].service}</span>
+            Projects Completed Under <br />{" "}
+            <span className="text-secondary">{projects[0].service}</span> in
+            London
           </h2>
-          <p className="">Projects completed under this service</p>
+
+          <p
+            className={`text-base sm:text-lg mt-2 ${currentTheme.text} max-w-2xl mx-auto`}
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            Explore completed projects under this service, showcasing quality
+            craftsmanship, modern design, and attention to detail.
+          </p>
         </div>
 
         {/* Grid */}
@@ -61,9 +71,11 @@ const RelatedProjects = ({ projects }) => {
                 <h3 className="text-lg font-semibold group-hover:text-secondary">
                   {project.title}
                 </h3>
-                <p className="text-sm text-secondary mt-2">
-                  {project.location}
-                </p>
+                {/* Year */}
+                <div className="flex items-center gap-2">
+                  <Calendar size={16} className="text-secondary" />
+                  <span>{project.year}</span>
+                </div>
               </div>
             </Link>
           ))}

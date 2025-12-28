@@ -22,7 +22,7 @@ export default function Leadership() {
     >
       <div className="content">
         {/* Section Title */}
-        <div className="flex flex-col items-center text-center mb-12">
+        <div className="flex flex-col items-center text-center mb-10">
           <Badge text="Our Leadership" />
           <h2
             className={`${currentTheme.headings}`}
@@ -43,13 +43,13 @@ export default function Leadership() {
         {/* Director Layout */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-8 items-center">
           {/* Director Image */}
-          <div className="w-full relative rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300">
+          <div className="w-full h-full flex justify-center md:justify-start relative rounded-md overflow-hidden">
             <Image
               src="/about-story.jpg"
               alt="Director"
               width={550}
               height={400}
-              className="object-cover rounded-2xl"
+              className="object-cover rounded-md transition-transform duration-300 hover:scale-105"
               priority
             />
           </div>
@@ -57,13 +57,15 @@ export default function Leadership() {
           {/* Director Info */}
           <div className="flex flex-col gap-4 text-center md:text-left">
             <h3 className="text-2xl md:text-3xl font-bold">Awais Ibrar</h3>
+
             <p className="text-lg md:text-xl text-secondary">
-              Managing Director, FA Builders Ltd.
+              Managing Director, FA Builders Ltd
             </p>
+
             <p className="italic text-md md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0">
               “At FA Builders, we don’t just construct buildings — we build
-              trust, deliver quality, and make sure every project stands the
-              test of time.”
+              trust, deliver lasting quality, and ensure every project stands
+              the test of time.”
             </p>
 
             {/* Social Icons */}
