@@ -22,7 +22,28 @@ const ServicesCardsSection = () => {
       className={`${currentTheme.background}  ${currentTheme.text} custom-container`}
     >
       <div className="content flex flex-col items-center">
-        <Badge text={"Services"} />
+        {/* HEADER */}
+        <div className="text-center mb-10">
+          <Badge text="Our Services" />
+
+          <h2
+            className={currentTheme.headings}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Our <span className="text-secondary">Services</span>
+          </h2>
+
+          <p
+            className={`text-lg leading-relaxed text-center ${currentTheme.text} max-w-2xl mx-auto`}
+            style={{ fontFamily: "var(--font-inter)" }}
+          >
+            Discover our comprehensive construction services across London,
+            including new builds, renovations, loft and basement conversions,
+            and extensions. Each service is delivered with precision, expertise,
+            and a commitment to quality and client satisfaction.
+          </p>
+        </div>
+
         {/* For SEO */}
         {/* <p>“Providing loft conversions across London with full building regulation compliance.”</p> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">

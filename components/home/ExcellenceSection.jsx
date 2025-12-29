@@ -10,21 +10,21 @@ const ExcellenceSection = () => {
   const stats = [
     {
       icon: <FaHardHat />,
-      title: "150+ Projects done",
+      title: "50+ Projects Completed",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi minima, obcaecati in nulla tempore nobis consequuntur quasi explicabo veniam.",
+        "From new builds to renovations and extensions, we have successfully delivered over 50 projects across London, maintaining the highest standards of quality and craftsmanship.",
     },
     {
       icon: <FaChartLine />,
       title: "10+ Years Experience",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi minima, obcaecati in nulla tempore nobis consequuntur quasi explicabo veniam.",
+        "With more than a decade of experience in the construction industry, our expert team ensures every project is planned and executed to perfection, delivering reliable results every time.",
     },
     {
       icon: <FaUsers />,
       title: "100% Client Satisfaction",
       description:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio excepturi minima, obcaecati in nulla tempore nobis consequuntur quasi explicabo veniam.",
+        "Our clients are at the heart of everything we do. We are proud to have a track record of complete client satisfaction, consistently exceeding expectations on every project.",
     },
   ];
 
@@ -64,13 +64,13 @@ const ExcellenceSection = () => {
               >
                 <div className="text-5xl text-secondary">{item.icon}</div>
                 <h2
-                  className="text-3xl font-semibold text-center"
+                  className="text-3xl font-semibold text-center lg:text-left"
                   style={{ fontFamily: "var(--font-montserrat)" }}
                 >
                   {item.title}
                 </h2>
                 <p
-                  className="text-md text-center"
+                  className="text-md text-center lg:text-left"
                   style={{ fontFamily: "var(--font-inter)" }}
                 >
                   {item.description}

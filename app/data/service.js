@@ -1,42 +1,26 @@
 import {
   FaHome,
-  FaPaintRoller,
-  FaArrowUp,
-  FaExpandAlt,
-  FaBoxOpen,
-  FaBath,
-  FaUtensils,
-  FaFire,
-  FaBolt,
-  FaThermometerHalf,
   FaRulerCombined,
   FaClipboardCheck,
   FaLeaf,
+  FaPaintRoller,
   FaSearch,
   FaArrowsAltH,
   FaHistory,
+  FaArrowUp,
   FaDoorOpen,
+  FaHammer,
+  FaSolarPanel,
+  FaExpandAlt,
   FaCouch,
   FaDoorClosed,
+  FaBoxOpen,
   FaShieldAlt,
-  FaWater,
   FaTruckMoving,
   FaWind,
-  FaTint,
-  FaToolbox,
-  FaHammer,
-  FaTools,
-  FaOilCan,
-  FaGasPump,
-  FaExclamationTriangle,
-  FaPlug,
-  FaCertificate,
-  FaLightbulb,
-  FaSolarPanel,
-  FaCogs,
-  FaMobileAlt,
   FaSnowflake,
   FaBuilding,
+  FaTools,
 } from "react-icons/fa";
 
 const service = [
@@ -48,14 +32,14 @@ const service = [
     shortDescription:
       "Complete construction of new residential and commercial properties from the ground up.",
     detailedDescription:
-      "We specialize in creating new buildings from scratch, handling everything from initial design and planning permissions to final construction and finishing. Our team manages the entire process, ensuring high-quality craftsmanship, adherence to building regulations, and timely completion. Whether you're looking to build your dream home or a commercial property, we deliver structures that combine aesthetic appeal with functional design.",
+      "We specialize in creating new buildings from scratch across London, handling initial design, planning permissions, and final construction. Our team ensures high-quality craftsmanship, compliance with building regulations, and timely project delivery. Ideal for dream homes, offices, or commercial properties, blending aesthetics and functionality.",
     specialties: [
       {
         text: "Custom architectural design and planning",
         icon: <FaRulerCombined className="text-[#ff9326]" />,
       },
       {
-        text: "Full project management from ground-breaking to completion",
+        text: "Full project management from groundbreaking to completion",
         icon: <FaClipboardCheck className="text-[#ff9326]" />,
       },
       {
@@ -72,7 +56,7 @@ const service = [
     shortDescription:
       "Transform existing spaces with comprehensive renovation and remodeling services.",
     detailedDescription:
-      "Our complete renovation services breathe new life into outdated or worn properties. We handle structural changes, interior redesign, and full refurbishments while maintaining the integrity of your existing building.",
+      "Our London-based renovation services refresh outdated or worn properties. We manage structural changes, interior redesigns, and full refurbishments while preserving your building’s integrity.",
     specialties: [
       {
         text: "Structural assessment and reinforcement",
@@ -96,7 +80,7 @@ const service = [
     shortDescription:
       "Convert unused loft space into functional and stylish living areas.",
     detailedDescription:
-      "We transform underutilized lofts into bedrooms, offices, or leisure spaces with expert structural work, insulation, and natural light optimization.",
+      "We convert underutilized lofts in London into bedrooms, offices, or leisure areas with structural expertise, insulation, and optimal natural light, increasing property value and usability.",
     specialties: [
       {
         text: "Dormer and mansard loft conversions",
@@ -120,7 +104,7 @@ const service = [
     shortDescription:
       "Expand your living space with bespoke single or multi-story extensions.",
     detailedDescription:
-      "Our extension services seamlessly blend new spaces with existing structures, increasing functionality and property value through thoughtful design and expert construction.",
+      "Our extension services seamlessly integrate new spaces with existing buildings in London, enhancing functionality and property value with expert design and construction.",
     specialties: [
       {
         text: "Architectural integration with existing buildings",
@@ -144,7 +128,7 @@ const service = [
     shortDescription:
       "Create high-quality underground living or storage spaces.",
     detailedDescription:
-      "We deliver safe, dry, and fully functional basement conversions using advanced waterproofing, structural underpinning, and ventilation solutions.",
+      "We deliver safe, dry, and fully functional basement conversions using advanced waterproofing, structural underpinning, and ventilation solutions for London homes.",
     specialties: [
       {
         text: "Waterproofing and tanking systems",
@@ -168,7 +152,7 @@ const service = [
     shortDescription:
       "Professional air conditioning installation for residential and commercial properties.",
     detailedDescription:
-      "Our AC installation services ensure optimal indoor comfort through efficient and reliable air conditioning systems. We assess your space, recommend suitable units, and provide expert installation with minimal disruption.",
+      "Our AC installation services provide efficient, reliable, and energy-saving cooling solutions for London homes and businesses, with expert installation and post-installation support.",
     specialties: [
       {
         text: "Residential and commercial AC systems",

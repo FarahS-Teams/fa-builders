@@ -6,8 +6,8 @@ import themeContext from "@/app/context/themeContext";
 import Cta from "./Cta";
 
 const Hero = ({
-  title = "Our Projects",
-  highlight = "Projects",
+  title = "",
+  highlight = "",
   description,
   image = "/projects-hero.jpg",
   ctaText,
@@ -23,6 +23,7 @@ const Hero = ({
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text} relative ${height}`}
+      aria-label={title}
     >
       {/* Background Image */}
       <Image
@@ -42,7 +43,7 @@ const Hero = ({
         <div className="text-center max-w-3xl">
           {/* Heading */}
           <h1
-            className={`${currentTheme.headings} text-[#ffffff]`}
+            className={`${currentTheme.headings} text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             {title.replace(highlight, "")}
@@ -52,9 +53,7 @@ const Hero = ({
           {/* Optional Paragraph */}
           {description && (
             <p
-              className="hidden sm:flex 
-                         text-sm sm:text-base md:text-lg lg:text-xl
-                         text-gray-200 leading-relaxed "
+              className="hidden sm:block text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 leading-relaxed mb-6"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               {description}
@@ -63,7 +62,7 @@ const Hero = ({
 
           {/* Optional CTA */}
           {ctaText && ctaPath && (
-            <div className="hidden sm:flex justify-center pt-4">
+            <div className="hidden sm:flex justify-center">
               <Cta text={ctaText} path={ctaPath} />
             </div>
           )}
@@ -71,8 +70,8 @@ const Hero = ({
       </div>
 
       {/* Decorative Lines */}
-      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-linear-0-to-r from-secondary to-transparent" />
-      <div className="absolute top-1 left-0 w-full h-px bg-linear-0-to-r from-secondary to-transparent" />
+      <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-secondary to-transparent" />
+      <div className="absolute top-1 left-0 w-full h-px bg-gradient-to-r from-secondary to-transparent" />
     </section>
   );
 };

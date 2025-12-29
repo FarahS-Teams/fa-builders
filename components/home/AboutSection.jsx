@@ -49,16 +49,18 @@ const AboutSection = () => {
 
           <h2 className={`${currentTheme.headings}`}>
             Building <span className="text-secondary">Excellence</span> Since
-            2008
+            2024
           </h2>
 
           <p
             className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            At FA Builders, we don't just construct buildings—we build
-            relationships, trust, and lasting quality. With over 15 years of
-            experience, we transform visions into remarkable realities.
+            At FA Builders Ltd, we don't just construct buildings—we build
+            trust, lasting relationships, and exceptional quality. With over 10
+            years of experience delivering new builds, renovations, and
+            extensions across London, we turn your visions into remarkable
+            realities.
           </p>
         </div>
 
@@ -70,23 +72,18 @@ const AboutSection = () => {
                 className="text-lg leading-relaxed mb-6 text-center lg:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                Founded with a commitment to exceptional craftsmanship and
-                client satisfaction, FA Builders has grown to become a trusted
-                name in construction. Our journey is built on a foundation of
-                integrity, innovation, and attention to detail.
+                FA Builders Ltd is a trusted London construction company,
+                delivering exceptional craftsmanship and client-focused results.
               </p>
 
               <p
                 className="text-lg leading-relaxed text-center lg:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                Every project we undertake reflects our core values: quality
-                workmanship, transparent communication, and timely delivery. We
-                believe that great construction is about more than just
-                materials—it's about creating spaces that inspire and endure.
+                Every project reflects our commitment to quality, transparency,
+                and timely delivery—creating spaces that inspire and endure.
               </p>
             </div>
-
             <Cta
               text="Our Full Story"
               path="/about"
@@ -96,7 +93,7 @@ const AboutSection = () => {
           </div>
 
           {/* Right Features */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 overflow-hidden">
             {features.map((feature, index) => (
               <div
                 key={index}
@@ -108,7 +105,7 @@ const AboutSection = () => {
                 <h4 className="font-bold text-xl mb-1 text-center">
                   {feature.title}
                 </h4>
-                <p className="text-md opacity-80">{feature.desc}</p>
+                <p className="text-md opacity-80 text-center">{feature.desc}</p>
               </div>
             ))}
           </div>

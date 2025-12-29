@@ -17,7 +17,7 @@ const rawProjects = [
     heroImage: "/project1.jpg",
     gallery: ["/project1.jpg", "/project1.jpg"],
     description:
-      "A premium residential extension delivering modern living space with high-end finishes.",
+      "Premium residential extension in London, creating modern living space with high-end finishes and quality craftsmanship.",
   },
   {
     title: "New Build Family Home",
@@ -28,7 +28,7 @@ const rawProjects = [
     heroImage: "/project2.jpg",
     gallery: ["/project2.jpg", "/project2.jpg"],
     description:
-      "A complete new build project delivering a modern, energy-efficient family home.",
+      "Complete new build family home in Harrow, London, designed for modern living and energy efficiency with expert construction.",
   },
   {
     title: "Full Property Renovation",
@@ -39,7 +39,7 @@ const rawProjects = [
     heroImage: "/project3.jpg",
     gallery: ["/project3.jpg", "/project3.jpg"],
     description:
-      "End-to-end renovation transforming an outdated property into a modern living space.",
+      "End-to-end property renovation in Croydon, London, transforming outdated spaces into stylish, contemporary homes.",
   },
   {
     title: "Loft Conversion with Skylights",
@@ -50,7 +50,7 @@ const rawProjects = [
     heroImage: "/project4.jpg",
     gallery: ["/project4.jpg", "/project4.jpg"],
     description:
-      "Loft conversion designed to maximize space and natural light with skylight installations.",
+      "Loft conversion in Leyton, London, maximizing space and natural light with custom skylight installations.",
   },
   {
     title: "Basement Conversion Project",
@@ -66,7 +66,7 @@ const rawProjects = [
       "/project5.jpg",
     ],
     description:
-      "Basement conversion creating a functional and stylish underground living area.",
+      "Basement conversion in Kensington, London, creating a stylish, functional underground living area with premium finishes.",
   },
   {
     title: "Residential AC Installation",
@@ -77,13 +77,13 @@ const rawProjects = [
     heroImage: "/project6.jpg",
     gallery: ["/project6.jpg", "/project6.jpg"],
     description:
-      "Professional AC installation ensuring efficient cooling and optimal indoor comfort.",
+      "Professional residential AC installation in Canary Wharf, London, ensuring optimal indoor comfort and energy efficiency.",
   },
 ];
 
 const projects = rawProjects.map((project, index) => ({
   ...project,
-  slug: `project${index + 1}-${slugify(project.title)}`, // guarantees uniqueness
+  slug: `london-${slugify(project.title)}-${index + 1}`, // SEO-friendly & unique
 }));
 
 export default projects;
