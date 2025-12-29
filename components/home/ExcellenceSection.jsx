@@ -42,7 +42,7 @@ const ExcellenceSection = () => {
     >
       <div
         className="content flex flex-col items-center 
-      px-4 sm:px-6 lg:px-8"
+      "
       >
         <Badge text={"Cool Numbers"} className="" />
 

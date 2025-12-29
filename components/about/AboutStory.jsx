@@ -17,8 +17,8 @@ const AboutStory = () => {
     // py-12 md:py-16 lg:py-8
     <section
       className={`${currentTheme.background} ${currentTheme.text}
-      custom-container relative w-full overflow-hidden
-      px-4 sm:px-6 lg:px-8`}
+      custom-container relative
+      `}
     >
       <div className="content">
         {/* Badge */}

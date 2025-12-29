@@ -49,8 +49,7 @@ const OurValues = () => {
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text} 
-      custom-container w-full relative overflow-hidden
-      px-4 sm:px-6 lg:px-8`}
+      custom-container w-full relative`}
     >
       <div className="content">
         {/* Section Header */}

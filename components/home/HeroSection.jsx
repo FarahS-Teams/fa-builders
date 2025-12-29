@@ -23,7 +23,7 @@ const HeroSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div className="content px-4 sm:px-6 lg:px-8">
+      <div className="content ">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-16">
           {/* Left Side text */}
           <div className="lg:w-1/2 text-center lg:text-left">

@@ -51,11 +51,8 @@ const ContactForm = () => {
   };
 
   return (
-    <section
-      aria-labelledby="contact-heading"
-      className={`${currentTheme.background} ${currentTheme.text} px-6 sm:px-10 lg:px-14 py-12`}
-    >
-      <div className="max-w-2xl mx-auto">
+    <div className={`${currentTheme.background} ${currentTheme.text}`}>
+      <div className="max-w-lg mx-auto">
         <h2
           id="contact-heading"
           className={`text-center ${currentTheme.headings} text-3xl sm:text-4xl font-bold mb-4`}
@@ -194,7 +191,7 @@ const ContactForm = () => {
           )}
         </form>
       </div>
-    </section>
+    </div>
   );
 };
 
