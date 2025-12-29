@@ -8,6 +8,9 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const length = images.length;
 
   // Autoplay
@@ -48,12 +51,19 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
             className="min-w-full relative cursor-pointer"
             onClick={() => openLightbox(index)}
           >
+            {/* Skeleton */}
+            {!imageLoaded && (
+              <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
+            )}
             <Image
               src={img}
               alt={`Slide ${index + 1}`}
               width={800}
               height={500}
-              className="object-cover w-full h-64 md:h-80 rounded-md transition-transform duration-300 hover:scale-105 "
+              onLoad={() => setImageLoaded(true)}
+              className={`object-cover w-full h-64 md:h-80 rounded-md transition-transform duration-300 hover:scale-105 ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
             />
           </div>
         ))}

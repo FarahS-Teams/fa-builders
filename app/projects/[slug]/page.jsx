@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }) {
             </div>
           </section>
 
-          <div className="-mx-4">
+          <div className="-mx-10">
             <CTASection />
           </div>
         </div>

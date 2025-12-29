@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import themeContext from "../../app/context/themeContext";
 import Cta from "../Cta";
 import Badge from "../Badge";
 
 const AboutStory = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const context = useContext(themeContext);
   if (!context) {
     throw new Error("AboutSection must be used within ThemeContextProvider");
@@ -22,14 +24,17 @@ const AboutStory = () => {
     >
       <div className="content">
         {/* Badge */}
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <Badge text="Our Story" />
-        </div>
+        </div> */}
 
         {/* Content Wrapper */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 lg:gap-16">
           {/* Text Section */}
           <div className="flex flex-col md:w-1/2 text-center md:text-left">
+            <div>
+              <Badge text="Our Story" />
+            </div>
             <h2
               className={`${currentTheme.headings}`}
               style={{ fontFamily: "var(--font-Montserrat)" }}
@@ -71,21 +76,20 @@ const AboutStory = () => {
           <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Image Card */}
             <div
-              className={`relative
-      w-full max-w-md
-      aspect-square
-      rounded-2xl overflow-hidden
-      ${currentTheme.card}
-      border border-secondary/20
-      shadow-xl
-      transition-transform duration-300
-      hover:scale-[1.02]`}
+              className={`relative w-full max-w-md aspect-square rounded-2xl overflow-hidden ${currentTheme.card} border border-secondary/20 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
             >
+              {/* Skeleton */}
+              {!imageLoaded && (
+                <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
+              )}
               <Image
                 src="/about-story.jpg"
                 alt="FA Builders construction project in London"
                 fill
-                className="object-cover"
+                onLoad={() => setImageLoaded(true)}
+                className={`object-cover ${
+                  imageLoaded ? "opacity-100" : "opacity-0"
+                }`}
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw max-w-lg lg:max-w-xl"
                 priority
               />

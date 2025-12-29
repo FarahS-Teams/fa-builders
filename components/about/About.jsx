@@ -6,6 +6,7 @@ import Leadership from "./Leadership";
 import OurProcess from "./OurProcess";
 import CTASection from "../home/CTASection";
 import PerksSection from "../home/PerksSection";
+import Certifications from "../Certifications";
 
 const About = () => {
   return (
