@@ -2,7 +2,7 @@
 
 import React from "react";
 import Cta from "../Cta";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import themeContext from "@/app/context/themeContext";
 import Image from "next/image";
 import hero from "../../public/hero.jpg";
@@ -11,6 +11,7 @@ import { FaToolbox, FaAward } from "react-icons/fa";
 import Badge from "../Badge";
 
 const HeroSection = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const context = useContext(themeContext);
 
   if (!context) {
@@ -71,12 +72,19 @@ const HeroSection = () => {
               <div
                 className={`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-secondary shadow-2xl`}
               >
+                {/* Skeleton */}
+                {!imageLoaded && (
+                  <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
+                )}
                 <Image
                   src={hero}
                   alt="FA Builders Construction Project"
                   width={600}
                   height={600}
-                  className="w-full h-auto object-cover"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`w-full h-auto object-cover ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
                 />
               </div>
             </div>

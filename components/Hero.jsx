@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import themeContext from "@/app/context/themeContext";
 import Cta from "./Cta";
 
@@ -15,9 +15,9 @@ const Hero = ({
   overlay = "bg-black/50",
   height = "h-[60vh] sm:h-[70vh] md:h-[80vh]",
 }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const context = useContext(themeContext);
   if (!context) throw new Error("Use inside ThemeProvider");
-
   const { currentTheme } = context;
 
   return (
@@ -25,6 +25,11 @@ const Hero = ({
       className={`${currentTheme.background} ${currentTheme.text} relative ${height}`}
       aria-label={title}
     >
+      {/* Skeleton */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
+      )}
+
       {/* Background Image */}
       <Image
         src={image}
@@ -32,7 +37,8 @@ const Hero = ({
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        onLoad={() => setImageLoaded(true)}
+        className={`object-cover ${imageLoaded ? "opacity-100" : "opacity-0"}`}
       />
 
       {/* Overlay */}

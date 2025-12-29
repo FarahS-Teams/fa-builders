@@ -10,6 +10,8 @@ import { useContext } from "react";
 import { useParams } from "next/navigation";
 import Badge from "@/components/Badge";
 import RelatedProjects from "@/components/services/RelatedProjects";
+import Hero from "@/components/Hero";
+import ServiceInfoSection from "@/components/services/ServiceInfoSection";
 
 const ServiceDetailPage = () => {
   const params = useParams();
@@ -36,30 +38,16 @@ const ServiceDetailPage = () => {
   return (
     <main className="custom-container">
       <div className="content flex flex-col gap-16 lg:gap-24">
+        {/* Padding issue alignment */}
         {/* Hero Section */}
-        <section className="pt-28 content">
-          <div className="max-w-6xl mx-auto text-center">
-            <Badge text={IndService.title} />
+        <Hero
+          title={IndService.title}
+          description={IndService.shortDescription}
+          image="/about-story.jpg"
+        />
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              {IndService.title}
-            </h1>
-
-            <p className="text-lg max-w-3xl mx-auto mb-8">
-              {IndService.detailedDescription}
-            </p>
-
-            <div className="relative w-full aspect-video max-w-4xl mx-auto">
-              <Image
-                src={IndService.image}
-                alt={IndService.title}
-                fill
-                className="object-cover rounded-xl"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-              />
-            </div>
-          </div>
-        </section>
+        {/* Service Section */}
+        <ServiceInfoSection service={IndService} />
 
         {/* ADD Related Projects Here */}
         <section className={`${currentTheme.background} ${currentTheme.text}`}>
@@ -101,7 +89,7 @@ const ServiceDetailPage = () => {
         <PerksSection />
 
         {/* CTA Section */}
-        <div className="-mx-4">
+        <div className="-mx-10">
           <CTASection />
         </div>
       </div>

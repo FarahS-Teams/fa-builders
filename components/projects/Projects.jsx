@@ -8,7 +8,7 @@ const Projects = () => {
         title="Our Projects"
         highlight="Projects"
         description="A showcase of our completed and ongoing construction projects across London."
-        image="/projects-hero.jpg"
+        image="/projects-hero1.jpg"
         ctaText="Check Out Our Services"
         ctaPath="/services"
         overlay="bg-black/30"

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import Badge from "../Badge";
 import themeContext from "@/app/context/themeContext";
 import { Calendar } from "lucide-react";
 import Cta from "../Cta";
 
 const RelatedProjects = ({ projects }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const context = useContext(themeContext);
   if (!context) {
     throw new Error(
@@ -58,17 +59,24 @@ const RelatedProjects = ({ projects }) => {
             >
               {/* Image */}
               <div className="relative h-56">
+                {/* Skeleton */}
+                {!imageLoaded && (
+                  <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
+                )}
                 <Image
-                  src={project.image}
+                  src={project.heroImage}
                   alt={project.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition"
+                  onLoad={() => setImageLoaded(true)}
+                  className={`object-cover group-hover:scale-105 transition ${
+                    imageLoaded ? "opacity-100" : "opacity-0"
+                  }`}
                 />
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <h3 className="text-lg font-semibold group-hover:text-secondary">
+                <h3 className="text-lg font-semibold text-secondary">
                   {project.title}
                 </h3>
                 {/* Year */}
