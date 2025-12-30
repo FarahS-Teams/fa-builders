@@ -36,61 +36,62 @@ const ServiceDetailPage = () => {
   const { currentTheme } = context;
 
   return (
-    <main className="custom-container">
-      <div className="content flex flex-col gap-16 lg:gap-24">
-        {/* Padding issue alignment */}
-        {/* Hero Section */}
-        <Hero
-          title={IndService.title}
-          description={IndService.shortDescription}
-          image="/about-story.jpg"
-        />
+    <main>
+      <Hero
+        title={IndService.title}
+        description={IndService.shortDescription}
+        image="/about-story.jpg"
+      />
+      <div className="custom-container">
+        <div className="mt-14 content flex flex-col gap-16 lg:gap-24">
+          {/* Service Section */}
+          <ServiceInfoSection service={IndService} />
 
-        {/* Service Section */}
-        <ServiceInfoSection service={IndService} />
+          {/* ADD Related Projects Here */}
+          <section
+            className={`${currentTheme.background} ${currentTheme.text}`}
+          >
+            <RelatedProjects projects={relatedProjects} />
+          </section>
 
-        {/* ADD Related Projects Here */}
-        <section className={`${currentTheme.background} ${currentTheme.text}`}>
-          <RelatedProjects projects={relatedProjects} />
-        </section>
-
-        {/* Specialties Section */}
-        <section
-          className={`${currentTheme.background} ${currentTheme.text} flex justify-center`}
-        >
-          <div className="">
-            <div className="text-center">
-              <Badge text="Specialties" />
-              <h2
-                className={`${currentTheme.headings}`}
-                style={{ fontFamily: "var(--font-Montserrat)" }}
-              >
-                Our <span className="text-secondary">Expertise</span>
-              </h2>
-            </div>
-
-            <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 xl:gap-12">
-              {IndService.specialties.map((elem, idx) => (
-                <div
-                  key={idx}
-                  className={`p-8 sm:p-4 lg:p-3 xl:p-8 rounded-xl flex flex-col items-center text-center ${currentTheme.card} hover:transform hover:-translate-y-1 transition-all duration-300`}
+          {/* Specialties Section */}
+          <section
+            className={`${currentTheme.background} ${currentTheme.text} flex justify-center`}
+          >
+            <div className="">
+              <div className="text-center">
+                <Badge text="Specialties" />
+                <h2
+                  className={`${currentTheme.headings}`}
+                  style={{ fontFamily: "var(--font-Montserrat)" }}
                 >
-                  <div className="text-3xl text-secondary mb-4">
-                    {elem.icon}
+                  Our <span className="text-secondary">Expertise</span>
+                </h2>
+              </div>
+
+              <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 xl:gap-12">
+                {IndService.specialties.map((elem, idx) => (
+                  <div
+                    key={idx}
+                    className={`p-8 sm:p-4 lg:p-3 xl:p-8 rounded-xl flex flex-col items-center text-center ${currentTheme.card} hover:transform hover:-translate-y-1 transition-all duration-300`}
+                  >
+                    <div className="text-3xl text-secondary mb-4">
+                      {elem.icon}
+                    </div>
+                    <p className="text-sm md:text-base">{elem.text}</p>
                   </div>
-                  <p className="text-sm md:text-base">{elem.text}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+          </section>
+
+          {/* Why Us Section */}
+          <PerksSection />
+
+          {/* CTA Section */}
+          <div className="-mx-10">
+            <CTASection />
           </div>
-        </section>
-
-        {/* Why Us Section */}
-        <PerksSection />
-
-        {/* CTA Section */}
-        <div className="-mx-10">
-          <CTASection />
         </div>
       </div>
     </main>
