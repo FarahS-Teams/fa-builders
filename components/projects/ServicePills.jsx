@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useRef, useContext } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import themeContext from "@/app/context/themeContext";

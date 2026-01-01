@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useContext } from "react";
 import { motion } from "framer-motion";
 import themeContext from "@/app/context/themeContext";

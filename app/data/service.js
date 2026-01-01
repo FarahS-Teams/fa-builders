@@ -25,7 +25,8 @@ import {
 
 const service = [
   {
-    image: "/about-story.jpg",
+    heroImage: "/services/New-build-service/new-build-hero.jpg",
+    bannerImage: "/services/New-build-service/new-build-service.jpg",
     icon: <FaHome className="text-3xl" />,
     slug: "new-build-services",
     title: "New Build Services",
@@ -49,7 +50,8 @@ const service = [
     ],
   },
   {
-    image: "/about-story.jpg",
+    heroImage: "/services/Renovation-service/renovation-hero.jpg",
+    bannerImage: "/services/Renovation-service/renovation-service.jpg",
     icon: <FaPaintRoller className="text-3xl" />,
     slug: "renovation-services",
     title: "Renovation Services",
@@ -73,7 +75,8 @@ const service = [
     ],
   },
   {
-    image: "/loft.jpg",
+    heroImage: "/services/Loft-service/loft-hero.jpg",
+    bannerImage: "/services/Loft-service/loft-service.jpg",
     icon: <FaArrowUp className="text-3xl" />,
     slug: "loft-conversions",
     title: "Loft Conversions",
@@ -97,7 +100,8 @@ const service = [
     ],
   },
   {
-    image: "/property.jpg",
+    heroImage: "/services/Extension-service/extension-hero.jpg",
+    bannerImage: "/services/Extension-service/extension-service.jpg",
     icon: <FaExpandAlt className="text-3xl" />,
     slug: "extension-services",
     title: "Extension Services",
@@ -121,7 +125,8 @@ const service = [
     ],
   },
   {
-    image: "/basement.jpg",
+    heroImage: "/services/Basement-service/basement-hero.jpg",
+    bannerImage: "/services/Basement-service/basement-service.jpg",
     icon: <FaBoxOpen className="text-3xl" />,
     slug: "basement-conversions",
     title: "Basement Conversions",
@@ -145,7 +150,8 @@ const service = [
     ],
   },
   {
-    image: "/ac.jpg",
+    heroImage: "/services/AC-service/ac-hero.jpg",
+    bannerImage: "/services/AC-service/ac-service.jpg",
     icon: <FaSnowflake className="text-3xl" />,
     slug: "ac-installation",
     title: "AC Installation",

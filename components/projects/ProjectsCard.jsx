@@ -1,10 +1,11 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import { useContext, useState } from "react";
 import { motion } from "framer-motion";
 import Cta from "../Cta";
 import themeContext from "@/app/context/themeContext";
-import { MapPin, Clock } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },

@@ -1,6 +1,6 @@
 "use client";
-// Have to add Transition on image navigation
 
+import React from "react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 

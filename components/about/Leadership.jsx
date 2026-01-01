@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import Image from "next/image";
 import { FaFacebook, FaTiktok } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
@@ -45,11 +45,11 @@ export default function Leadership() {
           {/* Director Image */}
           <div className="w-full h-full flex justify-center md:justify-start relative rounded-md overflow-hidden">
             <Image
-              src="/about-story.jpg"
+              src="/about/director-pic.jpg"
               alt="Director"
               width={550}
               height={400}
-              className="object-cover rounded-md transition-transform duration-300 hover:scale-105"
+              className={`object-cover rounded-2xl overflow-hidden ${currentTheme.card} border-1 border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
               priority
             />
           </div>
