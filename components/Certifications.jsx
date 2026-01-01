@@ -1,9 +1,9 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { useContext } from "react";
 import themeContext from "@/app/context/themeContext";
-import Cta from "./Cta";
 import Badge from "./Badge";
 import certifications from "@/app/data/compliance";
 

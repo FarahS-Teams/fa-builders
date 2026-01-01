@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect, useContext } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 import CategorySelect from "./CategorySelect";
 import ServicePills from "./ServicePills";
 const categories = ["All", "Residential", "Commercial"];

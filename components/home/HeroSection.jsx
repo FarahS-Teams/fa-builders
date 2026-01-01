@@ -5,7 +5,6 @@ import Cta from "../Cta";
 import { useState, useContext } from "react";
 import themeContext from "@/app/context/themeContext";
 import Image from "next/image";
-import hero from "../../public/hero.jpg";
 
 import { FaToolbox, FaAward } from "react-icons/fa";
 import Badge from "../Badge";
@@ -77,7 +76,7 @@ const HeroSection = () => {
                   <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
                 )}
                 <Image
-                  src={hero}
+                  src="/hero/home-hero.jpg"
                   alt="FA Builders Construction Project"
                   width={600}
                   height={600}

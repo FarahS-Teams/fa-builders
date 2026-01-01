@@ -1,8 +1,8 @@
 "use client";
+import React from "react";
 import Image from "next/image";
 import { useState, useContext } from "react";
 import themeContext from "../../app/context/themeContext";
-import Cta from "../Cta";
 import Badge from "../Badge";
 
 const AboutStory = () => {
@@ -23,13 +23,8 @@ const AboutStory = () => {
       `}
     >
       <div className="content">
-        {/* Badge */}
-        {/* <div className="flex justify-center">
-          <Badge text="Our Story" />
-        </div> */}
-
         {/* Content Wrapper */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           {/* Text Section */}
           <div className="flex flex-col md:w-1/2 text-center md:text-left">
             <div>
@@ -76,14 +71,16 @@ const AboutStory = () => {
           <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Image Card */}
             <div
-              className={`relative w-full max-w-md aspect-square rounded-2xl overflow-hidden ${currentTheme.card} border border-secondary/20 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
+              className={`relative w-full max-w-md aspect-square rounded-2xl overflow-hidden ${currentTheme.card} border-1 border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
             >
+              className=
+              {`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-secondary shadow-2xl`}
               {/* Skeleton */}
               {!imageLoaded && (
                 <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
               )}
               <Image
-                src="/about-story.jpg"
+                src="/about/about-story.jpg"
                 alt="FA Builders construction project in London"
                 fill
                 onLoad={() => setImageLoaded(true)}

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import {
   FaPhone,
@@ -12,8 +13,8 @@ import {
 import { GrTechnology } from "react-icons/gr";
 import { useContext } from "react";
 import themeContext from "../app/context/themeContext";
-import logo_dark from "../public/logo_dark.png";
-import logo_light from "../public/logo_light.png";
+import logo_dark from "../public/icons/logo_dark.png";
+import logo_light from "../public/icons/logo_light.png";
 import Image from "next/image";
 
 const Footer = () => {

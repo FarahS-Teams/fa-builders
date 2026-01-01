@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useContext, useState, useMemo } from "react";
 import projects from "@/app/data/projects";
 import themeContext from "@/app/context/themeContext";

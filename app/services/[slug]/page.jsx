@@ -40,7 +40,7 @@ const ServiceDetailPage = () => {
       <Hero
         title={IndService.title}
         description={IndService.shortDescription}
-        image="/about-story.jpg"
+        image={IndService.heroImage}
       />
       <div className="custom-container">
         <div className="mt-14 content flex flex-col gap-16 lg:gap-24">

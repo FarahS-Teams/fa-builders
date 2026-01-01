@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState, useEffect, useContext } from "react";
+import React from "react";
+import { useState, useEffect, useContext } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import themeContext from "@/app/context/themeContext";
 

@@ -1,4 +1,6 @@
 "use client";
+
+import React from "react";
 import service from "@/app/data/service";
 import Image from "next/image";
 import { FaBars } from "react-icons/fa6";
@@ -9,8 +11,8 @@ import Cta from "./Cta";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useContext } from "react";
 import themeContext from "../app/context/themeContext";
-import logo_dark from "../public/logo_dark.png";
-import logo_light from "../public/logo_light.png";
+import logo_dark from "../public/icons/logo_dark.png";
+import logo_light from "../public/icons/logo_light.png";
 import { usePathname } from "next/navigation";
 
 const Header = () => {

@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { HardHat, Building2, ShieldCheck } from "lucide-react";
 import { useContext } from "react";
 import { motion } from "framer-motion";

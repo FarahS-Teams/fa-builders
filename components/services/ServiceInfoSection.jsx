@@ -1,6 +1,7 @@
 "use client";
+
+import React from "react";
 import Image from "next/image";
-import { FaToolbox } from "react-icons/fa";
 import Badge from "@/components/Badge";
 import { useState, useContext } from "react";
 import themeContext from "@/app/context/themeContext";
@@ -56,7 +57,7 @@ const ServiceInfoSection = ({ service }) => {
               <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
             )}
             <Image
-              src={service.image}
+              src={service.bannerImage}
               alt={`${service.title} by FA Builders Ltd`}
               fill
               onLoad={() => setImageLoaded(true)}
