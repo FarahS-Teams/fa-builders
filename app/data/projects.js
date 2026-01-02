@@ -12,7 +12,7 @@ const rawProjects = [
     title: "Luxury Kitchen Extension",
     category: "Residential",
     service: "Extension Services",
-    location: "London, UK",
+    location: "Morden, UK",
     year: "2024",
     heroImage: "/projects/Extension-Services/kitchen-extension1.jpg",
     gallery: [
@@ -21,28 +21,28 @@ const rawProjects = [
       "/projects/Extension-Services/kitchen-extension1-3.jpg",
     ],
     description:
-      "Premium residential extension in London, creating modern living space with high-end finishes and quality craftsmanship.",
+      "High-quality kitchen extension in Morden, London, designed to enhance modern living with bespoke layouts, premium finishes, and expert craftsmanship.",
   },
   {
-    title: "Luxury Kitchen Extension",
+    title: "Luxury Kitchen and Home Extension",
     category: "Residential",
     service: "Extension Services",
-    location: "London, UK",
-    year: "2024",
+    location: "Norwood, UK",
+    year: "2023",
     heroImage: "/projects/Extension-Services/extension7.jpg",
     gallery: [
       "/projects/Extension-Services/extension7.jpg",
       "/projects/Extension-Services/extension7-1.jpg",
     ],
     description:
-      "Premium residential extension in London, creating modern living space with high-end finishes and quality craftsmanship.",
+      "Premium kitchen and home extension in Norwood, London, delivering enhanced living space with modern design, high-end finishes, and expert craftsmanship.",
   },
   {
-    title: "Luxury Kitchen Extension",
+    title: "Full Home Extension",
     category: "Residential",
     service: "Extension Services",
-    location: "London, UK",
-    year: "2024",
+    location: "Aspen, Canary Wharf",
+    year: "2023",
     heroImage: "/projects/Extension-Services/extension3-1.jpg",
     gallery: [
       "/projects/Extension-Services/extension3-1.jpg",
@@ -50,13 +50,13 @@ const rawProjects = [
       "/projects/Extension-Services/extension3-3.jpg",
     ],
     description:
-      "Premium residential extension in London, creating modern living space with high-end finishes and quality craftsmanship.",
+      "Luxury full home extension in Aspen, Canary Wharf, transforming the property into an expansive modern living space with exceptional finishes and quality craftsmanship.",
   },
   {
-    title: "New Build Bathroom",
+    title: "Luxury Bathroom",
     category: "Residential",
     service: "New Build Services",
-    location: "Harrow, London",
+    location: "Morden, London",
     year: "2024",
     heroImage: "/projects/New-Build-Services/new-build-bathroom1.jpg",
     gallery: [
@@ -64,27 +64,27 @@ const rawProjects = [
       "/projects/New-Build-Services/new-build-bathroom1-1.jpg",
     ],
     description:
-      "Complete new build family home in Harrow, London, designed for modern living and energy efficiency with expert construction.",
+      "Luxury bathroom project in Morden, London, combining modern design with premium finishes.",
   },
   {
-    title: "New Build Family Home",
+    title: "Modern Bathroom",
     category: "Residential",
     service: "New Build Services",
-    location: "Harrow, London",
-    year: "2024",
+    location: "Croydon, London",
+    year: "2025",
     heroImage: "/projects/New-Build-Services/new-build-bathroom2.jpg",
     gallery: [
       "/projects/New-Build-Services/new-build-bathroom2.jpg",
       "/projects/New-Build-Services/new-build-bathroom2.jpg",
     ],
     description:
-      "Complete new build family home in Harrow, London, designed for modern living and energy efficiency with expert construction.",
+      "Modern new build bathroom in Croydon, London, expertly designed with contemporary styling, premium finishes, and high-quality construction.",
   },
   {
     title: "New Build Family Home",
     category: "Residential",
     service: "New Build Services",
-    location: "Harrow, London",
+    location: "UK",
     year: "2024",
     heroImage: "/projects/New-Build-Services/new-build3.jpg",
     gallery: [
@@ -93,50 +93,39 @@ const rawProjects = [
       "/projects/New-Build-Services/new-build3-3.jpg",
     ],
     description:
-      "Complete new build family home in Harrow, London, designed for modern living and energy efficiency with expert construction.",
+      "Complete new build family home in London, designed for modern living and energy efficiency with expert construction.",
   },
   {
     title: "Full Property Renovation",
     category: "Residential",
     service: "Renovation Services",
-    location: "Croydon, London",
-    year: "2023",
+    location: "Morden, London",
+    year: "2024",
     heroImage: "/projects/Renovation-Services/renovation1.jpg",
     gallery: ["/projects/Renovation-Services/renovation1.jpg"],
     description:
-      "End-to-end property renovation in Croydon, London, transforming outdated spaces into stylish, contemporary homes.",
+      "End-to-end property renovation in Morden, London, transforming outdated spaces into stylish, contemporary homes.",
   },
   {
-    title: "Full Property Renovation",
+    title: "Full House Renovation",
     category: "Residential",
     service: "Renovation Services",
-    location: "Croydon, London",
-    year: "2023",
-    heroImage: "/projects/Renovation-Services/renovation3.jpg",
-    gallery: ["/projects/Renovation-Services/renovation3.jpg"],
-    description:
-      "End-to-end property renovation in Croydon, London, transforming outdated spaces into stylish, contemporary homes.",
-  },
-  {
-    title: "Full Property Renovation",
-    category: "Residential",
-    service: "Renovation Services",
-    location: "Croydon, London",
-    year: "2023",
+    location: "Morden, London",
+    year: "2024",
     heroImage: "/projects/Renovation-Services/renovation2.jpg",
     gallery: [
       "/projects/Renovation-Services/renovation2.jpg",
       "/projects/Renovation-Services/renovation2-1.jpg",
     ],
     description:
-      "End-to-end property renovation in Croydon, London, transforming outdated spaces into stylish, contemporary homes.",
+      "Comprehensive full house renovation in Morden, London, delivering a complete transformation with contemporary design and high-quality finishes.",
   },
   {
-    title: "Full Property Renovation",
+    title: "New Build Garden Renovation",
     category: "Residential",
     service: "Renovation Services",
-    location: "Croydon, London",
-    year: "2023",
+    location: "UK",
+    year: "2018",
     heroImage: "/projects/Renovation-Services/garden-renovation1.jpg",
     gallery: [
       "/projects/Renovation-Services/garden-renovation1.jpg",
@@ -144,43 +133,36 @@ const rawProjects = [
       "/projects/Renovation-Services/garden-renovation1-2.jpg",
     ],
     description:
-      "End-to-end property renovation in Croydon, London, transforming outdated spaces into stylish, contemporary homes.",
+      "High-end new build garden renovation in the UK, delivering a beautifully designed outdoor space with premium materials and high-quality landscaping.",
   },
   {
-    title: "Loft Conversion with Skylights",
+    title: "Loft Conversion",
     category: "Residential",
     service: "Loft Conversions",
-    location: "Leyton, London",
-    year: "2023",
-    heroImage: "/projects/Loft-Conversion/loft-conversion1.jpg",
-    gallery: ["/projects/Loft-Conversion/loft-conversion1.jpg"],
-    description:
-      "Loft conversion in Leyton, London, maximizing space and natural light with custom skylight installations.",
-  },
-  {
-    title: "Loft Conversion with Skylights",
-    category: "Residential",
-    service: "Loft Conversions",
-    location: "Leyton, London",
-    year: "2023",
+    location: "Croydon, London",
+    year: "2025",
     heroImage: "/projects/Loft-Conversion/loft-conversion.jpg",
-    gallery: ["/projects/Loft-Conversion/loft-conversion.jpg"],
+    gallery: [
+      "/projects/Loft-Conversion/loft-conversion1.jpg",
+      "/projects/Loft-Conversion/loft-conversion.jpg",
+      "/projects/New-Build-Services/new-build-bathroom2.jpg",
+    ],
     description:
-      "Loft conversion in Leyton, London, maximizing space and natural light with custom skylight installations.",
+      "Loft conversion with bathroom in Croydon, London, designed to enhance space, natural light, and premium finishes throughout.",
   },
   {
     title: "Residential AC Installation",
     category: "Residential",
     service: "AC Installation",
-    location: "Canary Wharf, London",
-    year: "2024",
+    location: "Croydon, London",
+    year: "2025",
     heroImage: "/projects/AC-Installation/AC-Installation1-1.jpg",
     gallery: [
       "/projects/AC-Installation/AC-Installation1.jpg",
       "/projects/AC-Installation/AC-Installation1-1.jpg",
     ],
     description:
-      "Professional residential AC installation in Canary Wharf, London, ensuring optimal indoor comfort and energy efficiency.",
+      "Professional residential AC installation in Croyden, London, ensuring optimal indoor comfort and energy efficiency.",
   },
 ];
 

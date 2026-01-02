@@ -98,7 +98,7 @@ const ProjectCard = ({ project, index }) => {
           </p>
 
           {/* Location – fixed height */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center md:justify-start lg:justify-start gap-2 ">
             <MapPin className="w-6 h-6 sm:w-4 sm:h-7 min-h-[1.25rem] text-secondary" />
             <p
               className="text-xs sm:text-sm opacity-80 min-h-[1.25rem]"
