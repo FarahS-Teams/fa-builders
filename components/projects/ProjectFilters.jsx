@@ -6,12 +6,12 @@ import ServicePills from "./ServicePills";
 const categories = ["All", "Residential", "Commercial"];
 const services = [
   "All",
-  "New Builds",
-  "Renovations",
+  "New Build Services",
+  "Renovation Services",
   "Loft Conversions",
-  "Extensions",
+  "Extension Services",
   "Basement Conversions",
-  "Underfloor Heating",
+  "AC Installation",
 ];
 
 export default function ProjectFilters({

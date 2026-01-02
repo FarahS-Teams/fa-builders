@@ -64,7 +64,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Side - Image */}
-          <div className="lg:w-1/2 relative h-full">
+          <div className="lg:w-1/2 relative h-full pt-10">
             {/* Main Image */}
             <div className="relative">
               <div className="absolute -inset-4 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-xl opacity-50"></div>
@@ -105,7 +105,7 @@ const HeroSection = () => {
 
             {/*Card 2 */}
             <div
-              className={`absolute -top-8 -right-2 md:-right-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
+              className={`absolute -top-2 -right-2 md:-right-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary rounded-lg">
