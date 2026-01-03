@@ -136,9 +136,7 @@ const TestimonialsSection = () => {
           >
             {reviews.map((elem, index) => (
               <SwiperSlide key={index}>
-                <div
-                  className={`${currentTheme.card} p-6 md:p-8 rounded-xl mt-1 h-full`}
-                >
+                <div className={`${currentTheme.card} rounded-xl mt-1 h-full`}>
                   {/* Quote Icon */}
                   <div className="text-secondary text-2xl mb-4">
                     <FaQuoteLeft />
