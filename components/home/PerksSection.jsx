@@ -4,20 +4,20 @@ import { useContext } from "react";
 import { FaHardHat, FaRulerCombined, FaStar } from "react-icons/fa";
 import themeContext from "@/app/context/themeContext";
 import Badge from "../Badge";
-
+import SimpleCards from "../SimpleCards";
 const perksData = [
   {
-    icon: FaHardHat,
+    icon: <FaHardHat />,
     title: "Expert Team",
     desc: "Skilled professionals delivering reliable construction solutions.",
   },
   {
-    icon: FaRulerCombined,
+    icon: <FaRulerCombined />,
     title: "Precision",
     desc: "Careful planning and attention to every construction detail.",
   },
   {
-    icon: FaStar,
+    icon: <FaStar />,
     title: "Quality",
     desc: "High standards in materials, workmanship, and finishes.",
   },
@@ -47,34 +47,30 @@ const PerksSection = () => {
         </h2>
 
         {/* cards section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full max-w-6xl">
-          {perksData.map((elem, index) => {
-            const Icon = elem.icon;
-            return (
-              <div
-                key={index}
-                className={`rounded-xl flex flex-col items-center text-center gap-4 sm:gap-5
-                ${currentTheme.card} transition-all duration-300 group hover:-translate-y-2`}
-              >
-                <div className="text-secondary text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">
-                  <Icon />
-                </div>
-                <h4
-                  className="font-bold text-lg sm:text-xl md:text-2xl"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {elem.title}
-                </h4>
-                <p
-                  className="text-sm sm:text-base opacity-80"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {elem.desc}
-                </p>
+        <SimpleCards
+          content={perksData.map((item, index) => (
+            <div
+              key={index}
+              className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+            >
+              <div className="text-3xl md:text-4xl lg:text-5xl text-secondary">
+                {item.icon}
               </div>
-            );
-          })}
-        </div>
+              <h4
+                className="font-bold text-lg sm:text-xl md:text-2xl"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {item.title}
+              </h4>
+              <p
+                className="text-sm sm:text-base opacity-80"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        />
       </div>
     </section>
   );
