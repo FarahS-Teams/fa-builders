@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import { FaHardHat, FaUsers, FaChartLine } from "react-icons/fa";
 import themeContext from "@/app/context/themeContext";
-import { useContext } from "react";
 import Badge from "../Badge";
+import SimpleCards from "../SimpleCards";
 
 const ExcellenceSection = () => {
   const stats = [
@@ -55,30 +55,28 @@ const ExcellenceSection = () => {
         </h2>
 
         {/* cards */}
-        <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-2 lg:gap-10">
-          {stats.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+        <SimpleCards
+          content={stats.map((item, index) => (
+            <div
+              key={index}
+              className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+            >
+              <div className="text-5xl text-secondary">{item.icon}</div>
+              <h2
+                className="text-3xl font-semibold text-center lg:text-left"
+                style={{ fontFamily: "var(--font-montserrat)" }}
               >
-                <div className="text-5xl text-secondary">{item.icon}</div>
-                <h2
-                  className="text-3xl font-semibold text-center lg:text-left"
-                  style={{ fontFamily: "var(--font-montserrat)" }}
-                >
-                  {item.title}
-                </h2>
-                <p
-                  className="text-md text-center lg:text-left"
-                  style={{ fontFamily: "var(--font-inter)" }}
-                >
-                  {item.description}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+                {item.title}
+              </h2>
+              <p
+                className="text-md text-center lg:text-left"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                {item.description}
+              </p>
+            </div>
+          ))}
+        />
       </div>
     </section>
   );
