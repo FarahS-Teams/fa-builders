@@ -53,7 +53,7 @@ const PerksSection = () => {
             return (
               <div
                 key={index}
-                className={`p-4 sm:p-5 lg:p-6 rounded-xl flex flex-col items-center text-center gap-4 sm:gap-5
+                className={`rounded-xl flex flex-col items-center text-center gap-4 sm:gap-5
                 ${currentTheme.card} transition-all duration-300 group hover:-translate-y-2`}
               >
                 <div className="text-secondary text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">

@@ -31,7 +31,7 @@ const ExcellenceSection = () => {
   const context = useContext(themeContext);
 
   if (!context) {
-    throw new Error("HeroSection must be used within a ThemeContextProvider");
+    throw new Error("Section must be used within a ThemeContextProvider");
   }
 
   const { theme, currentTheme } = context;
@@ -55,12 +55,12 @@ const ExcellenceSection = () => {
         </h2>
 
         {/* cards */}
-        <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-10">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-2 lg:gap-10">
           {stats.map((item, index) => {
             return (
               <div
                 key={index}
-                className={`${currentTheme.card} px-10 py-8 flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+                className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
               >
                 <div className="text-5xl text-secondary">{item.icon}</div>
                 <h2
