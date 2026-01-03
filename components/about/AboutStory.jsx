@@ -71,10 +71,8 @@ const AboutStory = () => {
           <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Image Card */}
             <div
-              className={`relative w-full max-w-md aspect-square rounded-2xl overflow-hidden ${currentTheme.card} border-1 border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
+              className={`relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border-1 border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
             >
-              className=
-              {`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-secondary shadow-2xl`}
               {/* Skeleton */}
               {!imageLoaded && (
                 <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />

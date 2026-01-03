@@ -13,7 +13,7 @@ const ProjectDetails = ({ project }) => {
     <div
       className={`
         ${currentTheme.card} ${currentTheme.text}
-        p-6 rounded-xl h-fit
+        rounded-xl h-fit
         max-w-sm mx-auto md:mx-0
         text-left md:text-center lg:text-left
       `}

@@ -45,7 +45,7 @@ export default function CategorySelect({ options, value, onChange }) {
       {/* Dropdown */}
       {open && (
         <div
-          className={`${currentTheme.card} absolute z-50 mt-2 w-full rounded-lg shadow-lg border-secondary overflow-hidden`}
+          className={`${currentTheme.image_card} absolute z-50 mt-2 w-full rounded-lg shadow-lg border-secondary overflow-hidden`}
         >
           {options.map((opt) => (
             <button

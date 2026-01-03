@@ -102,8 +102,8 @@ export default async function ProjectPage({ params }) {
           </p>
         </div>
       </section>
-      <div className="custom-container">
-        <div className="content flex flex-col gap-16 lg:gap-24">
+      <div className="custom-container mt-6">
+        <div className="content flex flex-col gap-10 lg:gap-12">
           {/* CONTENT */}
           <section className="py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="md:col-span-2 text-center md:text-left">
@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }) {
           </section>
 
           {/* PREV / NEXT */}
-          <section className="px-6 sm:px-8 lg:px-12 pt-8 border-t border-primary/10">
+          <section className="px-6 md:px-4 lg:px-4 pt-4 border-t border-primary/10">
             <div className="flex justify-between">
               {prevProject ? (
                 <Link

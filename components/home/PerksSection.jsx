@@ -53,9 +53,7 @@ const PerksSection = () => {
               key={index}
               className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
             >
-              <div className="text-3xl md:text-4xl lg:text-5xl text-secondary">
-                {item.icon}
-              </div>
+              <div className="text-3xl text-secondary">{item.icon}</div>
               <h4
                 className="font-bold text-lg sm:text-xl md:text-2xl"
                 style={{ fontFamily: "var(--font-inter)" }}

@@ -4,7 +4,7 @@ import React from "react";
 import Cta from "../Cta";
 import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
-import { FaHardHat, FaRulerCombined, FaUsers, FaStar } from "react-icons/fa";
+import { FaFireAlt, FaCheckCircle, FaTools, FaAward } from "react-icons/fa";
 import Badge from "../Badge";
 
 const AboutSection = () => {
@@ -18,24 +18,24 @@ const AboutSection = () => {
 
   const features = [
     {
-      icon: <FaHardHat className="text-3xl" />,
-      title: "Expert Team",
-      desc: "Skilled professionals",
+      icon: <FaFireAlt className="text-3xl" />,
+      title: "Gas Safe Practices",
+      desc: "All gas work carried out to Gas Safe standards",
     },
     {
-      icon: <FaRulerCombined className="text-3xl" />,
-      title: "Precision",
-      desc: "Attention to detail",
+      icon: <FaCheckCircle className="text-3xl" />,
+      title: "Building Regulations",
+      desc: "Compliant with UK building control requirements",
     },
     {
-      icon: <FaUsers className="text-3xl" />,
-      title: "Client Focused",
-      desc: "Your vision, our mission",
+      icon: <FaTools className="text-3xl" />,
+      title: "Best Workmanship",
+      desc: "High-quality finishes using proven methods",
     },
     {
-      icon: <FaStar className="text-3xl" />,
-      title: "Quality",
-      desc: "Highest standards",
+      icon: <FaAward className="text-3xl" />,
+      title: "Trusted Service",
+      desc: "Reliable, professional, and customer-focused",
     },
   ];
 
@@ -77,11 +77,22 @@ const AboutSection = () => {
               </p>
 
               <p
-                className="text-lg leading-relaxed text-center lg:text-left"
+                className="text-lg leading-relaxed text-center mb-6 lg:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 Every project reflects our commitment to quality, transparency,
                 and timely delivery—creating spaces that inspire and endure.
+              </p>
+              <p
+                className="text-lg leading-relaxed text-center lg:text-left"
+                style={{ fontFamily: "var(--font-inter)" }}
+              >
+                We operate in line with UK building regulations and best
+                industry practices, ensuring all work—including gas-related
+                installations—is carried out to recognised safety and quality
+                standards. Our structured approach, skilled workmanship, and
+                attention to detail give clients confidence at every stage of
+                the build.
               </p>
             </div>
             <Cta
@@ -93,16 +104,16 @@ const AboutSection = () => {
           </div>
 
           {/* Right Features */}
-          <div className="grid grid-cols-2 gap-4 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 overflow-hidden">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`p-5 rounded-xl flex flex-col justify-center items-center ${currentTheme.card} border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group `}
+                className={`p-5 rounded-xl flex flex-col justify-center items-center ${currentTheme.small_card} border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group `}
               >
                 <div className="text-secondary mb-3 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h4 className="font-bold text-xl mb-1 text-center">
+                <h4 className="font-bold text-md md:text-xl lg:text-xl mb-1 text-center">
                   {feature.title}
                 </h4>
                 <p className="text-md opacity-80 text-center">{feature.desc}</p>

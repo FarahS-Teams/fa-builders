@@ -22,15 +22,10 @@ const Footer = () => {
     {
       title: "Services",
       links: [
-        { name: "New Build", href: "/services/New-Build-Construction" },
-        { name: "Complete Renovation", href: "/services/Complete-Renovation" },
-        { name: "Loft Conversion", href: "/services/Loft-Conversion" },
-        { name: "Extension", href: "/services/Property-Extension" },
-        {
-          name: "Gas Safe Registered",
-          href: "/services/Gas-Safe-Registered-Services",
-        },
-        { name: "NICEIC", href: "/services/NICEIC-Electrical-Services" },
+        { name: "New Build", href: "/services/new-build-services" },
+        { name: "Complete Renovation", href: "/services/renovation-services" },
+        { name: "Loft Conversion", href: "/services/loft-conversions" },
+        { name: "Extension Services", href: "/services/extension-services" },
       ],
     },
     {
@@ -187,9 +182,9 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${currentTheme.card} w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300  hover:scale-110`}
+                    className={`${currentTheme.small_card} w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300  hover:scale-110`}
                   >
-                    <social.icon className="text-lg" />
+                    <social.icon className="text-lg hover:text-secondary" />
                   </Link>
                 ))}
               </div>

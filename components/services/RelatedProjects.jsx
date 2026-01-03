@@ -57,7 +57,7 @@ const RelatedProjects = ({ projects }) => {
             <Link
               key={project.slug}
               href={`/projects/${project.slug}`}
-              className={`${currentTheme.card} group rounded-xl overflow-hidden hover:shadow-lg transition`}
+              className={`${currentTheme.image_card} group rounded-xl overflow-hidden hover:shadow-lg transition`}
             >
               {/* Image */}
               <div className="relative h-56">

@@ -50,7 +50,7 @@ const ServiceInfoSection = ({ service }) => {
         {/* Image Section */}
         <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
           <div
-            className={`relative w-full max-w-md aspect-[4/3] lg:aspect-[12/9] rounded-2xl overflow-hidden ${currentTheme.card} border border-secondary/20 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
+            className={`relative w-full max-w-md aspect-[4/3] lg:aspect-[12/9] rounded-2xl overflow-hidden border border-secondary/20 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
           >
             {/* Skeleton */}
             {!imageLoaded && (
@@ -70,7 +70,7 @@ const ServiceInfoSection = ({ service }) => {
 
           {/* Floating Card */}
           <div
-            className={`absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary max-w-xs`}
+            className={`absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.small_card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary max-w-xs`}
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-secondary rounded-lg">

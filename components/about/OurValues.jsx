@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 import themeContext from "@/app/context/themeContext";
 import Badge from "../Badge";
+import SimpleCards from "../SimpleCards";
 
 const valuesData = [
   {
@@ -64,49 +65,50 @@ const OurValues = () => {
         </div>
 
         {/* Cards */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-10">
-          {valuesData.map(({ title, description, icon: Icon }, index) => (
-            <motion.div
-              key={title}
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              className={`
+        <SimpleCards
+          content={valuesData.map(
+            ({ title, description, icon: Icon }, index) => (
+              <motion.div
+                key={title}
+                custom={index}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className={`
                 ${currentTheme.card}
                 flex-1 max-w-md mx-auto md:mx-0
-                px-6 sm:px-8 py-8 sm:py-10
                 rounded-xl
                 flex flex-col items-center gap-4 sm:gap-5
                 text-center
                 hover:-translate-y-3 hover:shadow-xl
                 transition-all duration-300 ease-out
               `}
-            >
-              {/* Icon */}
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f7922c]/10 flex items-center justify-center">
-                <Icon size={28} sm={36} className="text-secondary" />
-              </div>
-
-              {/* Title */}
-              <h3
-                className="text-lg sm:text-xl md:text-2xl font-semibold"
-                style={{ fontFamily: "var(--font-Montserrat)" }}
               >
-                {title}
-              </h3>
+                {/* Icon */}
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#f7922c]/10 flex items-center justify-center">
+                  <Icon size={28} sm={36} className="text-secondary" />
+                </div>
 
-              {/* Description */}
-              <p
-                className="text-sm sm:text-base leading-relaxed opacity-90"
-                style={{ fontFamily: "var(--font-inter)" }}
-              >
-                {description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+                {/* Title */}
+                <h3
+                  className="text-lg sm:text-xl md:text-2xl font-semibold"
+                  style={{ fontFamily: "var(--font-Montserrat)" }}
+                >
+                  {title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className="text-sm sm:text-base leading-relaxed opacity-90"
+                  style={{ fontFamily: "var(--font-inter)" }}
+                >
+                  {description}
+                </p>
+              </motion.div>
+            ),
+          )}
+        />
       </div>
     </section>
   );
