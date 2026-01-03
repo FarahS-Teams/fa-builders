@@ -69,7 +69,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-linear-to-r from-secondary/20 to-secondary/20 rounded-3xl blur-xl opacity-50"></div>
               <div
-                className={`relative rounded-2xl overflow-hidden ${currentTheme.card} border-2 border-secondary shadow-2xl`}
+                className={`relative rounded-2xl overflow-hidden border-2 border-secondary shadow-2xl`}
               >
                 {/* Skeleton */}
                 {!imageLoaded && (
@@ -90,7 +90,7 @@ const HeroSection = () => {
 
             {/* Card 1 */}
             <div
-              className={`${currentTheme.background} absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary max-w-xs`}
+              className={`${currentTheme.background} absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.card} rounded-xl shadow-xl border border-secondary max-w-xs`}
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary rounded-lg">
@@ -105,7 +105,7 @@ const HeroSection = () => {
 
             {/*Card 2 */}
             <div
-              className={`absolute -top-2 -right-2 md:-right-6 ${currentTheme.card} p-3 md:p-4 rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
+              className={`absolute -top-2 -right-2 md:-right-6 ${currentTheme.card} rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary rounded-lg">

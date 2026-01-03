@@ -7,19 +7,20 @@ import { MdOutlineAir, MdFoundation } from "react-icons/md";
 import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
 import Cta from "../Cta";
+import SimpleCards from "../SimpleCards";
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: <MdFoundation className="text-3xl" />,
-      title: "New Build Construction",
+      icon: <MdFoundation />,
+      title: "New Build Services",
       description:
         "Complete residential and commercial construction from ground up. We handle everything from foundation to finishing with precision.",
       features: ["Custom Designs", "Quality Materials", "Timely Delivery"],
       path: "/services/build",
     },
     {
-      icon: <FaTools className="text-3xl" />,
+      icon: <FaTools />,
       title: "Complete Renovations",
       description:
         "Transform your existing space with our comprehensive renovation services. Modernize, expand, or completely redesign your property.",
@@ -31,7 +32,7 @@ const ServicesSection = () => {
       path: "/services/renovations",
     },
     {
-      icon: <MdOutlineAir className="text-3xl" />,
+      icon: <MdOutlineAir />,
       title: "HVAC & AC Installation",
       description:
         "Professional heating, ventilation, and air conditioning solutions for optimal comfort and energy efficiency in your space.",
@@ -68,14 +69,16 @@ const ServicesSection = () => {
         </h2>
 
         {/* Services section */}
-        <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-8 lg:gap-10">
-          {services.map((service, index) => (
+        <SimpleCards
+          content={services.map((service, index) => (
             <div
               key={index}
-              className={`group relative ${currentTheme.card} p-6 rounded-xl flex flex-col items-start justify-center gap-6 border border-secondary transition-all duration-500 hover:-translate-y-2`}
+              className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
             >
               {/* Icon */}
-              <div className="text-secondary">{service.icon}</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl text-secondary">
+                {service.icon}
+              </div>
 
               {/* Content */}
               <div className="relative">
@@ -105,7 +108,7 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        />
       </div>
     </section>
   );
