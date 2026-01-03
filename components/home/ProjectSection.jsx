@@ -43,7 +43,7 @@ const ProjectSection = () => {
             <Link
               key={idx}
               href={`/projects/${project.slug}`}
-              className={`${currentTheme.card} group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 
+              className={`${currentTheme.image_card} group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 
                   flex flex-col w-full md:w-1/2 lg:w-1/3`}
             >
               {/* Image */}
@@ -65,19 +65,27 @@ const ProjectSection = () => {
               </div>
 
               {/* Content */}
-              <div className="flex flex-col flex-1">
+              <div className="flex flex-col flex-1 px-6 py-4">
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-2">
+                  <h3
+                    className="text-lg font-bold mb-2 mt-4 hover:text-secondary"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
                     {project.title}
                   </h3>
 
-                  <p className="text-sm opacity-90 mb-6">
-                    {project.description}
+                  <p
+                    className="text-sm opacity-80 mb-6"
+                    style={{ fontFamily: "var(--font-inter)" }}
+                  >
+                    {project.description.length > 100
+                      ? project.description.slice(0, 100) + "..."
+                      : project.description}
                   </p>
                 </div>
 
                 {/* CTA fixed at bottom */}
-                <div className="mt-auto pt-4">
+                <div className="mt-auto">
                   <Cta
                     text="View Project"
                     path={`/projects/${project.slug}`}

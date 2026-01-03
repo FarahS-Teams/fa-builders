@@ -84,7 +84,7 @@ const LeftSide = () => {
         {/* Map */}
         <div className="mt-8">
           <div
-            className={`w-full h-64 sm:h-72 rounded-lg ${currentTheme.card} overflow-hidden`}
+            className={`w-full h-64 sm:h-72 rounded-lg ${currentTheme.image_card} overflow-hidden`}
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.6635293291583!2d-0.0874558!3d51.4659985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603c467a3b499%3A0xc34b72e5a7b8e5d!2s23%20Headcorn%20Rd%2C%20London%20SE15%203ND%2C%20UK!5e0!3m2!1sen!2sus!4v1703692800000!5m2!1sen!2sus"

@@ -1,10 +1,15 @@
 "use client";
 
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Image from "next/image";
+import themeContext from "@/app/context/themeContext";
 
 const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
+  const context = useContext(themeContext);
+  if (!context) throw new Error("Theme provider missing");
+  const { currentTheme } = context;
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -42,7 +47,7 @@ const ProjectGallery = ({ images, autoPlay = true, interval = 3000 }) => {
     <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
       {/* Carousel */}
       <div
-        className="flex transition-transform duration-500"
+        className={`flex transition-transform duration-500 `}
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((img, index) => (

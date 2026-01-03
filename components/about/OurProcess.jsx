@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import themeContext from "@/app/context/themeContext";
 import Cta from "../Cta";
 import Badge from "../Badge";
+import SimpleCards from "../SimpleCards";
 
 const processSteps = [
   {
@@ -79,8 +80,8 @@ const OurProcess = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {processSteps.map(
+        <SimpleCards
+          content={processSteps.map(
             ({ step, title, description, icon: Icon }, index) => (
               <motion.div
                 key={step}
@@ -92,11 +93,8 @@ const OurProcess = () => {
                 className={`${currentTheme.card}
               relative
               max-w-sm mx-auto w-full
-              px-6 py-8
               flex flex-col items-center
-              gap-5
-              rounded-xl
-              hover:-translate-y-3 hover:shadow-xl
+              gap-4 rounded-xl hover:-translate-y-3 hover:shadow-xl
               transition-all duration-300 ease-out`}
               >
                 {/* Step Badge */}
@@ -130,7 +128,7 @@ const OurProcess = () => {
               </motion.div>
             ),
           )}
-        </div>
+        />
 
         {/* CTA */}
         <div className="flex justify-center mt-8">

@@ -97,7 +97,7 @@ const Header = () => {
                   {/* Dropdown */}
                   <div className="absolute left-0 top-full mt-3 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div
-                      className={`${currentTheme.card} rounded-xl shadow-lg border border-secondary/30 p-4`}
+                      className={`${currentTheme.image_card} rounded-xl shadow-lg border border-secondary/30 p-4`}
                     >
                       <ul className="flex flex-col gap-3">
                         {service.map((item) => (

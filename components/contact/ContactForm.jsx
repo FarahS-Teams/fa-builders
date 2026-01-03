@@ -81,7 +81,8 @@ const ContactForm = () => {
                 autoComplete="given-name"
                 required
                 placeholder="John"
-                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
+                className={`mt-3 w-full px-4 py-3 rounded-lg 
+                  ${currentTheme.small_card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
               />
             </div>
             <div>
@@ -94,7 +95,7 @@ const ContactForm = () => {
                 autoComplete="family-name"
                 required
                 placeholder="Doe"
-                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
+                className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.small_card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
               />
             </div>
           </div>
@@ -109,7 +110,7 @@ const ContactForm = () => {
               autoComplete="email"
               required
               placeholder="you@example.com"
-              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.small_card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
             />
           </div>
 
@@ -123,7 +124,7 @@ const ContactForm = () => {
               autoComplete="tel"
               required
               placeholder="+44 123 456 7890"
-              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg ${currentTheme.small_card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
             />
           </div>
 
@@ -131,12 +132,12 @@ const ContactForm = () => {
             <Label htmlFor="service">Services</Label>
             <Select name="service" id="service" required aria-required="true">
               <SelectTrigger
-                className={`w-full mt-3 px-4 py-3 rounded-lg ${currentTheme.card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary transition`}
+                className={`w-full mt-3 px-4 py-3 rounded-lg ${currentTheme.small_card} hover:outline-none hover:ring-2 hover:ring-secondary cursor-pointer focus:ring-2 focus:ring-secondary transition`}
               >
                 <SelectValue placeholder="Select a service" />
               </SelectTrigger>
               <SelectContent
-                className={`${currentTheme.card} ${currentTheme.text}`}
+                className={`${currentTheme.small_card} ${currentTheme.text}`}
                 position="popper"
               >
                 <SelectGroup>
@@ -166,7 +167,7 @@ const ContactForm = () => {
               aria-required="true"
               required
               placeholder="Tell us about your project..."
-              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
+              className={`mt-3 w-full px-4 py-3 rounded-lg resize-none ${currentTheme.small_card} focus:outline-none focus:ring-2 focus:ring-secondary transition`}
             ></textarea>
           </div>
 

@@ -35,12 +35,10 @@ const ProjectCard = ({ project, index }) => {
       <div
         className={`
           ${currentTheme.background} ${currentTheme.text}
-          ${currentTheme.card}
+          ${currentTheme.image_card}
           group relative overflow-hidden
-          rounded-2xl border border-secondary/20
-          backdrop-blur-md shadow-lg
-          transition-all hover:shadow-2xl
-          flex flex-col h-full
+          rounded-2xl backdrop-blur-md shadow-lg
+          transition-all hover:shadow-2xl flex flex-col h-full
         `}
       >
         {/* IMAGE */}
@@ -114,6 +112,7 @@ const ProjectCard = ({ project, index }) => {
               text="View Project Details"
               path={`/projects/${project.slug}`}
               variant="secondary"
+              className="w-full"
             />
           </div>
         </div>
