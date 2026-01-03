@@ -21,7 +21,7 @@ export const metadata = {
   title: "FA Builders",
   description: "The standard of Excellence.",
   icons: {
-    icon: "/logo_light.png",
+    icon: "/icons/logo_light.png",
   },
 };
 

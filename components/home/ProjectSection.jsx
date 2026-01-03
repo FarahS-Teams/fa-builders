@@ -65,7 +65,7 @@ const ProjectSection = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 flex flex-col flex-1">
+              <div className="flex flex-col flex-1">
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-2">
                     {project.title}
