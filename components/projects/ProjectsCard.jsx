@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index }) => {
           ${currentTheme.background} ${currentTheme.text}
           ${currentTheme.image_card}
           group relative overflow-hidden
-          rounded-2xl backdrop-blur-md shadow-lg mx-2
+          rounded-2xl backdrop-blur-md shadow-lg
           transition-all hover:shadow-2xl flex flex-col h-full
         `}
       >
