@@ -72,8 +72,11 @@ const AboutSection = () => {
                 className="text-lg leading-relaxed mb-6 text-center lg:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
-                FA Builders Ltd is a trusted London construction company,
-                delivering exceptional craftsmanship and client-focused results.
+                <span className="text-secondary font-bold">
+                  FA Builders Ltd
+                </span>{" "}
+                is a trusted London construction company, delivering exceptional
+                craftsmanship and client-focused results.
               </p>
 
               <p
@@ -108,7 +111,7 @@ const AboutSection = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`p-5 rounded-xl flex flex-col justify-center items-center ${currentTheme.small_card} border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group `}
+                className={`rounded-xl flex flex-col justify-center items-center ${currentTheme.small_card} border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group `}
               >
                 <div className="text-secondary mb-3 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
