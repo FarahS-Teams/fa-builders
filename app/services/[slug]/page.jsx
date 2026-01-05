@@ -89,7 +89,7 @@ const ServiceDetailPage = () => {
           <PerksSection />
 
           {/* CTA Section */}
-          <div className="-mx-10">
+          <div className="-mx-8">
             <CTASection />
           </div>
         </div>

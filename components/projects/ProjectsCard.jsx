@@ -37,7 +37,7 @@ const ProjectCard = ({ project, index }) => {
           ${currentTheme.background} ${currentTheme.text}
           ${currentTheme.image_card}
           group relative overflow-hidden
-          rounded-2xl backdrop-blur-md shadow-lg
+          rounded-2xl backdrop-blur-md shadow-lg mx-2
           transition-all hover:shadow-2xl flex flex-col h-full
         `}
       >
@@ -59,7 +59,7 @@ const ProjectCard = ({ project, index }) => {
           />
 
           {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+          <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
           {/* Orange stripe */}
           <div className="absolute -bottom-20 -left-20 w-[150%] h-24 bg-secondary rotate-[-12deg] opacity-0 group-hover:opacity-100 transition duration-500" />
@@ -76,7 +76,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* CONTENT */}
-        <div className="p-4 sm:p-5 flex flex-col text-center md:text-left lg:text-left gap-2 flex-grow ">
+        <div className="p-2 lg:p-5 flex flex-col text-center md:text-left lg:text-left gap-2 flex-grow ">
           {/* Title – fixed height */}
           <h3
             className="text-base sm:text-lg font-bold line-clamp-2 min-h-[3rem]"
@@ -107,12 +107,12 @@ const ProjectCard = ({ project, index }) => {
           </div>
 
           {/* CTA always at bottom */}
-          <div className="mt-auto pt-4">
+          <div className="w-full mt-auto pt-4 flex justify-center">
             <Cta
               text="View Project Details"
               path={`/projects/${project.slug}`}
               variant="secondary"
-              className="w-full"
+              className="w-[80%]"
             />
           </div>
         </div>

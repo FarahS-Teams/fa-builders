@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }) {
   return (
     <main>
       {/* HERO */}
-      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
+      <section className="w-full relative h-[60vh] sm:h-[70vh] md:h-[80vh]">
         {/* Background Image */}
         <Image
           src={project.heroImage}
@@ -147,7 +147,7 @@ export default async function ProjectPage({ params }) {
             </div>
           </section>
 
-          <div className="-mx-10">
+          <div className="-mx-8">
             <CTASection />
           </div>
         </div>
