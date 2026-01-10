@@ -12,6 +12,9 @@ import Badge from "../Badge";
 import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
 import { FaQuoteLeft } from "react-icons/fa";
+import reviews from "@/app/data/reviews";
+import { FaStar, FaRegStar } from "react-icons/fa";
+
 
 const TestimonialsSection = () => {
   const context = useContext(themeContext);
@@ -24,68 +27,11 @@ const TestimonialsSection = () => {
 
   const { theme, currentTheme } = context;
 
-  const reviews = [
-    {
-      client: "John & Sarah Williams",
-      project: "Home Renovation",
-      review:
-        "FA Builders transformed our outdated kitchen into a modern masterpiece! Their attention to detail was incredible. They completed the project 2 weeks ahead of schedule and stayed within our budget. Truly professional!",
-      rating: 5,
-    },
-    {
-      client: "Michael Rodriguez",
-      project: "Commercial Builder",
-      review:
-        "We hired FA Builders for our office complex construction. Their project management was flawless - no delays, no hidden costs. Their team's expertise in commercial construction is unmatched in London.",
-      rating: 5,
-    },
-    {
-      client: "Emma Chen",
-      project: "Extension Project",
-      review:
-        "Our house extension seemed daunting, but FA Builders made it stress-free. They handled all permits, kept the site clean, and communicated daily. The quality is outstanding - worth every penny!",
-      rating: 5,
-    },
-    {
-      client: "David & Priya Kapoor",
-      project: "Complete Home Renovation",
-      review:
-        "From initial design to final touches, FA Builders exceeded our expectations. Their craftsmen are true artists. Our Victorian home now has modern amenities while keeping its historic charm intact.",
-      rating: 5,
-    },
-    {
-      client: "James Wilson",
-      project: "Property Developer",
-      review:
-        "As a developer, I've worked with many contractors. FA Builders stand out for their reliability and quality. They've completed 3 projects for us - each delivered on time and above standards.",
-      rating: 5,
-    },
-    {
-      client: "Sophie Mitchell",
-      project: "Loft Conversion",
-      review:
-        "Our loft conversion was complicated due to roof structure issues. FA Builders' engineers found innovative solutions we hadn't considered. They turned our cramped attic into a beautiful master suite!",
-      rating: 5,
-    },
-    {
-      client: "Ahmed Hassan",
-      project: "Restaurant Build",
-      review:
-        "Building a restaurant during COVID was challenging, but FA Builders adapted quickly. They sourced materials creatively when supply chains were disrupted. Our restaurant opened on time thanks to their dedication.",
-      rating: 5,
-    },
-    {
-      client: "Robert & Lisa Thompson",
-      project: "New Build Home",
-      review:
-        "Building our dream home from scratch was overwhelming, but FA Builders guided us through every step. Their 3D visualization helped us make decisions. The result? A home that perfectly matches our vision!",
-      rating: 5,
-    },
-  ];
+
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container px-6`}
       id="testimonials"
     >
       <div className="content">
@@ -136,14 +82,33 @@ const TestimonialsSection = () => {
           >
             {reviews.map((elem, index) => (
               <SwiperSlide key={index}>
-                <div className={`${currentTheme.card} rounded-xl mt-1 h-full`}>
+                <div className={`${currentTheme.card} rounded-xl mt-1 h-full p-6 flex flex-col group`}>
                   {/* Quote Icon */}
-                  <div className="text-secondary text-2xl mb-4">
+                  <div className="text-secondary text-3xl mb-4">
                     <FaQuoteLeft />
                   </div>
 
                   {/* Review Text */}
-                  <p className="mb-6 leading-relaxed italic">"{elem.review}"</p>
+                  <p className="mb-4 leading-relaxed italic flex-1">
+                    "{elem.review}"
+                  </p>
+
+                  {/* ⭐ Rating */}
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) =>
+                      i < elem.rating ? (
+                        <FaStar
+                          key={i}
+                          className="text-secondary text-sm transition-transform duration-300 group-hover:scale-110"
+                        />
+                      ) : (
+                        <FaRegStar
+                          key={i}
+                          className="text-secondary/40 text-sm transition-transform duration-300 group-hover:scale-110"
+                        />
+                      )
+                    )}
+                  </div>
 
                   {/* Client Info */}
                   <div className="border-t border-gray-700 pt-4">
@@ -152,6 +117,7 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
               </SwiperSlide>
+
             ))}
           </Swiper>
         </div>

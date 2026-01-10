@@ -77,8 +77,8 @@ const CTASection = () => {
           </div>
 
           {/* Guarantee */}
-          <div className="text-sm">
-            ⭐ 100% Satisfaction Guarantee | ⏱️ Response within 24 hours
+          <div className="text-sm flex justify-center flex-col md:flex-row lg:flex-row">
+            <p>⭐ 100% Satisfaction Guarantee |</p> <p>⏱️ Response within 24 hours</p>
           </div>
         </div>
       </div>

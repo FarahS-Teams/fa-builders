@@ -41,21 +41,21 @@ export default function Leadership() {
         </div>
 
         {/* Director Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 items-center px-0 lg:px-20 ">
           {/* Director Image */}
           <div className="w-full flex justify-center md:justify-start relative rounded-2xl overflow-hidden">
             <Image
               src="/about/director-pic.jpg"
               alt="Director"
               width={550}
-              height={400}
+              height={420}
               className={`object-cover rounded-2xl overflow-hidden border-1 border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
               priority
             />
           </div>
 
           {/* Director Info */}
-          <div className="flex flex-col gap-4 text-center md:text-left">
+          <div className="flex flex-col gap-2 lg:gap-4 text-center md:text-left">
             <h3 className="text-2xl md:text-3xl font-bold mb-2">
               Mr. Awais Ibrar
             </h3>
@@ -64,7 +64,7 @@ export default function Leadership() {
               Director, FA Builders Ltd
             </p>
 
-            <p className="italic text-md md:text-lg leading-relaxed max-w-xl mx-auto md:mx-0 mb-2">
+            <p className="italic text-md md:text-lg leading-relaxed max-w-md mx-auto md:mx-0 mb-2">
               “At FA Builders, we don’t just construct buildings — we build
               trust, deliver lasting quality, and ensure every project stands
               the test of time.”

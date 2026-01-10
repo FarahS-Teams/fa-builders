@@ -37,12 +37,12 @@ const ProjectCard = ({ project, index }) => {
           ${currentTheme.background} ${currentTheme.text}
           ${currentTheme.image_card}
           group relative overflow-hidden
-          rounded-2xl backdrop-blur-md shadow-lg
-          transition-all hover:shadow-2xl flex flex-col h-full
+          rounded-xl backdrop-blur-md shadow-lg
+          transition-all hover:shadow-2xl 
         `}
       >
         {/* IMAGE */}
-        <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-2xl">
+        <div className="relative w-full h-48 sm:h-56 md:h-64 overflow-hidden rounded-t-xl">
           {/* Skeleton */}
           {!imageLoaded && (
             <div className="absolute inset-0 animate-pulse bg-gray-300/30 dark:bg-gray-700/30" />
@@ -76,10 +76,10 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* CONTENT */}
-        <div className="p-2 lg:p-5 flex flex-col text-center md:text-left lg:text-left gap-2 flex-grow ">
+        <div className="p-4 lg:p-5 flex flex-col text-center md:text-left lg:text-left flex-grow ">
           {/* Title – fixed height */}
           <h3
-            className="text-base sm:text-lg font-bold line-clamp-2 min-h-[3rem]"
+            className="text-base sm:text-lg font-bold line-clamp-2 min-h-[3rem] hover:text-secondary"
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             {project.title}
@@ -107,12 +107,12 @@ const ProjectCard = ({ project, index }) => {
           </div>
 
           {/* CTA always at bottom */}
-          <div className="w-full mt-auto pt-4 flex justify-center">
+          <div className="w-full mt-4 mb-2 flex justify-center">
             <Cta
               text="View Project Details"
               path={`/projects/${project.slug}`}
               variant="secondary"
-              className="w-[80%]"
+              className="w-full"
             />
           </div>
         </div>

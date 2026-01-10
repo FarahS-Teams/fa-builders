@@ -52,10 +52,10 @@ const ContactForm = () => {
 
   return (
     <div className={`${currentTheme.background} ${currentTheme.text}`}>
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-md mx-auto">
         <h2
           id="contact-heading"
-          className={`text-center ${currentTheme.headings} text-3xl sm:text-4xl font-bold mb-4`}
+          className={`text-center ${currentTheme.headings}  mb-4`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Get in <span className="text-secondary">Touch</span>
@@ -65,7 +65,8 @@ const ContactForm = () => {
           you as soon as possible.
         </p>
 
-        <form
+      
+         <form
           onSubmit={onSubmit}
           className="space-y-6"
           aria-label="Contact form"
@@ -191,6 +192,7 @@ const ContactForm = () => {
             </p>
           )}
         </form>
+       
       </div>
     </div>
   );

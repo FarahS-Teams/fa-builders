@@ -43,8 +43,7 @@ const ProjectSection = () => {
             <Link
               key={idx}
               href={`/projects/${project.slug}`}
-              className={`${currentTheme.image_card} group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 
-                  flex flex-col w-full md:w-1/2 lg:w-1/3`}
+              className={`${currentTheme.image_card} group relative rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col w-full md:w-1/2 lg:w-1/3 pb-4`}
             >
               {/* Image */}
               <div className="relative w-full h-60">

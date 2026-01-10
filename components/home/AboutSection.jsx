@@ -64,7 +64,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-28">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12">
           {/* Left Content */}
           <div>
             <div className="mb-8">
@@ -107,21 +107,34 @@ const AboutSection = () => {
           </div>
 
           {/* Right Features */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 items-stretch">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`rounded-xl flex flex-col justify-center items-center ${currentTheme.small_card} border border-secondary/10 hover:border-secondary/30 transition-all duration-300 group `}
+                className={`rounded-xl flex flex-col items-center text-center
+    ${currentTheme.small_card}
+    border border-secondary/10 hover:border-secondary/30
+    transition-all duration-300 group
+     h-full min-h-[200px] md:min-h-[240px]`}
               >
-                <div className="text-secondary mb-3 group-hover:scale-110 transition-transform duration-300">
+                {/* Icon */}
+                <div className="text-secondary mt-2 mb-3 text-3xl group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h4 className="font-bold text-md md:text-xl lg:text-xl mb-1 text-center">
+
+                {/* Title */}
+                <h4 className="font-bold text-base md:text-lg lg:text-xl mb-2">
                   {feature.title}
                 </h4>
-                <p className="text-md opacity-80 text-center">{feature.desc}</p>
+
+                {/* Description */}
+                <p className="text-sm md:text-base opacity-80">
+                  {feature.desc}
+                </p>
               </div>
             ))}
+
+
           </div>
         </div>
       </div>

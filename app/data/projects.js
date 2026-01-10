@@ -24,7 +24,7 @@ const rawProjects = [
       "High-quality kitchen extension in Morden, London, designed to enhance modern living with bespoke layouts, premium finishes, and expert craftsmanship.",
   },
   {
-    title: "Luxury Kitchen and Home Extension",
+    title: "Luxury Home Extension",
     category: "Residential",
     service: "Extension Services",
     location: "Norwood, UK",

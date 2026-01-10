@@ -46,9 +46,9 @@ export default function ProjectFilters({
   };
 
   return (
-    <div className={`flex flex-col gap-6 mb-12`}>
+    <div className={`flex flex-col gap-6 mb-10`}>
       {/* TOP BAR */}
-      <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+      <div className="flex flex-col sm:flex-row items-center gap-4 justify-center px-6">
         {/* CATEGORY SELECT */}
         <CategorySelect
           options={categories}

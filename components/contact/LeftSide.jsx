@@ -9,18 +9,19 @@ const LeftSide = () => {
 
   return (
     <div className={`${currentTheme.background} ${currentTheme.text}`}>
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-md mx-auto">
         <h2
           id="contact-fa-builders"
-          className={`text-center ${currentTheme.headings} text-3xl sm:text-4xl font-bold mb-8`}
+          className={`text-center ${currentTheme.headings} mb-8`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Contact <span className="text-secondary">FA Builders</span>
         </h2>
 
-        <div className="space-y-6">
+
+        <div className="space-y-4">
           {/* Email */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-2">
             <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
@@ -28,17 +29,17 @@ const LeftSide = () => {
               <span className="text-secondary text-sm">Email</span>
               <p className="text-sm sm:text-base">
                 <a
-                  href="mailto:info@fabuilders.co.uk"
+                  href="mailto:info@fabuilder.co.uk"
                   className="hover:underline"
                 >
-                  info@fabuilders.co.uk
+                  info@fabuilder.co.uk
                 </a>
               </p>
             </div>
           </div>
 
           {/* Phone */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-2">
             <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
@@ -46,14 +47,14 @@ const LeftSide = () => {
               <span className="text-secondary text-sm">Phone</span>
               <p className="text-sm sm:text-base">
                 <a href="tel:+447476555002" className="hover:underline">
-                  +44 7476 555002
+                  +44 74 765 55002
                 </a>
               </p>
             </div>
           </div>
 
           {/* Address */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-2">
             <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <MapPin className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
@@ -67,7 +68,7 @@ const LeftSide = () => {
           </div>
 
           {/* Hours */}
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-2">
             <div className="shrink-0 w-10 h-10 flex items-center justify-center">
               <Clock className="w-6 h-6 sm:w-7 sm:h-7 text-secondary" />
             </div>
@@ -97,6 +98,7 @@ const LeftSide = () => {
               title="FA Builders Location on Google Maps"
             />
           </div>
+
         </div>
       </div>
     </div>

@@ -4,9 +4,10 @@ import React, { useContext } from "react";
 export default function SimpleCards({ items, content }) {
   return (
     <div>
-      <div className="flex flex-col md:flex-row lg:flex-row gap-4 md:gap-3 lg:gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
         {content}
       </div>
+
     </div>
   );
 }

@@ -51,7 +51,7 @@ const PerksSection = () => {
           content={perksData.map((item, index) => (
             <div
               key={index}
-              className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+              className={`${currentTheme.card} flex flex-col justify-center items-center gap-4 sm:gap-5 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
             >
               <div className="text-3xl text-secondary">{item.icon}</div>
               <h4
@@ -61,7 +61,7 @@ const PerksSection = () => {
                 {item.title}
               </h4>
               <p
-                className="text-sm sm:text-base opacity-80"
+                className="text-sm sm:text-base opacity-80 text-center"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {item.desc}

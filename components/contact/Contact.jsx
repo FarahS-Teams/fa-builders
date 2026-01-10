@@ -15,8 +15,8 @@ const Contact = () => {
       />
 
       <div className="custom-container sm:pb-12">
-        <div className="content grid grid-cols-1 md:grid-cols-2 gap-14 sm:gap-0 my-12">
-          <LeftSide />
+        <div className="content grid grid-cols-1 md:grid-cols-2 gap-14 my-12">
+          <LeftSide/>
           <ContactForm />
         </div>
       </div>

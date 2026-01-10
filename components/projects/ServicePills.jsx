@@ -49,7 +49,7 @@ const ServicePills = ({
           <button
             key={serv}
             onClick={() => applyFilter(activeCategory, serv)}
-            className={`shrink-0 px-1 lg:px-5 py-1 lg:py-2 text-sm rounded-full transition border
+            className={`shrink-0 px-2 lg:px-5 py-1 lg:py-2 text-sm rounded-full transition border
                         ${
                           activeService === serv
                             ? "bg-secondary text-white bg-secondary border-none"

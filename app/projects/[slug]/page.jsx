@@ -121,7 +121,7 @@ export default async function ProjectPage({ params }) {
           </section>
 
           {/* PREV / NEXT */}
-          <section className="px-6 md:px-4 lg:px-4 pt-4 border-t border-primary/10">
+          <section className="pt-4 border-t border-primary/10">
             <div className="flex justify-between">
               {prevProject ? (
                 <Link

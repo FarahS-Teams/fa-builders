@@ -21,7 +21,7 @@ const RelatedProjects = ({ projects }) => {
   if (!projects || projects.length === 0) {
     return (
       <section className="py-16 text-center text-gray-500">
-        No related projects found
+        <p className="text-md">No related projects found in this category</p>
       </section>
     );
   }

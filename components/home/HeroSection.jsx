@@ -5,7 +5,6 @@ import Cta from "../Cta";
 import { useState, useContext } from "react";
 import themeContext from "@/app/context/themeContext";
 import Image from "next/image";
-import SimpleCards from "../SimpleCards";
 import { FaToolbox, FaAward } from "react-icons/fa";
 import Badge from "../Badge";
 
@@ -37,7 +36,7 @@ const HeroSection = () => {
             </h2>
 
             {/* description */}
-            <p className="text-lg md:text-lg mb-8 leading-relaxed max-w-2xl">
+            <p className="text-lg md:text-lg mb-8 leading-relaxed">
               We transform your vision into reality with{" "}
               <span className="font-semibold text-secondary">
                 unmatched quality
@@ -90,7 +89,7 @@ const HeroSection = () => {
 
             {/* Card 1 */}
             <div
-              className={`${currentTheme.background} absolute -bottom-6 -left-2 md:-left-6 ${currentTheme.small_card} rounded-xl shadow-xl border border-secondary max-w-xs`}
+              className={`${currentTheme.background} absolute -bottom-6 -left-2 md:-left-4 ${currentTheme.small_card} rounded-xl shadow-xl border border-secondary max-w-xs`}
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary rounded-lg">
@@ -105,7 +104,7 @@ const HeroSection = () => {
 
             {/*Card 2 */}
             <div
-              className={`absolute -top-2 -right-2 md:-right-6 ${currentTheme.small_card} rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
+              className={`absolute -top-2 -right-2 md:-right-4 ${currentTheme.small_card} rounded-xl shadow-xl border border-secondary/20 max-w-xs`}
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-secondary rounded-lg">

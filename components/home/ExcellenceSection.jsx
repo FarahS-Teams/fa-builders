@@ -61,7 +61,7 @@ const ExcellenceSection = () => {
               key={index}
               className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
             >
-              <div className="text-5xl text-secondary">{item.icon}</div>
+              <div className="text-3xl text-secondary">{item.icon}</div>
               <h2
                 className="text-3xl font-semibold text-center lg:text-left"
                 style={{ fontFamily: "var(--font-montserrat)" }}

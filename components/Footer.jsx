@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import {
-  FaPhone,
+  FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
   FaTiktok,
@@ -26,19 +26,16 @@ const Footer = () => {
         { name: "Complete Renovation", href: "/services/renovation-services" },
         { name: "Loft Conversion", href: "/services/loft-conversions" },
         { name: "Extension Services", href: "/services/extension-services" },
+        { name: "AC Installation", href: "/services/ac-installation" },
+        { name: "Basement Conversion", href: "/services/basement-conversions" },
       ],
     },
     {
-      title: "Company",
+      title: "Quick Links",
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Projects", href: "/projects" },
         { name: "Testimonials", href: "/#testimonials" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
         { name: "Contact Us", href: "/contact" },
         { name: "FAQs", href: "/faqs" },
       ],
@@ -47,19 +44,19 @@ const Footer = () => {
 
   const contactInfo = [
     {
-      icon: FaPhone,
-      text: "07476555002",
-      href: "tel:07476555002",
+      icon: FaPhoneAlt,
+      text: "+44 74 765 55002",
+      href: "tel:+447476555002",
     },
     {
       icon: FaEnvelope,
-      text: "info@fabuliders.com",
+      text: "info@fabuilder.co.uk",
       href: "mailto:info@fabuilder.co.uk",
     },
     {
       icon: FaMapMarkerAlt,
-      text: "23 flat 2 headcorn road Thornton heath London",
-      href: "https://maps.google.com",
+      text: "Flat 2, 23 Headcorn Road, Thornton Heath, London, CR7 6JR, United Kingdom",
+      href: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.6635293291583!2d-0.0874558!3d51.4659985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603c467a3b499%3A0xc34b72e5a7b8e5d!2s23%20Headcorn%20Rd%2C%20London%20SE15%203ND%2C%20UK!5e0!3m2!1sen!2sus!4v1703692800000!5m2!1sen!2sus",
     },
   ];
 
@@ -93,9 +90,10 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="content py-12 lg:py-16">
         {/*Logo and Links */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 gap-x-6 lg:gap-x-8 mb-12">
+
           {/* Company Info*/}
-          <div className="md:col-span-5 lg:col-span-5">
+          <div className="md:col-span-4">
             <div className="flex items-start gap-4 mb-6">
               {/* Logo */}
               <div className="shrink-0">
@@ -120,30 +118,42 @@ const Footer = () => {
               </div>
             </div>
 
-            <p className="mb-6 leading-relaxed text-sm md:w-96">
+            <p className="mb-10 leading-relaxed text-sm max-w-lg">
               Building dreams with precision and excellence. We transform your
               vision into reality with unmatched quality and professional
               craftsmanship in every project.
             </p>
 
-            {/* Contact Info */}
-            <div className="space-y-3">
-              {contactInfo.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="flex items-start gap-3 hover:text-secondary transition-colors duration-300 group"
-                >
-                  <item.icon className="text-secondary mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-sm flex-1">{item.text}</span>
-                </Link>
-              ))}
+            {/* Social Links */}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mt-4">
+              {/* Label */}
+              <span className="font-medium text-sm md:mr-2 mb-1 md:mb-0">
+                Follow Us:
+              </span>
+
+              {/* Social Icons */}
+              <div className="flex gap-3">
+                {socialLinks.map((social, index) => (
+                  <Link
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-8 h-8
+                      bg-gray-100 dark:bg-gray-800 
+                      flex items-center justify-center rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary`}
+                  >
+                    <social.icon className="text-gray-200 hover:text-white text-lg" />
+                  </Link>
+                ))}
+              </div>
             </div>
+
           </div>
 
           {/* Footer Links  */}
-          <div className="col-span-1 md:col-span-7 lg:col-span-7">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="md:col-span-5">
+            <div className="grid grid-cols-2 gap-6 lg:gap-8">
               {footerSections.map((section, index) => (
                 <div key={index} className="w-full">
                   <h4 className="text-lg font-bold font-montserrat mb-4 relative pb-2">
@@ -167,28 +177,34 @@ const Footer = () => {
               ))}
             </div>
           </div>
+
+          {/* Contact Info (3rd column desktop / 3rd row mobile) */}
+          <div className="md:col-span-3">
+            <h4 className="text-lg font-bold font-montserrat mb-4 relative pb-2">
+              Contact
+              <span className="absolute bottom-0 left-0 w-8 h-0.5 bg-secondary"></span>
+            </h4>
+
+            <div className="space-y-3">
+              {contactInfo.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.href}
+                  className="flex items-start gap-3 hover:text-secondary transition-colors duration-300 group"
+                >
+                  <item.icon className="text-secondary mt-0.5 shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                  <span className="text-sm">{item.text}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+
         </div>
 
         {/* Bottom Section - Social Links and Copyright */}
         <div className="pt-4 border-t border-gray-700">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <span className="font-medium text-sm">Follow Us:</span>
-              <div className="flex gap-3">
-                {socialLinks.map((social, index) => (
-                  <Link
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${currentTheme.small_card} w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300  hover:scale-110`}
-                  >
-                    <social.icon className="text-lg hover:text-secondary" />
-                  </Link>
-                ))}
-              </div>
-            </div>
 
             {/* our agency name */}
             <div className="flex justify-center items-center gap-2">

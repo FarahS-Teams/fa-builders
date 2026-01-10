@@ -28,7 +28,7 @@ h2 {
   @apply flex w-full justify-center;
 }
 .content {
-  @apply mx-4 w-full max-w-[1560px];
+  @apply mx-6 w-full max-w-[1560px];
 }
 
 .no-scrollbar::-webkit-scrollbar {

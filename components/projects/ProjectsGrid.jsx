@@ -114,10 +114,10 @@ export default function ProjectsGrid() {
         </div>
 
         {/* PROJECTS GRID */}
-        <div className="relative " id="projectsgrid">
+        <div className="relative px-6 lg:px-0" id="projectsgrid">
           {filteredProjects.length > 0 ? (
             <div
-              className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-0 gap-y-6 lg:gap-8"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               role="list"
               aria-label="Construction projects portfolio"
             >
