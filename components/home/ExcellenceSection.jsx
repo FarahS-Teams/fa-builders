@@ -63,13 +63,13 @@ const ExcellenceSection = () => {
             >
               <div className="text-3xl text-secondary">{item.icon}</div>
               <h2
-                className="text-3xl font-semibold text-center lg:text-left"
+                className="text-3xl font-semibold text-center "
                 style={{ fontFamily: "var(--font-montserrat)" }}
               >
                 {item.title}
               </h2>
               <p
-                className="text-md text-center lg:text-left"
+                className="text-md text-center"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {item.description}

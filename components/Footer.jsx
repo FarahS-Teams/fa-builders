@@ -56,7 +56,6 @@ const Footer = () => {
     {
       icon: FaMapMarkerAlt,
       text: "Flat 2, 23 Headcorn Road, Thornton Heath, London, CR7 6JR, United Kingdom",
-      href: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.6635293291583!2d-0.0874558!3d51.4659985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487603c467a3b499%3A0xc34b72e5a7b8e5d!2s23%20Headcorn%20Rd%2C%20London%20SE15%203ND%2C%20UK!5e0!3m2!1sen!2sus!4v1703692800000!5m2!1sen!2sus",
     },
   ];
 
@@ -125,9 +124,9 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 mt-4">
+            <div className="flex flex-col md:flex-row items-start gap-2 md:gap-4 mt-4">
               {/* Label */}
-              <span className="font-medium text-sm md:mr-2 mb-1 md:mb-0">
+              <span className="font-medium text-sm">
                 Follow Us:
               </span>
 
@@ -140,14 +139,16 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-8 h-8
-                      bg-gray-100 dark:bg-gray-800 
-                      flex items-center justify-center rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary`}
+          bg-gray-100 dark:bg-gray-800 
+          flex items-center justify-center rounded-md shadow-md 
+          hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary`}
                   >
                     <social.icon className="text-gray-200 hover:text-white text-lg" />
                   </Link>
                 ))}
               </div>
             </div>
+
 
           </div>
 
@@ -186,16 +187,25 @@ const Footer = () => {
             </h4>
 
             <div className="space-y-3">
-              {contactInfo.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="flex items-start gap-3 hover:text-secondary transition-colors duration-300 group"
-                >
-                  <item.icon className="text-secondary mt-0.5 shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                  <span className="text-sm">{item.text}</span>
-                </Link>
-              ))}
+              {contactInfo.map((item, index) => {
+                const Wrapper = item.href ? Link : "div";
+
+                return (
+                  <Wrapper
+                    key={index}
+                    {...(item.href ? { href: item.href } : {})}
+                    className={`flex items-start gap-3 transition-colors duration-300 group ${item.href ? "hover:text-secondary cursor-pointer" : ""
+                      }`}
+                  >
+                    <item.icon
+                      className={`text-secondary mt-0.5 shrink-0 transition-transform duration-300 ${item.href ? "group-hover:scale-110" : ""
+                        }`}
+                    />
+                    <span className="text-sm">{item.text}</span>
+                  </Wrapper>
+                );
+              })}
+
             </div>
           </div>
 
