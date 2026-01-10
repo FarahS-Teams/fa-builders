@@ -3,11 +3,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import Badge from "../Badge";
 import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
@@ -55,10 +54,7 @@ const TestimonialsSection = () => {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
+           
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -77,12 +73,12 @@ const TestimonialsSection = () => {
                 spaceBetween: 30,
               },
             }}
-            modules={[Autoplay, Pagination, Navigation]}
+            modules={[Autoplay, Navigation]}
             className="mySwiper cursor-grab"
           >
             {reviews.map((elem, index) => (
               <SwiperSlide key={index}>
-                <div className={`${currentTheme.card} rounded-xl mt-1 h-full p-6 flex flex-col group`}>
+                <div className={`${currentTheme.card} rounded-xl mt-1 h-[640px] sm:h-[600px] lg:h-[550px] flex flex-col group items-stretch`}>
                   {/* Quote Icon */}
                   <div className="text-secondary text-3xl mb-4">
                     <FaQuoteLeft />
@@ -111,7 +107,7 @@ const TestimonialsSection = () => {
                   </div>
 
                   {/* Client Info */}
-                  <div className="border-t border-gray-700 pt-4">
+                  <div className="border-t border-gray-700 py-4">
                     <h4 className="font-bold text-lg">{elem.client}</h4>
                     <p className="text-secondary text-sm">{elem.project}</p>
                   </div>

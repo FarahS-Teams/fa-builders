@@ -124,7 +124,7 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex flex-col md:flex-row items-start gap-2 md:gap-4 mt-4">
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-4">
               {/* Label */}
               <span className="font-medium text-sm">
                 Follow Us:
@@ -218,11 +218,8 @@ const Footer = () => {
 
             {/* our agency name */}
             <div className="flex justify-center items-center gap-2">
-              <span className="text-lg text-secondary">
-                <GrTechnology />
-              </span>
               <span className="text-sm hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer">
-                Developed by Nexora Studio
+                Developed by Nexora Solutions
               </span>
             </div>
 

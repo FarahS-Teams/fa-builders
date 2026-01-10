@@ -1,58 +1,58 @@
 const reviews = [
   {
-    client: "Oliver & Emily Parker",
+    client: "Alex Morgan",
     project: "Complete Home Renovation",
     review:
-      "FA Builders completely transformed our outdated home into a modern, stylish space. From structural work to final finishes, everything was handled professionally and delivered to a very high standard.",
+      "FA Builders delivered a complete home renovation with excellent attention to detail. The team was professional, well-organised, and maintained high-quality standards throughout the entire project.",
     rating: 5,
   },
   {
-    client: "Daniel Brooks",
+    client: "Jamie Turner",
     project: "Commercial Construction",
     review:
-      "We appointed FA Builders for a commercial refurbishment, and the entire process was smooth and well-managed. Clear communication, no hidden costs, and excellent workmanship throughout.",
+      "Our commercial project was handled efficiently from start to finish. FA Builders maintained clear communication, met deadlines, and delivered outstanding workmanship across all construction phases.",
     rating: 5,
   },
   {
-    client: "Liam Chen",
+    client: "Taylor Brooks",
     project: "House Extension",
     review:
-      "Our house extension was completed exactly as planned. FA Builders managed approvals, construction, and finishing with great attention to detail. The new space fits perfectly with our home.",
+      "FA Builders completed our house extension smoothly and professionally. Planning, construction, and finishing were managed carefully, resulting in a seamless extension that blends perfectly with our home.",
     rating: 5,
   },
   {
-    client: "Ayesha Malik",
+    client: "Jordan Walker",
     project: "Full Property Renovation",
     review:
-      "FA Builders exceeded our expectations from start to finish. The quality of work, professionalism, and attention to detail were outstanding. We are extremely happy with the final result.",
+      "From initial consultation to final handover, FA Builders exceeded expectations. The renovation was completed to a high standard, with excellent project management and consistent attention to detail.",
     rating: 5,
   },
   {
-    client: "Thomas Reed",
-    project: "Property Development Projects",
+    client: "Casey Mitchell",
+    project: "Property Development",
     review:
-      "As a property developer, I value reliability and consistency. FA Builders have delivered multiple projects for us on time, with excellent build quality and strong site management.",
+      "FA Builders proved to be a reliable construction partner across multiple development projects. Their consistent quality, strong site management, and timely delivery make them highly dependable.",
     rating: 5,
   },
   {
-    client: "Sophie Carter",
+    client: "Morgan Parker",
     project: "Loft Conversion",
     review:
-      "Our loft conversion had structural challenges, but FA Builders handled them expertly. The finished space is bright, spacious, and beautifully finished. Highly recommended.",
+      "The loft conversion was completed with precision and care. FA Builders resolved structural challenges efficiently and delivered a bright, functional space finished to a very high standard.",
+    rating: 5,
+  },
+  {
+    client: "Riley Anderson",
+    project: "Restaurant Fit-Out",
+    review:
+      "FA Builders managed our restaurant fit-out professionally despite a tight schedule. The quality of work, organisation, and attention to detail helped us open the business on time.",
     rating: 5,
   },
   {
     client: "Hassan Ali",
-    project: "Restaurant Fit-Out",
-    review:
-      "FA Builders completed our restaurant fit-out to a very high standard. Despite a tight timeline, they remained organised and professional, helping us open on schedule.",
-    rating: 5,
-  },
-  {
-    client: "James & Olivia Turner",
     project: "New Build Home",
     review:
-      "FA Builders guided us through the entire new build process with clarity and confidence. The quality of construction and finishing exceeded our expectations. We’re delighted with our new home.",
+      "Building a new home felt straightforward with FA Builders guiding every step. Construction quality, finishes, and communication were excellent, resulting in a home we are truly proud of.",
     rating: 5,
   },
 ];

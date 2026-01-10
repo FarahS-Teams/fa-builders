@@ -47,8 +47,8 @@ const Header = () => {
     >
       <div className="content flex items-center justify-between">
         {/* Logo  */}
-        <Link className="flex items-center gap-3" href={"/"}>
-          <div className="flex items-center gap-3">
+        <Link className="flex items-center gap-2" href={"/"}>
+          <div className="flex items-center gap-1">
             <Image
               src={theme === "dark" ? logo_dark : logo_light}
               alt="FA Builders Logo"
@@ -60,14 +60,14 @@ const Header = () => {
           </div>
 
           {/* Tagline */}
-          <div>
+          <div className="text-[0.6rem]">
             <p
-              className="text-xs text-secondary tracking-widest uppercase"
+              className="text-secondary tracking-widest uppercase"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               The Standard of
             </p>
-            <p className="text-sm font-bold">EXCELLENCE.</p>
+            <p className="font-bold">EXCELLENCE.</p>
           </div>
         </Link>
 
@@ -82,11 +82,10 @@ const Header = () => {
                   {/* Services link */}
                   <Link
                     href="/services"
-                    className={`flex items-center gap-1 ${
-                      isActivePath("/services")
+                    className={`flex items-center gap-1 ${isActivePath("/services")
                         ? "text-secondary border-b-2 border-secondary"
                         : "hover:text-secondary"
-                    } transition-all duration-300`}
+                      } transition-all duration-300`}
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
                     Services
@@ -123,11 +122,10 @@ const Header = () => {
               <Link
                 key={index}
                 href={elem.path}
-                className={`${
-                  isActivePath(elem.path)
+                className={`${isActivePath(elem.path)
                     ? "text-secondary border-b-2 border-secondary"
                     : "relative group hover:text-secondary"
-                } transition-all duration-300`}
+                  } transition-all duration-300`}
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {elem.name}
@@ -152,11 +150,11 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className="lg:hidden flex items-center gap-4">
+        <div className="lg:hidden flex items-center gap-2">
           <ThemeToggleButton />
 
           <Sheet>
-            <SheetTrigger className="p-2 rounded-lg">
+            <SheetTrigger className="py-2 rounded-lg">
               <FaBars className="text-xl" />
             </SheetTrigger>
 
@@ -172,15 +170,7 @@ const Header = () => {
                   width={120}
                   height={40}
                 />
-                <div>
-                  <p
-                    className="text-xs text-secondary tracking-widest"
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
-                    The Standard of
-                  </p>
-                  <p className="text-sm font-bold">EXCELLENCE.</p>
-                </div>
+
               </div>
 
               {/* Mobile menu */}

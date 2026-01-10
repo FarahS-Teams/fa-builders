@@ -126,7 +126,7 @@ export default async function ProjectPage({ params }) {
               {prevProject ? (
                 <Link
                   href={`/projects/${prevProject.slug}`}
-                  className="text-secondary"
+                  className="text-secondary text-xs md:text-sm"
                 >
                   ← {prevProject.title}
                 </Link>
@@ -137,7 +137,7 @@ export default async function ProjectPage({ params }) {
               {nextProject ? (
                 <Link
                   href={`/projects/${nextProject.slug}`}
-                  className="text-secondary"
+                  className="text-secondary text-xs md:text-sm"
                 >
                   {nextProject.title} →
                 </Link>
