@@ -11,6 +11,7 @@
   --primary: #ffffff;
   --secondary: #f7922c;
 }
+
 .dark {
   /* --primary: #0e152b; */
   --secondary: #f7922c;
@@ -27,6 +28,7 @@ h2 {
 .custom-container {
   @apply flex w-full justify-center;
 }
+
 .content {
   @apply mx-4 w-full max-w-[1560px];
 }
@@ -34,7 +36,12 @@ h2 {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.swiper-wrapper {
+  align-items: stretch !important;
 }

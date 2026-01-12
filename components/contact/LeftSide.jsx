@@ -29,10 +29,10 @@ const LeftSide = () => {
               <span className="text-secondary text-sm">Email</span>
               <p className="text-sm sm:text-base">
                 <a
-                  href="mailto:info@fabuilder.co.uk"
+                  href="mailto:info@fabuildersltd.co.uk"
                   className="hover:underline"
                 >
-                  info@fabuilder.co.uk
+                  info@fabuildersltd.co.uk
                 </a>
               </p>
             </div>

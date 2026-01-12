@@ -1,58 +1,58 @@
 const reviews = [
   {
     client: "Alex Morgan",
-    project: "Complete Home Renovation",
+    project: "Home Renovation",
     review:
-      "FA Builders delivered a complete home renovation with excellent attention to detail. The team was professional, well-organised, and maintained high-quality standards throughout the entire project.",
+      "FA Builders transformed my home exactly how I imagined. The team was friendly and professional all the way.",
     rating: 5,
   },
   {
     client: "Jamie Turner",
     project: "Commercial Construction",
     review:
-      "Our commercial project was handled efficiently from start to finish. FA Builders maintained clear communication, met deadlines, and delivered outstanding workmanship across all construction phases.",
+      "They handled our project smoothly and kept us updated at every step. Really happy with the results!",
     rating: 5,
   },
   {
     client: "Taylor Brooks",
     project: "House Extension",
     review:
-      "FA Builders completed our house extension smoothly and professionally. Planning, construction, and finishing were managed carefully, resulting in a seamless extension that blends perfectly with our home.",
+      "The extension fits perfectly with our house. The team worked quickly and were always helpful.",
     rating: 5,
   },
   {
     client: "Jordan Walker",
-    project: "Full Property Renovation",
+    project: "Property Renovation",
     review:
-      "From initial consultation to final handover, FA Builders exceeded expectations. The renovation was completed to a high standard, with excellent project management and consistent attention to detail.",
+      "From start to finish, everything was well organised. The renovation looks amazing!",
     rating: 5,
   },
   {
     client: "Casey Mitchell",
     project: "Property Development",
     review:
-      "FA Builders proved to be a reliable construction partner across multiple development projects. Their consistent quality, strong site management, and timely delivery make them highly dependable.",
+      "Reliable, efficient, and always on time. I’d happily work with them again.",
     rating: 5,
   },
   {
     client: "Morgan Parker",
     project: "Loft Conversion",
     review:
-      "The loft conversion was completed with precision and care. FA Builders resolved structural challenges efficiently and delivered a bright, functional space finished to a very high standard.",
+      "The loft turned out even better than I hoped. They handled tricky parts with ease.",
     rating: 5,
   },
   {
     client: "Riley Anderson",
     project: "Restaurant Fit-Out",
     review:
-      "FA Builders managed our restaurant fit-out professionally despite a tight schedule. The quality of work, organisation, and attention to detail helped us open the business on time.",
+      "Despite a tight schedule, the team delivered perfectly. The quality was top-notch!",
     rating: 5,
   },
   {
     client: "Hassan Ali",
-    project: "New Build Home",
+    project: "New Home",
     review:
-      "Building a new home felt straightforward with FA Builders guiding every step. Construction quality, finishes, and communication were excellent, resulting in a home we are truly proud of.",
+      "Building a new home felt easy with them guiding us. The finished house is just perfect.",
     rating: 5,
   },
 ];

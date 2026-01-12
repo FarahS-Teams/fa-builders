@@ -50,8 +50,8 @@ const Footer = () => {
     },
     {
       icon: FaEnvelope,
-      text: "info@fabuilder.co.uk",
-      href: "mailto:info@fabuilder.co.uk",
+      text: "info@fabuildersltd.co.uk",
+      href: "mailto:info@fabuildersltd.co.uk",
     },
     {
       icon: FaMapMarkerAlt,
@@ -214,7 +214,7 @@ const Footer = () => {
 
         {/* Bottom Section - Social Links and Copyright */}
         <div className="pt-4 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
 
             {/* our agency name */}
             <div className="flex justify-center items-center gap-2">
@@ -225,8 +225,9 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="text-sm">
-              © {new Date().getFullYear()} FA Builders. All rights reserved.
+              © {new Date().getFullYear()} FA Builders Ltd. All rights reserved.
             </div>
+            <div></div>
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
 
   return (
     <section
-      className={`${currentTheme.background} ${currentTheme.text} custom-container px-6`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container px-4`}
       id="testimonials"
     >
       <div className="content">
@@ -43,82 +43,70 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Swiper Slider */}
-        <div className="relative ">
+        <div className="relative">
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
-            centeredSlides={true}
-            loop={true}
+            centeredSlides
+            loop
+            autoHeight={true}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-           
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
             breakpoints={{
-              640: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-              },
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 30 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
             modules={[Autoplay, Navigation]}
             className="mySwiper cursor-grab"
           >
             {reviews.map((elem, index) => (
-              <SwiperSlide key={index}>
-                <div className={`${currentTheme.card} rounded-xl mt-1 h-[640px] sm:h-[600px] lg:h-[550px] flex flex-col group items-stretch`}>
+              <SwiperSlide key={index} className="flex w-full h-auto">
+                <div
+                  className={`${currentTheme.card} rounded-xl flex flex-col w-full h-full`}
+                >
                   {/* Quote Icon */}
                   <div className="text-secondary text-3xl mb-4">
                     <FaQuoteLeft />
                   </div>
 
                   {/* Review Text */}
-                  <p className="mb-4 leading-relaxed italic flex-1">
+                  <p className="leading-relaxed italic flex-1 mb-4">
                     "{elem.review}"
                   </p>
 
-                  {/* ⭐ Rating */}
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(5)].map((_, i) =>
-                      i < elem.rating ? (
-                        <FaStar
-                          key={i}
-                          className="text-secondary text-sm transition-transform duration-300 group-hover:scale-110"
-                        />
-                      ) : (
-                        <FaRegStar
-                          key={i}
-                          className="text-secondary/40 text-sm transition-transform duration-300 group-hover:scale-110"
-                        />
-                      )
-                    )}
-                  </div>
-
-                  {/* Client Info */}
-                  <div className="border-t border-gray-700 py-4">
+                  {/* Footer */}
+                  <div className="border-t border-gray-700 py-4 flex flex-col gap-2">
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) =>
+                        i < elem.rating ? (
+                          <FaStar key={i} className="text-secondary text-sm" />
+                        ) : (
+                          <FaRegStar key={i} className="text-secondary/40 text-sm" />
+                        )
+                      )}
+                    </div>
                     <h4 className="font-bold text-lg">{elem.client}</h4>
                     <p className="text-secondary text-sm">{elem.project}</p>
                   </div>
                 </div>
-              </SwiperSlide>
 
+              </SwiperSlide>
             ))}
           </Swiper>
         </div>
+
       </div>
     </section>
+
+
   );
 };
 
