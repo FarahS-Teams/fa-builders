@@ -47,7 +47,7 @@ const LeftSide = () => {
               <span className="text-secondary text-sm">Phone</span>
               <p className="text-sm sm:text-base">
                 <a href="tel:+447476555002" className="hover:underline">
-                  +44 74 765 55002
+                  +44 7476 555002
                 </a>
               </p>
             </div>

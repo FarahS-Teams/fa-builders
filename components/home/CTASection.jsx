@@ -65,15 +65,17 @@ const CTASection = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Cta
-              text="Get Free Consultation Now"
+              text="Get Free Consultation"
               path="/contact"
               variant="primary"
             />
+
             <Cta
-              text="Call: 07476555002"
-              path="tel:07476555002"
+              text="Call Us Now"
+              path="tel:+447476999062"
               variant="secondary"
             />
+
           </div>
 
           {/* Guarantee */}

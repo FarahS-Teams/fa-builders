@@ -9,8 +9,8 @@ import {
   FaTiktok,
   FaInstagram,
   FaFacebookF,
+  FaWhatsapp,
 } from "react-icons/fa";
-import { GrTechnology } from "react-icons/gr";
 import { useContext } from "react";
 import themeContext from "../app/context/themeContext";
 import logo_dark from "../public/icons/logo_dark.png";
@@ -45,7 +45,7 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: FaPhoneAlt,
-      text: "+44 74 765 55002",
+      text: "+44 7476 555002",
       href: "tel:+447476555002",
     },
     {
@@ -72,6 +72,11 @@ const Footer = () => {
       icon: FaFacebookF,
       href: "https://www.facebook.com/share/1FeXdKT8s5/?mibextid=wwXIfr",
     },
+    {
+      icon: FaWhatsapp,
+      href: "https://wa.me/447476555002?text=Hi%2C%20I%20am%20interested%20in%20your%20services",
+    },
+
   ];
 
   const context = useContext(themeContext);
@@ -124,10 +129,10 @@ const Footer = () => {
             </p>
 
             {/* Social Links */}
-            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 mt-4">
+            <div className="flex flex-col items-center md:items-start gap-2 mt-4">
               {/* Label */}
               <span className="font-medium text-sm">
-                Follow Us:
+                Follow & connect:
               </span>
 
               {/* Social Icons */}
@@ -138,13 +143,12 @@ const Footer = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-8 h-8
-          bg-gray-100 dark:bg-gray-800 
-          flex items-center justify-center rounded-md shadow-md 
-          hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary`}
+                    aria-label={social.label}
+                    className={`group w-8 h-8 bg-gray-800 flex items-center justify-center rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary`}
                   >
-                    <social.icon className="text-gray-200 hover:text-white text-lg" />
+                    <social.icon className="text-gray-300 group-hover:text-white text-lg transition-colors" />
                   </Link>
+
                 ))}
               </div>
             </div>

@@ -8,7 +8,8 @@ import ThemeToggleButton from "./ThemeToggleButton";
 import { FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import Cta from "./Cta";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+
 import { useContext } from "react";
 import themeContext from "../app/context/themeContext";
 import logo_dark from "../public/icons/logo_dark.png";
@@ -83,8 +84,8 @@ const Header = () => {
                   <Link
                     href="/services"
                     className={`flex items-center gap-1 ${isActivePath("/services")
-                        ? "text-secondary border-b-2 border-secondary"
-                        : "hover:text-secondary"
+                      ? "text-secondary border-b-2 border-secondary"
+                      : "hover:text-secondary"
                       } transition-all duration-300`}
                     style={{ fontFamily: "var(--font-inter)" }}
                   >
@@ -123,8 +124,8 @@ const Header = () => {
                 key={index}
                 href={elem.path}
                 className={`${isActivePath(elem.path)
-                    ? "text-secondary border-b-2 border-secondary"
-                    : "relative group hover:text-secondary"
+                  ? "text-secondary border-b-2 border-secondary"
+                  : "relative group hover:text-secondary"
                   } transition-all duration-300`}
                 style={{ fontFamily: "var(--font-inter)" }}
               >
@@ -176,17 +177,20 @@ const Header = () => {
               {/* Mobile menu */}
               <div className="flex flex-col gap-6">
                 {navItems.map((elem, index) => (
-                  <Link
-                    key={index}
-                    href={elem.path}
-                    style={{ fontFamily: "var(--font-inter)" }}
-                  >
-                    <span className="relative">
-                      {elem.name}
-                      <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300"></span>
-                    </span>
-                  </Link>
+                  <SheetClose asChild key={index}>
+                    <Link
+                      href={elem.path}
+                      style={{ fontFamily: "var(--font-inter)" }}
+                      className="group"
+                    >
+                      <span className="relative">
+                        {elem.name}
+                        <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-amber-500 group-hover:w-full transition-all duration-300"></span>
+                      </span>
+                    </Link>
+                  </SheetClose>
                 ))}
+
 
                 {/* Mobile CTA */}
                 <div className="pt-4 mt-4 border-t border-gray-200/50">
