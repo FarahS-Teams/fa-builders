@@ -136,7 +136,7 @@ const Header = () => {
         </nav>
 
         {/* Right Section - Theme Toggle and CTA */}
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4 ">
           <ThemeToggleButton />
 
           {/* Cta*/}
@@ -150,7 +150,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className="lg:hidden flex items-center gap-2">
+        <div className="lg:hidden flex items-center gap-4">
           <ThemeToggleButton />
 
           <Sheet>

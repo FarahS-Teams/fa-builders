@@ -148,7 +148,7 @@ const ContactForm = () => {
                   {service.map((item) => (
                     <SelectItem
                       key={item.slug}
-                      value={item.slug}
+                      value={item.title}
                       className={`${currentTheme.text} hover:bg-gray-700 cursor-pointer transition`}
                     >
                       {item.title}
