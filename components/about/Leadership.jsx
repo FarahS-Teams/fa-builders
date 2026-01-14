@@ -49,7 +49,7 @@ export default function Leadership() {
               alt="Director"
               width={550}
               height={420}
-              className={`object-cover rounded-2xl overflow-hidden border-1 border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
+              className={`object-cover rounded-2xl overflow-hidden border border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
               priority
             />
           </div>

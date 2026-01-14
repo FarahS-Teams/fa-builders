@@ -1,4 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FA Builders Ltd – Official Website
+
+This repository contains the source code for the **FA Builders Ltd** official website — a UK-based construction company delivering high-quality residential and commercial building services.
+
+The website is designed to showcase services, projects, client testimonials, and provide an easy way for customers to get in touch.
+
+---
+
+## 🌐 Live Website
+👉 https://fabuildersltd.co.uk  
+
+---
+
+## 🏗️ About FA Builders Ltd
+
+**FA Builders Ltd** is a trusted construction company based in the London, United Kingdom, offering reliable and professional building services including:
+
+- Home Renovations
+- House Extensions
+- Loft Conversions
+- New Build Homes
+- Commercial Construction
+- Restaurant & Retail Fit-Outs
+
+We focus on quality craftsmanship, clear communication, and timely project delivery.
+
+---
+
+## 📞 Contact
+
+For business enquiries:
+
+- 🌍 Website: https://fabuildersltd.co.uk
+- 📧 Email: info@fabuildersltd.co.uk
+- 📞 Phone: +44 7476 555002
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js** (Page Router)
+- **React**
+- **Tailwind CSS**
+- **Swiper.js** (sliders & testimonials)
+- **shadcn/ui** (Sheet, UI components)
+- **React Icons**
+- **Vercel** (deployment)
+
+---
+
+## ✨ Key Features
+
+- Fully responsive design (mobile, tablet, desktop)
+- Modern UI with light/dark theme support
+- Client testimonials slider
+- Mobile-friendly navigation drawer
+- SEO-friendly structure
+- Fast performance and optimized assets
+- Clean, reusable components
+
+---
 
 ## Getting Started
 
@@ -16,21 +76,25 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👩‍💻 Developed By
 
-## Learn More
+**BIZKET**
+Professional Web & Software Solutions
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License & Usage
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is proprietary software owned by **FA Builders Ltd.**  
+Unauthorized use or redistribution is prohibited.
 
-## Deploy on Vercel
+© 2026 FA Builders Ltd. All rights reserved.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⭐ Notes
+
+Feel free to ⭐ the repository if you find it helpful.
+Please note that this is proprietary software and not licensed for reuse.

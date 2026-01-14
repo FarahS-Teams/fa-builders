@@ -50,7 +50,7 @@ const ServiceInfoSection = ({ service }) => {
         {/* Image Section */}
         <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
           <div
-            className={`relative w-full aspect-[4/3] lg:aspect-[12/9] rounded-2xl overflow-hidden border border-secondary/20 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
+            className={`relative w-full aspect-4/3 lg:aspect-12/9 rounded-2xl overflow-hidden border border-secondary/20 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
           >
             {/* Skeleton */}
             {!imageLoaded && (

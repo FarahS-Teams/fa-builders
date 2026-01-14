@@ -5,6 +5,7 @@ import { FaHardHat, FaUsers, FaChartLine } from "react-icons/fa";
 import themeContext from "@/app/context/themeContext";
 import Badge from "../Badge";
 import SimpleCards from "../SimpleCards";
+import { motion } from "framer-motion";
 
 const ExcellenceSection = () => {
   const stats = [
@@ -27,6 +28,19 @@ const ExcellenceSection = () => {
         "Our clients are at the heart of everything we do. We are proud to have a track record of complete client satisfaction, consistently exceeding expectations on every project.",
     },
   ];
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
 
   const context = useContext(themeContext);
 
@@ -57,26 +71,42 @@ const ExcellenceSection = () => {
         {/* cards */}
         <SimpleCards
           content={stats.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`${currentTheme.card} flex flex-col justify-center items-center gap-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className={`
+        ${currentTheme.card}
+        flex flex-col justify-center items-center gap-6
+        rounded-xl
+        hover:-translate-y-3 hover:shadow-xl
+        transition-all duration-300 ease-in
+      `}
             >
-              <div className="text-3xl text-secondary">{item.icon}</div>
+              <div className="text-3xl text-secondary">
+                {item.icon}
+              </div>
+
               <h2
-                className="text-3xl font-semibold text-center "
+                className="text-3xl font-semibold text-center"
                 style={{ fontFamily: "var(--font-montserrat)" }}
               >
                 {item.title}
               </h2>
+
               <p
                 className="text-md text-center"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         />
+
       </div>
     </section>
   );

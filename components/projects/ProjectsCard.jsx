@@ -61,7 +61,7 @@ const ProjectCard = ({ project, index }) => {
           <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
 
           {/* Stripe */}
-          <div className="absolute -bottom-20 -left-20 w-[150%] h-24 bg-secondary rotate-[-12deg] opacity-0 group-hover:opacity-100 transition duration-500" />
+          <div className="absolute -bottom-20 -left-20 w-[150%] h-24 bg-secondary -rotate-12 opacity-0 group-hover:opacity-100 transition duration-500" />
 
           {/* Badge */}
           <div className="absolute top-3 left-3 z-10">
@@ -72,7 +72,7 @@ const ProjectCard = ({ project, index }) => {
         </div>
 
         {/* CONTENT */}
-        <div className="p-4 lg:p-5 flex flex-col flex-grow text-center md:text-left">
+        <div className="p-4 lg:p-5 flex flex-col grow text-center md:text-left">
           {/* Title */}
           <h3
             className="text-base sm:text-lg font-bold line-clamp-2 min-h-[3.2rem] hover:text-secondary"
@@ -83,14 +83,14 @@ const ProjectCard = ({ project, index }) => {
 
           {/* Description */}
           <p
-            className="text-xs sm:text-sm opacity-90 line-clamp-3 min-h-[3.75rem]"
+            className="text-xs sm:text-sm opacity-90 line-clamp-3 min-h-15"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             {project.description.length > 70 ? project.description.slice(0, 70) + "..." : project.description}
           </p>
 
           {/* Location */}
-          <div className="flex items-center justify-center md:justify-start gap-2 min-h-[1.5rem]">
+          <div className="flex items-center justify-center md:justify-start gap-2 min-h-6">
             <MapPin className="w-4 h-4 text-secondary shrink-0" />
             <p className="text-xs sm:text-sm opacity-80">
               {project.location}

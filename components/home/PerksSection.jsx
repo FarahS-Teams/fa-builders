@@ -5,6 +5,8 @@ import { FaHardHat, FaRulerCombined, FaStar } from "react-icons/fa";
 import themeContext from "@/app/context/themeContext";
 import Badge from "../Badge";
 import SimpleCards from "../SimpleCards";
+import { motion } from "framer-motion";
+
 const perksData = [
   {
     icon: <FaHardHat />,
@@ -22,6 +24,19 @@ const perksData = [
     desc: "High standards in materials, workmanship, and finishes.",
   },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const PerksSection = () => {
   const context = useContext(themeContext);
@@ -49,24 +64,40 @@ const PerksSection = () => {
         {/* cards section */}
         <SimpleCards
           content={perksData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`${currentTheme.card} flex flex-col justify-center items-center gap-4 sm:gap-5 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className={`
+        ${currentTheme.card}
+        flex flex-col justify-center items-center
+        gap-4 sm:gap-5
+        rounded-xl
+        hover:-translate-y-3 hover:shadow-xl
+        transition-all duration-300 ease-in
+      `}
             >
-              <div className="text-3xl text-secondary">{item.icon}</div>
+              <div className="text-3xl text-secondary">
+                {item.icon}
+              </div>
+
               <h4
                 className="font-bold text-lg sm:text-xl md:text-2xl"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {item.title}
               </h4>
+
               <p
                 className="text-sm sm:text-base opacity-80 text-center"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 {item.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
         />
       </div>

@@ -144,9 +144,9 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className={`group w-8 h-8 bg-gray-800 flex items-center justify-center rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary`}
+                    className={`group w-8 h-8 flex items-center justify-center rounded-md shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-110 hover:bg-secondary border border-secondary ${currentTheme.background}`}
                   >
-                    <social.icon className="text-gray-300 group-hover:text-white text-lg transition-colors" />
+                    <social.icon className={`group-hover:text-white text-lg transition-colors ${currentTheme.text}`} />
                   </Link>
 
                 ))}
@@ -223,7 +223,7 @@ const Footer = () => {
             {/* our agency name */}
             <div className="flex justify-center items-center gap-2">
               <span className="text-sm hover:text-secondary transition-colors duration-300 ease-in-out cursor-pointer">
-                Developed by Nexora Solutions
+                Developed by BIZKET
               </span>
             </div>
 

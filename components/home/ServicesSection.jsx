@@ -7,8 +7,22 @@ import { useContext } from "react";
 import Cta from "../Cta";
 import SimpleCards from "../SimpleCards";
 import service from "@/app/data/service";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
 
   const context = useContext(themeContext);
   if (!context) {
@@ -37,9 +51,20 @@ const ServicesSection = () => {
         {/* Services section */}
         <SimpleCards
           content={showServices.map((ser, index) => (
-            <div
+            <motion.div
               key={index}
-              className={`${currentTheme.card} flex flex-col gap-4 h-full p-6 rounded-xl hover:-translate-y-3 transition-all duration-300 ease-in`}
+              custom={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              className={`
+        ${currentTheme.card}
+        flex flex-col gap-4 h-full p-6
+        rounded-xl
+        hover:-translate-y-3 hover:shadow-xl
+        transition-all duration-300 ease-in
+      `}
             >
               {/* Icon */}
               <div className="text-3xl text-secondary">
@@ -60,7 +85,9 @@ const ServicesSection = () => {
                 <ul className="mb-6 space-y-2">
                   {ser.specialties.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm">
-                      <span className="text-secondary text-xs" >{feature.icon}</span>
+                      <span className="text-secondary text-xs">
+                        {feature.icon}
+                      </span>
                       <span>{feature.text}</span>
                     </li>
                   ))}
@@ -76,10 +103,10 @@ const ServicesSection = () => {
                   />
                 </div>
               </div>
-            </div>
-
+            </motion.div>
           ))}
         />
+
       </div>
     </section>
   );

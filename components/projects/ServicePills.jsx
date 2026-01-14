@@ -32,7 +32,7 @@ const ServicePills = ({
                    flex items-center justify-center
                    rounded-full border-2 border-secondary
                    hover:bg-secondary/10
-                   hidden md:flex"
+                   md:flex"
       >
         <ChevronLeft size={20} className="text-secondary" />
       </button>
@@ -50,11 +50,10 @@ const ServicePills = ({
             key={serv}
             onClick={() => applyFilter(activeCategory, serv)}
             className={`shrink-0 px-2 lg:px-5 py-1 lg:py-2 text-sm rounded-full transition border
-                        ${
-                          activeService === serv
-                            ? "bg-secondary text-white bg-secondary border-none"
-                            : "border hover:bg-secondary/10 hover:text-secondary/90"
-                        }`}
+                        ${activeService === serv
+                ? "bg-secondary text-white border-none"
+                : "border hover:bg-secondary/10 hover:text-secondary/90"
+              }`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             {serv}
@@ -68,8 +67,7 @@ const ServicePills = ({
         className="shrink-0 h-9 w-9
                    flex items-center justify-center
                    rounded-full border-2 border-secondary
-                   hover:bg-secondary/10
-                   hidden md:flex"
+                   hover:bg-secondary/10 md:flex"
       >
         <ChevronRight size={20} className="text-secondary" />
       </button>

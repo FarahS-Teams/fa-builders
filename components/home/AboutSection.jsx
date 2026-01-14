@@ -6,14 +6,27 @@ import themeContext from "@/app/context/themeContext";
 import { useContext } from "react";
 import { FaFireAlt, FaCheckCircle, FaTools, FaAward } from "react-icons/fa";
 import Badge from "../Badge";
+import { motion } from "framer-motion";
 
 const AboutSection = () => {
-  const context = useContext(themeContext);
 
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.15,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const context = useContext(themeContext);
   if (!context) {
     throw new Error("AboutSection must be used within a ThemeContextProvider");
   }
-
   const { theme, currentTheme } = context;
 
   const features = [
@@ -109,13 +122,22 @@ const AboutSection = () => {
           {/* Right Features */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 items-stretch">
             {features.map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
-                className={`rounded-xl flex flex-col items-center text-center
-    ${currentTheme.small_card}
-    border border-secondary/10 hover:border-secondary/30
-    transition-all duration-300 group
-     h-full min-h-[200px] md:min-h-[240px]`}
+                custom={index}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                className={`
+        rounded-xl
+        flex flex-col items-center text-center
+        ${currentTheme.small_card}
+        border border-secondary/10 hover:border-secondary/30
+        transition-all duration-300
+        group
+        h-full min-h-[200px] md:min-h-60
+      `}
               >
                 {/* Icon */}
                 <div className="text-secondary mt-2 mb-3 text-3xl group-hover:scale-110 transition-transform duration-300">
@@ -131,11 +153,10 @@ const AboutSection = () => {
                 <p className="text-sm md:text-base opacity-80">
                   {feature.desc}
                 </p>
-              </div>
+              </motion.div>
             ))}
-
-
           </div>
+
         </div>
       </div>
     </section>
