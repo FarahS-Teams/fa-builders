@@ -72,7 +72,7 @@ const CTASection = () => {
 
             <Cta
               text="Call Us Now"
-              path="tel:+447476999062"
+              path="tel:+447476555002"
               variant="secondary"
             />
 
