@@ -40,7 +40,7 @@ const ServiceInfoSection = ({ service }) => {
           </h2>
 
           <p
-            className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
+            className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90 text-justify sm:text-left"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             {service.detailedDescription}

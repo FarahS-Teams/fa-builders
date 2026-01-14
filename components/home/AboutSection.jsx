@@ -66,7 +66,7 @@ const AboutSection = () => {
           </h2>
 
           <p
-            className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed`}
+            className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-justify sm:text-left`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             At FA Builders Ltd, we don't just construct buildings—we build
@@ -82,7 +82,7 @@ const AboutSection = () => {
           <div>
             <div className="mb-8">
               <p
-                className="text-lg leading-relaxed mb-6 text-center lg:text-left"
+                className="text-lg leading-relaxed mb-6 text-justify sm:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 <span className="text-secondary font-bold">
@@ -93,14 +93,14 @@ const AboutSection = () => {
               </p>
 
               <p
-                className="text-lg leading-relaxed text-center mb-6 lg:text-left"
+                className="text-lg leading-relaxed mb-6 text-justify sm:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 Every project reflects our commitment to quality, transparency,
                 and timely delivery—creating spaces that inspire and endure.
               </p>
               <p
-                className="text-lg leading-relaxed text-center lg:text-left"
+                className="text-lg leading-relaxed text-justify sm:text-left"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 We operate in line with UK building regulations and best

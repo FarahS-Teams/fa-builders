@@ -60,7 +60,7 @@ const ContactForm = () => {
         >
           Get in <span className="text-secondary">Touch</span>
         </h2>
-        <p className="text-center text-base sm:text-lg mb-10 max-w-xl mx-auto">
+        <p className="text-justify sm:text-center text-base sm:text-lg mb-10 max-w-xl mx-auto">
           Have a project in mind? Fill out the form below and we'll get back to
           you as soon as possible.
         </p>

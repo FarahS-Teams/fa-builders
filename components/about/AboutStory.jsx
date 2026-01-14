@@ -38,7 +38,7 @@ const AboutStory = () => {
             </h2>
 
             <p
-              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
+              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90 text-justify sm:text-left"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Founded in 2024, FA Builders Ltd is a trusted London construction
@@ -48,16 +48,15 @@ const AboutStory = () => {
             </p>
 
             <p
-              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
+              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90 text-justify sm:text-left"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Our experienced team deliver high-quality, safe, and sustainable
-              solutions. All work is carried out by certified professionals,
-              including Gas Safe registered and NICEIC-approved contractors.
+              solutions. All work is carried out by certified professionals.
             </p>
 
             <p
-              className="text-base sm:text-md leading-relaxed opacity-90"
+              className="text-base sm:text-md leading-relaxed opacity-90 text-justify sm:text-left"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               With a focus on clear communication, timely delivery, and client

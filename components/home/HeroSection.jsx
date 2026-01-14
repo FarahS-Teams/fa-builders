@@ -36,7 +36,7 @@ const HeroSection = () => {
             </h2>
 
             {/* description */}
-            <p className="text-lg md:text-lg mb-8 leading-relaxed">
+            <p className="text-lg md:text-lg mb-8 leading-relaxed text-justify sm:text-left">
               We transform your vision into reality with{" "}
               <span className="font-semibold text-secondary">
                 unmatched quality

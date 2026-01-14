@@ -49,7 +49,7 @@ const ServicesCardsSection = () => {
           </h2>
 
           <p
-            className={`text-lg leading-relaxed text-center ${currentTheme.text} max-w-2xl mx-auto`}
+            className={`text-lg leading-relaxed ${currentTheme.text} max-w-2xl mx-auto text-justify sm:text-left`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Discover our comprehensive construction services across London,

@@ -31,7 +31,7 @@ export default function Leadership() {
             Meet Our <span className="text-secondary">Director</span>
           </h2>
           <p
-            className="text-lg md:text-xl mt-3 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl mt-3 max-w-2xl mx-auto leading-relaxed text-justify sm:text-left"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             FA Builders Ltd. is led by experienced professionals committed to

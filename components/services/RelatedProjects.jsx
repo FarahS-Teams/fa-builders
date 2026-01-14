@@ -52,13 +52,12 @@ const RelatedProjects = ({ projects }) => {
             className={`${currentTheme.headings} text-2xl sm:text-3xl font-bold`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Projects Completed Under <br />{" "}
-            <span className="text-secondary">{projects[0].service}</span> in
-            London
+            Completed <span className="text-secondary">{projects[0].service}</span> Projects Across London
+
           </h2>
 
           <p
-            className={`text-base sm:text-lg mt-2 ${currentTheme.text} max-w-2xl mx-auto`}
+            className={`text-base sm:text-lg mt-2 ${currentTheme.text} max-w-2xl mx-auto text-justify sm:text-left`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Explore completed projects under this service, showcasing quality

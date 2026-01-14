@@ -110,7 +110,7 @@ export default async function ProjectPage({ params }) {
               <h2 className="text-2xl font-bold mb-4 text-primary">
                 Project Overview
               </h2>
-              <p className="mb-10">{project.description}</p>
+              <p className="mb-10 text-justify sm:text-left">{project.description}</p>
               <ProjectGallery images={project.gallery} />
             </div>
 
