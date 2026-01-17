@@ -47,7 +47,7 @@ export default function ProjectsGrid() {
     >
       <div className="content">
         {/* HEADER */}
-        <div className="text-center mb-10">
+        <div className="text-left sm:text-center mb-10">
           <Badge text="Our Portfolio" />
 
           <h2
@@ -58,7 +58,7 @@ export default function ProjectsGrid() {
           </h2>
 
           <p
-            className={`text-lg leading-relaxed text-center ${currentTheme.text} max-w-2xl mx-auto text-justify sm:text-left`}
+            className={`text-md sm:text-lg leading-relaxed ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Explore our completed construction projects across London,

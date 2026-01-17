@@ -26,7 +26,7 @@ const AboutStory = () => {
         {/* Content Wrapper */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           {/* Text Section */}
-          <div className="flex flex-col md:w-1/2 text-center md:text-left">
+          <div className="flex flex-col md:w-1/2 text-left">
             <div>
               <Badge text="Our Story" />
             </div>
@@ -38,7 +38,7 @@ const AboutStory = () => {
             </h2>
 
             <p
-              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90 text-justify sm:text-left"
+              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Founded in 2024, FA Builders Ltd is a trusted London construction
@@ -48,7 +48,7 @@ const AboutStory = () => {
             </p>
 
             <p
-              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90 text-justify sm:text-left"
+              className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               Our experienced team deliver high-quality, safe, and sustainable
@@ -56,7 +56,7 @@ const AboutStory = () => {
             </p>
 
             <p
-              className="text-base sm:text-md leading-relaxed opacity-90 text-justify sm:text-left"
+              className="text-base sm:text-md leading-relaxed opacity-90"
               style={{ fontFamily: "var(--font-inter)" }}
             >
               With a focus on clear communication, timely delivery, and client
@@ -70,7 +70,7 @@ const AboutStory = () => {
           <div className="relative w-full md:w-1/2 flex justify-center mt-6 md:mt-0">
             {/* Image Card */}
             <div
-              className={`relative w-full max-w-md aspect-square rounded-2xl overflow-hidden border border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
+              className={`relative w-full aspect-square rounded-2xl overflow-hidden border border-secondary/40 shadow-xl transition-transform duration-300 hover:scale-[1.02]`}
             >
               {/* Skeleton */}
               {!imageLoaded && (

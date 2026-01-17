@@ -102,15 +102,17 @@ export default async function ProjectPage({ params }) {
           </p>
         </div>
       </section>
+
+      {/* Project Overview */}
       <div className="custom-container mt-6">
         <div className="content flex flex-col gap-10 lg:gap-12">
           {/* CONTENT */}
           <section className="py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="md:col-span-2 text-center md:text-left">
+            <div className="md:col-span-2 text-left sm:text-center">
               <h2 className="text-2xl font-bold mb-4 text-primary">
                 Project Overview
               </h2>
-              <p className="mb-10 text-justify sm:text-left">{project.description}</p>
+              <p className="text-md md:text-lg mb-10">{project.description}</p>
               <ProjectGallery images={project.gallery} />
             </div>
 

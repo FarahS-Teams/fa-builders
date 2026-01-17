@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
     >
       <div className="content">
         {/* main hading*/}
-        <div className="text-center">
+        <div className="text-left sm:text-center w-full">
           <Badge text={"Client Stories"} />
           <h2 className={`${currentTheme.headings}`}>
             What Our <span className="text-secondary">Clients</span> Say

@@ -55,18 +55,19 @@ const ExcellenceSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
       <div
-        className="content flex flex-col items-center 
-      "
+        className="content flex flex-col items-center"
       >
-        <Badge text={"Cool Numbers"} className="" />
+        <div className="text-left sm:text-center w-full">
+          <Badge text={"Cool Numbers"} className="" />
 
         {/* Main heading */}
         <h2
-          className={`${currentTheme.headings} text-center`}
+          className={`${currentTheme.headings}`}
           style={{ fontFamily: "var(--font-montserrat)" }}
         >
           By The <span className="text-secondary">Numbers</span>
         </h2>
+        </div>
 
         {/* cards */}
         <SimpleCards

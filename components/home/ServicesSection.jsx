@@ -40,13 +40,16 @@ const ServicesSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
       <div className="content flex flex-col items-center">
-        {/* Badge */}
-        <Badge text={"Our Expertise"} />
-        {/* Main Heading */}
-        <h2 className={`${currentTheme.headings} text-center`}>
-          Expert <span className="text-secondary">Construction Services</span>{" "}
-          Across London
-        </h2>
+
+        <div className="text-left sm:text-center w-full">
+          {/* Badge */}
+          <Badge text={"Our Expertise"} />
+          {/* Main Heading */}
+          <h2 className={`${currentTheme.headings}`}>
+            Expert <span className="text-secondary">Construction Services</span>{" "}
+            Across London
+          </h2>
+        </div>
 
         {/* Services section */}
         <SimpleCards

@@ -57,32 +57,28 @@ const AboutSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
       <div className="content ">
-        <div className="text-center mb-12">
+        <div className="text-left sm:text-center mb-6 sm:mb-12 ">
           <Badge text={"About us"} />
 
           <h2 className={`${currentTheme.headings}`}>
-            Building <span className="text-secondary">Excellence</span> Since
-            2024
+            FA Builders <span className="text-secondary">Excellence</span>
           </h2>
 
           <p
-            className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-justify sm:text-left`}
+            className="text-md md:text-lg max-w-3xl lg:mx-auto leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            At FA Builders Ltd, we don't just construct buildings—we build
-            trust, lasting relationships, and exceptional quality. With over 10
-            years of experience delivering new builds, renovations, and
-            extensions across London, we turn your visions into remarkable
-            realities.
+            With over 10 years of experience delivering new builds, renovations, and
+            extensions across London, we turn your visions into remarkable realities.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-12">
           {/* Left Content */}
           <div>
-            <div className="mb-8">
+            <div className="mb-8 text-left text-md md:text-lg ">
               <p
-                className="text-lg leading-relaxed mb-6 text-justify sm:text-left"
+                className="leading-relaxed mb-6"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 <span className="text-secondary font-bold">
@@ -93,14 +89,14 @@ const AboutSection = () => {
               </p>
 
               <p
-                className="text-lg leading-relaxed mb-6 text-justify sm:text-left"
+                className="leading-relaxed mb-6"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 Every project reflects our commitment to quality, transparency,
                 and timely delivery—creating spaces that inspire and endure.
               </p>
               <p
-                className="text-lg leading-relaxed text-justify sm:text-left"
+                className="leading-relaxed"
                 style={{ fontFamily: "var(--font-inter)" }}
               >
                 We operate in line with UK building regulations and best

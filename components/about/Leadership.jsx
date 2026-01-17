@@ -20,9 +20,9 @@ export default function Leadership() {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container relative`}
     >
-      <div className="content">
+      <div className="content flex flex-col items-center">
         {/* Section Title */}
-        <div className="flex flex-col items-center text-center mb-10">
+        <div className="text-left sm:text-center w-full mb-10">
           <Badge text="Our Leadership" />
           <h2
             className={`${currentTheme.headings}`}

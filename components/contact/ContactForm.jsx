@@ -52,21 +52,24 @@ const ContactForm = () => {
 
   return (
     <div className={`${currentTheme.background} ${currentTheme.text}`}>
-      <div className="max-w-md mx-auto">
-        <h2
-          id="contact-heading"
-          className={`text-center ${currentTheme.headings}  mb-4`}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Get in <span className="text-secondary">Touch</span>
-        </h2>
-        <p className="text-justify sm:text-center text-base sm:text-lg mb-10 max-w-xl mx-auto">
-          Have a project in mind? Fill out the form below and we'll get back to
-          you as soon as possible.
-        </p>
+      <div className="max-w-md sm: mx-auto">
 
-      
-         <form
+        <div className="text-left sm:text-center">
+          <h2
+            id="contact-heading"
+            className={`${currentTheme.headings}  mb-4`}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Get in <span className="text-secondary">Touch</span>
+          </h2>
+          <p className="text-base sm:text-lg mb-10 max-w-xl mx-auto">
+            Have a project in mind? Fill out the form below and we'll get back to
+            you as soon as possible.
+          </p>
+        </div>
+
+
+        <form
           onSubmit={onSubmit}
           className="space-y-6"
           aria-label="Contact form"
@@ -184,15 +187,14 @@ const ContactForm = () => {
 
           {result && (
             <p
-              className={`text-center font-medium mt-4 ${
-                result.includes("Thank you") ? "text-green-600" : "text-red-600"
-              }`}
+              className={`text-center font-medium mt-4 ${result.includes("Thank you") ? "text-green-600" : "text-red-600"
+                }`}
             >
               {result}
             </p>
           )}
         </form>
-       
+
       </div>
     </div>
   );

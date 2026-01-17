@@ -51,9 +51,9 @@ export default function Stats() {
       className={`${currentTheme.background} ${currentTheme.text} 
       custom-container`}
     >
-      <div className="content">
+      <div className="content flex flex-col items-center">
         {/* Header */}
-        <div className="flex flex-col items-center text-center">
+        <div className="text-left sm:text-center w-full">
           <Badge text="Our Stats" />
           <h2
             className={`${currentTheme.headings}`}
@@ -74,7 +74,7 @@ export default function Stats() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay }}
                 className={`${currentTheme.card} 
-                max-w-sm mx-auto w-full
+                max-w-xl mx-auto w-full
                 flex flex-col items-center
                 gap-4 sm:gap-6
                 rounded-xl

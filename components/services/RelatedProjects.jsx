@@ -45,19 +45,19 @@ const RelatedProjects = ({ projects }) => {
     <section className={`${currentTheme.background} ${currentTheme.text}`}>
       <div className="w-full">
         {/* Heading */}
-        <div className="text-center mb-10">
+        <div className="text-left sm:text-center mb-10">
           <Badge text="Related Projects" />
 
           <h2
             className={`${currentTheme.headings} text-2xl sm:text-3xl font-bold`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Completed <span className="text-secondary">{projects[0].service}</span> Projects Across London
+            Related <span className="text-secondary">{projects[0].service}</span> Projects
 
           </h2>
 
           <p
-            className={`text-base sm:text-lg mt-2 ${currentTheme.text} max-w-2xl mx-auto text-justify sm:text-left`}
+            className={`text-base sm:text-md mt-2 ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Explore completed projects under this service, showcasing quality

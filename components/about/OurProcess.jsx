@@ -63,9 +63,9 @@ const OurProcess = () => {
       className={`${currentTheme.background} ${currentTheme.text}
       custom-container`}
     >
-      <div className="content">
+      <div className="content flex flex-col items-center">
         {/* Header */}
-        <div className="flex flex-col items-center text-center">
+        <div className="text-left sm:text-center w-full">
           <Badge text="Our Process" />
           <h2 className={currentTheme.headings}>
             Our <span className="text-secondary">Construction Process</span>
@@ -92,7 +92,7 @@ const OurProcess = () => {
                 viewport={{ once: true, amount: 0.3 }}
                 className={`${currentTheme.card}
               relative
-              max-w-sm mx-auto w-full
+              mx-auto w-full
               flex flex-col items-center
               gap-4 rounded-xl hover:-translate-y-3 hover:shadow-xl
               transition-all duration-300 ease-out`}

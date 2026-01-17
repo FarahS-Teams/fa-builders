@@ -42,13 +42,15 @@ const ProjectSection = () => {
     >
       <div className="content flex flex-col items-center">
         {/* Section Header */}
-        <Badge text="Our Portfolio" />
-        <h2
-          className={`${currentTheme.headings} text-center`}
-          style={{ fontFamily: "var(--font-Montserrat)" }}
-        >
-          Recent <span className="text-secondary">Projects</span>
-        </h2>
+        <div className="text-left sm:text-center w-full">
+          <Badge text="Our Portfolio" />
+          <h2
+            className={`${currentTheme.headings}`}
+            style={{ fontFamily: "var(--font-Montserrat)" }}
+          >
+            Recent <span className="text-secondary">Projects</span>
+          </h2>
+        </div>
 
         {/* Projects Grid */}
 

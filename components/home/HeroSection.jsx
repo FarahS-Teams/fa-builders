@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="content ">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-16">
           {/* Left Side text */}
-          <div className="lg:w-1/2 text-center lg:text-left">
+          <div className="lg:w-1/2 text-left">
             {/* Badge */}
             <Badge text={"TRUSTED CONTRACTORS"} />
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
             </h2>
 
             {/* description */}
-            <p className="text-lg md:text-lg mb-8 leading-relaxed text-justify sm:text-left">
+            <p className="text-md md:text-lg mb-8 leading-relaxed">
               We transform your vision into reality with{" "}
               <span className="font-semibold text-secondary">
                 unmatched quality

@@ -27,7 +27,7 @@ const ServiceInfoSection = ({ service }) => {
     >
       <div className="relative flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 lg:gap-16">
         {/* Text Section */}
-        <div className="flex flex-col md:w-1/2 text-center md:text-left">
+        <div className="flex flex-col md:w-1/2 md:text-left">
           <div>
             <Badge text={service.title} />
           </div>
@@ -40,7 +40,7 @@ const ServiceInfoSection = ({ service }) => {
           </h2>
 
           <p
-            className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90 text-justify sm:text-left"
+            className="text-base sm:text-md leading-relaxed mb-2 md:mb-4 opacity-90"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             {service.detailedDescription}

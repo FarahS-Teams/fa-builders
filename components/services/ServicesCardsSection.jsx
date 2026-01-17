@@ -38,7 +38,7 @@ const ServicesCardsSection = () => {
     >
       <div className="content flex flex-col items-center">
         {/* HEADER */}
-        <div className="text-center mb-10">
+        <div className="text-left sm:text-center mb-10">
           <Badge text="Our Services" />
 
           <h2
@@ -49,7 +49,7 @@ const ServicesCardsSection = () => {
           </h2>
 
           <p
-            className={`text-lg leading-relaxed ${currentTheme.text} max-w-2xl mx-auto text-justify sm:text-left`}
+            className={`text-md md:text-lg leading-relaxed ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Discover our comprehensive construction services across London,

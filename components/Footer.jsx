@@ -89,12 +89,12 @@ const Footer = () => {
 
   return (
     <footer
-      className={`${currentTheme.background} ${currentTheme.text} custom-container border-t-4 border-secondary`}
+      className={`${currentTheme.background} ${currentTheme.text} custom-container border-t-4 border-secondary overflow-x-hidden`}
     >
       {/* Main Footer Content */}
       <div className="content py-12 lg:py-16">
         {/*Logo and Links */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 gap-x-6 lg:gap-x-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 gap-x-2 lg:gap-x-8 mb-12">
 
           {/* Company Info*/}
           <div className="md:col-span-4">

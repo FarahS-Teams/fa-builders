@@ -12,7 +12,7 @@ const LeftSide = () => {
       <div className="max-w-md mx-auto">
         <h2
           id="contact-fa-builders"
-          className={`text-center ${currentTheme.headings} mb-8`}
+          className={`text-left sm:text-center ${currentTheme.headings} mb-8`}
           style={{ fontFamily: "var(--font-Montserrat)" }}
         >
           Contact <span className="text-secondary">FA Builders</span>

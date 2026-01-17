@@ -74,7 +74,7 @@ const ServiceDetailPage = () => {
           >
             <div>
               {/* Heading */}
-              <div className="text-center mb-10">
+              <div className="text-left sm:text-center w-full mb-10">
                 <Badge text="Specialties" />
                 <h2
                   className={currentTheme.headings}
@@ -85,7 +85,7 @@ const ServiceDetailPage = () => {
               </div>
 
               {/* Grid */}
-              <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 xl:gap-12">
+              <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 sm:gap-8 xl:gap-12">
                 {IndService.specialties.map((elem, idx) => (
                   <motion.div
                     key={idx}
