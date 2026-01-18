@@ -60,7 +60,7 @@ export default function ProjectsGrid() {
           </h2>
 
           <p
-            className={`text-md sm:text-lg leading-relaxed ${currentTheme.text} max-w-2xl mx-auto`}
+            className={`text-md text-left sm:text-center sm:text-lg leading-relaxed ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Explore our completed construction projects across London,

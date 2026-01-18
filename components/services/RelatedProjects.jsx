@@ -60,7 +60,7 @@ const RelatedProjects = ({ projects }) => {
           </h2>
 
           <p
-            className={`text-base sm:text-md mt-2 ${currentTheme.text} max-w-2xl mx-auto`}
+            className={`text-base text-left  sm:text-center sm:text-md mt-2 ${currentTheme.text} max-w-2xl mx-auto`}
             style={{ fontFamily: "var(--font-inter)" }}
           >
             Explore completed projects under this service, showcasing quality
