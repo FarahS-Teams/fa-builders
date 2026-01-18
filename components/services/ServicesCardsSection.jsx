@@ -10,7 +10,6 @@ import Cta from "../Cta";
 import SimpleCards from "../SimpleCards";
 
 const ServicesCardsSection = () => {
-
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -38,11 +37,13 @@ const ServicesCardsSection = () => {
     >
       <div className="content flex flex-col items-center">
         {/* HEADER */}
-        <div className="text-left sm:text-center mb-10">
-          <Badge text="Our Services" />
+        <div className=" mb-10">
+          <div className="text-center">
+            <Badge text="Our Services" />
+          </div>
 
           <h2
-            className={currentTheme.headings}
+            className={`${currentTheme.headings} text-center`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Services</span>
@@ -58,7 +59,6 @@ const ServicesCardsSection = () => {
             and a commitment to quality and client satisfaction.
           </p>
         </div>
-
 
         {/* Services section */}
         <SimpleCards
@@ -79,15 +79,11 @@ const ServicesCardsSection = () => {
       `}
             >
               {/* Icon */}
-              <div className="text-3xl text-secondary">
-                {ser.icon}
-              </div>
+              <div className="text-3xl text-secondary">{ser.icon}</div>
 
               {/* Content */}
               <div className="flex flex-col flex-1">
-                <h3 className="text-xl font-bold mb-3">
-                  {ser.title}
-                </h3>
+                <h3 className="text-xl font-bold mb-3">{ser.title}</h3>
 
                 <p className="mb-4 leading-relaxed text-sm md:text-base">
                   {ser.shortDescription}
@@ -118,7 +114,6 @@ const ServicesCardsSection = () => {
             </motion.div>
           ))}
         />
-
       </div>
     </section>
   );

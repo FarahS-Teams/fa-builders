@@ -9,7 +9,6 @@ import Badge from "../Badge";
 import { motion } from "framer-motion";
 
 const AboutSection = () => {
-
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -57,10 +56,12 @@ const AboutSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
       <div className="content ">
-        <div className="text-left sm:text-center mb-6 sm:mb-12 ">
-          <Badge text={"About us"} />
+        <div className="mb-6 sm:mb-12 ">
+          <div className="text-center">
+            <Badge text={"About us"} />
+          </div>
 
-          <h2 className={`${currentTheme.headings}`}>
+          <h2 className={`${currentTheme.headings} text-center`}>
             FA Builders <span className="text-secondary">Excellence</span>
           </h2>
 
@@ -68,8 +69,9 @@ const AboutSection = () => {
             className="text-md md:text-lg max-w-3xl lg:mx-auto leading-relaxed"
             style={{ fontFamily: "var(--font-inter)" }}
           >
-            With over 10 years of experience delivering new builds, renovations, and
-            extensions across London, we turn your visions into remarkable realities.
+            With over 10 years of experience delivering new builds, renovations,
+            and extensions across London, we turn your visions into remarkable
+            realities.
           </p>
         </div>
 
@@ -152,7 +154,6 @@ const AboutSection = () => {
               </motion.div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

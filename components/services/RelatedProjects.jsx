@@ -45,15 +45,18 @@ const RelatedProjects = ({ projects }) => {
     <section className={`${currentTheme.background} ${currentTheme.text}`}>
       <div className="w-full">
         {/* Heading */}
-        <div className="text-left sm:text-center mb-10">
-          <Badge text="Related Projects" />
+        <div className=" mb-10">
+          <div className="text-center">
+            <Badge text="Related Projects" />
+          </div>
 
           <h2
-            className={`${currentTheme.headings} text-2xl sm:text-3xl font-bold`}
+            className={`${currentTheme.headings} text-2xl text-center sm:text-3xl font-bold`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
-            Related <span className="text-secondary">{projects[0].service}</span> Projects
-
+            Related{" "}
+            <span className="text-secondary">{projects[0].service}</span>{" "}
+            Projects
           </h2>
 
           <p
@@ -123,7 +126,6 @@ const RelatedProjects = ({ projects }) => {
             </Link>
           ))}
         </div>
-
 
         {/* CTA */}
         <div className="flex items-center justify-center mt-8">

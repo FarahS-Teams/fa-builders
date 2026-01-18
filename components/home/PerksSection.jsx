@@ -52,16 +52,16 @@ const PerksSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
       <div className="content flex flex-col items-center ">
-       <div className="text-left sm:text-center w-full">
-         <Badge text={"Why Choose Us"} />
-        {/* main heading */}
-        <h2
-          className={`${currentTheme.headings}`}
-          style={{ fontFamily: "var(--font-montserrat)" }}
-        >
-          Why <span className="text-secondary">Choose</span> Us{" "}
-        </h2>
-       </div>
+        <div className="text-center w-full">
+          <Badge text={"Why Choose Us"} />
+          {/* main heading */}
+          <h2
+            className={`${currentTheme.headings}`}
+            style={{ fontFamily: "var(--font-montserrat)" }}
+          >
+            Why <span className="text-secondary">Choose</span> Us{" "}
+          </h2>
+        </div>
 
         {/* cards section */}
         <SimpleCards
@@ -82,9 +82,7 @@ const PerksSection = () => {
         transition-all duration-300 ease-in
       `}
             >
-              <div className="text-3xl text-secondary">
-                {item.icon}
-              </div>
+              <div className="text-3xl text-secondary">{item.icon}</div>
 
               <h4
                 className="font-bold text-lg sm:text-xl md:text-2xl"

@@ -14,7 +14,6 @@ import { FaQuoteLeft } from "react-icons/fa";
 import reviews from "@/app/data/reviews";
 import { FaStar, FaRegStar } from "react-icons/fa";
 
-
 const TestimonialsSection = () => {
   const context = useContext(themeContext);
 
@@ -26,8 +25,6 @@ const TestimonialsSection = () => {
 
   const { theme, currentTheme } = context;
 
-
-
   return (
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container px-4`}
@@ -35,7 +32,7 @@ const TestimonialsSection = () => {
     >
       <div className="content">
         {/* main hading*/}
-        <div className="text-left sm:text-center w-full">
+        <div className="text-center w-full">
           <Badge text={"Client Stories"} />
           <h2 className={`${currentTheme.headings}`}>
             What Our <span className="text-secondary">Clients</span> Say
@@ -89,24 +86,23 @@ const TestimonialsSection = () => {
                         i < elem.rating ? (
                           <FaStar key={i} className="text-secondary text-sm" />
                         ) : (
-                          <FaRegStar key={i} className="text-secondary/40 text-sm" />
-                        )
+                          <FaRegStar
+                            key={i}
+                            className="text-secondary/40 text-sm"
+                          />
+                        ),
                       )}
                     </div>
                     <h4 className="font-bold text-lg">{elem.client}</h4>
                     <p className="text-secondary text-sm">{elem.project}</p>
                   </div>
                 </div>
-
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-
       </div>
     </section>
-
-
   );
 };
 

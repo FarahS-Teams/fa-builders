@@ -26,12 +26,12 @@ const AboutStory = () => {
         {/* Content Wrapper */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
           {/* Text Section */}
-          <div className="flex flex-col md:w-1/2 text-left">
-            <div>
+          <div className="flex flex-col md:w-1/2 ">
+            <div className="text-center sm:text-left">
               <Badge text="Our Story" />
             </div>
             <h2
-              className={`${currentTheme.headings}`}
+              className={`${currentTheme.headings} text-center sm:text-left`}
               style={{ fontFamily: "var(--font-Montserrat)" }}
             >
               FA Builders <span className="text-secondary">Story</span>

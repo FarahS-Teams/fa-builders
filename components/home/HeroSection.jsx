@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className="content ">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-12 lg:gap-16">
           {/* Left Side text */}
-          <div className="lg:w-1/2 text-left">
+          <div className="lg:w-1/2 text-center sm:text-left">
             {/* Badge */}
             <Badge text={"TRUSTED CONTRACTORS"} />
 
@@ -42,8 +42,8 @@ const HeroSection = () => {
                 unmatched quality
               </span>{" "}
               and professional craftsmanship. As a trusted London construction
-              company, we manage every stage — from planning and design to final
-              completion — delivering excellence in every project.
+              company, we manage every stage from planning and design to final
+              completion, delivering excellence in every project.
             </p>
 
             {/* CTA Buttons */}

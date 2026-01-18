@@ -22,7 +22,7 @@ export default function Leadership() {
     >
       <div className="content flex flex-col items-center">
         {/* Section Title */}
-        <div className="text-left sm:text-center w-full mb-10">
+        <div className="text-center w-full mb-10">
           <Badge text="Our Leadership" />
           <h2
             className={`${currentTheme.headings}`}
@@ -31,7 +31,7 @@ export default function Leadership() {
             Meet Our <span className="text-secondary">Director</span>
           </h2>
           <p
-            className="text-lg md:text-xl mt-3 max-w-2xl mx-auto leading-relaxed text-justify sm:text-left"
+            className="text-lg md:text-xl mt-3 max-w-2xl mx-auto leading-relaxed text-left"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             FA Builders Ltd. is led by experienced professionals committed to

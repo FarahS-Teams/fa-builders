@@ -53,7 +53,7 @@ export default function Stats() {
     >
       <div className="content flex flex-col items-center">
         {/* Header */}
-        <div className="text-left sm:text-center w-full">
+        <div className="text-center w-full">
           <Badge text="Our Stats" />
           <h2
             className={`${currentTheme.headings}`}

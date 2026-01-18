@@ -74,7 +74,7 @@ const ServiceDetailPage = () => {
           >
             <div>
               {/* Heading */}
-              <div className="text-left sm:text-center w-full mb-10">
+              <div className="text-center w-full mb-10">
                 <Badge text="Specialties" />
                 <h2
                   className={currentTheme.headings}
@@ -107,15 +107,12 @@ const ServiceDetailPage = () => {
                     <div className="text-3xl text-secondary mb-4">
                       {elem.icon}
                     </div>
-                    <p className="text-sm md:text-base">
-                      {elem.text}
-                    </p>
+                    <p className="text-sm md:text-base">{elem.text}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
           </section>
-
 
           {/* Why Us Section */}
           <PerksSection />

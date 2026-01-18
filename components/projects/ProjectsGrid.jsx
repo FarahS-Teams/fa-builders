@@ -47,11 +47,13 @@ export default function ProjectsGrid() {
     >
       <div className="content">
         {/* HEADER */}
-        <div className="text-left sm:text-center mb-10">
-          <Badge text="Our Portfolio" />
+        <div className=" mb-10">
+          <div className="text-center">
+            <Badge text="Our Portfolio" />
+          </div>
 
           <h2
-            className={currentTheme.headings}
+            className={`${currentTheme.headings} text-center`}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             Our <span className="text-secondary">Projects</span>
@@ -65,6 +67,15 @@ export default function ProjectsGrid() {
             showcasing high-quality workmanship, modern design, and meticulous
             attention to detail.
           </p>
+        </div>
+
+        {/* FILTERS - Pass current filter state */}
+        <div className="mb-8 sm:mb-10 lg:mb-12">
+          <ProjectFilters
+            onFilter={handleFilter}
+            activeCategory={categoryFilter}
+            activeService={serviceFilter}
+          />
         </div>
 
         {/* PROJECTS COUNTER & INFO */}
@@ -102,15 +113,6 @@ export default function ProjectsGrid() {
               Reset Filters
             </button>
           )}
-        </div>
-
-        {/* FILTERS - Pass current filter state */}
-        <div className="mb-8 sm:mb-10 lg:mb-12">
-          <ProjectFilters
-            onFilter={handleFilter}
-            activeCategory={categoryFilter}
-            activeService={serviceFilter}
-          />
         </div>
 
         {/* PROJECTS GRID */}

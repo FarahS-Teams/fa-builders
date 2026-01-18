@@ -9,7 +9,7 @@ const LeftSide = () => {
 
   return (
     <div className={`${currentTheme.background} ${currentTheme.text}`}>
-      <div className="max-w-md mx-auto">
+      <div className="max-w-xl mx-auto">
         <h2
           id="contact-fa-builders"
           className={`text-left sm:text-center ${currentTheme.headings} mb-8`}
@@ -17,7 +17,6 @@ const LeftSide = () => {
         >
           Contact <span className="text-secondary">FA Builders</span>
         </h2>
-
 
         <div className="space-y-4">
           {/* Email */}
@@ -98,7 +97,6 @@ const LeftSide = () => {
               title="FA Builders Location on Google Maps"
             />
           </div>
-
         </div>
       </div>
     </div>

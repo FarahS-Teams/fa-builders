@@ -54,19 +54,17 @@ const ExcellenceSection = () => {
     <section
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
-      <div
-        className="content flex flex-col items-center"
-      >
-        <div className="text-left sm:text-center w-full">
+      <div className="content flex flex-col items-center">
+        <div className="text-center w-full">
           <Badge text={"Cool Numbers"} className="" />
 
-        {/* Main heading */}
-        <h2
-          className={`${currentTheme.headings}`}
-          style={{ fontFamily: "var(--font-montserrat)" }}
-        >
-          By The <span className="text-secondary">Numbers</span>
-        </h2>
+          {/* Main heading */}
+          <h2
+            className={`${currentTheme.headings}`}
+            style={{ fontFamily: "var(--font-montserrat)" }}
+          >
+            By The <span className="text-secondary">Numbers</span>
+          </h2>
         </div>
 
         {/* cards */}
@@ -87,9 +85,7 @@ const ExcellenceSection = () => {
         transition-all duration-300 ease-in
       `}
             >
-              <div className="text-3xl text-secondary">
-                {item.icon}
-              </div>
+              <div className="text-3xl text-secondary">{item.icon}</div>
 
               <h2
                 className="text-3xl font-semibold text-center"
@@ -107,7 +103,6 @@ const ExcellenceSection = () => {
             </motion.div>
           ))}
         />
-
       </div>
     </section>
   );

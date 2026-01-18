@@ -10,7 +10,6 @@ import service from "@/app/data/service";
 import { motion } from "framer-motion";
 
 const ServicesSection = () => {
-
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -40,8 +39,7 @@ const ServicesSection = () => {
       className={`${currentTheme.background} ${currentTheme.text} custom-container`}
     >
       <div className="content flex flex-col items-center">
-
-        <div className="text-left sm:text-center w-full">
+        <div className="text-center w-full">
           {/* Badge */}
           <Badge text={"Our Expertise"} />
           {/* Main Heading */}
@@ -70,15 +68,11 @@ const ServicesSection = () => {
       `}
             >
               {/* Icon */}
-              <div className="text-3xl text-secondary">
-                {ser.icon}
-              </div>
+              <div className="text-3xl text-secondary">{ser.icon}</div>
 
               {/* Content */}
               <div className="flex flex-col flex-1">
-                <h3 className="text-xl font-bold mb-3">
-                  {ser.title}
-                </h3>
+                <h3 className="text-xl font-bold mb-3">{ser.title}</h3>
 
                 <p className="mb-4 leading-relaxed text-sm md:text-base">
                   {ser.shortDescription}
@@ -109,7 +103,6 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         />
-
       </div>
     </section>
   );

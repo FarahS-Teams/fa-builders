@@ -10,7 +10,6 @@ import Cta from "../Cta";
 import { motion } from "framer-motion";
 
 const ProjectSection = () => {
-
   const cardVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: (i) => ({
@@ -42,7 +41,7 @@ const ProjectSection = () => {
     >
       <div className="content flex flex-col items-center">
         {/* Section Header */}
-        <div className="text-left sm:text-center w-full">
+        <div className="text-center w-full">
           <Badge text="Our Portfolio" />
           <h2
             className={`${currentTheme.headings}`}
@@ -131,7 +130,6 @@ const ProjectSection = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

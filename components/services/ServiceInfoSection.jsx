@@ -27,13 +27,13 @@ const ServiceInfoSection = ({ service }) => {
     >
       <div className="relative flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 lg:gap-16">
         {/* Text Section */}
-        <div className="flex flex-col md:w-1/2 md:text-left">
-          <div>
+        <div className="flex flex-col md:w-1/2 ">
+          <div className="text-center md:text-left">
             <Badge text={service.title} />
           </div>
 
           <h2
-            className={currentTheme.headings}
+            className={`${currentTheme.headings} text-center md:text-left `}
             style={{ fontFamily: "var(--font-Montserrat)" }}
           >
             {service.title}
@@ -61,8 +61,9 @@ const ServiceInfoSection = ({ service }) => {
               alt={`${service.title} by FA Builders Ltd`}
               fill
               onLoad={() => setImageLoaded(true)}
-              className={`object-cover w-full h-auto ${imageLoaded ? "opacity-100" : "opacity-0"
-                }`}
+              className={`object-cover w-full h-auto ${
+                imageLoaded ? "opacity-100" : "opacity-0"
+              }`}
               priority
             />
           </div>
