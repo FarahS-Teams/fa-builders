@@ -72,7 +72,7 @@ const OurProcess = () => {
           </h2>
 
           <p
-            className="text-base sm:text-lg max-w-xl mb-8"
+            className="text-base sm:text-lg max-w-xl mb-8 mx-auto"
             style={{ fontFamily: "var(--font-inter)" }}
           >
             We know your time is valuable — and we respect it at every step.
