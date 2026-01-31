@@ -27,7 +27,7 @@ const HeroSection = () => {
           {/* Left Side text */}
           <div className="lg:w-1/2 text-center sm:text-left">
             {/* Badge */}
-            <Badge text={"TRUSTED CONTRACTORS"} />
+            <Badge className="" text={"TRUSTED CONTRACTORS"} />
 
             {/* Main Heading */}
             <h2 className={`${currentTheme.headings}`}>
@@ -36,7 +36,7 @@ const HeroSection = () => {
             </h2>
 
             {/* description */}
-            <p className="text-md md:text-lg mb-8 leading-relaxed">
+            <p className="text-md md:text-lg mb-8 leading-relaxed text-left">
               We transform your vision into reality with{" "}
               <span className="font-semibold text-secondary">
                 unmatched quality
